@@ -43,22 +43,22 @@ function formatTimeInterval(start, end) {
     }
     if (interval > INTERVAL_DAY) {
         text += Math.floor(interval / INTERVAL_DAY);
-        text += ' d ';
+        text += ' 日 ';
         interval %= INTERVAL_DAY;
     }
     if (interval > INTERVAL_HOUR) {
         text += Math.floor(interval / INTERVAL_HOUR);
-        text += ' h ';
+        text += ' 时 ';
         interval %= INTERVAL_HOUR;
     }
     if (interval > INTERVAL_MINUTE) {
         text += Math.floor(interval / INTERVAL_MINUTE);
-        text += ' m ';
+        text += ' 分 ';
         interval %= INTERVAL_MINUTE;
     }
 
     text += Math.floor(interval / INTERVAL_SECOND);
-    text += ' s';
+    text += ' 秒';
 
     return text;
 };
@@ -116,7 +116,7 @@ function tick() {
         html += '<div style="color: green;">' + message1 + ':</div>';
         html += '<div style="font-size: 12pt; font-weight: bold;">';
         html += formatTimeInterval(timestamp.getTime(), now.getTime());
-        html += ' ago</div>'
+        html += '前</div>'
     }
     $('#allcontent').html(html);
 }
