@@ -113,7 +113,7 @@ function tick() {
         html += formatTimeInterval(now.getTime(), timestamp.getTime());
         html += '</div>'
     } else {
-        html += '<div style="color: green;">' + message1 + ':</div>';
+        html += '<div style="color: green;">' + message2 + ':</div>';
         html += '<div style="font-size: 12pt; font-weight: bold;">';
         html += formatTimeInterval(timestamp.getTime(), now.getTime());
         html += '前</div>'
