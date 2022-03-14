@@ -1,0 +1,32 @@
+:root {
+    --white-monochrome: 237, 233, 223;
+    --pale-gray-monochrome: 255, 251, 240;
+    --light-gray-monochrome: 160, 160, 160;
+    --gray-monochrome: 72, 69, 60;
+    --black-monochrome: 25, 20, 16;
+    --bright-accent: 140, 136, 126;
+    --medium-accent: 72, 69, 60;
+    --dark-accent: 140, 136, 126;
+    --pale-accent: 140, 136, 126;
+}
+.side-block {
+    --gradient-sidemenu-header: linear-gradient(10deg,rgba(var(--swatch-primary-darker),0.45) 0%,rgba(var(--swatch-primary-darker),0.55) 100%);
+    --sideblock-heading-text-color:  var(--swatch-menutxt-light-color);
+    --text-shadow: rgb(var(--swatch-border-color, 12,12,12));
+    padding-left: 0.75rem;
+}
+.side-block .heading {
+    min-height: 1.25rem;
+    background: linear-gradient(10deg,rgba(140,20,25,.45),rgba(140,20,25,.55));
+    background: var(--gradient-sidemenu-header);
+    justify-content: center;
+    text-shadow: 0.063rem 0.063rem 0.063rem #0c0c0c;
+    text-shadow: 0.063rem 0.063rem 0.063rem var(--text-shadow);
+}
+.side-block .heading p {
+    line-height: 1.25rem;
+}
+.side-block .menu-item {
+    border-left: 0.125rem solid hsla(0,0%,5%,.08);
+    border-left: 0.125rem solid rgba(var(--swatch-border-color),.08);
+}
