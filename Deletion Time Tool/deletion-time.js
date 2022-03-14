@@ -74,10 +74,10 @@ function generateDeletionLink1() {
     var html = '';
     html += '<div>复制此代码以在一个帖子或页面中放入计时器：</div>';
     html += '<div>';
-    html += '<blockquote><strong>[[iframe https://cdn.jsdelivr.net/gh/arandintday/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 51px;"]]</strong></blockquote>';
+    html += '<blockquote><strong>[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 60px;"]]</strong></blockquote>';
     html += '</div>';
     html += '<div>';
-    html += '<iframe src="https://cdn.jsdelivr.net/gh/arandintday/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + '" style="width: 400px; height: 51px;"></iframe>';
+    html += '<iframe src="https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + '" style="width: 400px; height: 60px;"></iframe>';
     html += '</div>';
     $('#generated').html(html);
 }
@@ -92,10 +92,10 @@ function generateDeletionLink2() {
     var html = '';
     html += '<div>复制此代码以在一个帖子或页面中放入计时器：</div>';
     html += '<div>';
-    html += '<blockquote><strong>[[iframe https://cdn.jsdelivr.net/gh/arandintday/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 51px;"]]</strong></blockquote>';
+    html += '<blockquote><strong>[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 60px;"]]</strong></blockquote>';
     html += '</div>';
     html += '<div>';
-    html += '<iframe src="https://cdn.jsdelivr.net/gh/arandintday/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + '" style="width: 400px; height: 51px;"></iframe>';
+    html += '<iframe src="https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + '" style="width: 400px; height: 60px;"></iframe>';
     html += '</div>';
     $('#generated').html(html);
 }
