@@ -74,10 +74,10 @@ function generateDeletionLink1() {
     var html = '';
     html += '<div>复制此代码以在一个帖子或页面中放入计时器：</div>';
     html += '<div>';
-    html += '<blockquote><strong>[[iframe /deletion-time.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 51px;"]]</strong></blockquote>';
+    html += '<blockquote><strong>[[iframe https://cdn.jsdelivr.net/gh/arandintday/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 51px;"]]</strong></blockquote>';
     html += '</div>';
     html += '<div>';
-    html += '<iframe src="/deletion-time.html?timestamp=' + timestamp.getTime() + '&type=' + type + '" style="width: 400px; height: 51px;"></iframe>';
+    html += '<iframe src="https://cdn.jsdelivr.net/gh/arandintday/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + '" style="width: 400px; height: 51px;"></iframe>';
     html += '</div>';
     $('#generated').html(html);
 }
@@ -90,12 +90,12 @@ function generateDeletionLink2() {
     var now = new Date();
     var timestamp = new Date(now.getTime() + (day * 24 * 60 * 60 * 1000) + (hour * 60 * 60 * 1000) + (minute * 60 * 1000));
     var html = '';
-    html += '<div>制此代码以在一个帖子或页面中放入计时器：</div>';
+    html += '<div>复制此代码以在一个帖子或页面中放入计时器：</div>';
     html += '<div>';
-    html += '<blockquote><strong>[[iframe http://aelanna.com/Tools/deletion-time.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 51px;"]]</strong></blockquote>';
+    html += '<blockquote><strong>[[iframe https://cdn.jsdelivr.net/gh/arandintday/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 51px;"]]</strong></blockquote>';
     html += '</div>';
     html += '<div>';
-    html += '<iframe src="http://aelanna.com/Tools/deletion-time.html?timestamp=' + timestamp.getTime() + '&type=' + type + '" style="width: 400px; height: 51px;"></iframe>';
+    html += '<iframe src="https://cdn.jsdelivr.net/gh/arandintday/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + '" style="width: 400px; height: 51px;"></iframe>';
     html += '</div>';
     $('#generated').html(html);
 }
@@ -157,74 +157,69 @@ function initGenerators() {
     html += '<input type="radio" name="type" value="2"> 通用/其它';
     html += '</div>';
     html += '<div>';
-    html += 'Delete at: ';
-    html += '<select id="gen1Month" name="month">';
-    html += '<option value="0"' + (now.getMonth() == 0 ? ' selected' : '') + '>January</option>';
-    html += '<option value="1"' + (now.getMonth() == 1 ? ' selected' : '') + '>February</option>';
-    html += '<option value="2"' + (now.getMonth() == 2 ? ' selected' : '') + '>March</option>';
-    html += '<option value="3"' + (now.getMonth() == 3 ? ' selected' : '') + '>April</option>';
-    html += '<option value="4"' + (now.getMonth() == 4 ? ' selected' : '') + '>May</option>';
-    html += '<option value="5"' + (now.getMonth() == 5 ? ' selected' : '') + '>June</option>';
-    html += '<option value="6"' + (now.getMonth() == 6 ? ' selected' : '') + '>July</option>';
-    html += '<option value="7"' + (now.getMonth() == 7 ? ' selected' : '') + '>August</option>';
-    html += '<option value="8"' + (now.getMonth() == 8 ? ' selected' : '') + '>September</option>';
-    html += '<option value="9"' + (now.getMonth() == 9 ? ' selected' : '') + '>October</option>';
-    html += '<option value="10"' + (now.getMonth() == 10 ? ' selected' : '') + '>November</option>';
-    html += '<option value="11"' + (now.getMonth() == 11 ? ' selected' : '') + '>December</option>';
+    html += '删除时间：';
+    html += '<select id="gen1Year" name="year">';
+    for (i = 2022; i < 2050; i++) {
+        html += '<option value="' + i + '"' + (now.getFullYear() == i ? ' selected' : '') + '>' + i + '</option>';
+    }
     html += '</select>';
+    html += ' 年 ';
+    html += '<select id="gen1Month" name="month">';
+    for (i = 0; i < 12; i++) {
+        html += '<option value="' + i + '"' + (now.getMonth() == i ? ' selected' : '') + '>' + (i + 1) + '</option>';
+    }
+    html += '</select>';
+    html += ' 月 ';
     html += '<select id="gen1Day" name="day">';
     for (i = 1; i < 32; i++) {
         html += '<option value="' + i + '"' + (now.getDate() == i ? ' selected' : '') + '>' + i + '</option>';
     }
     html += '</select>';
-    html += '<select id="gen1Year" name="year">';
-    for (i = 2010; i < 2016; i++) {
-        html += '<option value="' + i + '"' + (now.getFullYear() == i ? ' selected' : '') + '>' + i + '</option>';
-    }
-    html += '</select>';
-    html += ' at ';
+    html += ' 日 ';
     html += '<select id="gen1Hour" name="hour">';
     for (i = 0; i < 24; i++) {
         html += '<option value="' + i + '"' + (now.getHours() == i ? ' selected' : '') + '>' + (i < 10 ? '0' : '') + i + '</option>';
     }
     html += '</select>';
+    html += ' 时 ';
     html += '<select id="gen1Minute" name="minute">';
     for (i = 0; i < 60; i++) {
         html += '<option value="' + i + '"' + (now.getMinutes() == i ? ' selected' : '') + '>' + (i < 10 ? '0' : '') + i + '</option>';
     }
     html += '</select>';
-    html += ' <input type="submit" value="Generate!" />';
+    html += ' 分 ';
+    html += ' <input type="submit" value="生成！" />';
     html += '</div>';
 
     $("#genForm1Contents").html(html);
     html = '';
     html += '<div>';
-    html += 'Timer Type: ';
-    html += '<input type="radio" name="type2" value="0" checked> Deletion Timer &mdash; ';
-    html += '<input type="radio" name="type2" value="1"> Ban Timer &mdash; ';
-    html += '<input type="radio" name="type2" value="2"> Generic/Other';
+    html += '计时器类型：';
+    html += '<input type="radio" name="type2" value="0" checked> 删除计时器 &mdash; ';
+    html += '<input type="radio" name="type2" value="1"> 封禁计时器 &mdash; ';
+    html += '<input type="radio" name="type2" value="2"> 通用/其它';
     html += '</div>';
     html += '<div>';
-    html += 'Delete after: ';
+    html += '在以下时段后删除：';
     html += '<select id="gen2Day" name="day">';
     for (i = 0; i < 31; i++) {
         html += '<option value="' + i + '">' + i + '</option>';
     }
     html += '</select>';
-    html += ' days ';
+    html += ' 日 ';
     html += '<select id="gen2Hour" name="hour">';
     for (i = 0; i < 24; i++) {
         html += '<option value="' + i + '">' + i + '</option>';
     }
     html += '</select>';
-    html += ' hours ';
+    html += ' 时 ';
     html += '<select id="gen2Minute" name="minute">';
     for (i = 0; i < 60; i++) {
         html += '<option value="' + i + '">' + i + '</option>';
     }
     html += '</select>';
-    html += ' minutes ';
-    html += '<input type="submit" value="Generate!" />';
+    html += ' 分 ';
+    html += '<input type="submit" value="生成！" />';
     $("#genForm2Contents").html(html);
     $('#allcontent').show();
 }
