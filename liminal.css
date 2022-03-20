@@ -6,9 +6,9 @@
 */
 
 @import url('https://fontlibrary.org/face/fantasque-sans-mono');
-@import url("https://github.com/arandintday/thebackhubscn/raw/main/normalize-archived.css");
-@import url("https://github.com/arandintday/thebackhubscn/raw/main/bhl-archived.css");
-@import url("https://github.com/arandintday/thebackhubscn/raw/main/sidebar.css");
+@import url("https://arandintday.github.io/thebackhubscn/normalize-archived.css");
+@import url("https://arandintday.github.io/thebackhubscn/bhl-archived.css");
+@import url("https://arandintday.github.io/thebackhubscn/sidebar.css");
 @import url('https://fonts.googleapis.com/css?family=Basic|IBM+Plex+Mono:400,700');
 @import url('https://cdn.jsdelivr.net/gh/scp-cn-tech/sigma9@cn/modules/colstyle.min.css');
 
@@ -17,7 +17,7 @@
    --theme-id: "liminal";
    --theme-name: "Liminal Theme";
 
-   --logo-image: url("https://github.com/arandintday/thebackhubscn/raw/main/logo.svg");
+   --logo-image: url("https://arandintday.github.io/thebackhubscn/logo.svg");
    --header-title: "The Backrooms";
    --header-subtitle: "你曾经来过这里";
 
