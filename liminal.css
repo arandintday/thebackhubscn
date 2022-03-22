@@ -11,6 +11,7 @@
 @import url("https://arandintday.github.io/thebackhubscn/sidebar.css");
 @import url('https://fonts.googleapis.com/css?family=Basic|IBM+Plex+Mono:400,700');
 @import url('https://cdn.jsdelivr.net/gh/scp-cn-tech/sigma9@cn/modules/colstyle.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 :root {
    --theme-base: "black-highlighter";
