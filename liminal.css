@@ -284,3 +284,12 @@ width: auto !important;
 #side-bar div.menu-item a:not(a:first-child) {
     border-left: var(--sidebar-internal-border-thickness) solid rgba(var(--swatch-border-color),.08)
 }
+.thread-container .post .long .content .image{
+    object-fit: cover;
+    max-height: 2em;
+    width: 100%;
+    transition: max-height 0.5s;
+}
+.thread-container .post .long .content .image:hover{
+   max-height: 100em;
+}
