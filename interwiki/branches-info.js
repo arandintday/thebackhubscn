@@ -13,6 +13,13 @@ var Int = {
         id: "4431268",
         category: ""
     },
+    "es": {
+        name: "Español",
+        head: "En otros idiomas",
+        url: "http://es-backrooms-wiki.wikidot.com/",
+        id: "4745515",
+        category: ""
+    },
     "fr": {
         name: "Français",
         head: "Dans d’autres langues",

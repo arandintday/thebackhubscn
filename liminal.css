@@ -6,18 +6,19 @@
 */
 
 @import url('https://fontlibrary.org/face/fantasque-sans-mono');
-@import url("http://backrooms-wiki.wdfiles.com/local--files/component%3Atheme/normalize-archived.css");
-@import url("http://backrooms-wiki.wdfiles.com/local--files/component%3Atheme/bhl-archived.css");
-@import url("http://backrooms-wiki.wikidot.com/local--files/component:theme/sidebar.css");
+@import url("https://arandintday.github.io/thebackhubscn/normalize-archived.css");
+@import url("https://arandintday.github.io/thebackhubscn/bhl-archived.css");
+@import url("https://arandintday.github.io/thebackhubscn/sidebar.css");
 @import url('https://fonts.googleapis.com/css?family=Basic|IBM+Plex+Mono:400,700');
 @import url('https://cdn.jsdelivr.net/gh/scp-cn-tech/sigma9@cn/modules/colstyle.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 :root {
    --theme-base: "black-highlighter";
    --theme-id: "liminal";
    --theme-name: "Liminal Theme";
 
-   --logo-image: url("http://backrooms-wiki.wikidot.com/local--files/component:theme/logo.svg");
+   --logo-image: url("https://arandintday.github.io/thebackhubscn/logo.svg");
    --header-title: "The Backrooms";
    --header-subtitle: "你曾经来过这里";
 
@@ -282,4 +283,13 @@ width: auto !important;
 }
 #side-bar div.menu-item a:not(a:first-child) {
     border-left: var(--sidebar-internal-border-thickness) solid rgba(var(--swatch-border-color),.08)
+}
+.thread-container .post .long .content .image{
+    object-fit: cover;
+    max-height: 2em;
+    width: 100%;
+    transition: max-height 0.5s;
+}
+.thread-container .post .long .content .image:hover{
+   max-height: 100em;
 }
