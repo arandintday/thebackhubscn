@@ -290,6 +290,6 @@ width: auto !important;
     width: 100%;
     transition: max-height 0.5s;
 }
-.thread-container .post .long .content .image:hover :not(.collapsible-block .image) {
+.thread-container .post .long .content .image:hover:not(.collapsible-block .image) {
    max-height: 100em;
 }
