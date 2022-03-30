@@ -190,65 +190,6 @@ text-align:left !important;
 width: auto !important;
 }
 
-.interwiki1 {
-
-    background: rgb(237,233,223);
-    margin: 10px 15px;
-    padding: 10px;
-    border: 1px solid rgb(80,77,66);
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(102,0,0,.5);
-    box-sizing: border-box;
-    /*width: 15em;*/
-    width: calc(var(--base-font-size*0.93333*19));
-
-}
-
-.interwiki1_title {
-
-    color: rgb(80,77,66);
-    border-bottom: solid 1px rgb(80,77,66);
-    padding-left: 15px;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-size: 8pt;
-    font-weight: bold;
-
-}
-
-.interwiki1_entry {
-
-    position: relative;
-    margin: 2px 0;
-
-}
-
-.interwiki1_entry p::before {
-
-    content: "■";
-    font-size: 9px;
-    color: rgb(80,77,66);
-    position: relative;
-    margin: 0 7px 0 5px;
-    bottom: 3px;
-
-}
-
-.interwiki1_entry a, .interwiki1_entry a:visited {
-
-    font-weight: bold;
-    color: #b01;
-    text-decoration: none;
-    background: transparent;
-
-}
-
-.interwiki1_entry a:hover {
-
-    background-color: transparent;
-    text-decoration: underline;
-
-}
 #side-bar div.menu-item.small a {
     justify-content: center;
     width: auto;
@@ -283,6 +224,9 @@ width: auto !important;
 }
 #side-bar div.menu-item a:not(a:first-child) {
     border-left: var(--sidebar-internal-border-thickness) solid rgba(var(--swatch-border-color),.08)
+}
+#side-bar div.scpnet-interwiki-wrapper {
+    min-height: 300px;
 }
 .thread-container .post .long .content .image{
     object-fit: cover;
