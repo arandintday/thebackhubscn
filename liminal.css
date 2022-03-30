@@ -228,12 +228,12 @@ width: auto !important;
 #side-bar div.scpnet-interwiki-wrapper {
     min-height: 300px;
 }
-.thread-container .post .long .content .image{
+.thread-container .post .long .content .image:not(.collapsible-block .image) {
     object-fit: cover;
     max-height: 2em;
     width: 100%;
     transition: max-height 0.5s;
 }
-.thread-container .post .long .content .image:hover{
+.thread-container .post .long .content .image:hover:not(.collapsible-block .image) {
    max-height: 100em;
 }
