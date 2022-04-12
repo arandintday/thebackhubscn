@@ -231,7 +231,10 @@ function initGenerators() {
     html += '在以下时段后删除：';
     html += '<select id="gen2Day" name="day">';
     for (i = 0; i < 31; i++) {
-        html += '<option value="' + i + '">' + i + '</option>';
+        if (i == 3)
+            html += '<option value="' + i + '" selected="selected">' + i + '</option>';
+        else
+            html += '<option value="' + i + '">' + i + '</option>';
     }
     html += '</select>';
     html += ' 日 ';
