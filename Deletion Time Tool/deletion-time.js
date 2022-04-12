@@ -76,7 +76,7 @@ function generateDeletionLink1() {
     html += '<div id="timerOne">';
     html += '<blockquote><strong>[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 60px;"]]</strong></blockquote>';
     html += '</div>';
-    html += '<button onclick="copyDivToClipboard("timerOne")">点我复制</button>';
+    html += '<button onclick="copyDivToClipboard(\'timerOne\')">点我复制</button>';
     html += '<hr></hr>';
     html += '<div id="timerTwo">';
     html += '<blockquote><strong>由于条目的分数为-X分，现根据[[[deletions-guide|删帖指导]]]，宣告将删除此页：';
@@ -85,17 +85,18 @@ function generateDeletionLink1() {
     html += '<br>';
     html += '如果你不是作者又想要重写该条目，请在此帖回复申请。请先取得作者（或管理员，如果此文档搬运自Fandom的话）的同意，并将原文的源代码复制至沙盒里。除非你是工作人员，否则请勿就申请重写以外的范围回复此帖。</strong></blockquote>';
     html += '</div>';
-    html += '<button onclick="copyDivToClipboard("timerTwo")">点我复制</button>';
+    html += '<button onclick="copyDivToClipboard(\'timerTwo\')">点我复制</button>';
     html += '<hr></hr>';
     html += '<div id="timerThree">';
     html += '<blockquote><strong>由于翻译质量不佳，宣告删除。';
     html += '<br>';
     html += '[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 60px;"]]</strong></blockquote>';
     html += '</div>';
+    html += '<button onclick="copyDivToClipboard(\'timerThree\')">点我复制</button>';
+    html += '<hr></hr>';
     html += '<div>';
     html += '<iframe src="https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + '" style="width: 400px; height: 60px;"></iframe>';
     html += '</div>';
-    html += '<button onclick="copyDivToClipboard("timerThree")">点我复制</button>';
     $('#generated').html(html);
 }
 
@@ -111,7 +112,7 @@ function generateDeletionLink2() {
     html += '<div id="timerOne">';
     html += '<blockquote><strong>[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 60px;"]]</strong></blockquote>';
     html += '</div>';
-    html += '<button onclick="copyDivToClipboard("timerOne")">点我复制</button>';
+    html += '<button onclick="copyDivToClipboard(\'timerOne\')">点我复制</button>';
     html += '<hr></hr>';
     html += '<div id="timerTwo">';
     html += '<blockquote><strong>由于条目的分数为-X分，现根据[[[deletions-guide|删帖指导]]]，宣告将删除此页：';
@@ -120,17 +121,18 @@ function generateDeletionLink2() {
     html += '<br>';
     html += '如果你不是作者又想要重写该条目，请在此帖回复申请。请先取得作者（或管理员，如果此文档搬运自Fandom的话）的同意，并将原文的源代码复制至沙盒里。除非你是工作人员，否则请勿就申请重写以外的范围回复此帖。</strong></blockquote>';
     html += '</div>';
-    html += '<button onclick="copyDivToClipboard("timerTwo")">点我复制</button>';
+    html += '<button onclick="copyDivToClipboard(\'timerTwo\')">点我复制</button>';
     html += '<hr></hr>';
     html += '<div id="timerThree">';
     html += '<blockquote><strong>由于翻译质量不佳，宣告删除。';
     html += '<br>';
     html += '[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 60px;"]]</strong></blockquote>';
     html += '</div>';
+    html += '<button onclick="copyDivToClipboard(\'timerThree\')">点我复制</button>';
+    html += '<hr></hr>';
     html += '<div>';
     html += '<iframe src="https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + '" style="width: 400px; height: 60px;"></iframe>';
     html += '</div>';
-    html += '<button onclick="copyDivToClipboard("timerThree")">点我复制</button>';
     $('#generated').html(html);
 }
 

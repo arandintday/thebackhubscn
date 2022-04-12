@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <title>倒计时工具</title>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <script>
+        //This code is from stackoverflow, original author is J. García
+        function copyDivToClipboard(div_id) {
+            var range = document.createRange();
+            range.selectNode(document.getElementById(div_id));
+            window.getSelection().removeAllRanges(); // clear current selection
+            window.getSelection().addRange(range); // to select text
+            document.execCommand("copy");
+            window.getSelection().removeAllRanges();// to deselect
+        }
+    </script>
+    <script type="text/javascript" src="deletion-time.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <style type="text/css">
+        body {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 10pt;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            margin: 5px 0;
+        }
+        blockquote {
+            margin: 5px 10px;
+            padding: 10px 20px;
+            border: dashed 1px #808080;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="allcontent">
+        <h1>The Backrooms 中文分部倒计时工具</h1>
+        <strong>作者：Aelanna —— 源自<a href="http://aelanna.com/Tools/deletion-time.html">此网站</a>（http://aelanna.com/Tools/deletion-time.html）。</strong>
+        <div><strong>所有的日期与时间都基于你电脑内的当地时间。</strong></div>
+        <div>（也就意味着应该能与 Wikidot 上显示的时间对应。）</div>
+        <h2>在特定时间删除</h2>
+        <form id="genForm1" action="javascript:generateDeletionLink1()">
+            <div id="genForm1Contents">
+            </div>
+        </form>
+        <h2>在特定时间段后删除</h2>
+        <form id="genForm2" action="javascript:generateDeletionLink2()">
+            <div id="genForm2Contents">
+            </div>
+        </form>
+        <hr>
+        <div id="generated">&nbsp;</div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(initGenerators);
+    </script>
+
+</body>
+
+</html>
