@@ -64,36 +64,27 @@ function formatTimeInterval(start, end) {
 };
 
 function generateDeletionLink1() {
-    var month = $('#gen1Month').val();
-    var day = $('#gen1Day').val();
-    var year = $('#gen1Year').val();
-    var hour = $('#gen1Hour').val();
-    var minute = $('#gen1Minute').val();
-    var type = $('input:radio[name=type]:checked').val();
-    var timestamp = new Date(year, month, day, hour, minute, 0, 0);
+    var type = getType(1);
+    var timestamp = getTimeStamp(1);
     var html = '';
     html += '<div>复制此代码以在一个帖子或页面中放入计时器：</div>';
-    html += '<div id="timerOne">';
-    html += '<blockquote><strong>[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 60px;"]]</strong></blockquote>';
+    html += '<div>';
+    html += '<blockquote><strong><a href="javascript:;" onclick="copy(1,1)" id="timer1">[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 60px;"]]</a></strong></blockquote>';
     html += '</div>';
-    html += '<button onclick="copyDivToClipboard(\'timerOne\')">点我复制</button>';
     html += '<hr></hr>';
-    html += '<div id="timerTwo">';
-    html += '<blockquote><strong>由于条目的分数为-X分，现根据[[[deletions-guide|删帖指导]]]，宣告将删除此页：';
+    html += '<div>';
+    html += '<blockquote><strong><a href="javascript:;" onclick="copy(1,2)" id="timer2">由于条目的分数为-X分，现根据[[[deletions-guide|删帖指导]]]，宣告将删除此页：';
     html += '<br>';
     html += '[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 60px;"]]';
     html += '<br>';
-    html += '如果你不是作者又想要重写该条目，请在此帖回复申请。请先取得作者（或管理员，如果此文档搬运自Fandom的话）的同意，并将原文的源代码复制至沙盒里。除非你是工作人员，否则请勿就申请重写以外的范围回复此帖。</strong></blockquote>';
+    html += '如果你不是作者又想要重写该条目，请在此帖回复申请。请先取得作者（或管理员，如果此文档搬运自Fandom的话）的同意，并将原文的源代码复制至沙盒里。除非你是工作人员，否则请勿就申请重写以外的范围回复此帖。</a></strong></blockquote>';
     html += '</div>';
-    html += '<button onclick="copyDivToClipboard(\'timerTwo\')">点我复制</button>';
     html += '<hr></hr>';
-    html += '<div id="timerThree">';
-    html += '<blockquote><strong>由于翻译质量不佳，宣告删除。';
+    html += '<div>';
+    html += '<blockquote><strong><a href="javascript:;" onclick="copy(1,3)" id="timer3">由于翻译质量不佳，宣告删除。\n';
     html += '<br>';
     html += '[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 60px;"]]</strong></blockquote>';
     html += '</div>';
-    html += '<button onclick="copyDivToClipboard(\'timerThree\')">点我复制</button>';
-    html += '<hr></hr>';
     html += '<div>';
     html += '<iframe src="https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + '" style="width: 400px; height: 60px;"></iframe>';
     html += '</div>';
@@ -101,39 +92,113 @@ function generateDeletionLink1() {
 }
 
 function generateDeletionLink2() {
-    var day = $('#gen2Day').val();
-    var hour = $('#gen2Hour').val();
-    var minute = $('#gen2Minute').val();
-    var type = $('input:radio[name=type2]:checked').val();
-    var now = new Date();
-    var timestamp = new Date(now.getTime() + (day * 24 * 60 * 60 * 1000) + (hour * 60 * 60 * 1000) + (minute * 60 * 1000));
+    var type = getType(2);
+    var timestamp = getTimeStamp(2);
     var html = '';
     html += '<div>复制此代码以在一个帖子或页面中放入计时器：</div>';
-    html += '<div id="timerOne">';
-    html += '<blockquote><strong>[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 60px;"]]</strong></blockquote>';
+    html += '<div>';
+    html += '<blockquote><strong><a href="javascript:;" onclick="copy(2,1)">[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 60px;"]]</a></strong></blockquote>';
     html += '</div>';
-    html += '<button onclick="copyDivToClipboard(\'timerOne\')">点我复制</button>';
     html += '<hr></hr>';
-    html += '<div id="timerTwo">';
-    html += '<blockquote><strong>由于条目的分数为-X分，现根据[[[deletions-guide|删帖指导]]]，宣告将删除此页：';
+    html += '<div>';
+    html += '<blockquote><strong><a href="javascript:;" onclick="copy(2,2)">由于条目的分数为-X分，现根据[[[deletions-guide|删帖指导]]]，宣告将删除此页：';
     html += '<br>';
     html += '[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 60px;"]]';
     html += '<br>';
-    html += '如果你不是作者又想要重写该条目，请在此帖回复申请。请先取得作者（或管理员，如果此文档搬运自Fandom的话）的同意，并将原文的源代码复制至沙盒里。除非你是工作人员，否则请勿就申请重写以外的范围回复此帖。</strong></blockquote>';
+    html += '如果你不是作者又想要重写该条目，请在此帖回复申请。请先取得作者（或管理员，如果此文档搬运自Fandom的话）的同意，并将原文的源代码复制至沙盒里。除非你是工作人员，否则请勿就申请重写以外的范围回复此帖。</a></strong></blockquote>';
     html += '</div>';
-    html += '<button onclick="copyDivToClipboard(\'timerTwo\')">点我复制</button>';
     html += '<hr></hr>';
-    html += '<div id="timerThree">';
-    html += '<blockquote><strong>由于翻译质量不佳，宣告删除。';
+    html += '<div>';
+    html += '<blockquote><strong><a href="javascript:;" onclick="copy(2,3)">由于翻译质量不佳，宣告删除。';
     html += '<br>';
     html += '[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 60px;"]]</strong></blockquote>';
     html += '</div>';
-    html += '<button onclick="copyDivToClipboard(\'timerThree\')">点我复制</button>';
-    html += '<hr></hr>';
     html += '<div>';
     html += '<iframe src="https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + '" style="width: 400px; height: 60px;"></iframe>';
     html += '</div>';
     $('#generated').html(html);
+}
+
+function getType(linkType) {
+    var type = $('input:radio[name=type' + linkType + ']:checked').val();
+    return type;
+}
+
+function getTimeStamp(linkType) {
+    var month = $('#gen' + linkType + 'Month').val();
+    var day = $('#gen' + linkType + 'Day').val();
+    var year = $('#gen' + linkType + 'Year').val();
+    var hour = $('#gen' + linkType + 'Hour').val();
+    var minute = $('#gen' + linkType + 'Minute').val();
+    var now = new Date();
+    switch (linkType) {
+        case 1:
+            var timestamp = new Date(year, month, day, hour, minute, 0, 0);
+            break;
+        case 2:
+            var timestamp = new Date(now.getTime() + (day * 24 * 60 * 60 * 1000) + (hour * 60 * 60 * 1000) + (minute * 60 * 1000));
+            break;
+    }
+    return timestamp;
+}
+
+function copy(linkType, timeType) {
+    var timestamp = getTimeStamp(linkType);
+    var type = getType(linkType);
+    switch (timeType) {
+        case 1:
+            setCopy('[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 60px;"]]');
+            break;
+        case 2:
+            setCopy('由于条目的分数为-X分，现根据[[[deletions-guide|删帖指导]]]，宣告将删除此页：\n[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 60px;"]]\n如果你不是作者又想要重写该条目，请在此帖回复申请。请先取得作者（或管理员，如果此文档搬运自Fandom的话）的同意，并将原文的源代码复制至沙盒里。除非你是工作人员，否则请勿就申请重写以外的范围回复此帖。');
+            break;
+        case 3:
+            setCopy('由于翻译质量不佳，宣告删除。\n[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + ' style="width: 400px; height: 60px;"]]');
+            break;
+    }
+}
+
+//复制函数，复制自某使用 Discuz! 的论坛，里面的内容我只能看懂一半，所以懒得删
+function setCopy(text, msg) {
+    var content = document.createElement('textarea');
+    content.style.fontSize = '12pt';
+    content.style.border = '0';
+    content.style.padding = '0';
+    content.style.margin = '0';
+    content.style.position = 'absolute';
+    content.style.left = '-9999px';
+    var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+    content.style.top = yPosition + 'px';
+    content.setAttribute('readonly', '');
+    content.value = text;
+    var ap = document.getElementById('append_parent');
+    ap.appendChild(content);
+    content.select();
+    content.setSelectionRange(0, content.value.length);
+    try {
+        var success = document.execCommand('copy', false, null);
+    } catch (e) {
+        var success = false;
+    }
+    ap.removeChild(content);
+    if (success) {
+        if (msg) {
+            showPrompt(null, null, '<span>' + msg + '</span>', 1500);
+        }
+    } else if (BROWSER.ie) {
+        var r = clipboardData.setData('Text', text);
+        if (r) {
+            if (msg) {
+                showPrompt(null, null, '<span>' + msg + '</span>', 1500);
+            }
+        } else {
+            showDialog('<div class="c"><div style="width: 200px; text-align: center;">复制失败，请选择“允许访问”</div></div>', 'alert');
+        }
+    } else {
+        var msg = '<div class="c"><div style="width: 200px; text-align: center; text-decoration:underline;">点此复制到剪贴板</div>' + AC_FL_RunContent('id', 'clipboardswf', 'name', 'clipboardswf', 'devicefont', 'false', 'width', '200', 'height', '40', 'src', STATICURL + 'image/common/clipboard.swf', 'menu', 'false', 'allowScriptAccess', 'sameDomain', 'swLiveConnect', 'true', 'wmode', 'transparent', 'style', 'margin-top:-20px') + '</div>';
+        showDialog(msg, 'info');
+        CLIPBOARDSWFDATA = text;
+    }
 }
 
 var timestamp;
@@ -188,9 +253,9 @@ function initGenerators() {
     }
     html += '<div>';
     html += '计时器类型：';
-    html += '<input type="radio" name="type" value="0" checked> 删除计时器 &mdash; ';
-    html += '<input type="radio" name="type" value="1"> 封禁计时器 &mdash; ';
-    html += '<input type="radio" name="type" value="2"> 通用/其它';
+    html += '<input type="radio" name="type1" value="0" checked> 删除计时器 &mdash; ';
+    html += '<input type="radio" name="type1" value="1"> 封禁计时器 &mdash; ';
+    html += '<input type="radio" name="type1" value="2"> 通用/其它';
     html += '</div>';
     html += '<div>';
     html += '删除时间：';
