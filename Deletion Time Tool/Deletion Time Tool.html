@@ -4,19 +4,6 @@
 <head>
     <title>倒计时工具</title>
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-    <script>
-        //This code is from stackoverflow, original author is J. García
-        function copyDivToClipboard(div_id) {
-            var range = document.createRange();
-            range.selectNode(document.getElementById(div_id));
-            window.getSelection().removeAllRanges(); // clear current selection
-            window.getSelection().addRange(range); // to select text
-            document.execCommand("copy");
-            window.getSelection().removeAllRanges();// to deselect
-        }
-    </script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/arandintday/thebackhubscn@master/Deletion%20Time%20Tool/deletion-time.js"></script>
     <style type="text/css">
         body {
             font-family: Verdana, Arial, Helvetica, sans-serif;
