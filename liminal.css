@@ -246,3 +246,19 @@ blockquote {
 .thread-container .post .long .content .image:hover:not(.collapsible-block .image) {
     max-height: 100em;
 }
+
+div.scpnet-interwiki-wrapper {
+    margin: 0;
+    width: auto;
+}
+iframe.scpnet-interwiki-frame {
+    border: inherit;
+    width: 100%;
+    height: 230px;
+}
+@media (min-width:768px) {
+    div.scpnet-interwiki-wrapper,
+    iframe.scpnet-interwiki-frame {
+        width: 100%;
+    }
+}
