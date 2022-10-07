@@ -9,6 +9,7 @@
 @import url("https://arandintday.github.io/thebackhubscn/normalize-archived.css");
 @import url("https://arandintday.github.io/thebackhubscn/bhl-archived.css");
 @import url("https://arandintday.github.io/thebackhubscn/sidebar.css");
+@import url("https://arandintday.github.io/thebackhubscn/banlist.css");
 @import url('https://fonts.googleapis.com/css?family=Basic|IBM+Plex+Mono:400,700');
 @import url('https://fastly.jsdelivr.net/gh/scp-cn-tech/sigma9@cn/modules/colstyle.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
@@ -287,17 +288,4 @@ iframe.scpnet-interwiki-frame {
     margin: unset;
     border: unset;
     margin-bottom: 1em;
-}
-
-/* 隐藏开盒信息 */
-tr#revision-row-1496157767, tr#revision-row-1496157716, tr#revision-row-1496157676, 
-tr#revision-row-1496157704, tr#revision-row-1496157668, tr#revision-row-1496157666, 
-tr#revision-row-1496157663, tr#revision-row-1496157658, tr#revision-row-1496157655, 
-tr#revision-row-1496157652, tr#revision-row-1496157650, tr#revision-row-1496157647, 
-tr#revision-row-1496157642, tr#revision-row-1496157633, tr#revision-row-1496157630, 
-tr#revision-row-1496157624, tr#revision-row-1496157621, tr#revision-row-1496157617, 
-tr#revision-row-1496157611, tr#revision-row-1496157604, tr#revision-row-1496157598, 
-tr#revision-row-1496157594, tr#revision-row-1496157589, tr#revision-row-1496157581, 
-tr#revision-row-1496157537 {
-   display: none !important;
 }
