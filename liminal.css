@@ -291,6 +291,6 @@ iframe.scpnet-interwiki-frame {
 }
 
 /* 去除用户信息中头像白边 */
-#odialog-container .owindow .content.modal-body img {
-    background-color: transparent !important;
+#odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child {
+    background-color: initial!important;
 }
