@@ -289,3 +289,8 @@ iframe.scpnet-interwiki-frame {
     border: unset;
     margin-bottom: 1em;
 }
+
+/* 去除用户信息中头像白边 */
+#odialog-container .owindow .content.modal-body img {
+    background-color: transparent !important;
+}
