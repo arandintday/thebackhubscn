@@ -5,12 +5,12 @@
    Edited by Lambda Core & irisluscinia & hoah2333
 */
 
-@import url('https://fontlibrary.org/face/fantasque-sans-mono');
+//@import url('https://fontlibrary.org/face/fantasque-sans-mono');
 @import url("https://arandintday.github.io/thebackhubscn/normalize-archived.css");
 @import url("https://arandintday.github.io/thebackhubscn/bhl-archived.css");
 @import url("https://arandintday.github.io/thebackhubscn/sidebar.css");
 @import url("https://arandintday.github.io/thebackhubscn/banlist.css");
-@import url('https://fonts.googleapis.com/css?family=Basic|IBM+Plex+Mono:400,700');
+//@import url('https://fonts.googleapis.com/css?family=Basic|IBM+Plex+Mono:400,700');
 @import url('https://fastly.jsdelivr.net/gh/scp-cn-tech/sigma9@cn/modules/colstyle.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 :root {
@@ -20,10 +20,10 @@
     --logo-image: url("https://arandintday.github.io/thebackhubscn/logo.svg");
     --header-title: "The Backrooms";
     --header-subtitle: "你曾经来过这里";
-    --body-font: proxima-nova, sans-serif;
-    --header-font: 'IBM Plex Mono', '等线', sans-serif;
-    --title-font: 'Fantasque Sans Mono', monospace;
-    --mono-font: 'Fantasque Sans Mono', monospace;
+    --body-font: Raleway, Noto Sans SC, Arimo, Verdana, Geneva, sans-serif;
+    --header-font: Poppins, Noto Sans SC, Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
+    --title-font: Poppins, Noto Sans SC, Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
+    --mono-font: Recursive, 幼圆, Noto Serif SC, Consolas, monaco, monospace;
     --white-monochrome: 237, 233, 223;
     --pale-gray-monochrome: 255, 251, 240;
     --light-gray-monochrome: 160, 160, 160;
