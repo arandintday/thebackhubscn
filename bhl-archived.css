@@ -3,8 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0,0,1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;700;900&display=swap');
 @supports(display:grid) {
      :root {
         --theme-base: "black-highlighter";
@@ -13,10 +11,10 @@
         --logo-image: url(https://scp-wiki.wdfiles.com/local--files/component:pride-highlighter/lgbtqp_logo.svg);
         --header-title: "SCP Foundation";
         --header-subtitle: "SECURE, CONTAIN, PROTECT";
-        --body-font: Raleway, Noto Sans SC, Arimo, Verdana, Geneva, sans-serif;
-        --header-font: Poppins, Noto Sans SC, Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
-        --title-font: Poppins, Noto Sans SC, Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
-        --mono-font: Recursive, 幼圆, Noto Serif SC, Consolas, monaco, monospace;
+        --body-font: Raleway, Arimo, Verdana, Geneva, sans-serif;
+        --header-font: Poppins, Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
+        --title-font: Poppins, Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
+        --mono-font: Recursive, Consolas, monaco, monospace;
         --wght: 400;
         --ital: 0;
         --mono-wght: 350;
