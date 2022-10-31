@@ -5,12 +5,15 @@
    Edited by Lambda Core & irisluscinia & hoah2333
 */
 
-//@import url('https://fontlibrary.org/face/fantasque-sans-mono');
+/*
+@import url('https://fontlibrary.org/face/fantasque-sans-mono');
+@import url('https://fonts.googleapis.com/css?family=Basic|IBM+Plex+Mono:400,700');
+*/
 @import url("https://arandintday.github.io/thebackhubscn/normalize-archived.css");
 @import url("https://arandintday.github.io/thebackhubscn/bhl-archived.css");
 @import url("https://arandintday.github.io/thebackhubscn/sidebar.css");
 @import url("https://arandintday.github.io/thebackhubscn/banlist.css");
-//@import url('https://fonts.googleapis.com/css?family=Basic|IBM+Plex+Mono:400,700');
+
 @import url('https://fastly.jsdelivr.net/gh/scp-cn-tech/sigma9@cn/modules/colstyle.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 :root {
