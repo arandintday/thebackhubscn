@@ -1,32 +1,24 @@
 @supports(display: grid) {
-    :root {
-        /* header measurements */
-        --header-height-on-desktop: 10rem;
-        --header-height-on-mobile: 10rem;
-        --header-h1-font-size: clamp(2rem, 5vw, 2.8125rem);
-        --header-h2-font-size: clamp(0.875rem, 3vw, 0.9375rem);
-    }
- 
     #header {
         --search-textbox-text-color: var(--swatch-secondary-color);
         background: none;
     }
- 
+
     #header::before {
         content: " ";
         position: absolute;
         width: 100%;
         height: 100%;
         left: 0;
-        top: 0.75rem;
+        top: -2rem;
         background-image: var(--logo-image);
         background-repeat: no-repeat;
         background-position: center 0;
-        background-size: auto calc(var(--header-height-on-desktop) - 1.5rem);
-        opacity: 0.8;
+        background-size: auto calc(var(--header-height-on-desktop) + 5.5rem);
+        opacity: 0.4;
         pointer-events: none;
     }
- 
+
     #header h1,
     #header h2 {
         margin: 0;
@@ -40,7 +32,7 @@
         align-items: center;
         justify-content: center;
     }
- 
+
     #header h1 a,
     #header h1 a::before,
     #header h2 span,
@@ -51,37 +43,37 @@
         display: block;
         text-align: center;
     }
- 
+
     #header h1 {
         z-index: 1;
     }
- 
+
     #header h1 a::before,
     #header h1 a::after {
         content: var(--header-title);
     }
- 
+
     #header h1 a::before {
         color: rgb(var(--swatch-text-tertiary-color));
         z-index: -1;
-        -webkit-text-stroke: 0.325rem rgb(var(--swatch-text-tertiary-color));
+        -webkit-text-stroke: 0.2rem rgb(var(--swatch-text-tertiary-color));
     }
- 
+
     #header h1 a::after {
         color: rgb(var(--swatch-headerh1-color));
         z-index: 1;
     }
- 
+
     #header h2 {
         z-index: 0;
         text-transform: uppercase;
         pointer-events: none;
     }
- 
+
     #header h2 span {
-        margin-top: calc(var(--header-height-on-mobile)/2 + var(--header-h1-font-size)/2 - 2em);
+        margin-top: calc(var(--header-height-on-mobile)/2 + var(--header-h1-font-size)/2);
     }
- 
+
     #header h2 span::before,
     #header h2 span::after {
         --wght: 600;
@@ -92,33 +84,32 @@
         width: 100%;
         text-align: center;
     }
- 
+
     #header h2 span::before {
-        -webkit-text-stroke: 0.25rem rgb(var(--swatch-text-tertiary-color));
+        -webkit-text-stroke: 0.2rem rgb(var(--swatch-text-tertiary-color));
     }
- 
+
     #header h2 span::after {
         color: rgb(var(--swatch-headerh2-color));
         z-index: 1;
     }
- 
+
     #search-top-box form[id="search-top-box-form"]:not(:focus-within) input[type="text"] {
         color: rgba(0, 0, 0, 0);
     }
- 
+
     @media (min-width: 36rem) {
- 
         #login-status {
             flex-grow: 1;
             left: 3%;
             right: initial;
         }
- 
+
         #login-status::before {
             --mask-image: none;
             background-color: transparent;
         }
- 
+
         #login-status:not(:focus-within) {
             color: rgb(var(--login-line-divider-color));
             -webkit-user-select: initial;
@@ -126,18 +117,18 @@
             -ms-user-select: initial;
             user-select: initial;
         }
- 
+
         #login-status #account-topbutton,
         #login-status:not(:focus-within) #account-topbutton {
             --clip-path:
-                    polygon( 0 0, 100% 0, 100% 100%, 0 100% );
+                polygon(0 0, 100% 0, 100% 100%, 0 100%);
             background-color: rgba(var(--login-arrow-color), 0);
- 
+
         }
- 
-        #login-status #account-topbutton::before{
+
+        #login-status #account-topbutton::before {
             --clip-path:
-                    polygon( 30% 35%, 70% 35%, 50% 60%, 50% 60% );
+                polygon(30% 35%, 70% 35%, 50% 60%, 50% 60%);
             --mask-image: initial;
             content: "";
             position: absolute;
@@ -149,55 +140,53 @@
             -webkit-clip-path: var(--clip-path);
             clip-path: var(--clip-path);
         }
- 
+
         #login-status #account-topbutton::before,
         #login-status:not(:focus-within) #account-topbutton::before,
         #login-status:not(:focus-within) #account-topbutton:hover::before {
             --clip-path:
-                    polygon( 30% 35%, 70% 35%, 50% 60%, 50% 60% );
+                polygon(30% 35%, 70% 35%, 50% 60%, 50% 60%);
             --mask-image: initial;
         }
- 
+
         #login-status:not(:focus-within) #account-topbutton::after {
             display: none;
         }
- 
+
         #login-status:not(:focus-within) *:not(#account-topbutton):not([href*="account/messages"]) {
             --clip-path:
-                    polygon(
-                        0 0,
-                        100% 0,
-                        100% 100%,
-                        0 100%
-                    );
+                polygon(0 0,
+                    100% 0,
+                    100% 100%,
+                    0 100%);
             pointer-events: all;
             -webkit-clip-path: var(--clip-path);
             clip-path: var(--clip-path);
         }
- 
+
         #login-status:not(:focus-within) *:not(#account-topbutton):not(#account-options):not([href*="account/messages"]) {
             opacity: 1;
         }
- 
+
         #login-status #my-account {
             --wght: 300;
         }
- 
+
         #account-options {
             background: var(--gradient-header);
         }
- 
+
         #search-top-box {
             top: 1.5em;
             right: 3%;
             background: rgba(var(--search-focus-textbox-bg-color), 0.4);
             box-shadow: calc(var(--search-height) / 2 * -1) 0 calc(var(--search-height) / 2) rgba(var(--search-focus-textbox-bg-color), 0.4);
         }
- 
-        #search-top-box:focus-within ~ #login-status {
+
+        #search-top-box:focus-within~#login-status {
             opacity: 1;
         }
- 
+
         #search-top-box::after {
             transition:
                 background-color 150ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -210,35 +199,31 @@
                 clip-path 150ms cubic-bezier(0.4, 0, 0.2, 1),
                 -webkit-clip-path 150ms cubic-bezier(0.4, 0, 0.2, 1);
         }
- 
+
         #search-top-box:not(:focus-within)::after {
             --clip-path:
-                    polygon(
-                        0 0,
-                        100% 0,
-                        100% 100%,
-                        0% 100%
-                    );
+                polygon(0 0,
+                    100% 0,
+                    100% 100%,
+                    0% 100%);
             background-color: rgba(var(--search-icon-bg-color, --dark-accent), 1);
             -webkit-clip-path: var(--clip-path);
             clip-path: var(--clip-path);
         }
- 
+
         #search-top-box:not(:focus-within):hover::after {
             --clip-path:
-                    polygon(
-                        0 0,
-                        100% 0,
-                        100% 100%,
-                        0 100%
-                    );
+                polygon(0 0,
+                    100% 0,
+                    100% 100%,
+                    0 100%);
             background-color: rgb(var(--search-icon-hover-bg-color));
         }
- 
+
         #search-top-box form[id="search-top-box-form"]:not(:focus-within) {
             max-width: var(--search-width);
         }
- 
+
         #search-top-box form[id="search-top-box-form"]:not(:focus-within) input[type="text"] {
             max-width: var(--search-width);
             padding: 0 var(--search-height) 0 1em;
@@ -247,27 +232,11 @@
             color: rgba(var(--search-textbox-text-color), 0.4);
             cursor: pointer;
         }
- 
+
         #search-top-box form[id="search-top-box-form"]:not(:focus-within) input[type="submit"],
         #search-top-box form[id="search-top-box-form"]:focus-within input[type="submit"] {
             pointer-events: all;
             border: none;
         }
- 
-    }
- 
-    #page-title::after,
-    .meta-title::after,
-    #page-title::before,
-    .meta-title::before {
-        content: "";
-        flex-grow: 1;
-        height: 0.0625rem;
-        background: rgb(var(--swatch-primary));
-    }
- 
-    #page-title::before,
-    .meta-title::before {
-        margin: auto 1.25rem auto auto;
     }
 }
