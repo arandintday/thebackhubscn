@@ -11,12 +11,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;700;900&display=swap');
-@import url("https://arandintday.github.io/thebackhubscn/centered-header.css");
 */
 @import url("https://nu-scptheme.github.io/Black-Highlighter/css/normalize.css");
-@import url("https://hoah2333.github.io/thebackhubscn/bhl-archived.css");
-@import url("https://hoah2333.github.io/thebackhubscn/sidebar.css");
-@import url("https://hoah2333.github.io/thebackhubscn/centered-header.css");
+@import url("https://arandintday.github.io/thebackhubscn/bhl-archived.css");
+@import url("https://arandintday.github.io/thebackhubscn/sidebar.css");
+@import url("https://arandintday.github.io/thebackhubscn/centered-header.css");
 @import url("https://arandintday.github.io/thebackhubscn/banlist.css");
 @import url('https://fastly.jsdelivr.net/gh/scp-cn-tech/sigma9@cn/modules/colstyle.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
