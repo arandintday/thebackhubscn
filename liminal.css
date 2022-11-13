@@ -24,16 +24,16 @@
     --theme-base: "black-highlighter";
     --theme-id: "liminal";
     --theme-name: "Liminal Theme";
-   	/* Header */
+    /* Header */
     --logo-image: url("https://arandintday.github.io/thebackhubscn/logo.svg");
     --header-title: "The Backrooms";
     --header-subtitle: "你曾经来过这里";
     /* Fonts */
-	--body-font: Inter, "Noto Sans SC", Verdana, "Microsoft YaHei", "微软雅黑", Geneva, sans-serif, STXihei, "华文细黑";
-	--UI-font: PTRootUI, "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
-	--header-font: var(--body-font);
-	--title-font: var(--body-font);
-	--mono-font: Recursive, "Noto Serif SC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
+    --body-font: Inter, "Noto Sans SC", Verdana, "Microsoft YaHei", "微软雅黑", Geneva, sans-serif, STXihei, "华文细黑";
+    --UI-font: PTRootUI, "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
+    --header-font: var(--body-font);
+    --title-font: var(--body-font);
+    --mono-font: Recursive, "Noto Serif SC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
     --white-monochrome: 237, 233, 223;
     --pale-gray-monochrome: 255, 251, 240;
     --light-pale-gray-monochrome: 255, 251, 240;
@@ -111,17 +111,21 @@ div.scpnet-interwiki-wrapper {
     margin: 0;
     width: auto;
 }
+
 iframe.scpnet-interwiki-frame {
     border: inherit;
     width: 100%;
     height: 230px;
 }
+
 @media (min-width:768px) {
+
     div.scpnet-interwiki-wrapper,
     iframe.scpnet-interwiki-frame {
         width: 100%;
     }
 }
+
 /* Content Warning */
 #page-content div#u-adult-warning {
     width: fit-content;
@@ -133,15 +137,18 @@ iframe.scpnet-interwiki-frame {
     text-align: center;
     font-weight: bold;
 }
-#page-content div#u-adult-warning > div#u-adult-header {
+
+#page-content div#u-adult-warning>div#u-adult-header {
     font-size: 300%;
     text-shadow: 1px 2px 3px rgba(0, 0, 0, .5);
     color: #901;
 }
-#page-content div#u-adult-warning > div#u-adult-header p {
+
+#page-content div#u-adult-warning>div#u-adult-header p {
     margin: 0;
 }
-#page-content div#u-adult-warning > .error-block {
+
+#page-content div#u-adult-warning>.error-block {
     color: unset;
     padding: unset;
     margin: unset;
@@ -151,66 +158,69 @@ iframe.scpnet-interwiki-frame {
 
 /* 去除用户信息中头像白边 */
 #odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child {
-    background-color: initial!important;
+    background-color: initial !important;
 }
 
 /* 新增信息翻译 */
 form#edit-page-form .edit-page-bottomtable tr>td:nth-of-type(1)>div:nth-of-type(1)::before {
-	content: "简要修改说明";
+    content: "简要修改说明";
 }
 
 table.page-history tr:nth-of-type(2) td:nth-of-type(1)::before {
-	content: "版本";
+    content: "版本";
 }
 
 table.page-history tr:nth-of-type(2) td:nth-of-type(3)::before {
-	content: "标记";
+    content: "标记";
 }
 
 table.page-history tr:nth-of-type(2) td:nth-of-type(4)::before {
-	content: "操作";
+    content: "操作";
 }
 
 table.page-history tr:nth-of-type(2) td:nth-of-type(5)::before {
-	content: "更新者";
+    content: "更新者";
 }
 
 table.page-history tr:nth-of-type(2) td:nth-of-type(6)::before {
-	content: "日期";
+    content: "日期";
 }
 
 #site-tools-box::before {
-	content: "网站工具";
-}
-    
-#main-content .page-tags::before {
-	content: "标签\0021b4";
+    content: "网站工具";
 }
 
-#login-status #account-options li > a[href*="/messages"]::after {
-	content: "消息";
+#main-content .page-tags::before {
+    content: "标签\0021b4";
+}
+
+#login-status #account-options li>a[href*="/messages"]::after {
+    content: "消息";
 }
 
 [id*="u-credit"] div.credit-back::before {
-	content: "返回";
+    content: "返回";
 }
 
 #toc #toc-action-bar a::after {
-	content: "目录";
+    content: "目录";
 }
 
 /* 侧边栏logo适配 */
 #side-bar .side-block.media a[href*="discord"] {
     --social-logo-mask: var(--discord-mask-round);
 }
+
 #side-bar .side-block.media a[href*="b23.tv"] {
     --social-logo-mask: var(--bilibili-mask-round);
     --social-color: var(--bilibili-icon-color);
 }
+
 #side-bar .side-block.media a[href*="fandom"] {
     --social-logo-mask: var(--fandom-mask-round);
     --social-color: var(--fandom-icon-color);
 }
+
 #side-bar .side-block.media a[href*="tieba"] {
     --social-logo-mask: var(--tieba-mask-round);
     --social-color: var(--tieba-icon-color);
