@@ -48,6 +48,8 @@
     --dark-accent: 140, 136, 126;
     --alt-accent: 221, 102, 17;
     --background-gradient-distance: 0rem;
+    --link-color: 230, 23, 68;
+    --hover-link-color: 230, 23, 68;
     --gradient-header: linear-gradient(to top, rgba(var(--medium-accent)) 0%, rgba(var(--medium-accent), 0.90) 100%);
     --diagonal-stripes: linear-gradient(transparent 0);
 }
