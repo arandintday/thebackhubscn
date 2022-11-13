@@ -12,10 +12,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;700;900&display=swap');
 */
+/* 暂时不使用新版居中版头
+@import url("https://arandintday.github.io/thebackhubscn/centered-header.css");
+*/
 @import url("https://nu-scptheme.github.io/Black-Highlighter/css/normalize.css");
 @import url("https://arandintday.github.io/thebackhubscn/bhl-new.css");
 @import url("https://arandintday.github.io/thebackhubscn/sidebar.css");
-@import url("https://arandintday.github.io/thebackhubscn/centered-header.css");
 @import url("https://arandintday.github.io/thebackhubscn/banlist.css");
 @import url('https://fastly.jsdelivr.net/gh/scp-cn-tech/sigma9@cn/modules/colstyle.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
@@ -52,6 +54,21 @@
     --hover-link-color: 230, 23, 68;
     --gradient-header: linear-gradient(to top, rgba(var(--medium-accent)) 0%, rgba(var(--medium-accent), 0.90) 100%);
     --diagonal-stripes: linear-gradient(transparent 0);
+}
+
+#skrollr-body {
+    background-image: radial-gradient(circle, rgb(var(--medium-accent)) 50%, transparent 0);
+    background-repeat: repeat;
+    background-size: 0.25em 0.25em;
+    width: 100%;
+    height: 7.5rem;
+}
+
+#container {
+    background-image: radial-gradient(circle, rgb(var(--medium-accent), 0.05) 50%, transparent 0);
+    background-size: 0.25em 0.25em;
+    background-repeat: repeat;
+    background-attachment: fixed;
 }
 
 .styled-quote {
