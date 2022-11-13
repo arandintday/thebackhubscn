@@ -71,6 +71,52 @@
     background-attachment: fixed;
 }
 
+
+#header {
+    background-image: none;
+}
+
+#header::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-image: var(--logo-image);
+    background-size: auto 16rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+}
+
+#header h1,
+#header h1 a {
+    position: absolute;
+    top: 1rem;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+}
+
+#header h2,
+#header h2 span,
+#header h2 span::before {
+    position: absolute;
+    top: 2rem;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#header h1 a::before,
+#header h2 span::before {
+    text-shadow: .063rem 0.1rem 0.1rem #0c0c0c;
+}
+
 .styled-quote {
     background-color: rgb(var(--pale-gray-monochrome));
     border-left: 0.5rem solid rgba(var(--gray-monochrome));
