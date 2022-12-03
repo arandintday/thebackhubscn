@@ -1,4 +1,5 @@
-@import ("./liminal.css");
+@import url("https://fastly.jsdelivr.net/gh/arandintday/thebackhubscn@main/liminal.css");
+
 :root {
    --header-title: "The Backrooms中文沙盒站";
    --header-subtitle: "创造与超越";
