@@ -22,7 +22,7 @@
     --theme-base: "black-highlighter";
     --theme-id: "liminal";
     --theme-name: "Liminal Theme";
-    --logo-image: url("https://arandintday.github.io/thebackhubscn/logo.svg");
+    --logo-image: url("./logo.svg");
     --header-title: "The Backrooms";
     --header-subtitle: "你曾经来过这里";
     --body-font: Inter, Noto Sans SC, Arimo, Verdana, Geneva, sans-serif;
