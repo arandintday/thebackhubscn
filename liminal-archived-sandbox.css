@@ -1,0 +1,6 @@
+@import ("./liminal.css");
+:root {
+   --header-title: "The Backrooms中文沙盒站";
+   --header-subtitle: "创造与超越";
+   --medium-accent: 111, 168, 220;
+}
