@@ -28,7 +28,7 @@
     --body-font: Inter, Noto Sans SC, Arimo, Verdana, Geneva, sans-serif;
     --header-font: Inter, Noto Sans SC, Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
     --title-font: var(--header-font);
-    --mono-font: Recursive, 幼圆, Noto Serif SC, Consolas, monaco, monospace;
+    --mono-font: Recursive, Noto Serif SC, Consolas, monaco, monospace;
     --white-monochrome: 237, 233, 223;
     --pale-gray-monochrome: 255, 251, 240;
     --light-gray-monochrome: 160, 160, 160;
