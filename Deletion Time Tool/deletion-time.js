@@ -69,7 +69,8 @@ function generateDeletionLink1() {
     var custom1 = getCustom(1, $('#inputArea1').val());
     var custom2 = getCustom(2, $('#inputArea2').val());
     var html = '';
-    html += '<div>复制此代码以在一个帖子或页面中放入计时器：</div>';
+    html += '<div>复制此代码以在一个帖子或页面中放入计时器。<br>
+    html += '你亦可以直接点击某一个引用块，此做法将直接在剪贴板内写入本引用块的内容：</div>';
     html += '<a href="javascript:;" onclick="copy(1,1)" class="timer">';
     html += '<blockquote><strong>[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + custom1 + custom2 + ' style="width: 400px; height: 60px;"]]</strong></blockquote>';
     html += '</a';
@@ -79,7 +80,7 @@ function generateDeletionLink1() {
     html += '<br>';
     html += '[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + custom1 + custom2 + ' style="width: 400px; height: 60px;"]]';
     html += '<br>';
-    html += '如果你不是作者又想要重写该条目，请在此帖回复申请。请先取得作者（或管理员，如果此文档搬运自Fandom的话）的同意，并将原文的源代码复制至沙盒里。除非你是工作人员，否则请勿就申请重写以外的范围回复此帖。</strong></blockquote>';
+    html += '如果你不是作者又想要重写该条目，请在此帖回复申请。请先取得作者的同意，并将原文的源代码复制至沙盒里。除非你是工作人员，否则请勿就申请重写以外的范围回复此帖。</strong></blockquote>';
     html += '</a>';
     html += '<hr></hr>';
     html += '<a href="javascript:;" onclick="copy(1,3)" class="timer">';
@@ -99,7 +100,8 @@ function generateDeletionLink2() {
     var custom1 = getCustom(1, $('#inputArea3').val());
     var custom2 = getCustom(2, $('#inputArea4').val());
     var html = '';
-    html += '<div>复制此代码以在一个帖子或页面中放入计时器：</div>';
+    html += '<div>复制此代码以在一个帖子或页面中放入计时器。<br>
+    html += '你亦可以直接点击某一个引用块，此做法将直接在剪贴板内写入本引用块的内容：</div>';
     html += '<a href="javascript:;" onclick="copy(2, 1)" class="timer">';
     html += '<blockquote><strong>[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + custom1 + custom2 + ' style="width: 400px; height: 60px;"]]</strong></blockquote>';
     html += '</a>';
@@ -109,7 +111,7 @@ function generateDeletionLink2() {
     html += '<br>';
     html += '[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + custom1 + custom2 + ' style="width: 400px; height: 60px;"]]';
     html += '<br>';
-    html += '如果你不是作者又想要重写该条目，请在此帖回复申请。请先取得作者（或管理员，如果此文档搬运自Fandom的话）的同意，并将原文的源代码复制至沙盒里。除非你是工作人员，否则请勿就申请重写以外的范围回复此帖。</strong></blockquote>';
+    html += '如果你不是作者又想要重写该条目，请在此帖回复申请。请先取得作者的同意，并将原文的源代码复制至沙盒里。除非你是工作人员，否则请勿就申请重写以外的范围回复此帖。</strong></blockquote>';
     html += '</a>';
     html += '<hr></hr>';
     html += '<a href="javascript:;" onclick="copy(2, 3)" class="timer">';
@@ -164,7 +166,7 @@ function copy(linkType, timeType) {
             setCopy('[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + custom1 + custom2 + ' style="width: 400px; height: 60px;"]]');
             break;
         case 2:
-            setCopy('由于条目的分数为-X分，现根据[[[deletions-guide|删帖指导]]]，宣告将删除此页：\n[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + custom1 + custom2 + ' style="width: 400px; height: 60px;"]]\n如果你不是作者又想要重写该条目，请在此帖回复申请。请先取得作者（或管理员，如果此文档搬运自Fandom的话）的同意，并将原文的源代码复制至沙盒里。除非你是工作人员，否则请勿就申请重写以外的范围回复此帖。');
+            setCopy('由于条目的分数为-X分，现根据[[[deletions-guide|删帖指导]]]，宣告将删除此页：\n[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + custom1 + custom2 + ' style="width: 400px; height: 60px;"]]\n如果你不是作者又想要重写该条目，请在此帖回复申请。请先取得作者的同意，并将原文的源代码复制至沙盒里。除非你是工作人员，否则请勿就申请重写以外的范围回复此帖。');
             break;
         case 3:
             setCopy('由于翻译质量不佳，宣告删除。\n[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + custom1 + custom2 + ' style="width: 400px; height: 60px;"]]');
