@@ -69,7 +69,7 @@ function generateDeletionLink1() {
     var custom1 = getCustom(1, $('#inputArea1').val());
     var custom2 = getCustom(2, $('#inputArea2').val());
     var html = '';
-    html += '<div>复制此代码以在一个帖子或页面中放入计时器。<br>
+    html += '<div>复制此代码以在一个帖子或页面中放入计时器。<br>';
     html += '你亦可以直接点击某一个引用块，此做法将直接在剪贴板内写入本引用块的内容：</div>';
     html += '<a href="javascript:;" onclick="copy(1,1)" class="timer">';
     html += '<blockquote><strong>[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + custom1 + custom2 + ' style="width: 400px; height: 60px;"]]</strong></blockquote>';
@@ -100,7 +100,7 @@ function generateDeletionLink2() {
     var custom1 = getCustom(1, $('#inputArea3').val());
     var custom2 = getCustom(2, $('#inputArea4').val());
     var html = '';
-    html += '<div>复制此代码以在一个帖子或页面中放入计时器。<br>
+    html += '<div>复制此代码以在一个帖子或页面中放入计时器。<br>';
     html += '你亦可以直接点击某一个引用块，此做法将直接在剪贴板内写入本引用块的内容：</div>';
     html += '<a href="javascript:;" onclick="copy(2, 1)" class="timer">';
     html += '<blockquote><strong>[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + custom1 + custom2 + ' style="width: 400px; height: 60px;"]]</strong></blockquote>';
