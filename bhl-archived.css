@@ -16,20 +16,6 @@
         --header-font: Poppins, Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
         --title-font: Poppins, Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
         --mono-font: Recursive, Consolas, monaco, monospace;
-        --wght: 400;
-        --ital: 0;
-        --mono-wght: 350;
-        --slnt: 0;
-        --CASL: 0;
-        --CRSV: 0;
-        --MONO: 1;
-        --lnum: 1;
-        --pnum: 1;
-        --kern: 1;
-        --liga: 1;
-        --clig: 1;
-        --dlig: 0;
-        --calt: 1;
         --white-monochrome: 252, 252, 252;
         --pale-gray-monochrome: 244, 244, 244;
         --light-pale-gray-monochrome: 244, 244, 244;
@@ -119,12 +105,117 @@
         --final-header-height-on-mobile: calc(var(--header-height-on-mobile) + var(--topbar-height-on-mobile))
     }
 
-    * {
-        font-feature-settings: "lnum"var(--lnum), "pnum"var(--pnum), "kern"var(--kern), "liga"var(--liga), "clig"var(--clig), "dlig"var(--dlig), "calt"var(--calt);
+    :root {
+            /* ===VARIABLE FONT SETTINGS=== */
+        /* SETTING  |  ============== DESCRIPTION			|	FONT: 	RANGE 	 */
+        /* SETTING  |  ============== Weight				|	Body: 100 - 900  */
+        --wght: 400;
+        /* SETTING  |  ============== Weight for UI			|	  UI: 100 - 700  */
+        --ui-wght: 500;
+        /* SETTING  |  ============== Hover Weight for UI	|	  UI: 100 - 700  */
+        --ui-hvr-wght: 500;
+        /* ========================== Body Font Italic 		| 	Body:   0 - 1    */
+        --ital: 0;
+
+        /* ===VARIABLE MONO FONT SETTINGS=== */
+        /* See here for Recursive Font information: https://www.recursive.design/ */
+        /*=========================== Mono Font Weight 		| 	Mono: 300 - 1000 */
+        --mono-wght: 350;
+        /* ========================== Mono Font Italic 		| 	Mono: -15 - 0    */
+        --slnt: 0;
+        /* ========================== Mono Font Casual Amnt | 	Mono:   0 - 1    */
+        --CASL: 0;
+        /* ========================== Mono Font Cursive Amnt|	Mono:   0 - 1    */
+        --CRSV: 0;
+        /* ========================== Mono Font Mono Amnt	| 	Mono:   0 - 1    */
+        --MONO: 1;
+
+
+        /* ===OPENTYPE FEATURE SETTINGS=== */
+        /* See here for detailed explainations: https://sparanoid.com/lab/opentype-features/ */
+        /* ========================== Lining Numerals		|	Any: 	0 OR 1	 */
+        --lnum: 1;
+        /* ========================== Proportional Numerals	|	Any: 	0 OR 1	 */
+        --pnum: 1;
+        /* ========================== Kerning				|	Any: 	0 OR 1	 */
+        --kern: 1;
+        /* ========================== Capital Spacing		|	Any: 	0 OR 1	 */
+        --cpsp: 1;
+        /* ========================== Case Alternatives		|	Any: 	0 OR 1	 */
+        --liga: 1;
+        /* ========================== Standard Ligature		|	Any: 	0 OR 1	 */
+        --case: 1;
+        /* ========================== Contextual Ligature	|	Any: 	0 OR 1	 */
+        --clig: 1;
+        /* ========================== Discretionary Ligature|	Any: 	0 OR 1	 */
+        --dlig: 0;
+        /* ========================== Contextual Alternate	|	Any: 	0 OR 1	 */
+        --calt: 1;
+        /* ========================== Access All Alternates	|	Any: 	0 OR 1	 */
+        --aalt: 0;
+        /* ========================== Stylistic Sets		|	Any: 	0 OR 1	 */
+        /* ========================== SS 1 | Open Digits	|	Inter: 	0 OR 1	 */
+        --ss01: 1;
+        /* ========================== SS 2 | Disambiguation	|	Inter: 	0 OR 1	 */
+        --ss02: 0;
+        /* ========================== SS 3 | Curved R		|	Inter: 	0 OR 1	 */
+        --ss03: 1;
+        /* ========================== SS 4 | SS2 w/o zero	|	Inter: 	0 OR 1	 */
+        --ss04: 1;
+        /* ========================== Slashed Zero			|	Inter: 	0 OR 1	 */
+        --zero: 1;
+        /* ========================== Single Story a		|	Inter: 	0 OR 1	 */
+        --cv11: 0;
+    }
+
+    *,
+    *::before,
+    *::after {
+        -webkit-font-kerning: auto;
         font-kerning: auto;
         font-variant-ligatures: common-ligatures contextual;
         font-variant-numeric: lining-nums proportional-nums;
-        font-variation-settings: "wght"var(--wght), "ital"var(--ital), "slnt"var(--slnt), "CASL"var(--CASL), "CRSV"var(--CRSV), "MONO"var(--MONO)
+        font-weight: var(--wght, revert);
+    }
+
+    @supports (font-variation-settings: inherit) {
+
+        *,
+        *::before,
+        *::after {
+            font-variation-settings:
+                "ital"var(--ital, 0),
+                "slnt"var(--slnt, 0),
+                "CASL"var(--CASL, 0),
+                "CRSV"var(--CRSV, 0),
+                "MONO"var(--MONO, 0),
+                "FLAR"var(--FLAR, 0);
+        }
+    }
+
+    @supports (font-feature-settings: inherit) {
+
+        *,
+        *::before,
+        *::after {
+            font-feature-settings:
+                "lnum"var(--lnum, 1),
+                "pnum"var(--pnum, 1),
+                "kern"var(--kern, 1),
+                "cpsp"var(--cpsp, 1),
+                "liga"var(--liga, 1),
+                "case"var(--case, 1),
+                "clig"var(--clig, 1),
+                "dlig"var(--dlig, 0),
+                "calt"var(--calt, 1),
+                "aalt"var(--aalt, 0),
+                "ss01"var(--ss01, 1),
+                "ss02"var(--ss02, 0),
+                "ss03"var(--ss03, 1),
+                "ss04"var(--ss04, 1),
+                "zero"var(--zero, 1),
+                "cv11"var(--cv11, 0);
+        }
     }
 
     html {
@@ -186,96 +277,102 @@
         --slnt: -15
     }
 
-    [style*="weight:1000"],
     [style*="weight: 1000"],
-    [style*="weight:1000"] *,
-    [style*="weight: 1000"] * {
+    [style*="weight: 1000"] *,
+    [style*="weight:1000"],
+    [style*="weight:1000"] * {
         --wght: 1000;
-        --mono-wght: calc(var(--wght) - 50)
+        font-weight: var(--wght);
+        --mono-wght: calc(var(--wght) - 50);
     }
 
-    [style*="weight:900"],
     [style*="weight: 900"],
-    [style*="weight:900"] *,
-    [style*="weight: 900"] * {
+    [style*="weight: 900"] *,
+    [style*="weight:900"],
+    [style*="weight:900"] * {
         --wght: 900;
-        --mono-wght: calc(var(--wght) - 50)
+        font-weight: var(--wght);
+        --mono-wght: calc(var(--wght) - 50);
     }
 
-    [style*="weight:800"],
     [style*="weight: 800"],
-    [style*="weight:800"] *,
-    [style*="weight: 800"] * {
+    [style*="weight: 800"] *,
+    [style*="weight:800"],
+    [style*="weight:800"] * {
         --wght: 800;
-        --mono-wght: calc(var(--wght) - 50)
+        font-weight: var(--wght);
+        --mono-wght: calc(var(--wght) - 50);
     }
 
-    [style*="weight:700"],
     [style*="weight: 700"],
-    [style*="weight:700"] *,
-    [style*="weight: 700"] * {
+    [style*="weight: 700"] *,
+    [style*="weight:700"],
+    [style*="weight:700"] * {
         --wght: 700;
-        --mono-wght: calc(var(--wght) - 50)
+        font-weight: var(--wght);
+        --mono-wght: calc(var(--wght) - 50);
     }
 
-    [style*="weight:600"],
     [style*="weight: 600"],
-    [style*="weight:600"] *,
-    [style*="weight: 600"] * {
+    [style*="weight: 600"] *,
+    [style*="weight:600"],
+    [style*="weight:600"] * {
         --wght: 600;
-        --mono-wght: calc(var(--wght) - 50)
+        font-weight: var(--wght);
+        --mono-wght: calc(var(--wght) - 50);
     }
 
-    [style*="weight:500"],
     [style*="weight: 500"],
-    [style*="weight:500"] *,
-    [style*="weight: 500"] * {
+    [style*="weight: 500"] *,
+    [style*="weight:500"],
+    [style*="weight:500"] * {
         --wght: 500;
-        --mono-wght: calc(var(--wght) - 50)
+        font-weight: var(--wght);
+        --mono-wght: calc(var(--wght) - 50);
     }
 
-    [style*="weight:400"],
     [style*="weight: 400"],
-    [style*="weight:400"] *,
-    [style*="weight: 400"] * {
+    [style*="weight: 400"] *,
+    [style*="weight:400"],
+    [style*="weight:400"] * {
         --wght: 400;
-        --mono-wght: calc(var(--wght) - 50)
+        font-weight: var(--wght);
+        --mono-wght: calc(var(--wght) - 50);
     }
 
-    [style*="weight:300"],
     [style*="weight: 300"],
-    [style*="weight:300"] *,
-    [style*="weight: 300"] * {
+    [style*="weight: 300"] *,
+    [style*="weight:300"],
+    [style*="weight:300"] * {
         --wght: 300;
-        --mono-wght: calc(var(--wght) - 50)
+        font-weight: var(--wght);
+        --mono-wght: calc(var(--wght) - 50);
     }
 
-    [style*="weight:200"],
     [style*="weight: 200"],
-    [style*="weight:200"] *,
-    [style*="weight: 200"] * {
+    [style*="weight: 200"] *,
+    [style*="weight:200"],
+    [style*="weight:200"] * {
         --wght: 200;
-        --mono-wght: calc(var(--wght) - 50)
+        font-weight: var(--wght);
+        --mono-wght: calc(var(--wght) - 50);
     }
 
-    [style*="weight:100"],
     [style*="weight: 100"],
-    [style*="weight:100"] *,
-    [style*="weight: 100"] * {
+    [style*="weight: 100"] *,
+    [style*="weight:100"],
+    [style*="weight:100"] * {
         --wght: 100;
-        --mono-wght: calc(var(--wght) - 50)
+        font-weight: var(--wght);
+        --mono-wght: calc(var(--wght) - 50);
     }
 
-    [style*="style:italic"],
-    [style*="style: italic"],
-    [style*="style:italic"] *,
-    [style*="style: italic"] *,
-    [style*="style:oblique"],
-    [style*="style: oblique"],
-    [style*="style:oblique"] *,
-    [style*="style: oblique"] * {
+    [style*="italic"],
+    [style*="italic"] *,
+    [style*="oblique"],
+    [style*="oblique"] * {
         --ital: 1;
-        --slnt: -15
+        --slnt: -15;
     }
 
     audio,
@@ -284,26 +381,25 @@
     img,
     svg,
     video {
-        vertical-align: middle
+        vertical-align: middle;
     }
 
-    embed,
-    iframe,
     img,
+    embed,
+    video,
     object,
-    table,
-    video {
-        max-width: 100%
+    iframe,
+    table {
+        max-width: 100%;
     }
 
-    button,
     input,
-    meter,
-    progress,
+    textarea,
     select,
-    textarea {
-        font-family: Lato, sans-serif;
-        font-family: var(--body-font)
+    button,
+    meter,
+    progress {
+        font-family: var(--body-font);
     }
 
     table:not(.form) td>input {
@@ -312,76 +408,100 @@
 
     fieldset {
         margin: 0;
+        padding: 0;
         border: 0;
-        padding: 0
     }
 
     #edit-page-comments {
-        padding: 0 1rem;
         width: calc(100% - 2rem);
         min-height: 3rem;
+        padding: 0 1rem;
+        line-height: 1.5;
         resize: both;
-        line-height: 1.5
     }
 
-    #lock-info,
-    div.note,
-    input.checkbox,
+    textarea,
     input.text,
-    textarea {
-        border: .0625rem solid rgba(var(--swatch-border-color), .25);
+    input.checkbox,
+    div.note,
+    #lock-info {
+        transition:
+            box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1),
+            color 150ms cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+        border: 0.0625rem solid rgba(var(--swatch-border-color), 0.25);
         background-color: rgb(var(--swatch-background));
-        scrollbar-color: rgba(var(--swatch-tertiary-color), .6) rgba(var(--swatch-tertiary-color), .1);
         color: rgb(var(--swatch-text-general));
-        font-family: var(--body-font)
+        font-family: var(--body-font);
+        scrollbar-color:
+            rgba(var(--swatch-tertiary-color), 0.6) rgba(var(--swatch-tertiary-color), 0.1);
+        will-change: box-shadow, color, background-color;
     }
 
-    input.text::-webkit-scrollbar-track,
-    textarea::-webkit-scrollbar-track {
-        background: hsla(0, 0%, 67%, .05);
-        background: rgba(var(--swatch-tertiary-color), .1)
+    textarea::-webkit-scrollbar-track,
+    input.text::-webkit-scrollbar-track {
+        background: rgba(var(--swatch-tertiary-color), 0.1);
     }
 
-    input.text::-webkit-scrollbar-thumb,
-    textarea::-webkit-scrollbar-thumb {
-        background: hsla(0, 0%, 67%, .6);
-        background: rgba(var(--swatch-tertiary-color), .6)
+    textarea::-webkit-scrollbar-thumb,
+    input.text::-webkit-scrollbar-thumb {
+        background: rgba(var(--swatch-tertiary-color), 0.6);
     }
 
     pre,
     pre * {
+        --MONO: 1;
         --calt: 0;
         max-width: 90vw;
-        font-family: PT Mono, Andale Mono, Courier New, Courier, monospace;
         font-family: var(--mono-font);
-        font-variation-settings: "wght"var(--mono-wght), "CASL"var(--CASL), "CRSV"var(--CRSV), "MONO"var(--MONO);
-        white-space: pre
+        white-space: pre;
+        font-variation-settings:
+            "wght"var(--mono-wght),
+            "CASL"var(--CASL),
+            "CRSV"var(--CRSV),
+            "MONO"var(--MONO);
+    }
+
+    pre i,
+    pre i *,
+    pre em,
+    pre em *,
+    pre .italic,
+    pre .italic *,
+    pre [style*="italic"],
+    pre [style*="italic"] *,
+    pre [style*="oblique"],
+    pre [style*="oblique"] * {
+        --slnt: -15;
     }
 
     sub,
-    sup {
+    sup,
+    #main-content sub,
+    #main-content sup {
         position: relative;
-        font-size: .75em
+        font-size: 0.75em;
     }
 
-    sub {
-        bottom: -.25em;
-        vertical-align: sub
+    sub,
+    #main-content sub {
+        bottom: -0.25em;
+        vertical-align: sub;
     }
 
-    sup {
-        top: -.25em;
-        vertical-align: super
+    sup,
+    #main-content sup {
+        top: -0.25em;
+        vertical-align: super;
     }
 
     hr {
         display: block;
+        height: 0.0625rem;
         margin: 1em 0;
-        border: 0;
-        border-top: .063rem solid #424248;
-        border-top: .063rem solid rgba(var(--swatch-tertiary-color, 66, 66, 72));
         padding: 0;
-        height: .063rem
+        border: 0;
+        border-top: 0.0625rem solid rgba(var(--swatch-tertiary-color, 66, 66, 72));
     }
 
     h1,
@@ -390,32 +510,80 @@
     h4,
     h5,
     h6 {
-        font-family: Poppins, sans-serif;
+        margin: 0 0 0.5em 0;
+        padding: 0;
         font-family: var(--title-font);
-        font-variant-ligatures: common-ligatures contextual discretionary-ligatures
+        font-weight: revert;
+        line-height: 1.4;
+        font-variant-ligatures: common-ligatures contextual discretionary-ligatures;
     }
 
-    h1 {
-        margin: .7em 0 .6em;
-        padding: 0 0 .25em;
-        color: #0c0c0c;
-        color: rgb(var(--swatch-text-general));
-        font-weight: 700
+    h1,
+    h2 {
+        --wght: 800;
+        font-weight: var(--wght);
     }
 
-    h2,
     h3,
     h4,
     h5,
     h6 {
-        margin: .5em 0 .4em;
-        padding: 0;
-        font-weight: 900;
-        letter-spacing: .063rem
+        --wght: 700;
+        font-weight: var(--wght);
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.25em;
+    }
+
+    h3 {
+        font-size: 1.1875em;
+    }
+
+    h4 {
+        font-size: 1.125em;
+    }
+
+    h5 {
+        font-size: 1.0625em;
+    }
+
+    h6 {
+        font-size: 1em;
+    }
+
+    @media only screen and (min-width: 56.25rem) {
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.75em;
+        }
+
+        h3 {
+            font-size: 1.5375em;
+        }
+
+        h4 {
+            font-size: 1.3625em;
+        }
+
+        h5 {
+            font-size: 1.15em;
+        }
+
+        h6 {
+            font-size: 1em;
+        }
     }
 
     ul {
-        list-style: square
+        list-style: square;
     }
 
     a {
@@ -466,23 +634,32 @@
         text-decoration-color: currentColor;
     }
 
+    /* Line-Through Link Coloring on Chrome/Safari */
+
+    [style*="line-through"] a,
+    [style*="line-through"] a:visited,
+    [style*="line-through"] a:active {
+        -webkit-text-decoration-color: inherit;
+        text-decoration-color: inherit;
+    }
+
     ruby {
         display: inline-table;
         vertical-align: text-bottom;
         height: 1em;
-        line-height: 1
+        line-height: 1;
     }
 
     rt,
     ruby {
         text-align: center;
-        white-space: nowrap
+        white-space: nowrap;
     }
 
     rt {
         display: table-header-group;
         font-size: .6em;
-        line-height: 1.1
+        line-height: 1.1;
     }
 
     tt {
@@ -501,23 +678,18 @@
     }
 
     ::-webkit-scrollbar {
-        border: .063rem solid hsla(0, 0%, 5%, .1);
-        border: .063rem solid rgba(var(--swatch-menubg-black-color), .1);
-        border-radius: .031rem;
-        width: 1rem;
         width: var(--scrollbar-width);
-        height: .5625rem;
-        height: var(--scrollbar-width)
+        height: var(--scrollbar-width);
+        border: solid 0.0625rem rgba(var(--swatch-menubg-black-color), 0.1);
+        border-radius: 0.031rem;
     }
 
     ::-webkit-scrollbar-track {
-        background: hsla(0, 0%, 5%, .1);
-        background: rgba(var(--swatch-menubg-black-color), .1)
+        background: rgba(var(--swatch-menubg-black-color), 0.1);
     }
 
     ::-webkit-scrollbar-thumb {
-        background: hsla(0, 0%, 67%, .4);
-        background: rgba(var(--swatch-tertiary-color), .4)
+        background: rgba(var(--swatch-tertiary-color), 0.4);
     }
 
     @media only screen and (max-width:320px) {
@@ -527,22 +699,20 @@
     }
 
     ::-moz-selection {
-        background: rgba(180, 35, 35, .25);
-        background: rgba(var(--swatch-primary, 180, 35, 35), .25);
-        text-shadow: none
+        background: rgba(var(--swatch-primary, 180, 35, 35), 0.25);
+        text-shadow: none;
     }
 
     ::selection {
-        background: rgba(180, 35, 35, .25);
-        background: rgba(var(--swatch-primary, 180, 35, 35), .25);
-        text-shadow: none
+        background: rgba(var(--swatch-primary, 180, 35, 35), 0.25);
+        text-shadow: none;
     }
 
     .browserupgrade {
-        margin: .2em 0;
-        background: #ccc;
-        padding: .2em 0;
-        color: #000
+        margin: 0.2em 0;
+        padding: 0.2em 0;
+        background: rgb(var(--swatch-secondary-color));
+        color: rgb(var(--swatch-text-tertiary-color));
     }
 
     .code {
