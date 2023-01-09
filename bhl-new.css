@@ -2562,6 +2562,15 @@
         text-decoration-color: currentColor;
     }
 
+    /* Line-Through Link Coloring on Chrome/Safari */
+
+    [style*="line-through"] a,
+    [style*="line-through"] a:visited,
+    [style*="line-through"] a:active {
+        -webkit-text-decoration-color: inherit;
+        text-decoration-color: inherit;
+    }
+
     /* BlACK BLOCK ELEMENT */
 
     .bblock,
@@ -3363,14 +3372,8 @@
         transition:
             background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
         background-color: rgb(var(--ui-icon-color));
-        -webkit-mask-image: var(--button-icon);
-        mask-image: var(--button-icon);
-        -webkit-mask-size: calc(var(--icon-size) - 0.5em);
-        mask-size: calc(var(--icon-size) - 0.5em);
-        -webkit-mask-position: center center;
-        mask-position: center center;
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
+        -webkit-mask: var(--button-icon) center center / calc(var(--icon-size) - 0.5em) no-repeat;
+        mask: var(--button-icon) center center / calc(var(--icon-size) - 0.5em) no-repeat;
     }
 
     div[id*="page-options-bottom"]>a:hover::after,
@@ -4254,14 +4257,8 @@
         width: 100%;
         transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
         background-color: rgb(var(--editor-icon-color));
-        -webkit-mask-image: var(--edit-menu-mask);
-        mask-image: var(--edit-menu-mask);
-        -webkit-mask-size: calc(var(--icon-size) * 0.8);
-        mask-size: calc(var(--icon-size) * 0.8);
-        -webkit-mask-position: center center;
-        mask-position: center center;
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
+        -webkit-mask: var(--search-icon-mask) center center / calc(var(--search-height) / 2) calc(var(--search-height) / 2) no-repeat;
+        mask: var(--search-icon-mask) center center / calc(var(--search-height) / 2) calc(var(--search-height) / 2) no-repeat;
     }
 
     form#edit-page-form .wd-editor-toolbar-panel li:hover>a::before,
@@ -6746,14 +6743,8 @@ table.page-history:lang(cn) tr:nth-of-type(2) td:nth-of-type(6)::before {
         position: relative;
         transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
         background-color: rgb(var(--social-color));
-        -webkit-mask-image: var(--social-logo-mask);
-        mask-image: var(--social-logo-mask);
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-size: contain;
-        mask-size: contain;
-        -webkit-mask-position: center center;
-        mask-position: center center;
+        -webkit-mask: var(--social-logo-mask) center center / contain no-repeat;
+        mask: var(--social-logo-mask) center center / contain no-repeat;
     }
 
     #side-bar .side-block.media a::before,
@@ -6843,12 +6834,8 @@ table.page-history:lang(cn) tr:nth-of-type(2) td:nth-of-type(6)::before {
         top: 0.125rem;
         left: 0.125rem;
         background-color: rgb(var(--social-color));
-        -webkit-mask-image: var(--social-logo-mask);
-        mask-image: var(--social-logo-mask);
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-size: 90%;
-        mask-size: 90%;
+        -webkit-mask: var(--social-logo-mask) / 90% no-repeat;
+        mask: var(--social-logo-mask) / 90% no-repeat;
     }
 
     #side-bar .side-block.media a[href*="tiktok"]:hover::after,
@@ -7301,14 +7288,8 @@ table.page-history:lang(cn) tr:nth-of-type(2) td:nth-of-type(6)::before {
         transition:
             transform 150ms cubic-bezier(0.4, 0, 0.2, 1),
             background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
-        -webkit-mask-image: var(--down-arrow-mask);
-        mask-image: var(--down-arrow-mask);
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-position: 50% 50%;
-        mask-position: 50% 50%;
-        -webkit-mask-size: 1em;
-        mask-size: 1em;
+        -webkit-mask: var(--down-arrow-mask) 50% 50% / 1em no-repeat;
+        mask: var(--down-arrow-mask) 50% 50% / 1em no-repeat;
     }
 
     #side-bar div.collapsible-block div.collapsible-block-folded a.collapsible-block-link {
@@ -7824,14 +7805,8 @@ table.page-history:lang(cn) tr:nth-of-type(2) td:nth-of-type(6)::before {
         text-align: center;
         cursor: pointer;
         pointer-events: none;
-        -webkit-mask-size: calc(var(--search-height) / 2) calc(var(--search-height) / 2);
-        mask-size: calc(var(--search-height) / 2) calc(var(--search-height) / 2);
-        -webkit-mask-position: center center;
-        mask-position: center center;
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-image: var(--search-icon-mask);
-        mask-image: var(--search-icon-mask);
+        -webkit-mask: var(--search-icon-mask) center center / calc(var(--search-height) / 2) calc(var(--search-height) / 2) no-repeat;
+        mask: var(--search-icon-mask) center center / calc(var(--search-height) / 2) calc(var(--search-height) / 2) no-repeat;
     }
 
     #search-top-box:not(:focus-within):hover::before {
@@ -8733,12 +8708,8 @@ table.page-history:lang(cn) tr:nth-of-type(2) td:nth-of-type(6)::before {
         background-color: rgb(var(--topmenu-category-color)) !important;
         background-image: initial;
         color: transparent !important;
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-size: 1em 1em;
-        mask-size: 1em 1em;
-        -webkit-mask-position: center center;
-        mask-position: center center;
+        -webkit-mask: center center / 1em 1em no-repeat;
+        mask: center center / 1em 1em no-repeat;
     }
 
     #top-bar ul li:focus-within .homebutton,
@@ -8748,12 +8719,8 @@ table.page-history:lang(cn) tr:nth-of-type(2) td:nth-of-type(6)::before {
         background-color: rgb(var(--topmenu-category-color)) !important;
         background-image: initial;
         color: transparent !important;
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-size: 1em 1em;
-        mask-size: 1em 1em;
-        -webkit-mask-position: center center;
-        mask-position: center center;
+        -webkit-mask: center center / 1em 1em no-repeat;
+        mask: center center / 1em 1em no-repeat;
     }
 
     #top-bar ul li .homebutton {
@@ -8774,9 +8741,7 @@ table.page-history:lang(cn) tr:nth-of-type(2) td:nth-of-type(6)::before {
 
     #top-bar ul li .lightbulb .lightbulb-mask,
     #top-bar>.ct-theme-switch .lightbulb .lightbulb-mask {
-
         -webkit-mask-image: var(--lightbulb-mask);
-
         mask-image: var(--lightbulb-mask);
     }
 
@@ -9061,14 +9026,8 @@ table.page-history:lang(cn) tr:nth-of-type(2) td:nth-of-type(6)::before {
             background-color: rgba(var(--login-mobile-icon-color), 0);
             cursor: pointer;
             pointer-events: all;
-            -webkit-mask-image: var(--user-account-mask);
-            mask-image: var(--user-account-mask);
-            -webkit-mask-size: calc(var(--account-height) - 0.5em);
-            mask-size: calc(var(--account-height) - 0.5em);
-            -webkit-mask-position: center right;
-            mask-position: center right;
-            -webkit-mask-repeat: no-repeat;
-            mask-repeat: no-repeat;
+            -webkit-mask: var(--user-account-mask) center right / calc(var(--account-height) - 0.5em) no-repeat;
+            mask: var(--user-account-mask) center right / calc(var(--account-height) - 0.5em) no-repeat;
         }
 
         #login-status::before {
@@ -10107,12 +10066,8 @@ table.page-history:lang(cn) tr:nth-of-type(2) td:nth-of-type(6)::before {
         height: 100%;
         background-color: rgb(var(--rating-module-text-color));
         pointer-events: none;
-        -webkit-mask-size: calc(var(--rating-module-height) - 0.5em);
-        mask-size: calc(var(--rating-module-height) - 0.5em);
-        -webkit-mask-position: center;
-        mask-position: center;
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
+        -webkit-mask: center / calc(var(--rating-module-height) - 0.5em) no-repeat;
+        mask: center / calc(var(--rating-module-height) - 0.5em) no-repeat;
     }
 
     .page-rate-widget-box .rateup a::before {
@@ -10298,14 +10253,8 @@ table.page-history:lang(cn) tr:nth-of-type(2) td:nth-of-type(6)::before {
         transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
         background-color: rgb(var(--rating-module-text-color));
         pointer-events: none;
-        -webkit-mask-image: var(--mask-image);
-        mask-image: var(--mask-image);
-        -webkit-mask-size: calc(var(--rating-module-height) - 0.375em);
-        mask-size: calc(var(--rating-module-height) - 0.375em);
-        -webkit-mask-position: center center;
-        mask-position: center center;
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
+        -webkit-mask: var(--mask-image) center center / calc(var(--rating-module-height) - 0.375em) no-repeat;
+        mask: var(--mask-image) center center / calc(var(--rating-module-height) - 0.375em) no-repeat;
     }
 
     #page-content .rate-box-with-credit-button>.creditButton>p>a:hover::before,
@@ -10453,14 +10402,8 @@ table.page-history:lang(cn) tr:nth-of-type(2) td:nth-of-type(6)::before {
         transform: rotate(0) scale(1);
         transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
         background-color: rgb(var(--modal-header-bg));
-        -webkit-mask-image: var(--mask-image);
-        mask-image: var(--mask-image);
-        -webkit-mask-size: 0.75em;
-        mask-size: 0.75em;
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-position: center;
-        mask-position: center;
+        -webkit-mask: var(--mask-image) center / 0.75em no-repeat;
+        mask: var(--mask-image) center / 0.75em no-repeat;
     }
 
     [id*="u-credit"] .credit.first>p:hover:first-of-type::after,
@@ -10767,12 +10710,8 @@ table.page-history:lang(cn) tr:nth-of-type(2) td:nth-of-type(6)::before {
         width: 1em;
         height: 1em;
         background-color: rgb(var(--toc-header-text-color));
-        -webkit-mask-image: var(--mask-image);
-        mask-image: var(--mask-image);
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-position: center center;
-        mask-position: center center;
+        -webkit-mask: var(--mask-image) center center / no-repeat;
+        mask: var(--mask-image) center center / no-repeat;
     }
 
     #toc #toc-action-bar a:hover::before,
@@ -10952,14 +10891,8 @@ table.page-history:lang(cn) tr:nth-of-type(2) td:nth-of-type(6)::before {
         opacity: 0;
         background-color: rgb(var(--toc-body-hover-arrow-color));
         pointer-events: none;
-        -webkit-mask-size: 0.3625em 1em;
-        mask-size: 0.3625em 1em;
-        -webkit-mask-image: var(--right-arrow-mask);
-        mask-image: var(--right-arrow-mask);
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-position: center 0.25rem;
-        mask-position: center 0.25rem;
+        -webkit-mask: var(--right-arrow-mask) center 0.25rem / 0.3625em 1em no-repeat;
+        mask: var(--right-arrow-mask) center 0.25rem / 0.3625em 1em no-repeat;
     }
 
     #toc #toc-list a,
