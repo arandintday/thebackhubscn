@@ -60,7 +60,7 @@
 */
 
 #skrollr-body {
-    background-image: radial-gradient(circle, transparent 50%, transparent 0);
+    background-image: radial-gradient(circle, rgb(var(--medium-accent)) 50%, transparent 0);
     background-repeat: repeat;
     background-size: 0.25em 0.25em;
     width: 100%;
