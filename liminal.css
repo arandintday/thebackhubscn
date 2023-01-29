@@ -72,7 +72,7 @@
 }
 
 #container {
-    background-image: radial-gradient(circle, transparent, 0.05) 50%, transparent 0);
+    background-image: radial-gradient(circle, transparent 50%, transparent 0);
     background-size: 0.25em 0.25em;
     background-repeat: repeat;
     background-attachment: fixed;
