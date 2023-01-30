@@ -3577,21 +3577,34 @@
         border-left-color: #f4f4f4;
         border-left-color: rgb(var(--swatch-secondary-color))
     }
-
-    .blockquote,
-    [class*=blockquote],
+    
     blockquote,
-    div.blockquote {
+    .blockquote,
+    div.blockquote,
+    [class*="blockquote"] {
         --box-shadow: rgba(var(--swatch-menubg-black-color), 0.1);
         display: block;
+        position: relative;
+        margin: 0.5em 1.25rem;
+        padding: 0.825em 1.25em;
         clear: both;
-        margin: .5em 40px;
-        box-shadow: 0 .0625rem .125em rgba(0, 0, 0, .1);
-        box-shadow: 0 .0625rem .125em var(--box-shadow);
-        border: .0625rem dashed rgba(var(--swatch-border-color), .25);
-        background-color: #f4f4f4;
+        border: .0625rem solid rgba(var(--swatch-border-color), .25);
         background-color: rgb(var(--swatch-secondary-color));
-        padding: 0 1em
+        box-shadow: 0 .0625rem .125em var(--box-shadow);
+    }
+
+    blockquote> :first-child,
+    .blockquote> :first-child,
+    div.blockquote> :first-child,
+    [class*="blockquote"]> :first-child {
+        margin-top: 0;
+    }
+
+    blockquote> :last-child,
+    .blockquote> :last-child,
+    div.blockquote> :last-child,
+    [class*="blockquote"]> :last-child {
+        margin-bottom: 0;
     }
 
     @supports (display:flow-root) {
