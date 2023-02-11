@@ -263,7 +263,7 @@
     body b *,
     body strong,
     body strong * {
-        --wght: 800;
+        --wght: 700;
         --mono-wght: calc(var(--wght) - 50)
     }
 
@@ -1046,12 +1046,12 @@
     }
 
     .content-panel .panel-heading {
-        --wght: 800;
+        --wght: 700;
         --text-shadow: rgba(var(--swatch-menutxt-dark-color, 12, 12, 12), 0.35);
         padding: .313em .625em;
         color: #fcfcfc;
         color: rgb(var(--swatch-text-secondary-color, 252, 252, 252));
-        font-weight: 800;
+        font-weight: 700;
         font-size: 100%;
         text-align: center;
         text-shadow: .0625rem .0625rem .125rem hsla(0, 0%, 5%, .35);
@@ -3636,8 +3636,8 @@
     }
 
     .footnotes-footer .title {
-        --wght: 800;
-        font-weight: 800
+        --wght: 700;
+        font-weight: 700
     }
 
     .footnote-footer>a:first-of-type {
