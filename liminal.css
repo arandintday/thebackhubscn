@@ -302,3 +302,8 @@ iframe.scpnet-interwiki-frame {
 #odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child {
     background-color: initial!important;
 }
+
+/* 去除搜索框 */
+#search-top-box-input {
+    display: none;
+}
