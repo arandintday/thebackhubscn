@@ -2208,8 +2208,8 @@
         display: none
     }
 
-    a[href*="/most-recently-edited"],
-    a[href*="/random:random-tale"] {
+    #side-bar a[href*="/most-recently-edited"],
+    #side-bar a[href*="/random:random-tale"] {
         display: flex;
         justify-content: center;
         align-items: center;
