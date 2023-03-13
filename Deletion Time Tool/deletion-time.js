@@ -76,7 +76,7 @@ function generateDeletionLink1() {
     html += '</a';
     html += '<hr></hr>';
     html += '<a href="javascript:;" onclick="copy(1,2)" class="timer">';
-    html += '<blockquote><strong>由于条目的分数为-X分，现根据[[[deletions-guide|删帖指导]]]，宣告将删除此页：';
+    html += '<blockquote><strong>由于条目的分数为-X分，现根据[[[deletions-policy|删除政策]]]，宣告将删除此页：';
     html += '<br>';
     html += '[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + custom1 + custom2 + ' style="width: 400px; height: 60px;"]]';
     html += '<br>';
@@ -107,7 +107,7 @@ function generateDeletionLink2() {
     html += '</a>';
     html += '<hr></hr>';
     html += '<a href="javascript:;" onclick="copy(2, 2)" class="timer">';
-    html += '<blockquote><strong>由于条目的分数为-X分，现根据[[[deletions-guide|删帖指导]]]，宣告将删除此页：';
+    html += '<blockquote><strong>由于条目的分数为-X分，现根据[[[deletions-policy|删除政策]]]，宣告将删除此页：';
     html += '<br>';
     html += '[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + custom1 + custom2 + ' style="width: 400px; height: 60px;"]]';
     html += '<br>';
@@ -166,7 +166,7 @@ function copy(linkType, timeType) {
             setCopy('[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + custom1 + custom2 + ' style="width: 400px; height: 60px;"]]');
             break;
         case 2:
-            setCopy('由于条目的分数为-X分，现根据[[[deletions-guide|删帖指导]]]，宣告将删除此页：\n[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + custom1 + custom2 + ' style="width: 400px; height: 60px;"]]\n如果你不是作者又想要重写该条目，请在此帖回复申请。请先取得作者的同意，并将原文的源代码复制至沙盒里。除非你是工作人员，否则请勿就申请重写以外的范围回复此帖。');
+            setCopy('由于条目的分数为-X分，现根据[[[deletions-policy|删除政策]]]，宣告将删除此页：\n[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + custom1 + custom2 + ' style="width: 400px; height: 60px;"]]\n如果你不是作者又想要重写该条目，请在此帖回复申请。请先取得作者的同意，并将原文的源代码复制至沙盒里。除非你是工作人员，否则请勿就申请重写以外的范围回复此帖。');
             break;
         case 3:
             setCopy('由于翻译质量不佳，宣告删除。\n[[iframe https://arandintday.github.io/thebackhubscn/Deletion%20Time%20Tool/Deletion%20Time%20Tool.html?timestamp=' + timestamp.getTime() + '&type=' + type + custom1 + custom2 + ' style="width: 400px; height: 60px;"]]');
