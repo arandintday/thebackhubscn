@@ -404,7 +404,7 @@ iframe.scpnet-interwiki-frame {
     padding: 0;
 }
 
-.thread-container .post .long .content>p:first-of-type {
+.thread-container .post .long .content>p:first-of-type:not(*+p) {
     margin-top: 0;
 }
 
