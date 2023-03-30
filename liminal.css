@@ -195,11 +195,6 @@ blockquote {
     color: rgb(var(--swatch-menubg-medium-color));
 }
 
-#side-bar div.menu-item a[href*="/scp-"] {
-    text-align: left !important;
-    width: auto !important;
-}
-
 #side-bar div.menu-item.small a {
     justify-content: center;
     width: auto;
@@ -233,10 +228,6 @@ blockquote {
     flex-grow: 2;
 }
 
-#side-bar .side-block {
-    margin-top: -0.5rem;
-}
-
 #side-bar div.menu-item a:not(a:first-child) {
     border-left: var(--sidebar-internal-border-thickness) solid rgba(var(--swatch-border-color), .08)
 }
@@ -244,18 +235,6 @@ blockquote {
 #side-bar div.scpnet-interwiki-wrapper {
     min-height: 300px;
 }
-
-.thread-container .post .long .content .image:not(.collapsible-block .image) {
-    object-fit: cover;
-    max-height: 2em;
-    width: 100%;
-    transition: max-height 0.5s;
-}
-
-.thread-container .post .long .content .image:hover:not(.collapsible-block .image) {
-    max-height: 100em;
-}
-
 div.scpnet-interwiki-wrapper {
     margin: 0;
     width: auto;
@@ -271,6 +250,7 @@ iframe.scpnet-interwiki-frame {
         width: 100%;
     }
 }
+
 /* Content Warning */
 #page-content div#u-adult-warning {
     width: fit-content;
@@ -306,4 +286,212 @@ iframe.scpnet-interwiki-frame {
 /* 去除搜索框 */
 #search-top-box-input {
     display: none;
+}
+
+/* 论坛样式修改 */
+.thread-container .post .long .content .image:not(.collapsible-block .image) {
+    object-fit: cover;
+    max-height: 2em;
+    width: 100%;
+    transition: max-height 0.5s;
+}
+
+.thread-container .post .long .content .image:hover:not(.collapsible-block .image) {
+    max-height: 100em;
+}
+
+:root {
+    --thread-accent-color: 227, 223, 213;
+}
+
+.thread-container>.options {
+    display: none;
+}
+
+.thread-container .post-container {
+    background-color: rgb(var(--thread-accent-color));
+}
+#thread-container-posts > .post-container {
+    border: 1px solid rgb(var(--dark-accent));
+}
+
+#thread-container-posts > .post-container > .post-container > .post-container > .post-container > .post-container > .post-container {
+    border-right: 1px solid rgb(var(--dark-accent));
+}
+
+.thread-container .post {
+    padding: 0;
+    width: 100%;
+    border-radius: 3px;
+    padding: 0 0 12px 0;
+}
+
+.thread-container #thread-container-posts>.post-container {
+    margin: 0 0 18px 0;
+    padding: 18px;
+}
+
+.thread-container .post-container .post~.post-container {
+    border-top: 1px solid rgb(var(--dark-accent));
+}
+
+.thread-container .post .long {
+    position: relative;
+    border: none;
+    background-color: gba(var(--dark-accent), 0.1);
+}
+
+.thread-container .post .head {
+    padding: 0 0 18px 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.thread-container .post .head .options {
+    display: none;
+}
+
+.thread-container .post .head .title {
+    margin-bottom: 6px;
+    position: relative;
+    overflow: hidden;
+}
+.thread-container .post .head .title::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: rgb(var(--light-gray-monochrome));
+}
+
+.thread-container .post .head .info {
+    display: flex;
+    align-items: center;
+    padding: 4px 0 0 0;
+}
+
+.thread-container .post .head .info .printuser {
+    display: flex;
+    align-items: center;
+}
+
+.thread-container .post .head .info .printuser::after {
+    content: "·";
+    padding: 0 6px;
+}
+
+.thread-container .post .head .info .printuser a:first-of-type,
+.thread-container .post .head .info .printuser.deleted img {
+    margin-right: 0;
+}
+
+.thread-container .post .head .info .printuser a:first-of-type img,
+.thread-container .post .head .info .printuser.deleted img{
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    background-image: none !important;
+    padding: 0;
+    border: 2px solid rgb(var(--gray-monochrome));
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.thread-container .post .long .content {
+    padding: 0;
+}
+
+.thread-container .post .long .content>p:first-of-type {
+    margin-top: 0;
+}
+
+.thread-container .post-container .post-container {
+    position: relative;
+    left: 4px;
+    margin: 0;
+    padding: 24px 0 0 24px;
+}
+
+.thread-container .post-container .post-container .post::before {
+    content: "";
+    height: calc(100% - 36px);
+    width: 3px;
+    position: absolute;
+    background-color: rgb(var(--dark-accent));
+    left: 0;
+}
+.thread-container .post .long .changes>a[onclick*="showHistory"] {
+    display: inline-flex;
+}
+.thread-container .post .long .changes>a[onclick*="showHistory"] .icon-plus::before {
+    content: "+";
+    font-style: initial;
+}
+
+.thread-container .post .long .revisions {
+    padding-top: 0;
+}
+.thread-container .post .long .revisions table {
+    border-spacing: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+}
+
+.thread-container .post .long .revisions a {
+    color: #77A;
+}
+
+.thread-container .post .long .revisions table tbody {
+    display: contents;
+}
+
+.thread-container .post .long .revisions table tr {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.thread-container .post .long .revisions table tr td:nth-of-type(1),
+.thread-container .post .long .revisions table tr td:nth-of-type(2) {
+    padding-right: 7px;
+}
+
+.thread-container .post .long .revisions table tr.active td {
+    background-color: rgba(var(--light-gray-monochrome), 0.3);
+}
+.thread-container .post .long .revisions table tr.active::before {
+    content: ">";
+    margin-right: 5px;
+}
+
+#page-content>div.forum-thread-box>div.options a,
+.thread-container div.post div.long .options a {
+    border: initial;
+    background-color: initial;
+    color: #77A;
+    font-size: 90%;
+    --wght: 500;
+    padding: 0 0.25em;
+    margin: 0 0.1rem;
+    transition: text-decoration-color 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+#page-content>div.forum-thread-box>div.options a:hover,
+.thread-container div.post div.long .options a:hover {
+    text-decoration: underline;
+    color: #77A; 
+}
+
+#page-content>div.forum-thread-box>div.options {
+    margin: 0.2em 0;
+}
+
+.forum-thread-box .description-block {
+    background-color: rgb(var(--thread-accent-color));
+    box-shadow: none;
+    border-radius: 0;
+    border: 1px solid rgb(var(--dark-accent));
+    margin: 1em 0;
 }
