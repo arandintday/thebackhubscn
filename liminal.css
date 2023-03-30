@@ -376,10 +376,10 @@ iframe.scpnet-interwiki-frame {
     display: flex;
     align-items: center;
     padding: 4px 0 0 0;
+    flex-wrap: wrap;
 }
 
 #recent-posts-container .post .head .info {
-    flex-wrap: wrap;
     font-size: 0;
     justify-content: flex-end;
 }
