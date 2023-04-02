@@ -334,8 +334,8 @@ iframe.scpnet-interwiki-frame {
 }
 
 .thread-container #thread-container-posts>.post-container {
-    margin: 0 0 18px 0;
-    padding: 18px;
+    margin: 0 0 12px 0;
+    padding: 12px;
 }
 
 .thread-container .post-container .post~.post-container {
@@ -349,7 +349,7 @@ iframe.scpnet-interwiki-frame {
 
 .thread-container .post .head {
     padding: 0 0 18px 0;
-    background: 0 0;
+    background: none;
     box-shadow: none;
     border-radius: 0;
 }
@@ -472,7 +472,7 @@ iframe.scpnet-interwiki-frame {
     position: relative;
     left: 4px;
     margin: 0;
-    padding: 24px 0 0 24px;
+    padding: 12px 0 0 12px;
 }
 
 .thread-container .post-container .post-container .post::before {
