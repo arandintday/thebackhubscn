@@ -195,6 +195,11 @@ blockquote {
     color: rgb(var(--swatch-menubg-medium-color));
 }
 
+#side-bar div.side-block,
+#side-bar div.side-block .heading {
+   margin-top: 0;
+}
+
 #side-bar div.menu-item.small a {
     justify-content: center;
     width: auto;
