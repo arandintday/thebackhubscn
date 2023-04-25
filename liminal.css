@@ -419,6 +419,7 @@ iframe.scpnet-interwiki-frame {
 
 .thread-container .post .head .info > a {
     font-size: 14px;
+    max-width: fit-content;
 }
 
 .thread-container .post .head .info > a:nth-of-type(1) {
