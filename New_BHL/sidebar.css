@@ -479,9 +479,15 @@
 #side-bar .side-block {
     margin: 0;
     padding: 0;
-    box-shadow: inset calc(var(--sidebar-internal-border-thickness) * -1) 0 0 0 rgb(var(--swatch-border-color), 0.16),
-        inset calc(var(--sidebar-internal-border-thickness)) 0 0 0 rgb(var(--swatch-border-color), 0.16);
+    box-shadow: inset calc(var(--sidebar-internal-border-thickness) * -1) 0 0 0 rgb(var(--swatch-border-color), 0.08),
+        inset calc(var(--sidebar-internal-border-thickness)) 0 0 0 rgb(var(--swatch-border-color), 0.24);
 }
+
+#interwiki .side-block div.menu-item a,
+#side-bar .side-block div.menu-item a {
+    box-shadow: inset calc(var(--sidebar-internal-border-thickness) * -1) 0 0 0 rgb(var(--swatch-border-color), 0.16);
+}
+
 #interwiki .side-block .heading,
 #side-bar .side-block .heading {
     justify-content: center;
@@ -491,4 +497,14 @@
 #interwiki .side-block .heading p,
 #side-bar .side-block .heading p {
     --wght: 500;
+}
+
+#interwiki div.menu-item a[href="/"]+a[href="/forum:start"]:last-child,
+#interwiki div.menu-item:first-of-type a[href="/"],
+#interwiki div.menu-item:nth-of-type(2) a[href="/forum:start"],
+#side-bar div.menu-item a[href="/"]+a[href="/forum:start"]:last-child,
+#side-bar div.menu-item:first-of-type a[href="/"],
+#side-bar div.menu-item:nth-of-type(2) a[href="/forum:start"] {
+    justify-content: flex-start;
+    padding: 0 0 0 calc(var(--base-font-size)*(13/15));
 }
