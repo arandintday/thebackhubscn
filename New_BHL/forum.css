@@ -49,6 +49,7 @@
 
 .thread-container .post-container .post~.post-container {
     border-top: 1px solid rgb(var(--dark-accent));
+    border-left: 1px solid transparent;
 }
 
 .thread-container .post .long {
@@ -208,11 +209,12 @@
     padding-top: 0;
 }
 
-.thread-container .post .long .revisions table {
+#page-content .thread-container .post .long .revisions table {
     border-spacing: 0;
     display: flex;
     flex-direction: column;
     align-content: flex-end;
+    box-shadow: none;
 }
 
 .thread-container .post .long .revisions a {
@@ -243,7 +245,7 @@
 }
 
 #page-content>div.forum-thread-box>div.options a,
-.thread-container div.post div.long .options a {
+#page-content .thread-container div.post div.long .options a {
     border: initial;
     background-color: initial;
     color: #77a;
@@ -253,12 +255,17 @@
     margin: 0 0.1rem;
     transition: text-decoration-color 150ms cubic-bezier(0.4, 0, 0.2, 1),
         color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: none;
+    display: block;
+    min-width: initial;
 }
 
-#page-content>div.forum-thread-box>div.options a:hover,
-.thread-container div.post div.long .options a:hover {
+#page-content>div.forum-thread-box>div.options a:is(:focus, :focus-within, :active, :hover),
+#page-content .thread-container div.post div.long .options a:is(:focus, :focus-within, :active, :hover) {
     text-decoration: underline;
     color: #77a;
+    background-color: transparent;
+    box-shadow: none;
 }
 
 #page-content>div.forum-thread-box>div.options {
