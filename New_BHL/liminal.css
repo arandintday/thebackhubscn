@@ -1,0 +1,374 @@
+/* Remove Default Wikidot Styles */
+@import url("https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css");
+
+/* Base BHL Theme */
+@import url("https://nu-scptheme.github.io/Black-Highlighter/css/min/black-highlighter.min.css");
+
+/* Fantasque Sans Mono Font */
+@import url('https://fontlibrary.org/face/fantasque-sans-mono');
+
+/* Lato Font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Collapsible Sidebar */
+@import url("./sidebar.css");
+
+/* Fancy Forums */
+@import url("./forum.css");
+
+/* User Flairs */
+/* @import url("./user-flairs.css");  Not used for now */
+
+/* Banned History List */
+@import url("./banlist.css");
+
+/* Root Variables: When making a new theme, see: https://github.com/Nu-SCPTheme/Black-Highlighter/blob/master/src/css/root.css */
+
+:root {
+    /* S-CSS-P */
+    --theme-base: "black-highlighter";
+    --theme-id: "liminal";
+    --theme-name: "Liminal Theme";
+
+    /* Header */
+    --logo-image: url("./logo.svg");
+    --header-title: "The Backrooms";
+    --header-subtitle: "你曾经来过这里";
+    --swatch-headerh1-color: var(--white-monochrome);
+    --swatch-headerh2-color: var(--white-monochrome);
+    /* Typefaces */
+    --body-font: Inter, "Noto Sans SC", Verdana, "Microsoft YaHei", "微软雅黑", Geneva, sans-serif, STXihei, "华文细黑";
+    --UI-font: PTRootUI, "Noto Sans SC", "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
+    --header-font: var(--body-font);
+    --title-font: var(--body-font);
+    --mono-font: Recursive, "Noto Serif SC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
+
+    /* Colors */
+    --white-monochrome: 252, 252, 252;
+    /* ALTERED */
+    --pale-gray-monochrome: 237, 233, 223;
+    /* ALTERED */
+    --light-pale-gray-monochrome: 237, 233, 223;
+    --very-light-gray-monochrome: 215, 215, 215;
+    --light-gray-monochrome: 160, 160, 160;
+    --gray-monochrome: 72, 69, 60;
+    --dark-gray-monochrome: 64, 63, 52;
+    --black-monochrome: 25, 20, 16;
+    --pale-accent: 230, 23, 68;
+    --bright-accent: 140, 136, 126;
+    --medium-accent: 72, 69, 60;
+    --dark-accent: 140, 136, 126;
+    --alt-accent: 221, 102, 17;
+
+    /* Liminal Variables */
+    --header-text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.8);
+    --header-text-shadow-hover: 0px 5px 3px rgba(0, 0, 0, 0.3);
+    --quote-shadow: 0 2px 4px rgba(var(--black-monochrome), 0.25);
+    --footer-message: var(--header-subtitle);
+
+    --swatch-sidebar-collapsible-tab-bg: var(--swatch-primary);
+
+    /* Swatches */
+    --swatch-secondary-color: var(--white-monochrome);
+    --swatch-menubg-color: var(--white-monochrome);
+    --rating-module-bg-color: var(--white-monochrome);
+
+    --gradient-header: linear-gradient(to top,
+            rgba(var(--medium-accent)) 0%,
+            rgba(var(--medium-accent), 0.90) 100%);
+
+    --diagonal-stripes: transparent;
+    --background-gradient-distance: 0;
+    --scrollbar-width: 0.7rem;
+    --swatch-background: var(--pale-gray-monochrome);
+    --swatch-topmenu-border-color: var(--medium-accent);
+
+    --text-tags: "标签\0021b4";
+    --rename-option: "记住：后室维基用户可以重命名/移动自己创建的页面，但请谨慎使用该功能（最好仅在名称中出现错误时使用）。只有工作人员允许删除页面，包括你自己创建的页面。若需自删，请在页面名称前面加上 deleted: 前缀，以方便工作人员追踪与核查。";
+}
+
+/* Overflow Fix */
+body#html-body {
+    overflow-x: hidden;
+}
+
+/* Dots */
+/* Header Dots */
+#skrollr-body {
+    background-image:
+        radial-gradient(circle, rgb(var(--medium-accent)) 50%, transparent 0);
+    background-repeat: repeat;
+    background-size: 0.25em 0.25em;
+    width: 100%;
+    height: 7.5rem;
+}
+
+/* Content Dots */
+#container {
+    background-image: radial-gradient(circle, rgb(var(--medium-accent), 0.05) 50%, transparent 0);
+    background-size: 0.25em 0.25em;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+/* container wrap bug */
+
+#container-wrap-wrap {
+    width: 100vw;
+}
+
+/* Header Image */
+#header {
+    background-image: none;
+}
+
+#header::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-image: var(--logo-image);
+    background-size: auto 16rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+}
+
+/* Header Text */
+#header h1 {
+    width: 100%;
+}
+
+#header h1 a,
+#header h1 a:before {
+    width: fit-content;
+    transition: 0.2s;
+    position: relative;
+    bottom: 0;
+    color: rgb(var(--swatch-headerh1-color));
+}
+
+#header h1 a:hover:before {
+    text-shadow: var(--header-text-shadow-hover);
+    bottom: 3px;
+}
+
+#header h1,
+#header h1 a {
+    position: absolute;
+    top: 1rem;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+    height: 1.5rem;
+}
+
+#header h2,
+#header h2 span,
+#header h2 span::before {
+    position: absolute;
+    top: 1.85rem;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+#header h2 span::before {
+    color: rgb(var(--swatch-headerh2-color));
+}
+
+#header h1 a::before,
+#header h2 span::before {
+    text-shadow: var(--header-text-shadow);
+}
+
+/* Div Boxes */
+.darkblock {
+    color: rgb(var(--white-monochrome));
+    background: rgb(var(--dark-gray-monochrome));
+    padding: 0.01rem 1rem;
+    margin: 0.5rem 0;
+    box-shadow: var(--quote-shadow);
+}
+
+.lightblock {
+    color: rgb(var(--black-monochrome));
+    background: rgb(var(--white-monochrome));
+    padding: 0.01rem 1rem;
+    margin: 0.5rem 0;
+    box-shadow: var(--quote-shadow);
+}
+
+/* Div Quotes */
+.blockquote,
+[class*=blockquote],
+blockquote,
+div.blockquote {
+    box-shadow: var(--quote-shadow);
+}
+
+.styled-quote {
+    color: rgb(var(--black-monochrome));
+    background: rgb(var(--white-monochrome));
+    padding: 0.01rem 1rem;
+    margin: 0.5rem 0;
+    box-shadow: var(--quote-shadow);
+    border-left: solid 6px rgb(var(--dark-gray-monochrome));
+}
+
+.dark-styled-quote {
+    color: rgb(var(--white-monochrome));
+    background: rgb(var(--dark-gray-monochrome));
+    padding: 0.01rem 1rem;
+    margin: 0.5rem 0;
+    box-shadow: var(--quote-shadow);
+    border-left: solid 6px rgb(var(--bright-accent));
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0.5em;
+    margin-left: 0;
+}
+
+/* Table of Contents */
+#page-content #toc {
+    --toc-header-bg-color: var(--gray-monochrome);
+    --toc-body-bg-color: var(--pale-gray-monochrome);
+}
+
+/* Table */
+#page-content table {
+    box-shadow: var(--quote-shadow);
+}
+
+/* Max-Width Fix */
+img,
+embed,
+video,
+object,
+iframe,
+table,
+dark#page-content div,
+#page-content div table {
+    max-width: 100%;
+}
+
+div#footer:after {
+    content: var(--footer-message);
+    border-left: solid 1px;
+    padding-left: 0.5em;
+    height: 1.4em;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 0.3em;
+}
+
+/* Horizontal Rule Fix */
+hr {
+    clear: none;
+    display: flex;
+}
+
+.bibitems .bibitem:after,
+.footnotes-footer a[href*=javascript]:before {
+    right: -20%;
+    width: 140%;
+}
+
+/* Tab Gap */
+.yui-navset .yui-nav {
+    background: rgb(var(--tabs-bottom-border-color));
+    column-gap: 4px;
+}
+
+.yui-navset {
+    margin-top: 1rem;
+}
+
+/* Collapsible Sidebar */
+/* Most of the code for the collapsible sidebar is imported. */
+#main-content::after {
+    height: 13rem;
+    border-radius: 0 0.6rem 0.6rem 0;
+    background-color: rgb(var(--swatch-sidebar-collapsible-tab-bg));
+    top: calc(50vh - 6.5rem);
+    background-image: url("./sidebar-arrows.svg");
+}
+
+/* Page Title */
+
+#page-title,
+.meta-title {
+    margin-bottom: 0.5em;
+}
+
+/* printuser */
+span.printuser a:first-of-type:not(:last-of-type) img.small {
+    width: calc(80% - .3625rem);
+    height: 80%;
+}
+
+#avatar-hover-container {
+    display: none;
+}
+
+/* Buttons */
+div[id*=page-options-bottom]:not(.page-rate-widget-box):not(#search-top-box-form)>a.btn {
+    padding: 3px;
+    box-shadow: none;
+    flex-basis: 7rem;
+}
+
+div[id*=page-options-bottom]>a:after {
+    content: none;
+}
+
+/* Stop the unordered lists being in line with the text, this breaks SD banners! */
+
+ul {
+    padding-inline-start: 2.5rem;
+}
+
+/* Message on Delete/Rename/Move */
+
+#rename-option-rename::before,
+#rename-option-delete::before {
+    content: var(--rename-option);
+    color: red;
+    display: block;
+    margin-top: 1rem;
+}
+
+/* MOBILE */
+
+#page-content {
+    max-width: var(--body-width-on-desktop);
+}
+
+@media only screen and (max-width: 56.25rem) {
+    #page-content {
+        max-width: var(--body-width-on-mobile);
+    }
+}
+
+.scp-image-caption {
+    width: unset !important;
+}
+
+/* Fix Images */
+
+.image-container.floatright {
+    float: right;
+    margin-left: 0.7em;
+}
