@@ -198,6 +198,7 @@ body#html-body {
 /* Sidebar fix */
 #side-bar div.scpnet-interwiki-wrapper {
     min-height: 300px;
+    grid-column: span 2;
 }
 div.scpnet-interwiki-wrapper {
     margin: 0;

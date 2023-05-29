@@ -217,6 +217,10 @@
     box-shadow: none;
 }
 
+#page-content .forum-recent-posts-box > form {
+    box-shadow: none;
+}
+
 .thread-container .post .long .revisions a {
     color: #77a;
 }
@@ -245,7 +249,8 @@
 }
 
 #page-content>div.forum-thread-box>div.options a,
-#page-content .thread-container div.post div.long .options a {
+#page-content .thread-container div.post div.long .options a,
+#page-content>div.new-post a {
     border: initial;
     background-color: initial;
     color: #77a;
@@ -261,7 +266,8 @@
 }
 
 #page-content>div.forum-thread-box>div.options a:is(:focus, :focus-within, :active, :hover),
-#page-content .thread-container div.post div.long .options a:is(:focus, :focus-within, :active, :hover) {
+#page-content .thread-container div.post div.long .options a:is(:focus, :focus-within, :active, :hover),
+#page-content>div.new-post a:is(:focus, :focus-within, :active, :hover) {
     text-decoration: underline;
     color: #77a;
     background-color: transparent;

@@ -463,3 +463,32 @@
         display: none;
     }
 }
+
+#interwiki,
+#side-bar {
+    --sidebar-bg-color: 227, 223, 213;
+    --sideblock-heading-bg-color: var(--swatch-primary);
+    --sideblock-heading-text-color: var(--swatch-text-secondary-color);
+}
+
+#side-bar .side-block.media {
+    margin: 0.5rem 0 0 0;
+}
+
+#interwiki .side-block,
+#side-bar .side-block {
+    margin: 0;
+    padding: 0;
+    box-shadow: inset calc(var(--sidebar-internal-border-thickness) * -1) 0 0 0 rgb(var(--swatch-border-color), 0.16),
+        inset calc(var(--sidebar-internal-border-thickness)) 0 0 0 rgb(var(--swatch-border-color), 0.16);
+}
+#interwiki .side-block .heading,
+#side-bar .side-block .heading {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+#interwiki .side-block .heading p,
+#side-bar .side-block .heading p {
+    --wght: 500;
+}
