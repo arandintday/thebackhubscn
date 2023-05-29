@@ -13,6 +13,9 @@
 /* Collapsible Sidebar */
 @import url("./sidebar.css");
 
+/* 侧边栏logo适配 */
+@import url("./round-logo.css");
+
 /* Fancy Forums */
 @import url("./forum.css");
 
@@ -21,6 +24,10 @@
 
 /* Banned History List */
 @import url("./banlist.css");
+
+/* 嵌入繁中字体 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;700;900&display=swap');
 
 /* Root Variables: When making a new theme, see: https://github.com/Nu-SCPTheme/Black-Highlighter/blob/master/src/css/root.css */
 
@@ -37,11 +44,11 @@
     --swatch-headerh1-color: var(--white-monochrome);
     --swatch-headerh2-color: var(--white-monochrome);
     /* Typefaces */
-    --body-font: Inter, "Noto Sans SC", Verdana, "Microsoft YaHei", "微软雅黑", Geneva, sans-serif, STXihei, "华文细黑";
-    --UI-font: PTRootUI, "Noto Sans SC", "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
+    --body-font: Inter, "Noto Sans SC", "Noto Sans TC", Verdana, "Microsoft YaHei", "微软雅黑", Geneva, sans-serif, STXihei, "华文细黑";
+    --UI-font: PTRootUI, "Noto Sans SC", "Noto Sans TC", "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
     --header-font: var(--body-font);
     --title-font: var(--body-font);
-    --mono-font: Recursive, "Noto Serif SC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
+    --mono-font: Recursive, "Noto Serif SC", "Noto Serif TC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
 
     /* Colors */
     --white-monochrome: 252, 252, 252;
@@ -104,8 +111,9 @@ body#html-body {
 }
 
 /* Content Dots */
+/* 透明化以避免 Bug */
 #container {
-    background-image: radial-gradient(circle, rgb(var(--medium-accent), 0.05) 50%, transparent 0);
+    background-image: radial-gradient(circle, transparent 50%, transparent 0);
     background-size: 0.25em 0.25em;
     background-repeat: repeat;
     background-attachment: fixed;
@@ -185,6 +193,26 @@ body#html-body {
 #header h1 a::before,
 #header h2 span::before {
     text-shadow: var(--header-text-shadow);
+}
+
+/* Sidebar fix */
+#side-bar div.scpnet-interwiki-wrapper {
+    min-height: 300px;
+}
+div.scpnet-interwiki-wrapper {
+    margin: 0;
+    width: auto;
+}
+iframe.scpnet-interwiki-frame {
+    border: inherit;
+    width: 100%;
+    height: 230px;
+}
+@media (min-width:768px) {
+    div.scpnet-interwiki-wrapper,
+    iframe.scpnet-interwiki-frame {
+        width: 100%;
+    }
 }
 
 /* Div Boxes */
@@ -371,4 +399,31 @@ ul {
 .image-container.floatright {
     float: right;
     margin-left: 0.7em;
+}
+
+/* Content Warning */
+#page-content div#u-adult-warning {
+    width: fit-content;
+    margin: 0 auto 1.25rem;
+    padding: 0.5rem 1rem;
+    border: 3px solid #333;
+    background: #e4e4e4;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+}
+#page-content div#u-adult-warning > div#u-adult-header {
+    font-size: 300%;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, .5);
+    color: #901;
+}
+#page-content div#u-adult-warning > div#u-adult-header p {
+    margin: 0;
+}
+#page-content div#u-adult-warning > .error-block {
+    color: unset;
+    padding: unset;
+    margin: unset;
+    border: unset;
+    margin-bottom: 1em;
 }
