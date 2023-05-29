@@ -90,6 +90,10 @@
     --swatch-background: var(--pale-gray-monochrome);
     --swatch-topmenu-border-color: var(--medium-accent);
 
+    --ui-button-bg: var(--swatch-primary-darkest);
+    --ui-button-hover-bg: var(--swatch-menubg-dark-color);
+    --ui-button-txt: var(--swatch-text-secondary-color);
+
     --text-tags: "标签\0021b4";
     --rename-option: "记住：后室维基用户可以重命名/移动自己创建的页面，但请谨慎使用该功能（最好仅在名称中出现错误时使用）。只有工作人员允许删除页面，包括你自己创建的页面。若需自删，请在页面名称前面加上 deleted: 前缀，以方便工作人员追踪与核查。";
 }
@@ -427,4 +431,59 @@ ul {
     margin: unset;
     border: unset;
     margin-bottom: 1em;
+}
+
+/* Button */
+
+:not(.page-rate-widget-box):not(#search-top-box-form)>.btn,
+:not(.page-rate-widget-box):not(#search-top-box-form)>.button,
+:not(.page-rate-widget-box):not(#search-top-box-form)>.owindow .button-bar a,
+:not(.page-rate-widget-box):not(#search-top-box-form)>button,
+:not(.page-rate-widget-box):not(#search-top-box-form)>div.buttons input,
+:not(.page-rate-widget-box):not(#search-top-box-form)>input.button {
+    --wght: 300;
+    flex-basis: 5rem;
+}
+
+:not(.page-rate-widget-box):not(#search-top-box-form)>.btn:is(:hover,:active,:focus,:focus-within),
+:not(.page-rate-widget-box):not(#search-top-box-form)>.button:is(:hover,:active,:focus,:focus-within),
+:not(.page-rate-widget-box):not(#search-top-box-form)>.owindow .button-bar a:is(:hover,:active,:focus,:focus-within),
+:not(.page-rate-widget-box):not(#search-top-box-form)>button:is(:hover,:active,:focus,:focus-within),
+:not(.page-rate-widget-box):not(#search-top-box-form)>div.buttons input:is(:hover,:active,:focus,:focus-within),
+:not(.page-rate-widget-box):not(#search-top-box-form)>input.button:is(:hover,:active,:focus,:focus-within) {
+    box-shadow: none;
+}
+
+div[id*=page-options-bottom]:not(.page-rate-widget-box):not(#search-top-box-form)>a.btn {
+    background-color: rgb(var(--swatch-primary-darkest));
+    color: rgb(var(--swatch-text-secondary-color));
+    flex-basis: 5rem;
+}
+
+div[id*=page-options-bottom]:not(.page-rate-widget-box):not(#search-top-box-form)>a.btn:is(:hover,:active,:focus,:focus-within) {
+    box-shadow: none;
+    background-color: rgb(var(--swatch-menubg-dark-color));
+}
+
+#action-area:has(form[onsubmit*=setParent],
+#who-rated-page-area,
+form[onsubmit*=PageTagsModule],
+table.page-files,
+#edit-meta-addbutton,
+ul[style="list-style: none"],
+#page-block-checkbox,
+#rename-option-rename,
+#rename-option-delete) p:not(:has(a[id*=backlinks],a[onclick*=showWho],a.btn)) {
+    background-color: transparent;
+    box-shadow: none;
+    margin: 0.5rem auto;
+    padding: 0;
+}
+
+#who-rated-page-area>div>span[style*=color] {
+    margin-top: -0.0625rem;
+}
+
+form[onsubmit*=PageTagsModule] table>tbody>tr>td:nth-child(2)>input {
+    padding: 0.25ch 0.5ex
 }
