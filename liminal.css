@@ -195,6 +195,10 @@ blockquote {
     color: rgb(var(--swatch-menubg-medium-color));
 }
 
+#side-bar div.side-block {
+    padding: 0;
+}
+
 #side-bar div.side-block,
 #side-bar div.side-block .heading {
    margin-top: 0;
