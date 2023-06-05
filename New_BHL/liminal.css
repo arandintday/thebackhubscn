@@ -98,11 +98,6 @@
     --rename-option: "记住：后室维基用户可以重命名/移动自己创建的页面，但请谨慎使用该功能（最好仅在名称中出现错误时使用）。只有工作人员允许删除页面，包括你自己创建的页面。若需自删，请在页面名称前面加上 deleted: 前缀，以方便工作人员追踪与核查。";
 }
 
-/* Overflow Fix */
-body#html-body {
-    overflow-x: hidden;
-}
-
 /* Dots */
 /* Header Dots */
 #skrollr-body {
@@ -486,4 +481,9 @@ ul[style="list-style: none"],
 
 form[onsubmit*=PageTagsModule] table>tbody>tr>td:nth-child(2)>input {
     padding: 0.25ch 0.5ex
+}
+
+#main-content #action-area > div.page-source {
+    background-color: rgb(227, 223, 213);
+    border: .0625rem solid rgba(var(--swatch-border-color),.25);
 }
