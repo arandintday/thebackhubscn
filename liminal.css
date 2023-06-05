@@ -196,7 +196,7 @@ blockquote {
 }
 
 #side-bar div.side-block {
-    padding: 0 0 0 0.25rem;
+    padding: 0;
 }
 
 #side-bar div.side-block,
@@ -214,7 +214,7 @@ blockquote {
 
 #side-bar div.menu-item a {
     justify-content: flex-start;
-    padding: 0 0.6em;
+    padding: 0 0 0 calc(var(--base-font-size)*.93333);
 }
 
 #side-bar div.menu-item,
