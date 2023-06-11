@@ -20,6 +20,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;700;900&display=swap');
 @import url('https://fastly.jsdelivr.net/gh/scp-cn-tech/sigma9@cn/modules/colstyle.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
 :root {
     --theme-base: "black-highlighter";
     --theme-id: "liminal";
@@ -27,10 +28,10 @@
     --logo-image: url("./logo.svg");
     --header-title: "The Backrooms";
     --header-subtitle: "你曾经来过这里";
-    --body-font: Inter, Noto Sans SC, Arimo, Verdana, Geneva, sans-serif;
-    --header-font: Inter, Noto Sans SC, Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
+    --body-font: Inter, Noto Sans SC, Noto Sans TC, Arimo, Verdana, Geneva, sans-serif;
+    --header-font: Inter, Noto Sans SC, Noto Sans TC, Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
     --title-font: var(--header-font);
-    --mono-font: Recursive, Noto Serif SC, Consolas, monaco, monospace;
+    --mono-font: Recursive, Noto Serif SC, Noto Serif TC, Consolas, monaco, monospace;
     --white-monochrome: 237, 233, 223;
     --pale-gray-monochrome: 255, 251, 240;
     --light-gray-monochrome: 160, 160, 160;
@@ -48,16 +49,6 @@
     --gradient-header: linear-gradient(to top, rgba(var(--medium-accent)) 0%, rgba(var(--medium-accent), 0.90) 100%);
     --diagonal-stripes: linear-gradient(transparent 0);
 }
-
-
-/*
-#login-status {
-   position: absolute !important;
-}
-#account-options {
-   display: none !important;
-}
-*/
 
 #skrollr-body {
     background-image: radial-gradient(circle, rgb(var(--medium-accent)) 50%, transparent 0);
@@ -209,7 +200,7 @@ blockquote {
 
 #side-bar div.side-block,
 #side-bar div.side-block .heading {
-   margin-top: 0;
+    margin-top: 0;
 }
 
 #side-bar div.menu-item.small a {
@@ -248,11 +239,13 @@ blockquote {
 #side-bar div.menu-item a:not(a:first-child) {
     border-left: var(--sidebar-internal-border-thickness) solid rgba(var(--swatch-border-color), .08)
 }
+
 #side-bar div.menu-item a::before {
     left: 0;
     transform: translateX(calc(-100%));
     width: calc(100% + 6rem);
 }
+
 #side-bar div.menu-item a:hover::before {
     transform: translateX(calc(0rem));
 }
@@ -261,16 +254,20 @@ blockquote {
     min-height: 300px;
     transform: translate(0, 0);
 }
+
 div.scpnet-interwiki-wrapper {
     margin: 0;
     width: auto;
 }
+
 iframe.scpnet-interwiki-frame {
     border: inherit;
     width: 100%;
     height: 230px;
 }
-@media (min-width:768px) {
+
+@media (min-width: 768px) {
+
     div.scpnet-interwiki-wrapper,
     iframe.scpnet-interwiki-frame {
         width: 100%;
@@ -281,13 +278,16 @@ iframe.scpnet-interwiki-frame {
     #side-bar {
         left: calc(var(--sidebar-width-on-mobile)*-1);
     }
+
     #side-bar:target,
     #skrollr-body:target #side-bar {
         left: -0.5rem;
     }
+
     #side-bar div.scpnet-interwiki-wrapper {
         transform: translateX(0.5rem);
     }
+
     #side-bar:target .close-menu,
     #skrollr-body:target .close-menu {
         margin-left: calc(var(--sidebar-width-on-mobile) - 0.5rem);
@@ -306,15 +306,18 @@ iframe.scpnet-interwiki-frame {
     text-align: center;
     font-weight: bold;
 }
-#page-content div#u-adult-warning > div#u-adult-header {
+
+#page-content div#u-adult-warning>div#u-adult-header {
     font-size: 300%;
     text-shadow: 1px 2px 3px rgba(0, 0, 0, .5);
     color: #901;
 }
-#page-content div#u-adult-warning > div#u-adult-header p {
+
+#page-content div#u-adult-warning>div#u-adult-header p {
     margin: 0;
 }
-#page-content div#u-adult-warning > .error-block {
+
+#page-content div#u-adult-warning>.error-block {
     color: unset;
     padding: unset;
     margin: unset;
@@ -324,12 +327,18 @@ iframe.scpnet-interwiki-frame {
 
 /* 去除用户信息中头像白边 */
 #odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child {
-    background-color: initial!important;
+    background-color: initial !important;
 }
 
-/* 去除搜索框 */
+/* 搜索框修改 */
 #search-top-box-input {
     display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    #search-top-box:not(:focus-within):before {
+        top: calc(var(--header-height-on-mobile)/2 + 0.5em);
+    }
 }
 
 /* 论坛样式修改 */
@@ -429,7 +438,7 @@ iframe.scpnet-interwiki-frame {
     font-size: 0;
 }
 
-.thread-container .post .head .info > * {
+.thread-container .post .head .info>* {
     font-size: initial;
 }
 
@@ -456,19 +465,20 @@ iframe.scpnet-interwiki-frame {
     width: 100%;
 }
 
-.thread-container .post .head .info > a {
+.thread-container .post .head .info>a {
     font-size: 14px;
     max-width: fit-content;
 }
 
-.thread-container .post .head .info > a:nth-of-type(1) {
+.thread-container .post .head .info>a:nth-of-type(1) {
     grid-area: forum;
 }
-.thread-container .post .head .info > a:nth-of-type(2) {
+
+.thread-container .post .head .info>a:nth-of-type(2) {
     grid-area: thread;
 }
 
-.thread-container .post .head .info > a:nth-of-type(2)::before {
+.thread-container .post .head .info>a:nth-of-type(2)::before {
     content: "»";
     margin: 0 0.5em;
 }
@@ -482,7 +492,8 @@ iframe.scpnet-interwiki-frame {
         grid-template-columns: max-content max-content max-content 1fr;
         grid-template-rows: 1fr max-content max-content;
     }
-    .thread-container .post .head .info > a:nth-of-type(2)::before {
+
+    .thread-container .post .head .info>a:nth-of-type(2)::before {
         margin: 0 0.5em 0 0;
     }
 }
@@ -497,7 +508,7 @@ iframe.scpnet-interwiki-frame {
     box-sizing: border-box;
     width: 30px;
     height: 30px;
-    background-image: none!important;
+    background-image: none !important;
     padding: 0;
     border: 2px solid rgb(var(--gray-monochrome));
     border-radius: 50%;
@@ -561,7 +572,8 @@ iframe.scpnet-interwiki-frame {
     justify-content: flex-end;
 }
 
-.thread-container .post .long .revisions table tr td:first-of-type,.thread-container .post .long .revisions table tr td:nth-of-type(2) {
+.thread-container .post .long .revisions table tr td:first-of-type,
+.thread-container .post .long .revisions table tr td:nth-of-type(2) {
     padding-right: 7px;
 }
 
@@ -574,7 +586,8 @@ iframe.scpnet-interwiki-frame {
     margin-right: 5px;
 }
 
-#page-content>div.forum-thread-box>div.options a,.thread-container div.post div.long .options a {
+#page-content>div.forum-thread-box>div.options a,
+.thread-container div.post div.long .options a {
     border: initial;
     background-color: initial;
     color: #77a;
@@ -586,7 +599,8 @@ iframe.scpnet-interwiki-frame {
         color 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-#page-content>div.forum-thread-box>div.options a:hover,.thread-container div.post div.long .options a:hover {
+#page-content>div.forum-thread-box>div.options a:hover,
+.thread-container div.post div.long .options a:hover {
     text-decoration: underline;
     color: #77a;
 }
