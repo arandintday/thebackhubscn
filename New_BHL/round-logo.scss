@@ -17,6 +17,7 @@
 
 :where(:lang(cn)) #side-bar div.side-block.media {
     grid-column: span 2;
+    margin-top: 0;
 }
 
 :where(:lang(cn)) #side-bar .side-block.media a[href*="discord"] {
