@@ -34,11 +34,11 @@
 :root {
     /* S-CSS-P */
     --theme-base: "black-highlighter";
-    --theme-id: "liminal";
-    --theme-name: "Liminal Theme";
+    --theme-id: "nuliminal";
+    --theme-name: "NuLiminal Theme";
 
     /* Header */
-    --logo-image: url("./logo.svg");
+    --logo-image: url("./Images/logo.svg");
     --header-title: "The Backrooms";
     --header-subtitle: "你曾经来过这里";
     --swatch-headerh1-color: var(--white-monochrome);
@@ -56,8 +56,8 @@
     --pale-gray-monochrome: 237, 233, 223;
     /* ALTERED */
     --light-pale-gray-monochrome: 237, 233, 223;
-    --very-light-gray-monochrome: 215, 215, 215;
-    --light-gray-monochrome: 160, 160, 160;
+    --very-light-gray-monochrome: 220, 215, 210;
+    --light-gray-monochrome: 165, 160, 155;
     --gray-monochrome: 72, 69, 60;
     --dark-gray-monochrome: 64, 63, 52;
     --black-monochrome: 25, 20, 16;
@@ -78,7 +78,7 @@
     /* Swatches */
     --swatch-secondary-color: var(--white-monochrome);
     --swatch-menubg-color: var(--white-monochrome);
-    --rating-module-bg-color: var(--white-monochrome);
+    --rating-module-bg-color: var(--swatch-menubg-color);
 
     --gradient-header: linear-gradient(to top,
             rgba(var(--medium-accent)) 0%,
@@ -237,13 +237,6 @@ iframe.scpnet-interwiki-frame {
 }
 
 /* Div Quotes */
-.blockquote,
-[class*=blockquote],
-blockquote,
-div.blockquote {
-    box-shadow: var(--quote-shadow);
-}
-
 .styled-quote {
     color: rgb(var(--black-monochrome));
     background: rgb(var(--white-monochrome));
@@ -255,11 +248,11 @@ div.blockquote {
 
 .dark-styled-quote {
     color: rgb(var(--white-monochrome));
-    background: rgb(var(--dark-gray-monochrome));
+    background: rgb(var(--gray-monochrome));
     padding: 0.01rem 1rem;
     margin: 0.5rem 0;
     box-shadow: var(--quote-shadow);
-    border-left: solid 6px rgb(var(--bright-accent));
+    border-left: solid 6px rgb(var(--dark-gray-monochrome));
 }
 
 /* Headings */
@@ -328,18 +321,7 @@ hr {
     margin-top: 1rem;
 }
 
-/* Collapsible Sidebar */
-/* Most of the code for the collapsible sidebar is imported. */
-#main-content::after {
-    height: 13rem;
-    border-radius: 0 0.6rem 0.6rem 0;
-    background-color: rgb(var(--swatch-sidebar-collapsible-tab-bg));
-    top: calc(50vh - 6.5rem);
-    background-image: url("./sidebar-arrows.svg");
-}
-
 /* Page Title */
-
 #page-title,
 .meta-title {
     margin-bottom: 0.5em;
@@ -489,4 +471,9 @@ form[onsubmit*=PageTagsModule] table>tbody>tr>td:nth-child(2)>input {
 #main-content #action-area>div.page-source {
     background-color: rgb(227, 223, 213);
     border: .0625rem solid rgba(var(--swatch-border-color), .25);
+}
+
+/* Make some variables editable at :root level */
+#side-bar {
+    --sideblock-heading-text-color: inherit;
 }

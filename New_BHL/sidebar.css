@@ -237,6 +237,14 @@
     }
 }
 
+#main-content::after {
+    height: 13rem;
+    border-radius: 0 0.6rem 0.6rem 0;
+    background-color: rgb(var(--swatch-sidebar-collapsible-tab-bg));
+    top: calc(50vh - 6.5rem);
+    background-image: url("./Images/sidebar-arrows.svg");
+}
+
 #interwiki,
 #side-bar {
     --sidebar-bg-color: 227, 223, 213;
