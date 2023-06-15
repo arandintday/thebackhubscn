@@ -1,32 +1,42 @@
-@charset "UTF-8";
 /* Remove Default Wikidot Styles */
 @import url("https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css");
+
 /* Base BHL Theme */
 @import url("https://nu-scptheme.github.io/Black-Highlighter/css/min/black-highlighter.min.css");
+
 /* Fantasque Sans Mono Font */
-@import url("https://fontlibrary.org/face/fantasque-sans-mono");
+@import url('https://fontlibrary.org/face/fantasque-sans-mono');
+
 /* Lato Font */
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 /* Collapsible Sidebar */
 @import url("./sidebar.css");
+
 /* 侧边栏logo适配 */
 @import url("./round-logo.css");
+
 /* Fancy Forums */
 @import url("./forum.css");
+
 /* User Flairs */
 /* @import url("./user-flairs.css");  Not used for now */
+
 /* Banned History List */
 @import url("./banlist.css");
+
 /* 嵌入繁中字体 */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;700;900&display=swap');
 
 /* Root Variables: When making a new theme, see: https://github.com/Nu-SCPTheme/Black-Highlighter/blob/master/src/css/root.css */
+
 :root {
     /* S-CSS-P */
     --theme-base: "black-highlighter";
     --theme-id: "liminal";
     --theme-name: "Liminal Theme";
+
     /* Header */
     --logo-image: url("./logo.svg");
     --header-title: "The Backrooms";
@@ -39,6 +49,7 @@
     --header-font: var(--body-font);
     --title-font: var(--body-font);
     --mono-font: Recursive, "Noto Serif SC", "Noto Serif TC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
+
     /* Colors */
     --white-monochrome: 252, 252, 252;
     /* ALTERED */
@@ -55,35 +66,43 @@
     --medium-accent: 72, 69, 60;
     --dark-accent: 140, 136, 126;
     --alt-accent: 221, 102, 17;
+
     /* Liminal Variables */
     --header-text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.8);
     --header-text-shadow-hover: 0px 5px 3px rgba(0, 0, 0, 0.3);
     --quote-shadow: 0 2px 4px rgba(var(--black-monochrome), 0.25);
     --footer-message: var(--header-subtitle);
+
     --swatch-sidebar-collapsible-tab-bg: var(--swatch-primary);
+
     /* Swatches */
     --swatch-secondary-color: var(--white-monochrome);
     --swatch-menubg-color: var(--white-monochrome);
     --rating-module-bg-color: var(--white-monochrome);
+
     --gradient-header: linear-gradient(to top,
             rgba(var(--medium-accent)) 0%,
             rgba(var(--medium-accent), 0.90) 100%);
+
     --diagonal-stripes: transparent;
     --background-gradient-distance: 0;
     --scrollbar-width: 0.7rem;
     --swatch-background: var(--pale-gray-monochrome);
     --swatch-topmenu-border-color: var(--medium-accent);
+
     --ui-button-bg: var(--swatch-primary-darkest);
     --ui-button-hover-bg: var(--swatch-menubg-dark-color);
     --ui-button-txt: var(--swatch-text-secondary-color);
-    --text-tags: "标签↴";
+
+    --text-tags: "标签\0021b4";
     --rename-option: "记住：后室维基用户可以重命名/移动自己创建的页面，但请谨慎使用该功能（最好仅在名称中出现错误时使用）。只有工作人员允许删除页面，包括你自己创建的页面。若需自删，请在页面名称前面加上 deleted: 前缀，以方便工作人员追踪与核查。";
 }
 
 /* Dots */
 /* Header Dots */
 #skrollr-body {
-    background-image: radial-gradient(circle, rgb(var(--medium-accent)) 50%, transparent 0);
+    background-image:
+        radial-gradient(circle, rgb(var(--medium-accent)) 50%, transparent 0);
     background-repeat: repeat;
     background-size: 0.25em 0.25em;
     width: 100%;
@@ -100,6 +119,7 @@
 }
 
 /* container wrap bug */
+
 #container-wrap-wrap {
     width: 100vw;
 }
@@ -130,7 +150,6 @@
 
 #header h1 a,
 #header h1 a:before {
-    width: -moz-fit-content;
     width: fit-content;
     transition: 0.2s;
     position: relative;
@@ -192,7 +211,7 @@ iframe.scpnet-interwiki-frame {
     height: 230px;
 }
 
-@media (min-width: 768px) {
+@media (min-width:768px) {
 
     div.scpnet-interwiki-wrapper,
     iframe.scpnet-interwiki-frame {
@@ -302,7 +321,6 @@ hr {
 /* Tab Gap */
 .yui-navset .yui-nav {
     background: rgb(var(--tabs-bottom-border-color));
-    -moz-column-gap: 4px;
     column-gap: 4px;
 }
 
@@ -321,6 +339,7 @@ hr {
 }
 
 /* Page Title */
+
 #page-title,
 .meta-title {
     margin-bottom: 0.5em;
@@ -328,7 +347,7 @@ hr {
 
 /* printuser */
 span.printuser a:first-of-type:not(:last-of-type) img.small {
-    width: calc(80% - 0.3625rem);
+    width: calc(80% - .3625rem);
     height: 80%;
 }
 
@@ -348,12 +367,13 @@ div[id*=page-options-bottom]>a:after {
 }
 
 /* Stop the unordered lists being in line with the text, this breaks SD banners! */
+
 ul {
-    -webkit-padding-start: 2.5rem;
     padding-inline-start: 2.5rem;
 }
 
 /* Message on Delete/Rename/Move */
+
 #rename-option-rename::before,
 #rename-option-delete::before {
     content: var(--rename-option);
@@ -363,6 +383,7 @@ ul {
 }
 
 /* MOBILE */
+
 #page-content {
     max-width: var(--body-width-on-desktop);
 }
@@ -374,6 +395,7 @@ ul {
 }
 
 /* Fix Images */
+
 .image-container.floatright {
     float: right;
     margin-left: 0.7em;
@@ -381,7 +403,6 @@ ul {
 
 /* Content Warning */
 #page-content div#u-adult-warning {
-    width: -moz-fit-content;
     width: fit-content;
     margin: 0 auto 1.25rem;
     padding: 0.5rem 1rem;
@@ -394,7 +415,7 @@ ul {
 
 #page-content div#u-adult-warning>div#u-adult-header {
     font-size: 300%;
-    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, .5);
     color: #901;
 }
 
@@ -411,6 +432,7 @@ ul {
 }
 
 /* Button */
+
 :not(.page-rate-widget-box):not(#search-top-box-form)>.btn,
 :not(.page-rate-widget-box):not(#search-top-box-form)>.button,
 :not(.page-rate-widget-box):not(#search-top-box-form)>.owindow .button-bar a,
@@ -461,12 +483,10 @@ div[id*=page-options-bottom]:not(.page-rate-widget-box):not(#search-top-box-form
 }
 
 form[onsubmit*=PageTagsModule] table>tbody>tr>td:nth-child(2)>input {
-    padding: 0.25ch 0.5ex;
+    padding: 0.25ch 0.5ex
 }
 
 #main-content #action-area>div.page-source {
     background-color: rgb(227, 223, 213);
-    border: 0.0625rem solid rgba(var(--swatch-border-color), 0.25);
+    border: .0625rem solid rgba(var(--swatch-border-color), .25);
 }
-
-/*# sourceMappingURL=liminal.css.map */
