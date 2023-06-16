@@ -452,9 +452,4 @@ form[onsubmit*=PageTagsModule] table>tbody>tr>td:nth-child(2)>input {
     border: 0.0625rem solid rgba(var(--swatch-border-color), 0.25);
 }
 
-/* Make some variables editable at :root level */
-#side-bar {
-    --sideblock-heading-text-color: inherit;
-}
-
 /*# sourceMappingURL=liminal.css.map */
