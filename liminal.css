@@ -416,6 +416,10 @@ iframe.scpnet-interwiki-frame {
     overflow: hidden;
 }
 
+#page-content .post .head .title {
+    word-break: break-all;
+}
+
 .thread-container .post .head .title::after {
     content: "";
     position: absolute;
@@ -472,6 +476,8 @@ iframe.scpnet-interwiki-frame {
 
 .thread-container .post .head .info>a:nth-of-type(1) {
     grid-area: forum;
+    height: 100%;
+    margin-right: 0.5em;
 }
 
 .thread-container .post .head .info>a:nth-of-type(2) {
@@ -480,7 +486,13 @@ iframe.scpnet-interwiki-frame {
 
 .thread-container .post .head .info>a:nth-of-type(2)::before {
     content: "»";
-    margin: 0 0.5em;
+    margin-right: 0.5em;
+}
+
+@media (mix-width: 768px) {
+    .thread-container .post .head .info>a:nth-of-type(2) {
+        display: flex;
+    }
 }
 
 @media (max-width: 768px) {
