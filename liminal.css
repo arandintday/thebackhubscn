@@ -489,7 +489,7 @@ iframe.scpnet-interwiki-frame {
     margin-right: 0.5em;
 }
 
-@media (mix-width: 768px) {
+@media (min-width: 768px) {
     .thread-container .post .head .info>a:nth-of-type(2) {
         display: flex;
     }
