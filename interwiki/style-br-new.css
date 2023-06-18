@@ -1,0 +1,32 @@
+:root {
+    --white-monochrome: 252, 252, 252;
+    --pale-gray-monochrome: 237, 233, 223;
+    --light-gray-monochrome: 160, 160, 160;
+    --gray-monochrome: 72, 69, 60;
+    --black-monochrome: 25, 20, 16;
+    --bright-accent: 140, 136, 126;
+    --medium-accent: 72, 69, 60;
+    --dark-accent: 140, 136, 126;
+    --pale-accent: 140, 136, 126;
+}
+
+.side-block {
+    --sidebar-bg-color: 227, 223, 213;
+    --sideblock-heading-bg-color: var(--swatch-primary);
+    --sideblock-heading-text-color: var(--swatch-text-secondary-color);
+
+    margin: 0;
+    padding: 0;
+    box-shadow: inset calc(var(--sidebar-internal-border-thickness) * -1) 0 0 0 rgb(var(--swatch-border-color), 0.16),
+        inset calc(var(--sidebar-internal-border-thickness)) 0 0 0 rgb(var(--swatch-border-color), 0.16);
+}
+
+.side-block .heading {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.side-block .heading p {
+    --wght: 500;
+}
