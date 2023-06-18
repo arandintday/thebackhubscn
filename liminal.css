@@ -263,10 +263,10 @@ div.scpnet-interwiki-wrapper {
 iframe.scpnet-interwiki-frame {
     border: inherit;
     width: 100%;
-    height: 230px;
+    height: 220px;
 }
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
 
     div.scpnet-interwiki-wrapper,
     iframe.scpnet-interwiki-frame {
@@ -284,8 +284,14 @@ iframe.scpnet-interwiki-frame {
         left: -0.5rem;
     }
 
+    #side-bar .heading p,
+    #side-bar .side-block>.collapsible-block .collapsible-block-link {
+        letter-spacing: 0.016em;
+    }
+
     #side-bar div.scpnet-interwiki-wrapper {
-        transform: translateX(0.5rem);
+        width: calc(var(--sidebar-width-on-mobile) - 0.5rem);
+        max-width: calc(80vw + var(--base-font-size)*.5);
     }
 
     #side-bar:target .close-menu,
