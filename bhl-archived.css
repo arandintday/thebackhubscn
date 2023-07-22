@@ -105,6 +105,64 @@
         --final-header-height-on-mobile: calc(var(--header-height-on-mobile) + var(--topbar-height-on-mobile))
     }
 
+    /* ===ANIMATIONS=== */
+
+    :root {
+        --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slide-in {
+        from {
+            translate: 1rem 1rem;
+        }
+
+        to {
+            translate: 0 0;
+        }
+    }
+
+    @supports not (translate: 1rem 1rem) {
+        @keyframes slide-in {
+            from {
+                transform: translate(1rem, 1rem);
+            }
+
+            to {
+                transform: translate(0, 0);
+            }
+        }
+    }
+
+    @keyframes slide-down {
+        from {
+            max-height: 0;
+        }
+
+        to {
+            max-height: var(--header-height-on-desktop);
+        }
+    }
+
+    @keyframes lift-in {
+        from {
+            box-shadow: 0 0 0 0 rgba(var(--swatch-alternate-color), 0.25), inset 0 0 0 0.0625rem rgb(var(--swatch-primary-darkest));
+        }
+
+        to {
+            box-shadow: 0.25rem 0.125rem 0.5rem 0 rgba(var(--swatch-alternate-color), 0.25), inset 0 0 0 0.0625rem rgb(var(--swatch-primary-darkest));
+        }
+    }
+
     :root {
         /* ===VARIABLE FONT SETTINGS=== */
         /* SETTING  |  ============== DESCRIPTION			|	FONT: 	RANGE 	 */
@@ -3742,16 +3800,9 @@
         --rating-module-height: 1.3125em;
     }
 
-    .page-rate-widget-box,
-    #page-content .rate-box-with-
-    /* ===RATING MODULE=== */
-
-    :root {
-        --rating-module-height: 1.3125em;
-    }
-
     div.page-rate-widget-box,
-    #page-content div.rate-box-with-credit-button {
+    #page-content div.rate-box-with-credit-button,
+    #page-content .creditButtonStandalone {
         display: inline-flex;
         height: var(--rating-module-height);
         margin: 0 0 0.75rem;
@@ -3938,7 +3989,9 @@
     }
 
     div.rate-box-with-credit-button>div.creditButton,
-    div.rate-box-with-credit-button>div.creditButton>p {
+    div.rate-box-with-credit-button>div.creditButton>p,
+    div.creditButtonStandalone,
+    div.creditButtonStandalone>p {
         display: block;
         width: calc(var(--base-font-size) * (21 / 15));
         height: 100%;
@@ -3996,12 +4049,14 @@
         margin-bottom: 0;
     }
 
-    #page-content div.rate-box-with-credit-button>.creditButton:is(:hover, :active) {
+    #page-content div.rate-box-with-credit-button>.creditButton:is(:hover, :active),
+    #page-content div.creditButtonStandalone:is(:hover, :active) {
         background: transparent none repeat 0 0 / auto auto padding-box border-box scroll;
         background: initial;
     }
 
-    #page-content div.rate-box-with-credit-button>.creditButton>p {
+    #page-content div.rate-box-with-credit-button>.creditButton>p,
+    #page-content div.creditButtonStandalone>p {
         display: block;
         position: relative;
         margin: 0;
@@ -4009,12 +4064,15 @@
     }
 
     #page-content div.rate-box-with-credit-button>.creditButton>p,
-    #page-content div.rate-box-with-credit-button>.creditButton>p>a {
+    #page-content div.rate-box-with-credit-button>.creditButton>p>a,
+    #page-content div.creditButtonStandalone>p,
+    #page-content div.creditButtonStandalone>p>a {
         width: 100%;
         height: 100%;
     }
 
-    #page-content div.rate-box-with-credit-button>.creditButton>p>a {
+    #page-content div.rate-box-with-credit-button>.creditButton>p>a,
+    #page-content div.creditButtonStandalone>p>a {
         display: flex;
         margin-left: 0;
         border-left: none;
@@ -4022,7 +4080,17 @@
         color: transparent;
     }
 
-    #page-content div.rate-box-with-credit-button>.creditButton>p>a::before {
+    #page-content div.creditButtonStandalone>p>a {
+        line-height: initial;
+        border-radius: initial;
+        text-align: initial;
+        background: initial;
+        box-shadow: initial;
+        font-size: initial;
+    }
+
+    #page-content div.rate-box-with-credit-button>.creditButton>p>a::before,
+    #page-content div.creditButtonStandalone>p>a::before {
         --mask-image: var(--credit-button-mask);
 
         content: " ";
@@ -4041,7 +4109,8 @@
         mask: var(--mask-image) center center / calc(var(--rating-module-height) - 0.375em) no-repeat;
     }
 
-    #page-content div.rate-box-with-credit-button>.creditButton>p>a::after {
+    #page-content div.rate-box-with-credit-button>.creditButton>p>a::after,
+    #page-content div.creditButtonStandalone>p>a::after {
         --clip-path: polygon(0 100%, 100% 115%, 100% 100%, 0 115%);
 
         content: " ";
@@ -4059,11 +4128,13 @@
         clip-path: var(--clip-path);
     }
 
-    #page-content div.rate-box-with-credit-button>.creditButton>p>a:is(:hover, :active, :focus, :focus-within)::before {
+    #page-content div.rate-box-with-credit-button>.creditButton>p>a:is(:hover, :active, :focus, :focus-within)::before,
+    #page-content div.creditButtonStandalone>p>a:is(:hover, :active, :focus, :focus-within)::before {
         background-color: rgb(var(--rating-module-text-hover-color));
     }
 
-    #page-content div.rate-box-with-credit-button>.creditButton>p>a:is(:hover, :active, :focus, :focus-within)::after {
+    #page-content div.rate-box-with-credit-button>.creditButton>p>a:is(:hover, :active, :focus, :focus-within)::after,
+    #page-content div.creditButtonStandalone>p>a:is(:hover, :active, :focus, :focus-within)::after {
         --clip-path: polygon(0 100%, 100% 115%, 100% 0, 0 -15%);
     }
 
