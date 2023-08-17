@@ -347,6 +347,22 @@ iframe.scpnet-interwiki-frame {
     }
 }
 
+/* License Box */
+#page-content .licensebox .collapsible-block-link {
+    margin-left: .25em;
+    padding: .25em;
+    font-weight: 700;
+    opacity: .5;
+    color: rgb(var(--gray-monochrome));
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+}
+
+#page-content .licensebox .collapsible-block-link:hover {
+    opacity: 1;
+}
+
 /* 论坛样式修改 */
 .thread-container .post .long .content .image:not(.collapsible-block .image) {
     object-fit: cover;
