@@ -5,36 +5,16 @@
 
 @media only screen and (min-width: 56.25rem) {
     #content-wrap {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: row;
-        -moz-box-orient: horizontal;
-        -moz-box-direction: normal;
-        -ms-flex-direction: row;
         flex-direction: row;
-        width: -webkit-calc(100vw - (100vw - 100%));
-        width: -moz-calc(100vw - (100vw - 100%));
         width: calc(100vw - (100vw - 100%));
-        min-height: -webkit-calc(100vh - -webkit-calc(var(--final-header-height-on-desktop, 10.125rem)));
-        min-height: -moz-calc(100vh - -moz-calc(var(--final-header-height-on-desktop, 10.125rem)));
         min-height: calc(100vh - calc(var(--final-header-height-on-desktop, 10.125rem)));
-        -webkit-box-flex: 2;
-        -webkit-flex-grow: 2;
-        -moz-box-flex: 2;
-        -ms-flex-positive: 2;
         flex-grow: 2;
         height: auto;
         position: initial;
         margin: 0 auto;
         max-width: inherit;
         margin-left: -11em;
-        margin-left: -webkit-calc(var(--sidebar-width-on-desktop, 15.5em) * -1 / 2 - 2rem);
-        margin-left: -moz-calc(var(--sidebar-width-on-desktop, 15.5em) * -1 / 2 - 2rem);
         margin-left: calc(var(--sidebar-width-on-desktop, 15.5em) * -1 / 2 - 2rem);
     }
 
@@ -55,50 +35,13 @@
     }
 
     #side-bar {
-        -webkit-transform: translateX(-14.6rem);
-        -moz-transform: translateX(-14.6rem);
-        -ms-transform: translateX(-14.6rem);
-        -o-transform: translateX(-14.6rem);
         transform: translateX(-14.6rem);
-        -webkit-transform: translateX(-webkit-calc(var(--sidebar-width-on-desktop, 17em) * -1 - 1rem));
-        -moz-transform: translateX(-moz-calc(var(--sidebar-width-on-desktop, 17em) * -1 - 1rem));
-        -ms-transform: translateX(calc(var(--sidebar-width-on-desktop, 17em) * -1 - 1rem));
-        -o-transform: translateX(calc(var(--sidebar-width-on-desktop, 17em) * -1 - 1rem));
         transform: translateX(calc(var(--sidebar-width-on-desktop, 17em) * -1 - 1rem));
-        -webkit-transition:
-            background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            padding 300ms linear,
-            margin 300ms linear,
-            -webkit-transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
-        transition:
-            background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            padding 300ms linear,
-            margin 300ms linear,
-            -webkit-transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
-        -o-transition:
-            background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            padding 300ms linear,
-            margin 300ms linear,
-            -o-transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
-        -moz-transition:
-            transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            padding 300ms linear,
-            margin 300ms linear,
-            -moz-transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
         transition:
             transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
             background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
             padding 300ms linear,
             margin 300ms linear;
-        transition:
-            transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            padding 300ms linear,
-            margin 300ms linear,
-            -webkit-transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            -moz-transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            -o-transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
         border: none;
         border-color: rgba(var(--swatch-tertiary-color, 170, 170, 170), 0.4);
         width: var(--sidebar-width-on-desktop, 13.6rem) !important;
@@ -109,7 +52,6 @@
         background-color: rgba(var(--sidebar-bg-color, 255, 255, 255), 0);
         top: 0;
         max-height: 100vh;
-        position: -webkit-sticky;
         position: sticky;
         left: 0;
         padding-left: 0.5rem;
@@ -138,7 +80,6 @@
     #side-bar::-webkit-scrollbar-thumb,
     #side-bar::-webkit-scrollbar-corner {
         width: 0.5rem;
-        border-right-width: -webkit-calc(100vw + 100vh);
         border-right-width: calc(100vw + 100vh);
         border-right-style: inset;
         border-color: inherit;
@@ -151,15 +92,7 @@
         background-color: rgba(var(--sidebar-bg-color, 255, 255, 255), 1);
         padding-right: 0.25rem;
         margin-right: 1.75rem;
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
         transform: translateX(0);
-        -webkit-transform: translateX(-webkit-calc(var(--sidebar-width-on-desktop, 1rem) - var(--sidebar-width-on-desktop, 0)));
-        -moz-transform: translateX(-moz-calc(var(--sidebar-width-on-desktop, 1rem) - var(--sidebar-width-on-desktop, 0)));
-        -ms-transform: translateX(calc(var(--sidebar-width-on-desktop, 1rem) - var(--sidebar-width-on-desktop, 0)));
-        -o-transform: translateX(calc(var(--sidebar-width-on-desktop, 1rem) - var(--sidebar-width-on-desktop, 0)));
         transform: translateX(calc(var(--sidebar-width-on-desktop, 1rem) - var(--sidebar-width-on-desktop, 0)));
         overflow-y: auto;
         overflow-x: hidden;
@@ -181,15 +114,7 @@
         background-color: rgba(var(--sidebar-bg-color, 255, 255, 255), 1);
         padding-right: 0.25rem;
         margin-right: 1.75rem;
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
         transform: translateX(0);
-        -webkit-transform: translateX(-webkit-calc(var(--sidebar-width-on-desktop, 1rem) - var(--sidebar-width-on-desktop, 0.5rem)));
-        -moz-transform: translateX(-moz-calc(var(--sidebar-width-on-desktop, 1rem) - var(--sidebar-width-on-desktop, 0.5rem)));
-        -ms-transform: translateX(calc(var(--sidebar-width-on-desktop, 1rem) - var(--sidebar-width-on-desktop, 0.5rem)));
-        -o-transform: translateX(calc(var(--sidebar-width-on-desktop, 1rem) - var(--sidebar-width-on-desktop, 0.5rem)));
         transform: translateX(calc(var(--sidebar-width-on-desktop, 1rem) - var(--sidebar-width-on-desktop, 0.5rem)));
         overflow-y: auto;
         overflow-x: hidden;
@@ -209,37 +134,13 @@
     #main-content::after {
         content: " ";
         position: fixed;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        -moz-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -moz-box-pack: center;
-        -ms-flex-pack: center;
         justify-content: center;
         width: 1rem;
         height: 100%;
         max-height: 100%;
         top: 0;
-        -webkit-transition:
-            left 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            background-position 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
-        -o-transition:
-            left 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            background-position 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
-        -moz-transition:
-            left 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            background-position 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
         transition:
             left 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
             background-position 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
@@ -249,9 +150,6 @@
         background-repeat: no-repeat;
         background-position: center left 1rem;
         background-attachment: fixed;
-        -webkit-background-size: 1rem 12.875rem;
-        -moz-background-size: 1rem 12.875rem;
-        -o-background-size: 1rem 12.875rem;
         background-size: 1rem 12.875rem;
         pointer-events: none;
     }
@@ -259,25 +157,9 @@
     #side-bar:hover+#main-content::after,
     #side-bar:active+#main-content::after {
         left: -17em;
-        left: -webkit-calc(var(--sidebar-width-on-desktop, 17em) * -1);
-        left: -moz-calc(var(--sidebar-width-on-desktop, 17em) * -1);
         left: calc(var(--sidebar-width-on-desktop, 17em) * -1);
         background-position: center left -17em;
-        background-position: center left -webkit-calc(var(--sidebar-width-on-desktop, 17em) * -1);
-        background-position: center left -moz-calc(var(--sidebar-width-on-desktop, 17em) * -1);
         background-position: center left calc(var(--sidebar-width-on-desktop, 17em) * -1);
-        -webkit-transition:
-            left 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            background-position 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
-        -o-transition:
-            left 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            background-position 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
-        -moz-transition:
-            left 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            background-position 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
         transition:
             left 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
             background-position 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
@@ -289,25 +171,9 @@
 
     #side-bar:focus-within+#main-content::after {
         left: -17em;
-        left: -webkit-calc(var(--sidebar-width-on-desktop, 17em) * -1);
-        left: -moz-calc(var(--sidebar-width-on-desktop, 17em) * -1);
         left: calc(var(--sidebar-width-on-desktop, 17em) * -1);
         background-position: center left -17em;
-        background-position: center left -webkit-calc(var(--sidebar-width-on-desktop, 17em) * -1);
-        background-position: center left -moz-calc(var(--sidebar-width-on-desktop, 17em) * -1);
         background-position: center left calc(var(--sidebar-width-on-desktop, 17em) * -1);
-        -webkit-transition:
-            left 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            background-position 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
-        -o-transition:
-            left 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            background-position 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
-        -moz-transition:
-            left 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            background-position 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
         transition:
             left 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
             background-position 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
@@ -327,70 +193,29 @@
         top: 0;
         top: var(--final-header-height-on-desktop, 0);
         left: 0;
-        -webkit-transform: translateX(-12.6rem);
-        -moz-transform: translateX(-12.6rem);
-        -ms-transform: translateX(-12.6rem);
-        -o-transform: translateX(-12.6rem);
         transform: translateX(-12.6rem);
-        -webkit-transform: translateX(-webkit-calc(var(--sidebar-width-on-desktop, 17em) * -1 + 1rem));
-        -moz-transform: translateX(-moz-calc(var(--sidebar-width-on-desktop, 17em) * -1 + 1rem));
-        -ms-transform: translateX(calc(var(--sidebar-width-on-desktop, 17em) * -1 + 1rem));
-        -o-transform: translateX(calc(var(--sidebar-width-on-desktop, 17em) * -1 + 1rem));
         transform: translateX(calc(var(--sidebar-width-on-desktop, 17em) * -1 + 1rem));
         width: 17em;
         width: var(--sidebar-width-on-desktop, 17em);
-        height: -webkit-calc(100% - 3rem);
-        height: -moz-calc(100% - 3rem);
         height: calc(100% - 3rem);
-        height: -webkit-calc(100% - var(--final-header-height-on-desktop, 0.688rem) - 2.313rem);
-        height: -moz-calc(100% - var(--final-header-height-on-desktop, 0.688rem) - 2.313rem);
         height: calc(100% - var(--final-header-height-on-desktop, 0.688rem) - 2.313rem);
-        -webkit-transition:
-            opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            -webkit-transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
-        transition:
-            opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            -webkit-transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
-        -o-transition:
-            opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            -o-transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
-        -moz-transition:
-            transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            -moz-transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
         transition:
             transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
             opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
-        transition:
-            transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            -webkit-transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            -moz-transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
-            -o-transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
         opacity: 0.5;
         pointer-events: none;
         z-index: 9;
         margin-bottom: 0;
-        margin-bottom: -webkit-calc(var(--final-header-height-on-desktop, -2.313rem) * -1 - 2.313rem);
-        margin-bottom: -moz-calc(var(--final-header-height-on-desktop, -2.313rem) * -1 - 2.313rem);
         margin-bottom: calc(var(--final-header-height-on-desktop, -2.313rem) * -1 - 2.313rem);
     }
 
     #side-bar:hover+#main-content::before,
     #side-bar:active+#main-content::before {
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
         transform: translateX(0);
         opacity: 0;
     }
 
     #side-bar:focus-within+#main-content::before {
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
         transform: translateX(0);
         opacity: 0;
     }
@@ -399,8 +224,6 @@
         margin-top: 1em;
         padding-left: 0.25em;
         background-color: rgb(0, 0, 0, 0);
-        -webkit-border-radius: 0;
-        -moz-border-radius: 0;
         border-radius: 0;
         border-left-width: 0rem;
         border-right-width: 0rem;
@@ -415,40 +238,24 @@
         #side-bar {
             overflow-y: hidden;
             overflow-x: hidden;
-            -webkit-transform: translateX(-90%) !important;
-            -moz-transform: translateX(-90%) !important;
-            -ms-transform: translateX(-90%) !important;
-            -o-transform: translateX(-90%) !important;
             transform: translateX(-90%) !important;
         }
 
         #side-bar:hover,
         #side-bar:active {
             overflow-y: auto;
-            -webkit-transform: translateX(0) !important;
-            -moz-transform: translateX(0) !important;
-            -ms-transform: translateX(0) !important;
-            -o-transform: translateX(0) !important;
             transform: translateX(0) !important;
             margin-left: -0.5rem;
         }
 
         #side-bar:focus-within {
             overflow-y: auto;
-            -webkit-transform: translateX(0) !important;
-            -moz-transform: translateX(0) !important;
-            -ms-transform: translateX(0) !important;
-            -o-transform: translateX(0) !important;
             transform: translateX(0) !important;
             margin-left: -0.5rem;
         }
 
         #main-content::before {
             left: 1rem;
-            -webkit-transform: translateX(-100%) !important;
-            -moz-transform: translateX(-100%) !important;
-            -ms-transform: translateX(-100%) !important;
-            -o-transform: translateX(-100%) !important;
             transform: translateX(-100%) !important;
         }
     }
