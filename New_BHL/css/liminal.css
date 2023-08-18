@@ -48,7 +48,7 @@
   --theme-id: "nuliminal";
   --theme-name: "NuLiminal Theme";
   /* Header */
-  --logo-image: url("../images/logo.svg");
+  --logo-image: url("../image/logo.svg");
   --header-title: "The Backrooms";
   --header-subtitle: "你曾经来过这里";
   --swatch-headerh1-color: var(--white-monochrome);
