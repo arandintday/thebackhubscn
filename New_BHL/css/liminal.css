@@ -48,7 +48,7 @@
   --theme-id: "nuliminal";
   --theme-name: "NuLiminal Theme";
   /* Header */
-  --logo-image: url("./Images/logo.svg");
+  --logo-image: url("../images/logo.svg");
   --header-title: "The Backrooms";
   --header-subtitle: "你曾经来过这里";
   --swatch-headerh1-color: var(--white-monochrome);
@@ -538,7 +538,7 @@ table.page-compare {
   grid-template: 1fr 1fr/0.5fr 1fr 1fr;
 }
 
-table.page-compare :is(tbody, tr, tr td:nth-of-type(2), tr td:nth-of-type(3)) {
+table.page-compare :is(tbody, tr, tr:nth-of-type(2) td:nth-of-type(2), tr:nth-of-type(2) td:nth-of-type(3)) {
   display: contents;
 }
 
@@ -558,6 +558,10 @@ table.page-compare th {
   color: rgb(var(--swatch-text-secondary-color));
 }
 
-table.page-compare :is(td, span) {
+table.page-compare :is(tr:nth-of-type(even)) :is(td, span) {
   background-color: rgba(var(--swatch-tertiary-color), 0.2);
+}
+
+table.page-compare :is(tr:nth-of-type(odd)) :is(td, span) {
+  background-color: rgba(var(--swatch-tertiary-color), 0.3);
 }/*# sourceMappingURL=liminal.css.map */

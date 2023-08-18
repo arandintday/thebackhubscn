@@ -272,7 +272,7 @@
   background-color: rgb(var(--swatch-sidebar-collapsible-tab-bg));
   top: -webkit-calc(50vh - 6.5rem);
   top: calc(50vh - 6.5rem);
-  background-image: url("./Images/sidebar-arrows.svg");
+  background-image: url("../images/sidebar-arrows.svg");
 }
 
 #interwiki,
