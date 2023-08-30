@@ -277,28 +277,32 @@
 
 #interwiki,
 #side-bar {
-  --sidebar-bg-color: 227, 223, 213;
+  --sidebar-bg-color: var(--swatch-secondary-color);
   --sideblock-heading-bg-color: var(--swatch-primary);
   --sideblock-heading-text-color: var(--swatch-text-secondary-color);
 }
-
-#side-bar .side-block.media {
-  margin: 0;
-}
-
-:is(#interwiki, #side-bar) .side-block {
+#interwiki .side-block,
+#side-bar .side-block {
   margin: 0;
   padding: 0;
   -webkit-box-shadow: inset -webkit-calc(var(--sidebar-internal-border-thickness) * -1) 0 0 0 rgb(var(--swatch-border-color), 0.08), inset -webkit-calc(var(--sidebar-internal-border-thickness)) 0 0 0 rgb(var(--swatch-border-color), 0.24);
           box-shadow: inset calc(var(--sidebar-internal-border-thickness) * -1) 0 0 0 rgb(var(--swatch-border-color), 0.08), inset calc(var(--sidebar-internal-border-thickness)) 0 0 0 rgb(var(--swatch-border-color), 0.24);
 }
-
-:is(#interwiki, #side-bar) .side-block div.menu-item a {
+#interwiki .side-block.media,
+#side-bar .side-block.media {
+  margin: 0;
+}
+#interwiki .side-block div.menu-item a,
+#side-bar .side-block div.menu-item a {
   -webkit-box-shadow: inset -webkit-calc(var(--sidebar-internal-border-thickness) * -1) 0 0 0 rgb(var(--swatch-border-color), 0.16);
           box-shadow: inset calc(var(--sidebar-internal-border-thickness) * -1) 0 0 0 rgb(var(--swatch-border-color), 0.16);
 }
-
-:is(#interwiki, #side-bar) .side-block .heading {
+#interwiki .side-block div.menu-item a::before,
+#side-bar .side-block div.menu-item a::before {
+  background-color: rgba(var(--sidebar-links-hover-bg-color), 0.8);
+}
+#interwiki .side-block .heading,
+#side-bar .side-block .heading {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
           justify-content: center;
@@ -307,14 +311,14 @@
           align-items: center;
   margin: 0;
 }
-
-:is(#interwiki, #side-bar) .side-block .heading p {
+#interwiki .side-block .heading p,
+#side-bar .side-block .heading p {
   --wght: 500;
 }
-
-:is(#interwiki, #side-bar) div.menu-item a[href="/"] + a[href="/forum:start"]:last-child,
-:is(#interwiki, #side-bar) div.menu-item:first-of-type a[href="/"],
-:is(#interwiki, #side-bar) div.menu-item:nth-of-type(2) a[href="/forum:start"] {
+#interwiki .side-block div.menu-item a[href="/"] + a[href="/forum:start"]:last-child, #interwiki .side-block div.menu-item:first-of-type a[href="/"], #interwiki .side-block div.menu-item:nth-of-type(2) a[href="/forum:start"],
+#side-bar .side-block div.menu-item a[href="/"] + a[href="/forum:start"]:last-child,
+#side-bar .side-block div.menu-item:first-of-type a[href="/"],
+#side-bar .side-block div.menu-item:nth-of-type(2) a[href="/forum:start"] {
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
           justify-content: flex-start;

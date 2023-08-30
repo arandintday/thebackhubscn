@@ -61,8 +61,7 @@
     --logo-image: url("../image/logo.svg");
     --header-title: "The Backrooms";
     --header-subtitle: "你曾经来过这里";
-    --swatch-headerh1-color: var(--white-monochrome);
-    --swatch-headerh2-color: var(--white-monochrome);
+
     /* Typefaces */
     --body-font: Inter, "Noto Sans SC", "Noto Sans TC", Verdana, "Microsoft YaHei", "微软雅黑", Geneva, sans-serif, STXihei, "华文细黑";
     --UI-font: PTRootUI, "Noto Sans SC", "Noto Sans TC", "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
@@ -70,12 +69,15 @@
     --title-font: var(--body-font);
     --mono-font: Recursive, "Noto Serif SC", "Noto Serif TC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
 
+    /* MOST THEMES SHOULDN'T CHANGE THIS: makes editing consistent across themes, adds programing ligatures */
+    --editor-font: Recursive, "Noto Serif SC", "Noto Serif TC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
+
     /* Colors */
     --white-monochrome: 252, 252, 252;
     /* ALTERED */
     --pale-gray-monochrome: 237, 233, 223;
     /* ALTERED */
-    --light-pale-gray-monochrome: 237, 233, 223;
+    --light-pale-gray-monochrome: 217, 213, 203;
     --very-light-gray-monochrome: 220, 215, 210;
     --light-gray-monochrome: 165, 160, 155;
     --gray-monochrome: 72, 69, 60;
@@ -95,13 +97,9 @@
 
     --swatch-sidebar-collapsible-tab-bg: var(--swatch-primary);
 
-    /* MOST THEMES SHOULDN'T CHANGE THIS: makes editing consistent across themes, adds programing ligatures */
-    --editor-font: Recursive, "Noto Serif SC", "Noto Serif TC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
-
     /* Swatches */
-    --swatch-secondary-color: var(--white-monochrome);
-    --swatch-menubg-color: var(--white-monochrome);
-    --rating-module-bg-color: var(--swatch-menubg-color);
+    --swatch-secondary-color: var(--light-pale-gray-monochrome);
+    --rating-module-bg-color: var(--swatch-secondary-color);
 
     --modal-header-bg: var(--swatch-primary), 0.9;
 
@@ -119,15 +117,25 @@
     --ui-button-hover-bg: var(--swatch-menubg-dark-color);
     --ui-button-txt: var(--swatch-text-secondary-color);
 
+    --swatch-headerh1-color: var(--white-monochrome);
+    --swatch-headerh2-color: var(--white-monochrome);
+
     --text-tags: "标签\0021b4";
     --rename-option: "记住：后室维基用户可以重命名/移动自己创建的页面，但请谨慎使用该功能（最好仅在名称中出现错误时使用）。只有工作人员允许删除页面，包括你自己创建的页面。若需自删，请在页面名称前面加上 deleted: 前缀，以方便工作人员追踪与核查。";
+}
+
+#main-content {
+    --tabs-bg: var(--light-pale-gray-monochrome);
+    --tabs-hover-bg: var(--swatch-primary);
+    --tabs-selected-bg: var(--swatch-primary-darker);
+    --tabs-selected-outline: var(--swatch-primary-darker);
+    --tabs-bottom-border-color: var(--swatch-primary);
 }
 
 /* Dots */
 /* Header Dots */
 #skrollr-body {
-    background-image:
-        radial-gradient(circle, rgb(var(--medium-accent)) 50%, transparent 0);
+    background-image: radial-gradient(circle, rgb(var(--medium-accent)) 50%, transparent 0);
     background-repeat: repeat;
     background-size: 0.25em 0.25em;
     width: 100%;
@@ -146,71 +154,76 @@
 /* Header Image */
 #header {
     background-image: none;
-}
 
-#header::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-image: var(--logo-image);
-    background-size: auto 16rem;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.4;
-}
+    &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background-image: var(--logo-image);
+        background-size: auto 16rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.4;
+    }
 
-/* Header Text */
-#header h1 {
-    width: 100%;
-}
+    & h1 {
+        width: 100%;
 
-#header h1 a,
-#header h1 a::before {
-    width: fit-content;
-    transition: 0.2s;
-    position: relative;
-    bottom: 0;
-    color: rgb(var(--swatch-headerh1-color));
-}
+        & a {
 
-#header h1 a:hover::before {
-    text-shadow: var(--header-text-shadow-hover);
-    bottom: 3px;
-}
+            &,
+            &::before {
+                width: fit-content;
+                transition: 0.2s;
+                position: relative;
+                bottom: 0;
+                color: rgb(var(--swatch-headerh1-color));
+            }
 
-#header h1,
-#header h1 a {
-    position: absolute;
-    top: 1rem;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    z-index: 0;
-    height: 1.5rem;
-}
+            &::before {
+                text-shadow: var(--header-text-shadow);
+            }
 
-#header h2,
-#header h2 span,
-#header h2 span::before {
-    position: absolute;
-    top: 1.85rem;
-    margin: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
-}
+            &:hover::before {
+                text-shadow: var(--header-text-shadow-hover);
+                bottom: 3px;
+            }
+        }
 
-#header h2 span::before {
-    color: rgb(var(--swatch-headerh2-color));
-}
+        &,
+        & a {
+            position: absolute;
+            top: 1rem;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            z-index: 0;
+            height: 1.5rem;
+        }
+    }
 
-#header h1 a::before,
-#header h2 span::before {
-    text-shadow: var(--header-text-shadow);
+    & h2 {
+
+        &,
+        & span,
+        & span::before {
+            position: absolute;
+            top: 1.85rem;
+            margin: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        & span::before {
+            color: rgb(var(--swatch-headerh2-color));
+            text-shadow: var(--header-text-shadow);
+        }
+    }
 }
 
 /* Sidebar fix */
@@ -240,8 +253,8 @@ iframe.scpnet-interwiki-frame {
 
 /* Div Boxes */
 .darkblock {
-    color: rgb(var(--white-monochrome));
-    background: rgb(var(--dark-gray-monochrome));
+    color: rgb(var(--swatch-text-secondary-color));
+    background: rgb(var(--swatch-primary-darker));
     padding: 0.01rem 1rem;
     margin: 0.5rem 0;
     box-shadow: var(--quote-shadow);
@@ -249,7 +262,7 @@ iframe.scpnet-interwiki-frame {
 
 .lightblock {
     color: rgb(var(--black-monochrome));
-    background: rgb(var(--white-monochrome));
+    background: rgb(var(--swatch-secondary-color));
     padding: 0.01rem 1rem;
     margin: 0.5rem 0;
     box-shadow: var(--quote-shadow);
@@ -258,20 +271,20 @@ iframe.scpnet-interwiki-frame {
 /* Div Quotes */
 .styled-quote {
     color: rgb(var(--black-monochrome));
-    background: rgb(var(--white-monochrome));
+    background: rgb(var(--swatch-secondary-color));
     padding: 0.01rem 1rem;
     margin: 0.5rem 0;
     box-shadow: var(--quote-shadow);
-    border-left: solid 6px rgb(var(--dark-gray-monochrome));
+    border-left: solid 6px rgb(var(--swatch-primary-darker));
 }
 
 .dark-styled-quote {
     color: rgb(var(--white-monochrome));
-    background: rgb(var(--gray-monochrome));
+    background: rgb(var(--swatch-primary-darker));
     padding: 0.01rem 1rem;
     margin: 0.5rem 0;
     box-shadow: var(--quote-shadow);
-    border-left: solid 6px rgb(var(--dark-gray-monochrome));
+    border-left: solid 6px rgb(var(--swatch-primary-darker));
 }
 
 /* Headings */
@@ -291,9 +304,12 @@ h6 {
 }
 
 /* Table */
-#page-content div.b-tables table.wiki-content-table,
-#page-content table.wiki-content-table {
-    box-shadow: var(--quote-shadow);
+#page-content {
+
+    div.b-tables table.wiki-content-table,
+    table.wiki-content-table {
+        box-shadow: var(--quote-shadow);
+    }
 }
 
 div#footer::after {
@@ -355,10 +371,10 @@ span.printuser a:first-of-type:not(:last-of-type) img.small {
     -webkit-transition: opacity .5s ease-in-out;
     -moz-transition: opacity .5s ease-in-out;
     transition: opacity .5s ease-in-out;
-}
 
-#page-content .licensebox .collapsible-block-link:hover {
-    opacity: 1;
+    &:hover {
+        opacity: 1;
+    }
 }
 
 /* Info */
@@ -377,28 +393,11 @@ span.printuser a:first-of-type:not(:last-of-type) img.small {
     background-color: rgba(var(--swatch-alternate-color), .5);
     justify-content: center;
     align-items: center;
-}
 
-#u-infobox:target {
-    opacity: 1 !important;
-    pointer-events: unset;
-}
-
-.infobox-title {
-    --wght: 800;
-    display: flex;
-    justify-content: flex-start;
-    margin: 0;
-    padding: 1.5ex 1.25rem;
-    background-color: rgb(var(--modal-header-bg));
-    background-image: linear-gradient(125deg, rgba(var(--modal-header-stripe), .75) 25%, transparent 25%, transparent 50%, rgba(var(--modal-header-stripe), .75) 50%, rgba(var(--modal-header-stripe), .75) 75%, transparent 75%, transparent 100%);
-    background-size: 3rem 4.35rem;
-    color: rgb(var(--modal-header-txt));
-    font-family: var(--header-font);
-    font-size: 1.5em;
-    font-weight: var(--wght);
-    line-height: 1ex;
-    text-transform: uppercase;
+    &:target {
+        opacity: 1 !important;
+        pointer-events: unset;
+    }
 }
 
 .infobox {
@@ -408,25 +407,42 @@ span.printuser a:first-of-type:not(:last-of-type) img.small {
     background-color: rgb(var(--modal-bg));
     box-shadow: inset 0 0 0 .125rem rgba(var(--swatch-alternate-color), .25), .5rem .25rem 1rem 0 rgba(var(--swatch-alternate-color), .25);
     color: rgb(var(--modal-body-text));
-}
 
-.infobox-footer {
-    width: 100%;
-    margin: 1rem 0 1em;
-    padding: 1rem 1rem 0 0;
-    box-shadow: 0-.0625rem 0 0 rgba(var(--modal-header-stripe), .2);
-    text-align: right;
-}
+    &-title {
+        --wght: 800;
+        display: flex;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 1.5ex 1.25rem;
+        background-color: rgb(var(--modal-header-bg));
+        background-image: linear-gradient(125deg, rgba(var(--modal-header-stripe), .75) 25%, transparent 25%, transparent 50%, rgba(var(--modal-header-stripe), .75) 50%, rgba(var(--modal-header-stripe), .75) 75%, transparent 75%, transparent 100%);
+        background-size: 3rem 4.35rem;
+        color: rgb(var(--modal-header-txt));
+        font-family: var(--header-font);
+        font-size: 1.5em;
+        font-weight: var(--wght);
+        line-height: 1ex;
+        text-transform: uppercase;
+    }
 
-.infobox-title p,
-.infobox-footer p {
-    all: unset;
-}
+    &-body {
+        display: grid;
+        margin: 0 1rem;
+        padding: 0;
+    }
 
-.infobox-body {
-    display: grid;
-    margin: 0 1rem;
-    padding: 0;
+    &-footer {
+        width: 100%;
+        margin: 1rem 0 1em;
+        padding: 1rem 1rem 0 0;
+        box-shadow: 0-.0625rem 0 0 rgba(var(--modal-header-stripe), .2);
+        text-align: right;
+    }
+
+    &-title p,
+    &-footer p {
+        all: unset;
+    }
 }
 
 /* CN Contents */
@@ -441,56 +457,48 @@ span.printuser a:first-of-type:not(:last-of-type) img.small {
     color: #333;
     text-align: center;
     font-weight: bold;
-}
 
-#page-content div#u-adult-warning>div#u-adult-header {
-    font-size: 300%;
-    text-shadow: 1px 2px 3px rgba(0, 0, 0, .5);
-    color: #901;
-}
+    &>div#u-adult-header {
+        font-size: 300%;
+        text-shadow: 1px 2px 3px rgba(0, 0, 0, .5);
+        color: #901;
 
-#page-content div#u-adult-warning>div#u-adult-header p {
-    margin: 0;
-}
+        & p {
+            margin: 0;
+        }
+    }
 
-#page-content div#u-adult-warning>.error-block {
-    color: unset;
-    padding: unset;
-    margin: unset;
-    border: unset;
-    margin-bottom: 1em;
+    &>.error-block {
+        color: unset;
+        padding: unset;
+        margin: unset;
+        border: unset;
+        margin-bottom: 1em;
+    }
 }
 
 /* Button */
+:not(.page-rate-widget-box):not(#search-top-box-form) {
 
-:not(.page-rate-widget-box):not(#search-top-box-form)>.btn,
-:not(.page-rate-widget-box):not(#search-top-box-form)>.button,
-:not(.page-rate-widget-box):not(#search-top-box-form)>.owindow .button-bar a,
-:not(.page-rate-widget-box):not(#search-top-box-form)>button,
-:not(.page-rate-widget-box):not(#search-top-box-form)>div.buttons input,
-:not(.page-rate-widget-box):not(#search-top-box-form)>input.button {
-    --wght: 300;
-    flex-basis: 5rem;
-}
+    &>:is(button, .btn, .button, input.button, .owindow .button-bar a, div.buttons input) {
+        --wght: 300;
+        flex-basis: 5rem;
 
-:not(.page-rate-widget-box):not(#search-top-box-form)>.btn:is(:hover, :active, :focus, :focus-within),
-:not(.page-rate-widget-box):not(#search-top-box-form)>.button:is(:hover, :active, :focus, :focus-within),
-:not(.page-rate-widget-box):not(#search-top-box-form)>.owindow .button-bar a:is(:hover, :active, :focus, :focus-within),
-:not(.page-rate-widget-box):not(#search-top-box-form)>button:is(:hover, :active, :focus, :focus-within),
-:not(.page-rate-widget-box):not(#search-top-box-form)>div.buttons input:is(:hover, :active, :focus, :focus-within),
-:not(.page-rate-widget-box):not(#search-top-box-form)>input.button:is(:hover, :active, :focus, :focus-within) {
-    box-shadow: none;
+        &:is(:hover, :active, :focus, :focus-within) {
+            box-shadow: none;
+        }
+    }
 }
 
 div[id*=page-options-bottom]:not(.page-rate-widget-box):not(#search-top-box-form)>a.btn {
     background-color: rgb(var(--swatch-primary-darkest));
     color: rgb(var(--swatch-text-secondary-color));
     flex-basis: 5rem;
-}
 
-div[id*=page-options-bottom]:not(.page-rate-widget-box):not(#search-top-box-form)>a.btn:is(:hover, :active, :focus, :focus-within) {
-    box-shadow: none;
-    background-color: rgb(var(--swatch-menubg-dark-color));
+    &:is(:hover, :active, :focus, :focus-within) {
+        box-shadow: none;
+        background-color: rgb(var(--swatch-menubg-dark-color));
+    }
 }
 
 #action-area:has(form[onsubmit*=setParent], #who-rated-page-area, form[onsubmit*=PageTagsModule], table.page-files, #edit-meta-addbutton, ul[style="list-style: none"], #page-block-checkbox, #rename-option-rename, #rename-option-delete) p:not(:has(a[id*=backlinks], a[onclick*=showWho], a.btn)) {
@@ -519,25 +527,64 @@ table.page-compare {
     justify-items: center;
     margin-top: 1rem;
     grid-template: 1fr 1fr / 0.5fr 1fr 1fr;
+
+    & :is(tbody, tr, tr:nth-of-type(2) :is(td:nth-of-type(2), td:nth-of-type(3))) {
+        display: contents;
+    }
+
+    & :is(th, td, span) {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding: 0.5em 0;
+    }
+
+    & th {
+        background-color: rgb(var(--swatch-primary));
+        color: rgb(var(--swatch-text-secondary-color));
+    }
+
+    & tr:nth-of-type(even) {
+
+        & :is(td, span) {
+            background-color: rgba(var(--swatch-tertiary-color), .2);
+        }
+    }
+
+    & tr:nth-of-type(odd) {
+
+        & :is(td, span) {
+            background-color: rgba(var(--swatch-tertiary-color), .3);
+        }
+    }
 }
 
-table.page-compare :is(tbody, tr, tr:nth-of-type(2) td:nth-of-type(2), tr:nth-of-type(2) td:nth-of-type(3)) {
-    display: contents;
+:is(div.image-block, div.scp-image-block) {
+    gap: 0;
+
+    :is(.image-caption, .scp-image-caption) {
+        background-color: rgb(var(--swatch-secondary-color));
+        box-shadow: inset calc(0.125rem * -1) 0 0 0 rgb(var(--swatch-border-color), 0.16),
+            inset 0 calc(0.125rem * -1) 0 0 rgb(var(--swatch-border-color), 0.16),
+            inset 0.125rem 0 0 0 rgb(var(--swatch-border-color), 0.16);
+    }
 }
 
-table.page-compare :is(th, td, span) {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    padding: 0.5em 0;
-}
-table.page-compare th {
-    background-color: rgb(var(--swatch-primary));
-    color: rgb(var(--swatch-text-secondary-color));
-}
-table.page-compare :is(tr:nth-of-type(even)) :is(td, span) {
-    background-color: rgba(var(--swatch-tertiary-color),.2);
-}
-table.page-compare :is(tr:nth-of-type(odd)) :is(td, span) {
-    background-color: rgba(var(--swatch-tertiary-color),.3);
+:is(.yui-navset, .yui-navset-top, .yui-navset-bottom) .yui-nav {
+    & .selected {
+        z-index: unset;
+        box-shadow: none;
+        translate: 0;
+
+        @supports not (translate: 0 0) {
+            transform: translate(0);
+        }
+    }
+
+    & li a::before {
+        --clip-path: polygon(0 calc(100% - 0.25rem), 100% calc(100% - 0.25rem), 100% 100%, 0 100%);
+        width: 100%;
+        height: 100%;
+        left: 0;
+    }
 }

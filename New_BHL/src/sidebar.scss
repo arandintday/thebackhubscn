@@ -281,39 +281,43 @@
 
 #interwiki,
 #side-bar {
-    --sidebar-bg-color: 227, 223, 213;
+    --sidebar-bg-color: var(--swatch-secondary-color);
     --sideblock-heading-bg-color: var(--swatch-primary);
     --sideblock-heading-text-color: var(--swatch-text-secondary-color);
-}
 
-#side-bar .side-block.media {
-    margin: 0;
-}
+    .side-block {
+        margin: 0;
+        padding: 0;
+        box-shadow: inset calc(var(--sidebar-internal-border-thickness) * -1) 0 0 0 rgb(var(--swatch-border-color), 0.08),
+            inset calc(var(--sidebar-internal-border-thickness)) 0 0 0 rgb(var(--swatch-border-color), 0.24);
 
-:is(#interwiki, #side-bar) .side-block {
-    margin: 0;
-    padding: 0;
-    box-shadow: inset calc(var(--sidebar-internal-border-thickness) * -1) 0 0 0 rgb(var(--swatch-border-color), 0.08),
-        inset calc(var(--sidebar-internal-border-thickness)) 0 0 0 rgb(var(--swatch-border-color), 0.24);
-}
+        &.media {
+            margin: 0;
+        }
 
-:is(#interwiki, #side-bar) .side-block div.menu-item a {
-    box-shadow: inset calc(var(--sidebar-internal-border-thickness) * -1) 0 0 0 rgb(var(--swatch-border-color), 0.16);
-}
+        & div.menu-item a {
+            box-shadow: inset calc(var(--sidebar-internal-border-thickness) * -1) 0 0 0 rgb(var(--swatch-border-color), 0.16);
 
-:is(#interwiki, #side-bar) .side-block .heading {
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-}
+            &::before {
+                background-color: rgba(var(--sidebar-links-hover-bg-color), 0.8);
+            }
+        }
 
-:is(#interwiki, #side-bar) .side-block .heading p {
-    --wght: 500;
-}
+        & .heading {
+            justify-content: center;
+            align-items: center;
+            margin: 0;
 
-:is(#interwiki, #side-bar) div.menu-item a[href="/"]+a[href="/forum:start"]:last-child,
-:is(#interwiki, #side-bar) div.menu-item:first-of-type a[href="/"],
-:is(#interwiki, #side-bar) div.menu-item:nth-of-type(2) a[href="/forum:start"] {
-    justify-content: flex-start;
-    padding: 0 0 0 calc(var(--base-font-size)*(13/15));
+            & p {
+                --wght: 500;
+            }
+        }
+
+        & div.menu-item a[href="/"]+a[href="/forum:start"]:last-child,
+        & div.menu-item:first-of-type a[href="/"],
+        & div.menu-item:nth-of-type(2) a[href="/forum:start"] {
+            justify-content: flex-start;
+            padding: 0 0 0 calc(var(--base-font-size)*(13/15));
+        }
+    }
 }

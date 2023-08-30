@@ -95,25 +95,25 @@
 :where(:lang(cn)) #side-bar div.side-block.media {
     grid-column: span 2;
     margin-top: 0;
-}
 
-:where(:lang(cn)) #side-bar div.side-block.media a[href*="discord"] {
-    --social-logo-mask: var(--discord-mask-round);
-    --social-color: var(--discord-icon-color);
-}
+    & a[href*="discord"] {
+        --social-logo-mask: var(--discord-mask-round);
+        --social-color: var(--discord-icon-color);
+    }
 
-:where(:lang(cn)) #side-bar div.side-block.media a[href*="b23.tv"],
-:where(:lang(cn)) #side-bar div.side-block.media a[href*="bilibili"] {
-    --social-logo-mask: var(--bilibili-mask-round);
-    --social-color: var(--bilibili-icon-color);
-}
+    & a[href*="b23.tv"],
+    & a[href*="bilibili"] {
+        --social-logo-mask: var(--bilibili-mask-round);
+        --social-color: var(--bilibili-icon-color);
+    }
 
-:where(:lang(cn)) #side-bar div.side-block.media a[href*="fandom"] {
-    --social-logo-mask: var(--fandom-mask-round);
-    --social-color: var(--fandom-icon-color);
-}
+    & a[href*="fandom"] {
+        --social-logo-mask: var(--fandom-mask-round);
+        --social-color: var(--fandom-icon-color);
+    }
 
-:where(:lang(cn)) #side-bar div.side-block.media a[href*="tieba"] {
-    --social-logo-mask: var(--tieba-mask-round);
-    --social-color: var(--tieba-icon-color);
+    & a[href*="tieba"] {
+        --social-logo-mask: var(--tieba-mask-round);
+        --social-color: var(--tieba-icon-color);
+    }
 }

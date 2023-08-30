@@ -51,20 +51,20 @@
   --logo-image: url("../image/logo.svg");
   --header-title: "The Backrooms";
   --header-subtitle: "你曾经来过这里";
-  --swatch-headerh1-color: var(--white-monochrome);
-  --swatch-headerh2-color: var(--white-monochrome);
   /* Typefaces */
   --body-font: Inter, "Noto Sans SC", "Noto Sans TC", Verdana, "Microsoft YaHei", "微软雅黑", Geneva, sans-serif, STXihei, "华文细黑";
   --UI-font: PTRootUI, "Noto Sans SC", "Noto Sans TC", "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
   --header-font: var(--body-font);
   --title-font: var(--body-font);
   --mono-font: Recursive, "Noto Serif SC", "Noto Serif TC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
+  /* MOST THEMES SHOULDN'T CHANGE THIS: makes editing consistent across themes, adds programing ligatures */
+  --editor-font: Recursive, "Noto Serif SC", "Noto Serif TC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
   /* Colors */
   --white-monochrome: 252, 252, 252;
   /* ALTERED */
   --pale-gray-monochrome: 237, 233, 223;
   /* ALTERED */
-  --light-pale-gray-monochrome: 237, 233, 223;
+  --light-pale-gray-monochrome: 217, 213, 203;
   --very-light-gray-monochrome: 220, 215, 210;
   --light-gray-monochrome: 165, 160, 155;
   --gray-monochrome: 72, 69, 60;
@@ -81,12 +81,9 @@
   --quote-shadow: 0 2px 4px rgba(var(--black-monochrome), 0.25);
   --footer-message: var(--header-subtitle);
   --swatch-sidebar-collapsible-tab-bg: var(--swatch-primary);
-  /* MOST THEMES SHOULDN'T CHANGE THIS: makes editing consistent across themes, adds programing ligatures */
-  --editor-font: Recursive, "Noto Serif SC", "Noto Serif TC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
   /* Swatches */
-  --swatch-secondary-color: var(--white-monochrome);
-  --swatch-menubg-color: var(--white-monochrome);
-  --rating-module-bg-color: var(--swatch-menubg-color);
+  --swatch-secondary-color: var(--light-pale-gray-monochrome);
+  --rating-module-bg-color: var(--swatch-secondary-color);
   --modal-header-bg: var(--swatch-primary), 0.9;
   --gradient-header: linear-gradient(to top,
           rgba(var(--medium-accent)) 0%,
@@ -99,8 +96,18 @@
   --ui-button-bg: var(--swatch-primary-darkest);
   --ui-button-hover-bg: var(--swatch-menubg-dark-color);
   --ui-button-txt: var(--swatch-text-secondary-color);
+  --swatch-headerh1-color: var(--white-monochrome);
+  --swatch-headerh2-color: var(--white-monochrome);
   --text-tags: "标签↴";
   --rename-option: "记住：后室维基用户可以重命名/移动自己创建的页面，但请谨慎使用该功能（最好仅在名称中出现错误时使用）。只有工作人员允许删除页面，包括你自己创建的页面。若需自删，请在页面名称前面加上 deleted: 前缀，以方便工作人员追踪与核查。";
+}
+
+#main-content {
+  --tabs-bg: var(--light-pale-gray-monochrome);
+  --tabs-hover-bg: var(--swatch-primary);
+  --tabs-selected-bg: var(--swatch-primary-darker);
+  --tabs-selected-outline: var(--swatch-primary-darker);
+  --tabs-bottom-border-color: var(--swatch-primary);
 }
 
 /* Dots */
@@ -126,7 +133,6 @@
 #header {
   background-image: none;
 }
-
 #header::before {
   content: "";
   position: absolute;
@@ -140,14 +146,10 @@
   background-repeat: no-repeat;
   opacity: 0.4;
 }
-
-/* Header Text */
 #header h1 {
   width: 100%;
 }
-
-#header h1 a,
-#header h1 a::before {
+#header h1 a, #header h1 a::before {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -157,14 +159,14 @@
   bottom: 0;
   color: rgb(var(--swatch-headerh1-color));
 }
-
+#header h1 a::before {
+  text-shadow: var(--header-text-shadow);
+}
 #header h1 a:hover::before {
   text-shadow: var(--header-text-shadow-hover);
   bottom: 3px;
 }
-
-#header h1,
-#header h1 a {
+#header h1, #header h1 a {
   position: absolute;
   top: 1rem;
   margin: 0;
@@ -177,10 +179,7 @@
   z-index: 0;
   height: 1.5rem;
 }
-
-#header h2,
-#header h2 span,
-#header h2 span::before {
+#header h2, #header h2 span, #header h2 span::before {
   position: absolute;
   top: 1.85rem;
   margin: 0;
@@ -193,13 +192,8 @@
           justify-content: center;
   font-weight: bold;
 }
-
 #header h2 span::before {
   color: rgb(var(--swatch-headerh2-color));
-}
-
-#header h1 a::before,
-#header h2 span::before {
   text-shadow: var(--header-text-shadow);
 }
 
@@ -228,8 +222,8 @@ iframe.scpnet-interwiki-frame {
 }
 /* Div Boxes */
 .darkblock {
-  color: rgb(var(--white-monochrome));
-  background: rgb(var(--dark-gray-monochrome));
+  color: rgb(var(--swatch-text-secondary-color));
+  background: rgb(var(--swatch-primary-darker));
   padding: 0.01rem 1rem;
   margin: 0.5rem 0;
   -webkit-box-shadow: var(--quote-shadow);
@@ -238,7 +232,7 @@ iframe.scpnet-interwiki-frame {
 
 .lightblock {
   color: rgb(var(--black-monochrome));
-  background: rgb(var(--white-monochrome));
+  background: rgb(var(--swatch-secondary-color));
   padding: 0.01rem 1rem;
   margin: 0.5rem 0;
   -webkit-box-shadow: var(--quote-shadow);
@@ -248,22 +242,22 @@ iframe.scpnet-interwiki-frame {
 /* Div Quotes */
 .styled-quote {
   color: rgb(var(--black-monochrome));
-  background: rgb(var(--white-monochrome));
+  background: rgb(var(--swatch-secondary-color));
   padding: 0.01rem 1rem;
   margin: 0.5rem 0;
   -webkit-box-shadow: var(--quote-shadow);
           box-shadow: var(--quote-shadow);
-  border-left: solid 6px rgb(var(--dark-gray-monochrome));
+  border-left: solid 6px rgb(var(--swatch-primary-darker));
 }
 
 .dark-styled-quote {
   color: rgb(var(--white-monochrome));
-  background: rgb(var(--gray-monochrome));
+  background: rgb(var(--swatch-primary-darker));
   padding: 0.01rem 1rem;
   margin: 0.5rem 0;
   -webkit-box-shadow: var(--quote-shadow);
           box-shadow: var(--quote-shadow);
-  border-left: solid 6px rgb(var(--dark-gray-monochrome));
+  border-left: solid 6px rgb(var(--swatch-primary-darker));
 }
 
 /* Headings */
@@ -353,7 +347,6 @@ span.printuser a:first-of-type:not(:last-of-type) img.small {
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
 }
-
 #page-content .licensebox .collapsible-block-link:hover {
   opacity: 1;
 }
@@ -382,12 +375,20 @@ span.printuser a:first-of-type:not(:last-of-type) img.small {
   -webkit-align-items: center;
           align-items: center;
 }
-
 #u-infobox:target {
   opacity: 1 !important;
   pointer-events: unset;
 }
 
+.infobox {
+  display: grid;
+  width: 60vw;
+  border: 0;
+  background-color: rgb(var(--modal-bg));
+  -webkit-box-shadow: inset 0 0 0 0.125rem rgba(var(--swatch-alternate-color), 0.25), 0.5rem 0.25rem 1rem 0 rgba(var(--swatch-alternate-color), 0.25);
+          box-shadow: inset 0 0 0 0.125rem rgba(var(--swatch-alternate-color), 0.25), 0.5rem 0.25rem 1rem 0 rgba(var(--swatch-alternate-color), 0.25);
+  color: rgb(var(--modal-body-text));
+}
 .infobox-title {
   --wght: 800;
   display: -webkit-box;
@@ -408,17 +409,11 @@ span.printuser a:first-of-type:not(:last-of-type) img.small {
   line-height: 1ex;
   text-transform: uppercase;
 }
-
-.infobox {
+.infobox-body {
   display: grid;
-  width: 60vw;
-  border: 0;
-  background-color: rgb(var(--modal-bg));
-  -webkit-box-shadow: inset 0 0 0 0.125rem rgba(var(--swatch-alternate-color), 0.25), 0.5rem 0.25rem 1rem 0 rgba(var(--swatch-alternate-color), 0.25);
-          box-shadow: inset 0 0 0 0.125rem rgba(var(--swatch-alternate-color), 0.25), 0.5rem 0.25rem 1rem 0 rgba(var(--swatch-alternate-color), 0.25);
-  color: rgb(var(--modal-body-text));
+  margin: 0 1rem;
+  padding: 0;
 }
-
 .infobox-footer {
   width: 100%;
   margin: 1rem 0 1em;
@@ -427,16 +422,8 @@ span.printuser a:first-of-type:not(:last-of-type) img.small {
           box-shadow: -0.0625rem 0 0 rgba(var(--modal-header-stripe), 0.2);
   text-align: right;
 }
-
-.infobox-title p,
-.infobox-footer p {
+.infobox-title p, .infobox-footer p {
   all: unset;
-}
-
-.infobox-body {
-  display: grid;
-  margin: 0 1rem;
-  padding: 0;
 }
 
 /* CN Contents */
@@ -453,17 +440,14 @@ span.printuser a:first-of-type:not(:last-of-type) img.small {
   text-align: center;
   font-weight: bold;
 }
-
 #page-content div#u-adult-warning > div#u-adult-header {
   font-size: 300%;
   text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
   color: #901;
 }
-
 #page-content div#u-adult-warning > div#u-adult-header p {
   margin: 0;
 }
-
 #page-content div#u-adult-warning > .error-block {
   color: unset;
   padding: unset;
@@ -473,23 +457,12 @@ span.printuser a:first-of-type:not(:last-of-type) img.small {
 }
 
 /* Button */
-:not(.page-rate-widget-box):not(#search-top-box-form) > .btn,
-:not(.page-rate-widget-box):not(#search-top-box-form) > .button,
-:not(.page-rate-widget-box):not(#search-top-box-form) > .owindow .button-bar a,
-:not(.page-rate-widget-box):not(#search-top-box-form) > button,
-:not(.page-rate-widget-box):not(#search-top-box-form) > div.buttons input,
-:not(.page-rate-widget-box):not(#search-top-box-form) > input.button {
+:not(.page-rate-widget-box):not(#search-top-box-form) > :is(button, .btn, .button, input.button, .owindow .button-bar a, div.buttons input) {
   --wght: 300;
   -webkit-flex-basis: 5rem;
           flex-basis: 5rem;
 }
-
-:not(.page-rate-widget-box):not(#search-top-box-form) > .btn:is(:hover, :active, :focus, :focus-within),
-:not(.page-rate-widget-box):not(#search-top-box-form) > .button:is(:hover, :active, :focus, :focus-within),
-:not(.page-rate-widget-box):not(#search-top-box-form) > .owindow .button-bar a:is(:hover, :active, :focus, :focus-within),
-:not(.page-rate-widget-box):not(#search-top-box-form) > button:is(:hover, :active, :focus, :focus-within),
-:not(.page-rate-widget-box):not(#search-top-box-form) > div.buttons input:is(:hover, :active, :focus, :focus-within),
-:not(.page-rate-widget-box):not(#search-top-box-form) > input.button:is(:hover, :active, :focus, :focus-within) {
+:not(.page-rate-widget-box):not(#search-top-box-form) > :is(button, .btn, .button, input.button, .owindow .button-bar a, div.buttons input):is(:hover, :active, :focus, :focus-within) {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -500,7 +473,6 @@ div[id*=page-options-bottom]:not(.page-rate-widget-box):not(#search-top-box-form
   -webkit-flex-basis: 5rem;
           flex-basis: 5rem;
 }
-
 div[id*=page-options-bottom]:not(.page-rate-widget-box):not(#search-top-box-form) > a.btn:is(:hover, :active, :focus, :focus-within) {
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -537,11 +509,9 @@ table.page-compare {
   margin-top: 1rem;
   grid-template: 1fr 1fr/0.5fr 1fr 1fr;
 }
-
-table.page-compare :is(tbody, tr, tr:nth-of-type(2) td:nth-of-type(2), tr:nth-of-type(2) td:nth-of-type(3)) {
+table.page-compare :is(tbody, tr, tr:nth-of-type(2) :is(td:nth-of-type(2), td:nth-of-type(3))) {
   display: contents;
 }
-
 table.page-compare :is(th, td, span) {
   display: -webkit-box;
   display: -webkit-flex;
@@ -552,16 +522,42 @@ table.page-compare :is(th, td, span) {
           justify-content: center;
   padding: 0.5em 0;
 }
-
 table.page-compare th {
   background-color: rgb(var(--swatch-primary));
   color: rgb(var(--swatch-text-secondary-color));
 }
-
-table.page-compare :is(tr:nth-of-type(even)) :is(td, span) {
+table.page-compare tr:nth-of-type(even) :is(td, span) {
   background-color: rgba(var(--swatch-tertiary-color), 0.2);
 }
-
-table.page-compare :is(tr:nth-of-type(odd)) :is(td, span) {
+table.page-compare tr:nth-of-type(odd) :is(td, span) {
   background-color: rgba(var(--swatch-tertiary-color), 0.3);
+}
+
+:is(div.image-block, div.scp-image-block) {
+  gap: 0;
+}
+:is(div.image-block, div.scp-image-block) :is(.image-caption, .scp-image-caption) {
+  background-color: rgb(var(--swatch-secondary-color));
+  -webkit-box-shadow: inset -0.125rem 0 0 0 rgb(var(--swatch-border-color), 0.16), inset 0 -0.125rem 0 0 rgb(var(--swatch-border-color), 0.16), inset 0.125rem 0 0 0 rgb(var(--swatch-border-color), 0.16);
+          box-shadow: inset -0.125rem 0 0 0 rgb(var(--swatch-border-color), 0.16), inset 0 -0.125rem 0 0 rgb(var(--swatch-border-color), 0.16), inset 0.125rem 0 0 0 rgb(var(--swatch-border-color), 0.16);
+}
+
+:is(.yui-navset, .yui-navset-top, .yui-navset-bottom) .yui-nav .selected {
+  z-index: unset;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  translate: 0;
+}
+@supports not (translate: 0 0) {
+  :is(.yui-navset, .yui-navset-top, .yui-navset-bottom) .yui-nav .selected {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+:is(.yui-navset, .yui-navset-top, .yui-navset-bottom) .yui-nav li a::before {
+  --clip-path: polygon(0 -webkit-calc(100% - 0.25rem), 100% -webkit-calc(100% - 0.25rem), 100% 100%, 0 100%);
+  --clip-path: polygon(0 calc(100% - 0.25rem), 100% calc(100% - 0.25rem), 100% 100%, 0 100%);
+  width: 100%;
+  height: 100%;
+  left: 0;
 }/*# sourceMappingURL=liminal.css.map */
