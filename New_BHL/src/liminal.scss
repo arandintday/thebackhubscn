@@ -65,14 +65,14 @@
     --header-subtitle: "你曾经来过这里";
 
     /* Typefaces */
-    --body-font: Inter, "Noto Sans SC", "Noto Sans TC", Verdana, "Microsoft YaHei", "微软雅黑", Geneva, sans-serif, STXihei, "华文细黑";
+    --body-font: Inter, "Noto Sans SC", "Noto Sans TC", "Microsoft YaHei UI", "微软雅黑", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Geneva, sans-serif, STXihei, "华文细黑";
     --UI-font: PTRootUI, "Noto Sans SC", "Noto Sans TC", "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
     --header-font: var(--body-font);
     --title-font: var(--body-font);
-    --mono-font: Recursive, "Noto Serif SC", "Noto Serif TC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
+    --mono-font: Recursive, "Noto Serif SC", "Noto Serif TC", "宋体", "SimSun", "Microsoft YaHei UI", "微软雅黑", "Microsoft JhengHei UI", "Microsoft JhengHei", "Courier New", Courier, monospace, STXihei, "华文细黑";
 
     /* MOST THEMES SHOULDN'T CHANGE THIS: makes editing consistent across themes, adds programing ligatures */
-    --editor-font: Recursive, "Noto Serif SC", "Noto Serif TC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
+    --editor-font: Recursive, "Noto Serif SC", "Noto Serif TC", "宋体", "SimSun", "Microsoft YaHei UI", "微软雅黑", "Microsoft JhengHei UI", "Microsoft JhengHei", "Courier New", Courier, monospace, STXihei, "华文细黑";
 
     /* Colors */
     --white-monochrome: 252, 252, 252;
@@ -135,14 +135,14 @@
     --header-subtitle: "你曾经来过这里";
 
     /* Typefaces */
-    --body-font: Inter, "Noto Sans SC", "Noto Sans TC", Verdana, "Microsoft YaHei", "微软雅黑", Geneva, sans-serif, STXihei, "华文细黑";
+    --body-font: Inter, "Noto Sans SC", "Noto Sans TC", "Microsoft YaHei UI", "微软雅黑", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Geneva, sans-serif, STXihei, "华文细黑";
     --UI-font: PTRootUI, "Noto Sans SC", "Noto Sans TC", "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
     --header-font: var(--body-font);
     --title-font: var(--body-font);
-    --mono-font: Recursive, "Noto Serif SC", "Noto Serif TC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
+    --mono-font: Recursive, "Noto Serif SC", "Noto Serif TC", "宋体", "SimSun", "Microsoft YaHei UI", "微软雅黑", "Microsoft JhengHei UI", "Microsoft JhengHei", "Courier New", Courier, monospace, STXihei, "华文细黑";
 
     /* MOST THEMES SHOULDN'T CHANGE THIS: makes editing consistent across themes, adds programing ligatures */
-    --editor-font: Recursive, "Noto Serif SC", "Noto Serif TC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
+    --editor-font: Recursive, "Noto Serif SC", "Noto Serif TC", "宋体", "SimSun", "Microsoft YaHei UI", "微软雅黑", "Microsoft JhengHei UI", "Microsoft JhengHei", "Courier New", Courier, monospace, STXihei, "华文细黑";
 }
 
 #main-content {
