@@ -104,6 +104,22 @@
   --rename-option: "记住：后室维基用户可以重命名/移动自己创建的页面，但请谨慎使用该功能（最好仅在名称中出现错误时使用）。只有工作人员允许删除页面，包括你自己创建的页面。若需自删，请在页面名称前面加上 deleted: 前缀，以方便工作人员追踪与核查。";
 }
 
+:root:where(:lang(cn)) {
+  --theme-base: "黑色标记笔";
+  --theme-id: "新阈限";
+  --theme-name: "新阈限版式";
+  --header-title: "The Backrooms";
+  --header-subtitle: "你曾经来过这里";
+  /* Typefaces */
+  --body-font: Inter, "Noto Sans SC", "Noto Sans TC", Verdana, "Microsoft YaHei", "微软雅黑", Geneva, sans-serif, STXihei, "华文细黑";
+  --UI-font: PTRootUI, "Noto Sans SC", "Noto Sans TC", "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
+  --header-font: var(--body-font);
+  --title-font: var(--body-font);
+  --mono-font: Recursive, "Noto Serif SC", "Noto Serif TC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
+  /* MOST THEMES SHOULDN'T CHANGE THIS: makes editing consistent across themes, adds programing ligatures */
+  --editor-font: Recursive, "Noto Serif SC", "Noto Serif TC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
+}
+
 #main-content {
   --tabs-bg: var(--light-pale-gray-monochrome);
   --tabs-hover-bg: var(--swatch-primary);
