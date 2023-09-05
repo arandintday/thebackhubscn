@@ -347,6 +347,12 @@ iframe.scpnet-interwiki-frame {
     }
 }
 
+/* Footer */
+#footer,
+#footer a {
+    color: rgb(var(--white-monochrome));
+}
+
 /* License Box */
 #page-content .licensebox .collapsible-block-link {
     margin-left: .25em;
