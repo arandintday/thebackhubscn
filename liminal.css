@@ -168,7 +168,7 @@ blockquote {
 }
 
 .lightblock {
-    background-color: rgb(var(--white-monochrome));
+    background-color: rgb(var(--pale-gray-monochrome));
     padding: 0.01rem 1rem;
     margin: 0.5rem 0 0.5rem 0.25rem;
     box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, .25);
