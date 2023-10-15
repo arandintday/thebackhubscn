@@ -170,7 +170,6 @@
 /* Header Image */
 #header {
   background-image: none;
-  z-index: 30;
 }
 #header::before {
   content: "";
