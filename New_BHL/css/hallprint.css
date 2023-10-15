@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Remove Default Wikidot Styles */
 @import url("https://cdn.scpwiki.com/theme/en/black-highlighter/css/min/normalize.min.css");
 /* Base BHL Theme */
@@ -6,12 +7,21 @@
 @import url("https://fontlibrary.org/face/fantasque-sans-mono");
 /* Public Sans Font */
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Collapsible Sidebar */
+@import url("./sidebar.css");
+/* 侧边栏logo适配 */
+@import url("./round-logo.css");
 /* Fancy Forums */
-@import url("https://backrooms-wiki.wikidot.com/component:forum-theme/code/1");
-/* Mask Icons */
-@import url("https://backrooms-wiki.wikidot.com/component:mask-icons/code/1");
+@import url("./forum.css");
+/* Banned History List */
+@import url("./banlist.css");
 /* Material Icons */
-@import url(https://backrooms-wiki.wdfiles.com/component:material-icons/code/1);
+@import url("./material-icons.css");
+/* 嵌入字体 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@100;300;400;500;700;900&display=swap");
 /* Root Variables: When making a new theme, see: https://github.com/Nu-SCPTheme/Black-Highlighter/blob/master/src/css/parts/root.css */
 :root {
   /* S-CSS-P */
@@ -21,15 +31,15 @@
   /* Header */
   --logo-image: url("http://backrooms-wiki.wdfiles.com/local--files/component%3Atheme/logo.svg");
   --header-title: "The Backrooms";
-  --header-subtitle: "You've been here before.";
+  --header-subtitle: "你曾经来过这里";
   --swatch-headerh1-color: var(--white-monochrome);
   --swatch-headerh2-color: var(--white-monochrome);
   /* Typefaces */
-  --body-font: "Public Sans", Inter, Verdana, Geneva, "Helvetica Neue", "Helvetica", sans-serif;
-  --UI-font: "Fantasque Sans Mono", Courier New, Ubuntu Mono, Consolas, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --header-font: "Fantasque Sans Mono", Courier New, Ubuntu Mono, Consolas, monospace;
-  --title-font: var(--header-font);
-  --mono-font: "Fantasque Sans Mono", Recursive, Consolas, monaco, monospace;
+  --body-font: Inter, "Noto Sans SC", "Noto Sans TC", "Microsoft YaHei UI", "微软雅黑", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Geneva, sans-serif, STXihei, "华文细黑";
+  --UI-font: PTRootUI, "Noto Sans SC", "Noto Sans TC", "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
+  --header-font: var(--body-font);
+  --title-font: var(--body-font);
+  --mono-font: Recursive, "Noto Serif SC", "Noto Serif TC", "宋体", "SimSun", "Microsoft YaHei UI", "微软雅黑", "Microsoft JhengHei UI", "Microsoft JhengHei", "Courier New", Courier, monospace, STXihei, "华文细黑";
   /* Colors */
   --white-monochrome: 252, 252, 252;
   --pale-gray-monochrome: 237, 233, 223;
@@ -45,12 +55,12 @@
   --dark-accent: 122, 109, 82;
   --alt-accent: 221, 102, 17;
   /* Liminal Variables */
-  --header-text-shadow: 0px 2px 3px rgba(0,0,0,0.8);
-  --header-text-shadow-hover: 0px 5px 3px rgba(0,0,0,0.3);
-  --quote-shadow: 0 2px 4px rgba(var(--black-monochrome),0.25);
+  --header-text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.8);
+  --header-text-shadow-hover: 0px 5px 3px rgba(0, 0, 0, 0.3);
+  --quote-shadow: 0 2px 4px rgba(var(--black-monochrome), 0.25);
   --footer-message: var(--header-subtitle);
   /* MOST THEMES SHOULDN'T CHANGE THIS: makes editing consistent across themes, adds programming ligatures */
-  --editor-font: "Fantasque Sans Mono", Recursive, Consolas, monaco, monospace;
+  --editor-font: Recursive, "Noto Serif SC", "Noto Serif TC", "宋体", "SimSun", "Microsoft YaHei UI", "微软雅黑", "Microsoft JhengHei UI", "Microsoft JhengHei", "Courier New", Courier, monospace, STXihei, "华文细黑";
   /* Swatches */
   --swatch-secondary-color: var(--white-monochrome);
   --swatch-menubg-color: var(--white-monochrome);
@@ -59,11 +69,13 @@
   --toc-body-bg-color: var(--white-monochrome);
   --swatch-topmenu-bg-color: var(--gray-monochrome);
   --swatch-topmenu-border-color: var(--swatch-topmenu-bg-color);
-  --gradient-header: linear-gradient( to bottom, rgb(var(--bright-accent)) 0%, rgb(var(--dark-accent)) 100%);
-  --gradient-background: linear-gradient( to bottom, rgb(var(--swatch-background)), rgb(var(--swatch-background)));
+  --gradient-header: linear-gradient(to bottom, rgb(var(--bright-accent)) 0%, rgb(var(--dark-accent)) 100%);
+  --gradient-background: linear-gradient(to bottom, rgb(var(--swatch-background)), rgb(var(--swatch-background)));
   --diagonal-stripes: transparent;
-  --background-gradient-distance: 40rem; /* will not go further than 100vh */
-  --background-gradient-color: var(--gray-monochrome); /* This will display at low opacity */
+  --background-gradient-distance: 40rem;
+  /* will not go further than 100vh */
+  --background-gradient-color: var(--gray-monochrome);
+  /* This will display at low opacity */
   /* Measurements */
   --scrollbar-width: 0.7rem;
   --swatch-background: var(--pale-gray-monochrome);
@@ -72,6 +84,8 @@
   --body-width-on-desktop: 45.75rem;
   --header-height-on-desktop: 9rem;
   --header-height-on-mobile: 9rem;
+  --text-tags: "标签↴";
+  --rename-option: "记住：后室维基用户可以重命名/移动自己创建的页面，但请谨慎使用该功能（最好仅在名称中出现错误时使用）。只有工作人员允许删除页面，包括你自己创建的页面。若需自删，请在页面名称前面加上 deleted: 前缀，以方便工作人员追踪与核查。";
   /* Wallpaper Mask */
   --wallpaper-mask: url(data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22windows-1252%22%20standalone%3D%22no%22%3F%3E%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xml%3Aspace%3D%22preserve%22%20width%3D%22106.667%22%20height%3D%22154.667%22%3E%3Cpath%20d%3D%22M72.547%201158.57H5.074V-6.465h67.473V1158.57M119.027%20710.25v-58.977l126.95%20154.438L363.43%20654.77v61.476L246.477%20865.688%20119.027%20710.25%22%20style%3D%22fill%3A%23333%3Bfill-opacity%3A1%3Bfill-rule%3Anonzero%3Bstroke%3Anone%22%20transform%3D%22matrix%28.13305%200%200%20-.13255%20-.633%20153.92%29%22%2F%3E%3Cpath%20d%3D%22M119.027%20951.652V790.715l125.45%20153.441L363.43%20792.715v166.933L247.477%201108.09l-128.45-156.438M763.27%201158.57h-63.473l63.473-80.97ZM472.387%201158.57h-67.473V-6.465h67.473V1158.57M518.867%20995.133v-58.977L645.816%201090.6%20763.27%20939.656v61.474l-116.954%20149.44-127.449-155.437M763.27%20657.27%20647.316%20805.711%20518.867%20649.273V488.336l125.449%20153.441L763.27%20490.336V657.27M518.867%201158.57v-82.97l67.973%2082.97z%22%20style%3D%22fill%3A%23333%3Bfill-opacity%3A1%3Bfill-rule%3Anonzero%3Bstroke%3Anone%22%20transform%3D%22matrix%28.13305%200%200%20-.13255%20-.633%20153.92%29%22%2F%3E%3Cpath%20d%3D%22M763.27%20413.867%20646.316%20563.309%20518.867%20407.867v-58.972l126.949%20154.437L763.27%20352.391v61.476M363.43%20128.98%20246.477%20278.422l-127.45-155.438V64.008l126.95%20154.437L363.43%2067.504v61.476%22%20style%3D%22fill%3A%23333%3Bfill-opacity%3A1%3Bfill-rule%3Anonzero%3Bstroke%3Anone%22%20transform%3D%22matrix%28.13305%200%200%20-.13255%20-.633%20153.92%29%22%2F%3E%3Cpath%20d%3D%22M363.43%20205.449v166.934L247.477%20520.824l-128.45-156.437V203.449l125.45%20153.442L363.43%20205.449M518.867%2071.504V-6.465h67.973l57.476%2070.473%2055.481-70.473h63.473V79.5L647.316%20227.941%20518.867%2071.504%22%20style%3D%22fill%3A%23333%3Bfill-opacity%3A1%3Bfill-rule%3Anonzero%3Bstroke%3Anone%22%20transform%3D%22matrix%28.13305%200%200%20-.13255%20-.633%20153.92%29%22%2F%3E%3C%2Fsvg%3E);
   --wallpaper-mask-size: 2.3rem;
@@ -79,49 +93,28 @@
 
 /* Wallpaper */
 /* Header Wallpaper */
-#skrollr-body::before {
-  background-color: rgba(var(--swatch-topmenu-bg-color), 0.2);
-  background-repeat: repeat;
-  background-size: 0.25em 0.25em;
-  width: 100%;
-  height: 9rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  -webkit-mask-image: var(--wallpaper-mask);
-  mask-image: var(--wallpaper-mask);
-  -webkit-mask-repeat: repeat;
-  mask-repeat: repeat;
-  -webkit-mask-size: var(--wallpaper-mask-size);
-  mask-size: var(--wallpaper-mask-size);
-  -webkit-mask-position: center;
-  mask-position: center;
-}
-
-#skrollr-body::before {
-  background-color: rgba(var(--swatch-topmenu-bg-color), 0.2);
-  background-repeat: repeat;
-  background-size: 0.25em 0.25em;
-  width: 100%;
-  height: var(--header-height-on-desktop);
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  -webkit-mask-image: var(--wallpaper-mask);
-  mask-image: var(--wallpaper-mask);
-  -webkit-mask-repeat: repeat;
-  mask-repeat: repeat;
-  -webkit-mask-size: var(--wallpaper-mask-size);
-  mask-size: var(--wallpaper-mask-size);
-  -webkit-mask-position: center;
-  mask-position: center;
-}
-
 #skrollr-body {
   height: var(--header-height-on-desktop);
   width: 100vw;
+}
+#skrollr-body::before {
+  content: "";
+  background-color: rgba(var(--swatch-topmenu-bg-color), 0.2);
+  background-repeat: repeat;
+  background-size: 0.25em 0.25em;
+  width: 100%;
+  height: var(--header-height-on-desktop);
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-mask-image: var(--wallpaper-mask);
+          mask-image: var(--wallpaper-mask);
+  -webkit-mask-repeat: repeat;
+          mask-repeat: repeat;
+  -webkit-mask-size: var(--wallpaper-mask-size);
+          mask-size: var(--wallpaper-mask-size);
+  -webkit-mask-position: center;
+          mask-position: center;
 }
 
 /* Header Wallpaper */
@@ -138,37 +131,37 @@
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(var(--background-gradient-color), 0)), color-stop(8.1%, rgba(var(--background-gradient-color), 0.013)), color-stop(15.5%, rgba(var(--background-gradient-color), 0.049)), color-stop(22.5%, rgba(var(--background-gradient-color), 0.104)), color-stop(29%, rgba(var(--background-gradient-color), 0.175)), color-stop(35.3%, rgba(var(--background-gradient-color), 0.259)), color-stop(41.2%, rgba(var(--background-gradient-color), 0.352)), color-stop(47.1%, rgba(var(--background-gradient-color), 0.45)), color-stop(52.9%, rgba(var(--background-gradient-color), 0.55)), color-stop(58.8%, rgba(var(--background-gradient-color), 0.648)), color-stop(64.7%, rgba(var(--background-gradient-color), 0.741)), color-stop(71%, rgba(var(--background-gradient-color), 0.825)), color-stop(77.5%, rgba(var(--background-gradient-color), 0.896)), color-stop(84.5%, rgba(var(--background-gradient-color), 0.951)), color-stop(91.9%, rgba(var(--background-gradient-color), 0.987)), to(rgb(var(--background-gradient-color))));
   background-image: linear-gradient(to top, rgba(var(--background-gradient-color), 0) 0%, rgba(var(--background-gradient-color), 0.013) 8.1%, rgba(var(--background-gradient-color), 0.049) 15.5%, rgba(var(--background-gradient-color), 0.104) 22.5%, rgba(var(--background-gradient-color), 0.175) 29%, rgba(var(--background-gradient-color), 0.259) 35.3%, rgba(var(--background-gradient-color), 0.352) 41.2%, rgba(var(--background-gradient-color), 0.45) 47.1%, rgba(var(--background-gradient-color), 0.55) 52.9%, rgba(var(--background-gradient-color), 0.648) 58.8%, rgba(var(--background-gradient-color), 0.741) 64.7%, rgba(var(--background-gradient-color), 0.825) 71%, rgba(var(--background-gradient-color), 0.896) 77.5%, rgba(var(--background-gradient-color), 0.951) 84.5%, rgba(var(--background-gradient-color), 0.987) 91.9%, rgb(var(--background-gradient-color)) 100%);
 }
-
 #content-wrap::before {
   opacity: 0.04;
   -webkit-mask-image: var(--wallpaper-mask);
-  mask-image: var(--wallpaper-mask);
+          mask-image: var(--wallpaper-mask);
   -webkit-mask-repeat: repeat;
-  mask-repeat: repeat;
+          mask-repeat: repeat;
   -webkit-mask-size: var(--wallpaper-mask-size);
-  mask-size: var(--wallpaper-mask-size);
+          mask-size: var(--wallpaper-mask-size);
   -webkit-mask-position: center;
-  mask-position: center;
+          mask-position: center;
 }
-
 #content-wrap::after {
   opacity: 0.1;
 }
 
 #container-wrap-wrap::before {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(var(--swatch-topmenu-bg-color), 0)), color-stop(5%, rgba(var(--swatch-topmenu-bg-color), 0.013)), color-stop(10.1%, rgba(var(--swatch-topmenu-bg-color), 0.049)), color-stop(15.2%, rgba(var(--swatch-topmenu-bg-color), 0.104)), color-stop(20.5%, rgba(var(--swatch-topmenu-bg-color), 0.175)), color-stop(25.9%, rgba(var(--swatch-topmenu-bg-color), 0.259)), color-stop(31.6%, rgba(var(--swatch-topmenu-bg-color), 0.352)), color-stop(37.5%, rgba(var(--swatch-topmenu-bg-color), 0.45)), color-stop(43.8%, rgba(var(--swatch-topmenu-bg-color), 0.55)), color-stop(50.4%, rgba(var(--swatch-topmenu-bg-color), 0.648)), color-stop(57.4%, rgba(var(--swatch-topmenu-bg-color), 0.741)), color-stop(64.9%, rgba(var(--swatch-topmenu-bg-color), 0.825)), color-stop(72.8%, rgba(var(--swatch-topmenu-bg-color), 0.896)), color-stop(81.3%, rgba(var(--swatch-topmenu-bg-color), 0.951)), color-stop(90.3%, rgba(var(--swatch-topmenu-bg-color), 0.987)), to(rgb(var(--swatch-topmenu-bg-color))));
-  background: linear-gradient(to bottom, rgba(var(--swatch-topmenu-bg-color), 0) 0%, rgba(var(--swatch-topmenu-bg-color), 0.013) 5%, rgba(var(--swatch-topmenu-bg-color), 0.049) 10.1%, rgba(var(--swatch-topmenu-bg-color), 0.104) 15.2%, rgba(var(--swatch-topmenu-bg-color), 0.175) 20.5%, rgba(var(--swatch-topmenu-bg-color), 0.259) 25.9%, rgba(var(--swatch-topmenu-bg-color), 0.352) 31.6%, rgba(var(--swatch-topmenu-bg-color), 0.45) 37.5%, rgba(var(--swatch-topmenu-bg-color), 0.55) 43.8%, rgba(var(--swatch-topmenu-bg-color), 0.648) 50.4%, rgba(var(--swatch-topmenu-bg-color), 0.741) 57.4%, rgba(var(--swatch-topmenu-bg-color), 0.825) 64.9%, rgba(var(--swatch-topmenu-bg-color), 0.896) 72.8%, rgba(var(--swatch-topmenu-bg-color), 0.951) 81.3%, rgba(var(--swatch-topmenu-bg-color), 0.987) 90.3%, rgb(var(--swatch-topmenu-bg-color)) 100%);
-  z-index: -1;
   content: "";
+  z-index: -1;
   top: 0;
   left: 0;
   position: absolute;
   width: 100%;
   height: var(--header-height-on-desktop);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(var(--swatch-topmenu-bg-color), 0)), color-stop(5%, rgba(var(--swatch-topmenu-bg-color), 0.013)), color-stop(10.1%, rgba(var(--swatch-topmenu-bg-color), 0.049)), color-stop(15.2%, rgba(var(--swatch-topmenu-bg-color), 0.104)), color-stop(20.5%, rgba(var(--swatch-topmenu-bg-color), 0.175)), color-stop(25.9%, rgba(var(--swatch-topmenu-bg-color), 0.259)), color-stop(31.6%, rgba(var(--swatch-topmenu-bg-color), 0.352)), color-stop(37.5%, rgba(var(--swatch-topmenu-bg-color), 0.45)), color-stop(43.8%, rgba(var(--swatch-topmenu-bg-color), 0.55)), color-stop(50.4%, rgba(var(--swatch-topmenu-bg-color), 0.648)), color-stop(57.4%, rgba(var(--swatch-topmenu-bg-color), 0.741)), color-stop(64.9%, rgba(var(--swatch-topmenu-bg-color), 0.825)), color-stop(72.8%, rgba(var(--swatch-topmenu-bg-color), 0.896)), color-stop(81.3%, rgba(var(--swatch-topmenu-bg-color), 0.951)), color-stop(90.3%, rgba(var(--swatch-topmenu-bg-color), 0.987)), to(rgb(var(--swatch-topmenu-bg-color))));
+  background: linear-gradient(to bottom, rgba(var(--swatch-topmenu-bg-color), 0) 0%, rgba(var(--swatch-topmenu-bg-color), 0.013) 5%, rgba(var(--swatch-topmenu-bg-color), 0.049) 10.1%, rgba(var(--swatch-topmenu-bg-color), 0.104) 15.2%, rgba(var(--swatch-topmenu-bg-color), 0.175) 20.5%, rgba(var(--swatch-topmenu-bg-color), 0.259) 25.9%, rgba(var(--swatch-topmenu-bg-color), 0.352) 31.6%, rgba(var(--swatch-topmenu-bg-color), 0.45) 37.5%, rgba(var(--swatch-topmenu-bg-color), 0.55) 43.8%, rgba(var(--swatch-topmenu-bg-color), 0.648) 50.4%, rgba(var(--swatch-topmenu-bg-color), 0.741) 57.4%, rgba(var(--swatch-topmenu-bg-color), 0.825) 64.9%, rgba(var(--swatch-topmenu-bg-color), 0.896) 72.8%, rgba(var(--swatch-topmenu-bg-color), 0.951) 81.3%, rgba(var(--swatch-topmenu-bg-color), 0.987) 90.3%, rgb(var(--swatch-topmenu-bg-color)) 100%);
 }
 
 /* container wrap bug */
-#container, #container-wrap, #container-wrap-wrap {
+#container,
+#container-wrap,
+#container-wrap-wrap {
   width: 100vw;
 }
 
@@ -177,7 +170,6 @@
   background-image: none;
   z-index: 30;
 }
-
 #header::before {
   content: "";
   position: absolute;
@@ -192,13 +184,10 @@
   background-repeat: no-repeat;
   opacity: 0.4;
 }
-
-/* Header Text */
 #header h1 {
   width: 100%;
 }
-
-#header h1 a, #header h1 a:before {
+#header h1 a, #header h1 a::before {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -208,12 +197,13 @@
   bottom: 0;
   color: rgb(var(--swatch-headerh1-color));
 }
-
-#header h1 a:hover:before {
+#header h1 a::before {
+  text-shadow: var(--header-text-shadow);
+}
+#header h1 a:hover::before {
   text-shadow: var(--header-text-shadow-hover);
   bottom: 3px;
 }
-
 #header h1, #header h1 a {
   position: absolute;
   top: 1.4rem;
@@ -227,7 +217,6 @@
   z-index: 0;
   height: 1.5rem;
 }
-
 #header h2, #header h2 span, #header h2 span::before {
   position: absolute;
   top: 2.05rem;
@@ -241,12 +230,8 @@
           justify-content: center;
   font-weight: bold;
 }
-
 #header h2 span::before {
   color: rgb(var(--swatch-headerh2-color));
-}
-
-#header h1 a::before, #header h2 span::before {
   text-shadow: var(--header-text-shadow);
 }
 
@@ -296,7 +281,12 @@
 }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0.5em;
   margin-left: 0;
 }
@@ -314,11 +304,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Max-Width Fix */
-img, embed, video, object, iframe, table, dark#page-content div, #page-content div table {
+img,
+embed,
+video,
+object,
+iframe,
+table,
+dark#page-content div,
+#page-content div table {
   max-width: 100%;
 }
 
-div#footer:after {
+div#footer::after {
   content: var(--footer-message);
   border-left: solid 1px;
   padding-left: 0.5em;
@@ -340,21 +337,21 @@ hr {
   display: flex;
 }
 
-.bibitems .bibitem:after, .footnotes-footer a[href*=javascript]:before {
+.bibitems .bibitem::after,
+.footnotes-footer a[href*=javascript]::before {
   right: -20%;
   width: 140%;
 }
 
 /* Tab Gap */
+.yui-navset {
+  margin-top: 1rem;
+}
 .yui-navset .yui-nav {
   background: rgb(var(--tabs-bottom-border-color));
   -webkit-column-gap: 4px;
      -moz-column-gap: 4px;
           column-gap: 4px;
-}
-
-.yui-navset {
-  margin-top: 1rem;
 }
 
 /* Page Title */
@@ -369,7 +366,6 @@ span.printuser img.small {
   -webkit-transition-timing-function: cubic-bezier 0, 1, 1, 0;
           transition-timing-function: cubic-bezier 0, 1, 1, 0;
 }
-
 span.printuser img.small:hover {
   -webkit-transform: scale(2);
           transform: scale(2);
@@ -388,13 +384,17 @@ ul {
 }
 
 /* Template options text fix */
-form#edit-page-form #page-templates option, form#edit-post-form #page-templates option, form#new-post-form #page-templates option, form#new-thread-form #page-templates option {
+form#edit-page-form #page-templates option,
+form#edit-post-form #page-templates option,
+form#new-post-form #page-templates option,
+form#new-thread-form #page-templates option {
   color: rgb(var(--swatch-menutxt-dark-color));
 }
 
 /* Message on Delete/Rename/Move */
-#rename-option-rename::before, #rename-option-delete::before {
-  content: "Reminder: Backrooms Wiki users can rename/move pages they own, but use this responsibly (preferably only if there is an error with the name). Only staff are allowed to delete pages, even your own pages: ask Backrooms Wiki staff and we will help you!";
+#rename-option-rename::before,
+#rename-option-delete::before {
+  content: var(--rename-option);
   color: red;
   display: block;
   margin-top: 1rem;
@@ -405,17 +405,19 @@ form#edit-page-form #page-templates option, form#edit-post-form #page-templates 
   width: inherit !important;
 }
 
-:is(.image-caption, .scp-image-caption) {
+.image-caption,
+.scp-image-caption {
   width: unset !important;
 }
 
-:is(div.image-block, div.scp-image-block) {
+div.image-block,
+div.scp-image-block {
   -webkit-box-align: stretch;
   -webkit-align-items: stretch;
           align-items: stretch;
 }
-
-:is(div.image-block, div.scp-image-block) img.image {
+div.image-block img.image,
+div.scp-image-block img.image {
   width: 100% !important;
   border: 0;
 }
@@ -442,7 +444,8 @@ form#edit-page-form #page-templates option, form#edit-post-form #page-templates 
 }
 
 /* Inline maths actually inline */
-#MathJax_Message, .math-inline {
+#MathJax_Message,
+.math-inline {
   display: inline;
 }
 
@@ -456,7 +459,6 @@ form#edit-page-form #page-templates option, form#edit-post-form #page-templates 
   -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
 }
-
 #page-content .licensebox .collapsible-block-link:hover {
   color: rgb(var(--dark-gray-monochrome));
 }
@@ -469,11 +471,12 @@ form#edit-page-form #page-templates option, form#edit-post-form #page-templates 
 }
 
 /* Footnote */
-a.bibcite:before, a.footnoteref:before {
+a.bibcite::before,
+a.footnoteref::before {
   content: "[";
 }
-
-a.bibcite:after, a.footnoteref:after {
+a.bibcite::after,
+a.footnoteref::after {
   content: "]";
 }
 
