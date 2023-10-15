@@ -1,13 +1,9 @@
 :root {
     --white-monochrome: 252, 252, 252;
-    --pale-gray-monochrome: 237, 233, 223;
-    --light-gray-monochrome: 160, 160, 160;
-    --gray-monochrome: 72, 69, 60;
     --black-monochrome: 25, 20, 16;
     --bright-accent: 140, 136, 126;
     --medium-accent: 72, 69, 60;
     --dark-accent: 140, 136, 126;
-    --pale-accent: 140, 136, 126;
 }
 
 .side-block {

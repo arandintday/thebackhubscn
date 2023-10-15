@@ -468,12 +468,6 @@ div.scp-image-block {
     font-family: var(--editor-font);
 }
 
-/* Make some variables editable at :root level */
-#side-bar {
-    --sideblock-heading-text-color: inherit;
-    z-index: 55 !important;
-}
-
 /* Inline maths actually inline */
 #MathJax_Message,
 .math-inline {
@@ -531,10 +525,6 @@ body {
 
 /* Mober Phone */
 @media only screen and (max-width: 56.25rem) {
-    #side-bar {
-        z-index: 55 !important;
-    }
-
     :root {
         --header-height-on-desktop: var(--header-height-on-mobile);
         --final-header-height-on-desktop: var(--final-header-height-on-mobile);
