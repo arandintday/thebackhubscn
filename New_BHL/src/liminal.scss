@@ -229,31 +229,6 @@
     }
 }
 
-/* Sidebar fix */
-#side-bar div.scpnet-interwiki-wrapper {
-    min-height: 300px;
-    grid-column: span 2;
-}
-
-div.scpnet-interwiki-wrapper {
-    margin: 0;
-    width: auto;
-}
-
-iframe.scpnet-interwiki-frame {
-    border: inherit;
-    width: 100%;
-    height: 230px;
-}
-
-@media (min-width: 768px) {
-
-    div.scpnet-interwiki-wrapper,
-    iframe.scpnet-interwiki-frame {
-        width: 100%;
-    }
-}
-
 /* Div Boxes */
 .darkblock {
     color: rgb(var(--swatch-text-secondary-color));
@@ -331,8 +306,8 @@ hr {
 }
 
 /* Page Title */
-.meta-title {
-    margin-bottom: 0.5em;
+.meta-title p {
+    margin: 0;
 }
 
 /* printuser */
@@ -346,11 +321,13 @@ span.printuser a:first-of-type:not(:last-of-type) img.small {
 }
 
 /* Message on Delete/Rename/Move */
-#rename-option-rename::before,
-#rename-option-delete::before {
-    content: var(--rename-option);
-    color: red;
-    display: block;
+#rename-option-rename,
+#rename-option-delete {
+    &::before {
+        content: var(--rename-option);
+        color: red;
+        display: block;
+    }
 }
 
 /* Editor Font */
