@@ -101,7 +101,7 @@
     padding-left: 0rem;
     padding-right: 2rem;
     background-color: rgba(var(--swatch-menubg-color, 255, 255, 255), 0);
-    top: 1rem;
+    top: 0rem;
     max-height: 100vh;
     position: -webkit-sticky;
     position: sticky;
