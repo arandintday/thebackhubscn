@@ -1,0 +1,1 @@
+{"version":3,"sources":["..\\src\\liminal-impact.scss"],"names":[],"mappings":"AAAQ,4BAAA;AACA,4BAAA","file":"liminal-impact.css","sourcesContent":["@import url(\"./liminal.css\");\r\n@import url(\"./sidebar.css\");"]}

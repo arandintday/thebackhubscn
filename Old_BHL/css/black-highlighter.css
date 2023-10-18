@@ -4101,11 +4101,6 @@
     max-width: 100vw !important;
     height: 100% !important;
   }
-  [id*=u-credit],
-  [id*=u-credit] .fader,
-  [id*=u-credit] .fader iframe {
-    /* Overwriting Inline Styling */
-  }
   [id*=u-credit] .modalcontainer {
     display: -webkit-box;
     display: -webkit-flex;
@@ -4583,4 +4578,4 @@
   #html-body:target #container-wrap-wrap {
     background: transparent;
   }
-}/*# sourceMappingURL=bhl-archived.css.map */
+}/*# sourceMappingURL=black-highlighter.css.map */
