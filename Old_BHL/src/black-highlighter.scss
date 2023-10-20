@@ -2378,36 +2378,39 @@
             text-align: center;
         }
 
-        &>input,
-        &>input[type=submit] {
-            flex-grow: 1;
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0.25rem;
-            min-height: calc(var(--base-font-size) * (14 / 15) * 1.85);
-        }
+        &-form {
 
-        input[type=submit] {
-            cursor: pointer;
-            margin-right: 0;
-            font-size: calc(var(--base-font-size) * (14 / 15) * 0.85);
-            border: var(--border-styling);
-            border-radius: var(--border-radius-width);
-
-            &,
-            &:focus,
-            &:hover {
-                box-shadow: none;
-                background: rgb(var(--swatch-primary-darkest));
-                color: rgb(var(--swatch-text-light));
+            &>input,
+            &>input[type=submit] {
+                flex-grow: 1;
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0.25rem;
+                min-height: calc(var(--base-font-size) * (14 / 15) * 1.85);
             }
 
-            &:focus,
-            &:hover {
-                --text-shadow: rgba(var(--swatch-menutxt-dark-color, 12, 12, 12), 0.75);
+            input[type=submit] {
+                cursor: pointer;
+                margin-right: 0;
+                font-size: calc(var(--base-font-size) * (14 / 15) * 0.85);
                 border: var(--border-styling);
                 border-radius: var(--border-radius-width);
-                text-shadow: 0 0 0.063rem var(--text-shadow);
+
+                &,
+                &:focus,
+                &:hover {
+                    box-shadow: none;
+                    background: rgb(var(--swatch-primary-darkest));
+                    color: rgb(var(--swatch-text-light));
+                }
+
+                &:focus,
+                &:hover {
+                    --text-shadow: rgba(var(--swatch-menutxt-dark-color, 12, 12, 12), 0.75);
+                    border: var(--border-styling);
+                    border-radius: var(--border-radius-width);
+                    text-shadow: 0 0 0.063rem var(--text-shadow);
+                }
             }
         }
     }

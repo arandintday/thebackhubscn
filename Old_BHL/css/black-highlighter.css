@@ -2303,7 +2303,7 @@
     color: rgba(var(--swatch-tertiary-color));
     text-align: center;
   }
-  #search-top-box > input, #search-top-box > input[type=submit] {
+  #search-top-box-form > input, #search-top-box-form > input[type=submit] {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
             flex-grow: 1;
@@ -2314,7 +2314,7 @@
     min-height: -webkit-calc(var(--base-font-size) * 0.9333333333 * 1.85);
     min-height: calc(var(--base-font-size) * 0.9333333333 * 1.85);
   }
-  #search-top-box input[type=submit] {
+  #search-top-box-form input[type=submit] {
     cursor: pointer;
     margin-right: 0;
     font-size: -webkit-calc(var(--base-font-size) * 0.9333333333 * 0.85);
@@ -2323,13 +2323,13 @@
     -webkit-border-radius: var(--border-radius-width);
             border-radius: var(--border-radius-width);
   }
-  #search-top-box input[type=submit], #search-top-box input[type=submit]:focus, #search-top-box input[type=submit]:hover {
+  #search-top-box-form input[type=submit], #search-top-box-form input[type=submit]:focus, #search-top-box-form input[type=submit]:hover {
     -webkit-box-shadow: none;
             box-shadow: none;
     background: rgb(var(--swatch-primary-darkest));
     color: rgb(var(--swatch-text-light));
   }
-  #search-top-box input[type=submit]:focus, #search-top-box input[type=submit]:hover {
+  #search-top-box-form input[type=submit]:focus, #search-top-box-form input[type=submit]:hover {
     --text-shadow: rgba(var(--swatch-menutxt-dark-color, 12, 12, 12), 0.75);
     border: var(--border-styling);
     -webkit-border-radius: var(--border-radius-width);
