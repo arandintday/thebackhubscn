@@ -32,7 +32,7 @@
   }
   #main-content::before {
     --not-ie: absolute;
-    content: " ";
+    content: "";
     background-color: rgb(var(--black-monochrome, 0, 0, 0));
     position: fixed;
     position: var(--not-ie);

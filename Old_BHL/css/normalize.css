@@ -48,17 +48,13 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
     background: inherit;
     text-decoration: inherit;
   }
-  #side-bar a:visited,
-  a,
-  a.newpage,
-  a:visited {
+  #side-bar a:visited, a, a.newpage, a:visited {
     color: inherit;
   }
   a.newpage {
     background: inherit;
   }
-  a.newpage,
-  a:hover {
+  a.newpage, a:hover {
     text-decoration: inherit;
   }
   a:hover {
@@ -70,9 +66,6 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
   #header,
   #top-bar {
     max-width: inherit;
-  }
-  #header,
-  #top-bar {
     margin: inherit;
     width: inherit;
   }
@@ -94,9 +87,6 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
   sup {
     top: inherit;
     vertical-align: inherit;
-  }
-  #header,
-  sup {
     position: inherit;
   }
   #header {
@@ -104,6 +94,7 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
     background: inherit;
     padding-bottom: inherit;
     height: inherit;
+    position: inherit;
   }
   #search-top-box {
     position: inherit;
@@ -117,16 +108,13 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
     -webkit-border-radius: inherit;
             border-radius: inherit;
   }
-  #search-top-box-input,
-  #search-top-box-input:focus,
-  #search-top-box-input:hover {
+  #search-top-box-input, #search-top-box-input:focus, #search-top-box-input:hover {
     -webkit-box-shadow: inherit;
             box-shadow: inherit;
     background-color: inherit;
     color: inherit;
   }
-  #search-top-box-input:focus,
-  #search-top-box-input:hover {
+  #search-top-box-input:focus, #search-top-box-input:hover {
     border: inherit;
   }
   #search-top-box-form input[type=submit] {
@@ -143,8 +131,7 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
     font-weight: inherit;
     font-size: inherit;
   }
-  #search-top-box-form input[type=submit]:focus,
-  #search-top-box-form input[type=submit]:hover {
+  #search-top-box-form input[type=submit]:focus, #search-top-box-form input[type=submit]:hover {
     -webkit-box-shadow: inherit;
             box-shadow: inherit;
     border: inherit;
@@ -209,13 +196,6 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
   #top-bar ul {
     float: inherit;
   }
-  #top-bar li {
-    margin: inherit;
-  }
-  #top-bar a {
-    background: inherit;
-    color: inherit;
-  }
   #top-bar ul li {
     position: inherit;
     border: inherit;
@@ -225,6 +205,17 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
             box-shadow: inherit;
     border: inherit;
     border-top: inherit;
+    width: inherit;
+  }
+  #top-bar ul li ul,
+  #top-bar ul li ul li,
+  #top-bar ul li ul li.sfhover,
+  #top-bar ul li ul li:hover,
+  #top-bar ul li ul li a {
+    border-width: inherit;
+  }
+  #top-bar ul li ul a {
+    color: inherit;
   }
   #top-bar ul li a {
     border-right: inherit;
@@ -236,15 +227,17 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
     line-height: inherit;
     text-decoration: inherit;
   }
-  #top-bar ul li.sfhover a,
-  #top-bar ul li:hover a {
+  #top-bar ul li.sfhover a, #top-bar ul li:hover a {
     border-right: inherit;
     border-left: inherit;
     background: inherit;
     color: inherit;
   }
-  #top-bar ul li.sfhover ul li a,
-  #top-bar ul li:hover ul li a {
+  #top-bar ul li.sfhover a:hover, #top-bar ul li:hover a:hover {
+    background: inherit;
+    text-decoration: inherit;
+  }
+  #top-bar ul li.sfhover ul li a, #top-bar ul li:hover ul li a {
     border-top: inherit;
     border-width: inherit;
     padding-top: inherit;
@@ -254,30 +247,21 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
     max-height: inherit;
     line-height: inherit;
   }
-  #top-bar ul li.sfhover a:hover,
-  #top-bar ul li:hover a:hover {
-    background: inherit;
-    text-decoration: inherit;
-  }
-  #top-bar ul li ul {
-    width: inherit;
-  }
-  #top-bar ul li ul,
-  #top-bar ul li ul li,
-  #top-bar ul li ul li.sfhover,
-  #top-bar ul li ul li:hover,
-  #top-bar ul li ul li a {
-    border-width: inherit;
-  }
-  #top-bar a:hover,
-  #top-bar ul li ul a {
-    color: inherit;
-  }
-  .top-bar ul li:last-of-type ul {
+  #top-bar ul li:last-of-type ul {
     right: inherit;
   }
   #top-bar ul > li > ul {
-    *margin-top: inherit;
+    margin-top: inherit;
+  }
+  #top-bar li {
+    margin: inherit;
+  }
+  #top-bar a {
+    background: inherit;
+    color: inherit;
+  }
+  #top-bar a:hover {
+    color: inherit;
   }
   #side-bar {
     display: inherit;
@@ -311,8 +295,7 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
     font-weight: inherit;
     font-size: inherit;
   }
-  #side-bar div.menu-item,
-  #side-bar p {
+  #side-bar div.menu-item {
     margin: inherit;
   }
   #side-bar div.menu-item img {
@@ -335,6 +318,9 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
   #side-bar div.menu-item .sub-text {
     color: inherit;
     font-size: inherit;
+  }
+  #side-bar p {
+    margin: inherit;
   }
   #side-bar .collapsible-block-folded {
     background: inherit;
@@ -390,25 +376,22 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
   .yui-navset .yui-content {
     background-color: inherit;
   }
+  .yui-navset .yui-nav,
+  .yui-navset .yui-navset-top .yui-nav {
+    border-color: inherit;
+  }
   .yui-navset .yui-nav a,
   .yui-navset .yui-navset-top .yui-nav a {
     background-image: inherit;
     background-color: inherit;
   }
-  .yui-navset .yui-nav .selected a,
-  .yui-navset .yui-nav .selected a:focus,
-  .yui-navset .yui-nav .selected a:hover {
-    background: inherit;
-    color: inherit;
-  }
-  .yui-navset .yui-nav a:focus,
-  .yui-navset .yui-nav a:hover {
+  .yui-navset .yui-nav a:focus, .yui-navset .yui-nav a:hover {
     background: inherit;
     text-decoration: inherit;
   }
-  .yui-navset .yui-nav,
-  .yui-navset .yui-navset-top .yui-nav {
-    border-color: inherit;
+  .yui-navset .yui-nav .selected a, .yui-navset .yui-nav .selected a:focus, .yui-navset .yui-nav .selected a:hover {
+    background: inherit;
+    color: inherit;
   }
   .yui-navset li {
     line-height: inherit;
@@ -469,8 +452,7 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
   .content-panel.centered {
     text-align: inherit;
   }
-  .content-panel.left-column,
-  .content-panel.right-column {
+  .content-panel.left-column, .content-panel.right-column {
     float: inherit;
     width: inherit;
   }
@@ -619,8 +601,7 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
     border: inherit;
     width: inherit;
   }
-  .scp-image-block.block-left,
-  .scp-image-block.block-right {
+  .scp-image-block.block-left, .scp-image-block.block-right {
     float: inherit;
     clear: inherit;
     margin: inherit;
@@ -642,12 +623,12 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
     font-size: inherit;
     text-align: inherit;
   }
-  .scp-image-block > p {
-    margin: inherit;
-  }
   .scp-image-block .scp-image-caption > p {
     margin: inherit;
     padding: inherit;
+  }
+  .scp-image-block > p {
+    margin: inherit;
   }
   .footer-wikiwalk-nav {
     font-weight: inherit;
@@ -715,21 +696,20 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
     line-height: inherit;
     text-decoration: inherit;
   }
-  .tags:before {
-    border: inherit;
-    padding: inherit;
-  }
-  .tags:after,
-  .tags:before {
+  .tags::before, .tags::after {
+    content: inherit;
     position: inherit;
     top: inherit;
     left: inherit;
     float: inherit;
     width: inherit;
     height: inherit;
-    content: inherit;
   }
-  .tags:after {
+  .tags::before {
+    border: inherit;
+    padding: inherit;
+  }
+  .tags::after {
     -webkit-box-shadow: inherit;
             box-shadow: inherit;
     -webkit-border-radius: inherit;
@@ -757,7 +737,7 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
   }
   .emph {
     -webkit-text-emphasis-style: inherit;
-    text-emphasis-style: inherit;
+            text-emphasis-style: inherit;
   }
   @document url-prefix() {
     .emph {
@@ -790,7 +770,8 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
     width: inherit;
   }
   ::-webkit-scrollbar {
-    border-round: inherit;
+    -webkit-border-radius: inherit;
+            border-radius: inherit;
     border: inherit;
     width: inherit;
     height: inherit;
@@ -888,13 +869,10 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
     table.form td,
     table.form th {
       float: inherit;
+      padding: inherit;
     }
     td.name {
       width: inherit;
-    }
-    table.form td,
-    table.form th {
-      padding: inherit;
     }
     #edit-page-title {
       max-width: inherit;
@@ -1113,15 +1091,14 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
       z-index: inherit;
       overflow-y: inherit;
     }
-    #side-bar,
-    #side-bar:after {
+    #side-bar, #side-bar::after {
       position: inherit;
       top: inherit;
       background-color: inherit;
       width: inherit;
       height: inherit;
     }
-    #side-bar:after {
+    #side-bar::after {
       content: inherit;
     }
     #side-bar:target {

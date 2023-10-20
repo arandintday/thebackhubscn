@@ -41,7 +41,9 @@
   --hover-link-color: 187, 0, 34;
   --visited-link-color: 150, 24, 43;
   --background-gradient-distance: 0rem;
-  --gradient-header: linear-gradient(to top, rgba(var(--medium-accent)) 0%, rgba(var(--medium-accent), 0.90) 100%);
+  --gradient-header: linear-gradient(to top,
+          rgba(var(--medium-accent)) 0%,
+          rgba(var(--medium-accent), 0.90) 100%);
   --diagonal-stripes: linear-gradient(transparent 0);
 }
 
@@ -167,8 +169,8 @@ div#page-options-bottom-2 > a:hover {
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
           justify-content: flex-start;
-  padding: 0 0 0 -webkit-calc(var(--base-font-size) * 0.93333);
-  padding: 0 0 0 calc(var(--base-font-size) * 0.93333);
+  padding: 0 0 0 -webkit-calc(var(--base-font-size) * 0.9333333333);
+  padding: 0 0 0 calc(var(--base-font-size) * 0.9333333333);
 }
 #side-bar div.side-block div.menu-item a::before {
   left: 0;
@@ -253,8 +255,8 @@ a.newpage {
 }
 
 blockquote {
-  -webkit-box-shadow: 0.05rem 0.1rem 0.3rem rgba(0, 0, 0, 0.25);
-          box-shadow: 0.05rem 0.1rem 0.3rem rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0.05rem 0.1rem 0.3rem rgba(var(--black-monochrome), 0.25);
+          box-shadow: 0.05rem 0.1rem 0.3rem rgba(var(--black-monochrome), 0.25);
 }
 
 .styled-quote {
@@ -262,8 +264,8 @@ blockquote {
   border-left: 0.5rem solid rgba(var(--gray-monochrome));
   padding: 0.1rem 1rem;
   margin: 0.5rem 0 0.5rem 0.25rem;
-  -webkit-box-shadow: 0.05rem 0.1rem 0.3rem rgba(0, 0, 0, 0.25);
-          box-shadow: 0.05rem 0.1rem 0.3rem rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0.05rem 0.1rem 0.3rem rgba(var(--black-monochrome), 0.25);
+          box-shadow: 0.05rem 0.1rem 0.3rem rgba(var(--black-monochrome), 0.25);
 }
 
 .dark-styled-quote {
@@ -272,8 +274,8 @@ blockquote {
   color: rgb(var(--white-monochrome));
   padding: 0.1rem 1rem;
   margin: 0.5rem 0 0.5rem 0.25rem;
-  -webkit-box-shadow: 0.05rem 0.1rem 0.3rem rgba(0, 0, 0, 0.25);
-          box-shadow: 0.05rem 0.1rem 0.3rem rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0.05rem 0.1rem 0.3rem rgba(var(--black-monochrome), 0.25);
+          box-shadow: 0.05rem 0.1rem 0.3rem rgba(var(--black-monochrome), 0.25);
 }
 .dark-styled-quote a {
   color: rgb(var(--swatch-menubg-medium-color));
@@ -283,8 +285,8 @@ blockquote {
   background-color: rgb(var(--pale-gray-monochrome));
   padding: 0.01rem 1rem;
   margin: 0.5rem 0 0.5rem 0.25rem;
-  -webkit-box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.25);
-          box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 0.2rem 0.3rem rgba(var(--black-monochrome), 0.25);
+          box-shadow: 0 0.2rem 0.3rem rgba(var(--black-monochrome), 0.25);
 }
 
 .darkblock {

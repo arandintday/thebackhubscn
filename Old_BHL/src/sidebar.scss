@@ -23,7 +23,7 @@
 
         &::before {
             --not-ie: absolute;
-            content: " ";
+            content: "";
             background-color: rgb(var(--black-monochrome, 0, 0, 0));
             position: fixed;
             position: var(--not-ie);
@@ -32,7 +32,9 @@
             transform: translateX(calc(var(--sidebar-width-on-desktop, 17em) * -1 + 1rem));
             width: var(--sidebar-width-on-desktop, 17em);
             height: calc(100% - var(--final-header-height-on-desktop, 0.688rem) - 2.313rem);
-            transition: transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1), opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+            transition:
+                transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
+                opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
             opacity: 0.5;
             pointer-events: none;
             z-index: 9;
@@ -54,7 +56,10 @@
             height: 100%;
             max-height: 100%;
             top: 0;
-            transition: left 300ms cubic-bezier(0.4, 0.0, 0.2, 1), background-position 300ms cubic-bezier(0.4, 0.0, 0.2, 1), opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+            transition:
+                left 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
+                background-position 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
+                opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
             left: 1rem;
             background: url("https://scp-wiki.wdfiles.com/local--files/component%3Acollapsible-sidebar/sidebar-tab.svg");
             background-repeat: no-repeat;
@@ -67,7 +72,11 @@
 
     #side-bar {
         transform: translateX(calc(var(--sidebar-width-on-desktop, 17em) * -1 - 1em));
-        transition: transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1), background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1), padding 300ms linear, margin 300ms linear;
+        transition:
+            transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
+            background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
+            padding 300ms linear,
+            margin 300ms linear;
         width: var(--sidebar-width-on-desktop, 13.6rem) !important;
         min-width: var(--sidebar-width-on-desktop, 13.6rem) !important;
         grid-area: side-bar;
@@ -86,7 +95,8 @@
 
         &::-webkit-scrollbar {
             width: 0;
-            transition: width 300ms 50ms cubic-bezier(0.4, 0.0, 0.2, 1);
+            transition:
+                width 300ms 50ms cubic-bezier(0.4, 0.0, 0.2, 1);
 
             &-track,
             &-thumb {
@@ -120,7 +130,8 @@
 
             &::-webkit-scrollbar {
                 width: 0.5rem;
-                transition: width 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+                transition:
+                    width 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
             }
 
             &+#main-content {
@@ -132,7 +143,10 @@
                 &::after {
                     left: calc(var(--sidebar-width-on-desktop, 17em) * -1);
                     background-position: center left calc(var(--sidebar-width-on-desktop, 17em) * -1);
-                    transition: left 300ms cubic-bezier(0.4, 0.0, 0.2, 1), background-position 300ms cubic-bezier(0.4, 0.0, 0.2, 1), opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+                    transition:
+                        left 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
+                        background-position 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
+                        opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
                     opacity: 0;
                     width: 0rem;
                     font-size: 0em;

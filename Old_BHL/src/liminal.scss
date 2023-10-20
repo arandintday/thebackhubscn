@@ -42,12 +42,16 @@
     --hover-link-color: 187, 0, 34;
     --visited-link-color: 150, 24, 43;
     --background-gradient-distance: 0rem;
-    --gradient-header: linear-gradient(to top, rgba(var(--medium-accent)) 0%, rgba(var(--medium-accent), 0.90) 100%);
+    --gradient-header: linear-gradient(to top,
+            rgba(var(--medium-accent)) 0%,
+            rgba(var(--medium-accent), 0.90) 100%);
     --diagonal-stripes: linear-gradient(transparent 0);
 }
 
 #skrollr-body {
-    background-image: radial-gradient(circle, rgb(var(--medium-accent)) 50%, transparent 0);
+    background-image: radial-gradient(circle,
+            rgb(var(--medium-accent)) 50%,
+            transparent 0);
     background-repeat: repeat;
     background-size: 0.25em 0.25em;
     width: 100%;
@@ -55,7 +59,9 @@
 }
 
 #container {
-    background-image: radial-gradient(circle, transparent 50%, transparent 0);
+    background-image: radial-gradient(circle,
+            transparent 50%,
+            transparent 0);
     background-size: 0.25em 0.25em;
     background-repeat: repeat;
     background-attachment: fixed;
@@ -165,7 +171,7 @@ div#page-options-bottom-2>a {
 
             & a {
                 justify-content: flex-start;
-                padding: 0 0 0 calc(var(--base-font-size) * 0.93333);
+                padding: 0 0 0 calc(var(--base-font-size) * (14 / 15));
 
                 &::before {
                     left: 0;
@@ -249,7 +255,7 @@ a.newpage {
 }
 
 blockquote {
-    box-shadow: 0.05rem 0.1rem 0.3rem rgba(0, 0, 0, 0.25);
+    box-shadow: 0.05rem 0.1rem 0.3rem rgba(var(--black-monochrome), 0.25);
 }
 
 .styled-quote {
@@ -257,7 +263,7 @@ blockquote {
     border-left: 0.5rem solid rgba(var(--gray-monochrome));
     padding: 0.1rem 1rem;
     margin: 0.5rem 0 0.5rem 0.25rem;
-    box-shadow: 0.05rem 0.1rem 0.3rem rgba(0, 0, 0, 0.25);
+    box-shadow: 0.05rem 0.1rem 0.3rem rgba(var(--black-monochrome), 0.25);
 }
 
 .dark-styled-quote {
@@ -266,7 +272,7 @@ blockquote {
     color: rgb(var(--white-monochrome));
     padding: 0.1rem 1rem;
     margin: 0.5rem 0 0.5rem 0.25rem;
-    box-shadow: 0.05rem 0.1rem 0.3rem rgba(0, 0, 0, 0.25);
+    box-shadow: 0.05rem 0.1rem 0.3rem rgba(var(--black-monochrome), 0.25);
 
     & a {
         color: rgb(var(--swatch-menubg-medium-color));
@@ -277,7 +283,7 @@ blockquote {
     background-color: rgb(var(--pale-gray-monochrome));
     padding: 0.01rem 1rem;
     margin: 0.5rem 0 0.5rem 0.25rem;
-    box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0.2rem 0.3rem rgba(var(--black-monochrome), 0.25);
 }
 
 .darkblock {
