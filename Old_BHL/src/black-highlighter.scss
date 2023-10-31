@@ -4046,14 +4046,6 @@
             text-decoration: none;
             will-change: border-color, box-shadow, color, background-color, font-weight, font-variation-settings;
 
-            @supports (font-size: 0.75cqi) {
-                font-size: calc(max(var(--min-font-size), min(0.75cqi, var(--max-font-size))) * 1.8);
-            }
-
-            @supports (font-size: 1cqi) {
-                font-size: max(var(--min-font-size), min(0.75cqi, var(--max-font-size)));
-            }
-
             &:hover,
             &:active,
             &:focus,
@@ -4126,7 +4118,7 @@
             &-left {
                 float: left;
                 clear: left;
-                margin: 0 2em 1em 0
+                margin: 0 2em 1em 0;
             }
 
             &-center {

@@ -4103,19 +4103,6 @@
     text-decoration: none;
     will-change: border-color, box-shadow, color, background-color, font-weight, font-variation-settings;
   }
-  @supports (font-size: 0.75cqi) {
-    [id*=u-credit] div.credit-back,
-    [id*=u-credit] a[href="#u-credit-otherwise"] {
-      font-size: -webkit-calc(max(var(--min-font-size), min(0.75cqi, var(--max-font-size))) * 1.8);
-      font-size: calc(max(var(--min-font-size), min(0.75cqi, var(--max-font-size))) * 1.8);
-    }
-  }
-  @supports (font-size: 1cqi) {
-    [id*=u-credit] div.credit-back,
-    [id*=u-credit] a[href="#u-credit-otherwise"] {
-      font-size: max(var(--min-font-size), min(0.75cqi, var(--max-font-size)));
-    }
-  }
   [id*=u-credit] div.credit-back:hover, [id*=u-credit] div.credit-back:active, [id*=u-credit] div.credit-back:focus, [id*=u-credit] div.credit-back:focus-within,
   [id*=u-credit] a[href="#u-credit-otherwise"]:hover,
   [id*=u-credit] a[href="#u-credit-otherwise"]:active,
