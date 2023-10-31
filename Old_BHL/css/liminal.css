@@ -108,10 +108,7 @@ div#page-options-bottom-2 > a:hover {
           justify-content: center;
   z-index: 0;
 }
-#header h1 a::before {
-  text-shadow: 0.063rem 0.1rem 0.1rem #0c0c0c;
-}
-#header h2, #header h2 h2 span, #header h2 h2 span::before {
+#header h2, #header h2 span, #header h2 span::before {
   position: absolute;
   top: 2rem;
   margin: 0;
@@ -122,9 +119,6 @@ div#page-options-bottom-2 > a:hover {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
           justify-content: center;
-}
-#header h2 h2 span::before {
-  text-shadow: 0.063rem 0.1rem 0.1rem #0c0c0c;
 }
 
 #side-bar {
