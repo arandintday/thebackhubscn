@@ -3453,49 +3453,18 @@
     -webkit-box-shadow: 0 0.125rem 0 0 rgb(var(--rating-module-bottom-border-color));
             box-shadow: 0 0.125rem 0 0 rgb(var(--rating-module-bottom-border-color));
   }
-  div.rate-box-with-credit-button div.page-rate-widget-box .rate-points,
-  div.rate-box-with-credit-button div.page-rate-widget-box .rateup,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel,
-  div.page-rate-widget-box .rate-points,
-  div.page-rate-widget-box .rateup,
-  div.page-rate-widget-box .ratedown,
-  div.page-rate-widget-box .cancel {
+  div.rate-box-with-credit-button div.page-rate-widget-box :is(.rate-points, .rateup, .ratedown, .cancel), div.page-rate-widget-box :is(.rate-points, .rateup, .ratedown, .cancel) {
+    --wght: 600;
     display: block;
     margin: 0 0.125rem 0 0;
     border: none;
-  }
-  div.rate-box-with-credit-button div.page-rate-widget-box .rate-points, div.rate-box-with-credit-button div.page-rate-widget-box .rate-points a,
-  div.rate-box-with-credit-button div.page-rate-widget-box .rateup,
-  div.rate-box-with-credit-button div.page-rate-widget-box .rateup a,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown a,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel a,
-  div.page-rate-widget-box .rate-points,
-  div.page-rate-widget-box .rate-points a,
-  div.page-rate-widget-box .rateup,
-  div.page-rate-widget-box .rateup a,
-  div.page-rate-widget-box .ratedown,
-  div.page-rate-widget-box .ratedown a,
-  div.page-rate-widget-box .cancel,
-  div.page-rate-widget-box .cancel a {
-    --wght: 600;
     position: relative;
     background: transparent;
     font-weight: var(--wght);
   }
-  div.rate-box-with-credit-button div.page-rate-widget-box .rateup, div.rate-box-with-credit-button div.page-rate-widget-box .rateup a,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown a,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel a,
-  div.page-rate-widget-box .rateup,
-  div.page-rate-widget-box .rateup a,
-  div.page-rate-widget-box .ratedown,
-  div.page-rate-widget-box .ratedown a,
-  div.page-rate-widget-box .cancel,
-  div.page-rate-widget-box .cancel a {
+  div.rate-box-with-credit-button div.page-rate-widget-box :is(.rateup, .ratedown, .cancel),
+  div.rate-box-with-credit-button div.page-rate-widget-box :is(.rateup, .ratedown, .cancel) a, div.page-rate-widget-box :is(.rateup, .ratedown, .cancel),
+  div.page-rate-widget-box :is(.rateup, .ratedown, .cancel) a {
     display: block;
     width: -webkit-calc(var(--base-font-size) * 1.4);
     width: calc(var(--base-font-size) * 1.4);
@@ -3505,63 +3474,21 @@
     text-align: center;
     text-transform: uppercase;
   }
-  div.rate-box-with-credit-button div.page-rate-widget-box .rateup, div.rate-box-with-credit-button div.page-rate-widget-box .rateup:hover, div.rate-box-with-credit-button div.page-rate-widget-box .rateup:active, div.rate-box-with-credit-button div.page-rate-widget-box .rateup:focus, div.rate-box-with-credit-button div.page-rate-widget-box .rateup a, div.rate-box-with-credit-button div.page-rate-widget-box .rateup a:hover, div.rate-box-with-credit-button div.page-rate-widget-box .rateup a:active, div.rate-box-with-credit-button div.page-rate-widget-box .rateup a:focus,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown:hover,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown:active,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown:focus,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown a,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown a:hover,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown a:active,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown a:focus,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel:hover,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel:active,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel:focus,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel a,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel a:hover,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel a:active,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel a:focus,
-  div.page-rate-widget-box .rateup,
-  div.page-rate-widget-box .rateup:hover,
-  div.page-rate-widget-box .rateup:active,
-  div.page-rate-widget-box .rateup:focus,
-  div.page-rate-widget-box .rateup a,
-  div.page-rate-widget-box .rateup a:hover,
-  div.page-rate-widget-box .rateup a:active,
-  div.page-rate-widget-box .rateup a:focus,
-  div.page-rate-widget-box .ratedown,
-  div.page-rate-widget-box .ratedown:hover,
-  div.page-rate-widget-box .ratedown:active,
-  div.page-rate-widget-box .ratedown:focus,
-  div.page-rate-widget-box .ratedown a,
-  div.page-rate-widget-box .ratedown a:hover,
-  div.page-rate-widget-box .ratedown a:active,
-  div.page-rate-widget-box .ratedown a:focus,
-  div.page-rate-widget-box .cancel,
-  div.page-rate-widget-box .cancel:hover,
-  div.page-rate-widget-box .cancel:active,
-  div.page-rate-widget-box .cancel:focus,
-  div.page-rate-widget-box .cancel a,
-  div.page-rate-widget-box .cancel a:hover,
-  div.page-rate-widget-box .cancel a:active,
-  div.page-rate-widget-box .cancel a:focus {
+  div.rate-box-with-credit-button div.page-rate-widget-box :is(.rateup, .ratedown, .cancel), div.rate-box-with-credit-button div.page-rate-widget-box :is(.rateup, .ratedown, .cancel):is(:hover, :active, :focus),
+  div.rate-box-with-credit-button div.page-rate-widget-box :is(.rateup, .ratedown, .cancel) a,
+  div.rate-box-with-credit-button div.page-rate-widget-box :is(.rateup, .ratedown, .cancel) a:is(:hover, :active, :focus), div.page-rate-widget-box :is(.rateup, .ratedown, .cancel), div.page-rate-widget-box :is(.rateup, .ratedown, .cancel):is(:hover, :active, :focus),
+  div.page-rate-widget-box :is(.rateup, .ratedown, .cancel) a,
+  div.page-rate-widget-box :is(.rateup, .ratedown, .cancel) a:is(:hover, :active, :focus) {
     color: transparent;
   }
-  div.rate-box-with-credit-button div.page-rate-widget-box .rateup a,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown a,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel a,
-  div.page-rate-widget-box .rateup a,
-  div.page-rate-widget-box .ratedown a,
-  div.page-rate-widget-box .cancel a {
+  div.rate-box-with-credit-button div.page-rate-widget-box :is(.rateup, .ratedown, .cancel) a, div.page-rate-widget-box :is(.rateup, .ratedown, .cancel) a {
+    --wght: 600;
     z-index: 0;
+    position: relative;
+    background: transparent;
+    font-weight: var(--wght);
   }
-  div.rate-box-with-credit-button div.page-rate-widget-box .rateup a::before,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown a::before,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel a::before,
-  div.page-rate-widget-box .rateup a::before,
-  div.page-rate-widget-box .ratedown a::before,
-  div.page-rate-widget-box .cancel a::before {
+  div.rate-box-with-credit-button div.page-rate-widget-box :is(.rateup, .ratedown, .cancel) a::before, div.page-rate-widget-box :is(.rateup, .ratedown, .cancel) a::before {
     content: "";
     position: absolute;
     z-index: 1;
@@ -3577,12 +3504,7 @@
     -webkit-mask: center/calc(var(--rating-module-height) - 0.5em) no-repeat;
             mask: center/calc(var(--rating-module-height) - 0.5em) no-repeat;
   }
-  div.rate-box-with-credit-button div.page-rate-widget-box .rateup a::after,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown a::after,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel a::after,
-  div.page-rate-widget-box .rateup a::after,
-  div.page-rate-widget-box .ratedown a::after,
-  div.page-rate-widget-box .cancel a::after {
+  div.rate-box-with-credit-button div.page-rate-widget-box :is(.rateup, .ratedown, .cancel) a::after, div.page-rate-widget-box :is(.rateup, .ratedown, .cancel) a::after {
     --clip-path: polygon(0 100%, 100% 115%, 100% 100%, 0 115%);
     content: "";
     position: absolute;
@@ -3601,101 +3523,44 @@
     -webkit-clip-path: var(--clip-path);
             clip-path: var(--clip-path);
   }
-  div.rate-box-with-credit-button div.page-rate-widget-box .rateup a:hover, div.rate-box-with-credit-button div.page-rate-widget-box .rateup a:active, div.rate-box-with-credit-button div.page-rate-widget-box .rateup a:focus,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown a:hover,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown a:active,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown a:focus,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel a:hover,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel a:active,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel a:focus,
-  div.page-rate-widget-box .rateup a:hover,
-  div.page-rate-widget-box .rateup a:active,
-  div.page-rate-widget-box .rateup a:focus,
-  div.page-rate-widget-box .ratedown a:hover,
-  div.page-rate-widget-box .ratedown a:active,
-  div.page-rate-widget-box .ratedown a:focus,
-  div.page-rate-widget-box .cancel a:hover,
-  div.page-rate-widget-box .cancel a:active,
-  div.page-rate-widget-box .cancel a:focus {
+  div.rate-box-with-credit-button div.page-rate-widget-box :is(.rateup, .ratedown, .cancel) a:is(:hover, :active, :focus), div.page-rate-widget-box :is(.rateup, .ratedown, .cancel) a:is(:hover, :active, :focus) {
     text-decoration: none;
   }
-  div.rate-box-with-credit-button div.page-rate-widget-box .rateup a:hover::before, div.rate-box-with-credit-button div.page-rate-widget-box .rateup a:active::before, div.rate-box-with-credit-button div.page-rate-widget-box .rateup a:focus::before,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown a:hover::before,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown a:active::before,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown a:focus::before,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel a:hover::before,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel a:active::before,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel a:focus::before,
-  div.page-rate-widget-box .rateup a:hover::before,
-  div.page-rate-widget-box .rateup a:active::before,
-  div.page-rate-widget-box .rateup a:focus::before,
-  div.page-rate-widget-box .ratedown a:hover::before,
-  div.page-rate-widget-box .ratedown a:active::before,
-  div.page-rate-widget-box .ratedown a:focus::before,
-  div.page-rate-widget-box .cancel a:hover::before,
-  div.page-rate-widget-box .cancel a:active::before,
-  div.page-rate-widget-box .cancel a:focus::before {
+  div.rate-box-with-credit-button div.page-rate-widget-box :is(.rateup, .ratedown, .cancel) a:is(:hover, :active, :focus)::before, div.page-rate-widget-box :is(.rateup, .ratedown, .cancel) a:is(:hover, :active, :focus)::before {
     background-color: rgb(var(--rating-module-text-hover-color));
   }
-  div.rate-box-with-credit-button div.page-rate-widget-box .rateup a:hover::after, div.rate-box-with-credit-button div.page-rate-widget-box .rateup a:active::after, div.rate-box-with-credit-button div.page-rate-widget-box .rateup a:focus::after,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown a:hover::after,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown a:active::after,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown a:focus::after,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel a:hover::after,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel a:active::after,
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel a:focus::after,
-  div.page-rate-widget-box .rateup a:hover::after,
-  div.page-rate-widget-box .rateup a:active::after,
-  div.page-rate-widget-box .rateup a:focus::after,
-  div.page-rate-widget-box .ratedown a:hover::after,
-  div.page-rate-widget-box .ratedown a:active::after,
-  div.page-rate-widget-box .ratedown a:focus::after,
-  div.page-rate-widget-box .cancel a:hover::after,
-  div.page-rate-widget-box .cancel a:active::after,
-  div.page-rate-widget-box .cancel a:focus::after {
+  div.rate-box-with-credit-button div.page-rate-widget-box :is(.rateup, .ratedown, .cancel) a:is(:hover, :active, :focus)::after, div.page-rate-widget-box :is(.rateup, .ratedown, .cancel) a:is(:hover, :active, :focus)::after {
     --clip-path: polygon(0 100%, 100% 115%, 100% 0, 0 -15%);
   }
-  div.rate-box-with-credit-button div.page-rate-widget-box .rateup a,
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown a,
-  div.page-rate-widget-box .rateup a,
-  div.page-rate-widget-box .ratedown a {
+  div.rate-box-with-credit-button div.page-rate-widget-box :is(.rateup, .ratedown) a, div.page-rate-widget-box :is(.rateup, .ratedown) a {
     background: transparent none repeat 0 0/auto auto padding-box border-box scroll;
-    background: initial;
     background-color: transparent;
   }
-  div.rate-box-with-credit-button div.page-rate-widget-box .rateup a::before,
-  div.page-rate-widget-box .rateup a::before {
+  div.rate-box-with-credit-button div.page-rate-widget-box .rateup a::before, div.page-rate-widget-box .rateup a::before {
     -webkit-mask-image: var(--rateup-mask);
             mask-image: var(--rateup-mask);
   }
-  div.rate-box-with-credit-button div.page-rate-widget-box .rateup a::after,
-  div.page-rate-widget-box .rateup a::after {
+  div.rate-box-with-credit-button div.page-rate-widget-box .rateup a::after, div.page-rate-widget-box .rateup a::after {
     background-color: rgb(var(--rating-module-button-plus-color));
   }
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown a::before,
-  div.page-rate-widget-box .ratedown a::before {
+  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown a::before, div.page-rate-widget-box .ratedown a::before {
     -webkit-mask-image: var(--ratedown-mask);
             mask-image: var(--ratedown-mask);
   }
-  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown a::after,
-  div.page-rate-widget-box .ratedown a::after {
+  div.rate-box-with-credit-button div.page-rate-widget-box .ratedown a::after, div.page-rate-widget-box .ratedown a::after {
     background-color: rgb(var(--rating-module-button-negative-color));
   }
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel,
-  div.page-rate-widget-box .cancel {
+  div.rate-box-with-credit-button div.page-rate-widget-box .cancel, div.page-rate-widget-box .cancel {
     font-size: 0.85em;
   }
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel a::before,
-  div.page-rate-widget-box .cancel a::before {
+  div.rate-box-with-credit-button div.page-rate-widget-box .cancel a::before, div.page-rate-widget-box .cancel a::before {
     -webkit-mask-image: var(--cancel-mask);
             mask-image: var(--cancel-mask);
   }
-  div.rate-box-with-credit-button div.page-rate-widget-box .cancel a::after,
-  div.page-rate-widget-box .cancel a::after {
+  div.rate-box-with-credit-button div.page-rate-widget-box .cancel a::after, div.page-rate-widget-box .cancel a::after {
     background-color: rgb(var(--rating-module-button-cancel-color));
   }
-  div.rate-box-with-credit-button div.page-rate-widget-box .rate-points,
-  div.page-rate-widget-box .rate-points {
+  div.rate-box-with-credit-button div.page-rate-widget-box .rate-points, div.page-rate-widget-box .rate-points {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
@@ -3709,8 +3574,7 @@
     line-height: calc(var(--rating-module-height) * 1.25);
     text-transform: capitalize;
   }
-  div.rate-box-with-credit-button div.page-rate-widget-box .rate-points .number,
-  div.page-rate-widget-box .rate-points .number {
+  div.rate-box-with-credit-button div.page-rate-widget-box .rate-points .number, div.page-rate-widget-box .rate-points .number {
     font-size: -webkit-calc(var(--base-font-size) * 1.1333333333);
     font-size: calc(var(--base-font-size) * 1.1333333333);
   }
@@ -3723,8 +3587,8 @@
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  div.rate-box-with-credit-button > div.creditButton > p,
-  div.creditButtonStandalone > p {
+  :is(div.rate-box-with-credit-button > div.creditButton, div.creditButtonStandalone),
+  :is(div.rate-box-with-credit-button > div.creditButton, div.creditButtonStandalone) > p {
     display: block;
     width: -webkit-calc(var(--base-font-size) * 1.4);
     width: calc(var(--base-font-size) * 1.4);
@@ -3777,27 +3641,21 @@
     margin-right: 0;
     margin-bottom: 0;
   }
-  #page-content div.rate-box-with-credit-button > .creditButton:hover, #page-content div.rate-box-with-credit-button > .creditButton:active,
-  #page-content div.creditButtonStandalone:hover,
-  #page-content div.creditButtonStandalone:active {
+  #page-content :is(div.rate-box-with-credit-button > .creditButton, div.creditButtonStandalone):is(:hover, :active) {
     background: transparent none repeat 0 0/auto auto padding-box border-box scroll;
-    background: initial;
   }
-  #page-content div.rate-box-with-credit-button > .creditButton > p,
-  #page-content div.creditButtonStandalone > p {
+  #page-content :is(div.rate-box-with-credit-button > .creditButton, div.creditButtonStandalone) > p {
     display: block;
     position: relative;
     margin: 0;
     padding: 0;
   }
-  #page-content div.rate-box-with-credit-button > .creditButton > p, #page-content div.rate-box-with-credit-button > .creditButton > p > a,
-  #page-content div.creditButtonStandalone > p,
-  #page-content div.creditButtonStandalone > p > a {
+  #page-content :is(div.rate-box-with-credit-button > .creditButton, div.creditButtonStandalone) > p,
+  #page-content :is(div.rate-box-with-credit-button > .creditButton, div.creditButtonStandalone) > p > a {
     width: 100%;
     height: 100%;
   }
-  #page-content div.rate-box-with-credit-button > .creditButton > p > a,
-  #page-content div.creditButtonStandalone > p > a {
+  #page-content :is(div.rate-box-with-credit-button > .creditButton, div.creditButtonStandalone) > p > a {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
@@ -3806,10 +3664,9 @@
     background-color: transparent;
     color: transparent;
   }
-  #page-content div.rate-box-with-credit-button > .creditButton > p > a::before,
-  #page-content div.creditButtonStandalone > p > a::before {
+  #page-content :is(div.rate-box-with-credit-button > .creditButton, div.creditButtonStandalone) > p > a::before {
     --mask-image: var(--credit-button-mask);
-    content: " ";
+    content: "";
     position: absolute;
     z-index: 1;
     top: 0;
@@ -3826,10 +3683,9 @@
     -webkit-mask: var(--mask-image) center center/calc(var(--rating-module-height) - 0.375em) no-repeat;
             mask: var(--mask-image) center center/calc(var(--rating-module-height) - 0.375em) no-repeat;
   }
-  #page-content div.rate-box-with-credit-button > .creditButton > p > a::after,
-  #page-content div.creditButtonStandalone > p > a::after {
+  #page-content :is(div.rate-box-with-credit-button > .creditButton, div.creditButtonStandalone) > p > a::after {
     --clip-path: polygon(0 100%, 100% 115%, 100% 100%, 0 115%);
-    content: " ";
+    content: "";
     position: absolute;
     z-index: 0;
     top: 0;
@@ -3844,29 +3700,11 @@
     -webkit-clip-path: var(--clip-path);
             clip-path: var(--clip-path);
   }
-  #page-content div.rate-box-with-credit-button > .creditButton > p > a:hover::before, #page-content div.rate-box-with-credit-button > .creditButton > p > a:active::before, #page-content div.rate-box-with-credit-button > .creditButton > p > a:focus::before, #page-content div.rate-box-with-credit-button > .creditButton > p > a:focus-within::before,
-  #page-content div.creditButtonStandalone > p > a:hover::before,
-  #page-content div.creditButtonStandalone > p > a:active::before,
-  #page-content div.creditButtonStandalone > p > a:focus::before,
-  #page-content div.creditButtonStandalone > p > a:focus-within::before {
+  #page-content :is(div.rate-box-with-credit-button > .creditButton, div.creditButtonStandalone) > p > a:is(:hover, :active, :focus, :focus-within)::before {
     background-color: rgb(var(--rating-module-text-hover-color));
   }
-  #page-content div.rate-box-with-credit-button > .creditButton > p > a:hover::after, #page-content div.rate-box-with-credit-button > .creditButton > p > a:active::after, #page-content div.rate-box-with-credit-button > .creditButton > p > a:focus::after, #page-content div.rate-box-with-credit-button > .creditButton > p > a:focus-within::after,
-  #page-content div.creditButtonStandalone > p > a:hover::after,
-  #page-content div.creditButtonStandalone > p > a:active::after,
-  #page-content div.creditButtonStandalone > p > a:focus::after,
-  #page-content div.creditButtonStandalone > p > a:focus-within::after {
+  #page-content :is(div.rate-box-with-credit-button > .creditButton, div.creditButtonStandalone) > p > a:is(:hover, :active, :focus, :focus-within)::after {
     --clip-path: polygon(0 100%, 100% 115%, 100% 0, 0 -15%);
-  }
-  #page-content div.creditButtonStandalone > p > a {
-    line-height: initial;
-    -webkit-border-radius: initial;
-            border-radius: initial;
-    text-align: initial;
-    background: initial;
-    -webkit-box-shadow: initial;
-            box-shadow: initial;
-    font-size: initial;
   }
   #page-content div.rate-box-with-credit-button > div.page-rate-widget-box {
     display: -webkit-inline-box;
@@ -3879,11 +3717,14 @@
             box-shadow: none;
   }
   /* Credit View Styling */
-  [id*=u-credit], [id*=u-credit] * {
+  [id*=u-credit],
+  [id*=u-credit] * {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  [id*=u-credit], [id*=u-credit] .fader, [id*=u-credit] .fader iframe {
+  [id*=u-credit] *,
+  [id*=u-credit] .fader,
+  [id*=u-credit] .fader iframe {
     width: 100vw !important;
     max-width: 100vw !important;
     height: 100% !important;
@@ -3928,12 +3769,8 @@
     border: none;
     -webkit-border-radius: 0;
             border-radius: 0;
-    /* Overwrite inline styling */
     -webkit-box-shadow: inset 0 0 0 0.125rem rgba(var(--swatch-alternate-color), 0.25), 0.5rem 0.25rem 1rem 0 rgba(var(--swatch-alternate-color), 0.25);
             box-shadow: inset 0 0 0 0.125rem rgba(var(--swatch-alternate-color), 0.25), 0.5rem 0.25rem 1rem 0 rgba(var(--swatch-alternate-color), 0.25);
-  }
-  [id*=u-credit] div.modalbox > hr:first-of-type, [id*=u-credit] div.modalbox > hr:last-of-type {
-    display: none;
   }
   [id*=u-credit] div.modalbox > div:first-of-type {
     --wght: 600;
@@ -3960,7 +3797,10 @@
     -webkit-box-sizing: content-box;
             box-sizing: content-box;
   }
-  [id*=u-credit] .credit.first, [id*=u-credit] .credit.otherwise {
+  [id*=u-credit] > hr:is(:first-of-type, :last-of-type) {
+    display: none;
+  }
+  [id*=u-credit] .credit:is(.first, .otherwise) {
     display: grid;
     width: auto;
     height: -webkit-max-content;
@@ -3988,7 +3828,6 @@
     bottom: auto;
     left: auto;
     width: 1.75em;
-    /* Overwrite inline styling */
   }
   [id*=u-credit] .close-credits > a {
     display: -webkit-box;
@@ -4006,7 +3845,7 @@
     font-size: 1.25em;
     color: transparent;
   }
-  [id*=u-credit] .close-credits > a::before, [id*=u-credit] .close-credits > a::after {
+  [id*=u-credit] .close-credits > a:is(::before, ::after) {
     content: "";
     position: absolute;
     top: 0;
@@ -4042,20 +3881,14 @@
       transition: transform 0.2s var(--ease-in-out), -webkit-transform 0.2s var(--ease-in-out);
     }
   }
-  [id*=u-credit] .close-credits > a:hover::after, [id*=u-credit] .close-credits > a:active::after, [id*=u-credit] .close-credits > a:focus::after, [id*=u-credit] .close-credits > a:focus-within::after {
+  [id*=u-credit] .close-credits > a:is(:hover, :active, :focus, :focus-within)::after {
     rotate: 15deg;
     scale: 1.1;
   }
   @supports not (scale: 1.1) {
-    [id*=u-credit] .close-credits > a:hover::after, [id*=u-credit] .close-credits > a:active::after, [id*=u-credit] .close-credits > a:focus::after, [id*=u-credit] .close-credits > a:focus-within::after {
+    [id*=u-credit] .close-credits > a:is(:hover, :active, :focus, :focus-within)::after {
       -webkit-transform: rotateZ(15deg) scale(1.1);
               transform: rotateZ(15deg) scale(1.1);
-    }
-  }
-  @supports not (scale: 2 1) {
-    [id*=u-credit] .close-credits {
-      -webkit-transform: scale(2, 1);
-              transform: scale(2, 1);
     }
   }
   [id*=u-credit] div.creditBottomRate {
@@ -4103,11 +3936,21 @@
     text-decoration: none;
     will-change: border-color, box-shadow, color, background-color, font-weight, font-variation-settings;
   }
-  [id*=u-credit] div.credit-back:hover, [id*=u-credit] div.credit-back:active, [id*=u-credit] div.credit-back:focus, [id*=u-credit] div.credit-back:focus-within,
-  [id*=u-credit] a[href="#u-credit-otherwise"]:hover,
-  [id*=u-credit] a[href="#u-credit-otherwise"]:active,
-  [id*=u-credit] a[href="#u-credit-otherwise"]:focus,
-  [id*=u-credit] a[href="#u-credit-otherwise"]:focus-within {
+  @supports (font-size: 0.75cqi) {
+    [id*=u-credit] div.credit-back,
+    [id*=u-credit] a[href="#u-credit-otherwise"] {
+      font-size: -webkit-calc(max(var(--min-font-size), min(0.75cqi, var(--max-font-size))) * 1.8);
+      font-size: calc(max(var(--min-font-size), min(0.75cqi, var(--max-font-size))) * 1.8);
+    }
+  }
+  @supports (font-size: 1cqi) {
+    [id*=u-credit] div.credit-back,
+    [id*=u-credit] a[href="#u-credit-otherwise"] {
+      font-size: max(var(--min-font-size), min(0.75cqi, var(--max-font-size)));
+    }
+  }
+  [id*=u-credit] div.credit-back:is(:hover, :active, :focus, :focus-within),
+  [id*=u-credit] a[href="#u-credit-otherwise"]:is(:hover, :active, :focus, :focus-within) {
     --wght: var(--ui-hvr-wght);
     border-color: transparent;
     outline: 0 solid rgb(var(--swatch-primary));
@@ -4119,8 +3962,7 @@
     text-decoration: none;
     cursor: pointer;
   }
-  [id*=u-credit] div.credit-back p,
-  [id*=u-credit] div.credit-back iframe {
+  [id*=u-credit] div.credit-back :is(p, iframe) {
     position: absolute;
     top: 0;
     right: auto;
