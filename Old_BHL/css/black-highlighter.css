@@ -3722,7 +3722,7 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  [id*=u-credit] *,
+  [id*=u-credit],
   [id*=u-credit] .fader,
   [id*=u-credit] .fader iframe {
     width: 100vw !important;
