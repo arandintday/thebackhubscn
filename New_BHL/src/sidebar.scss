@@ -1,0 +1,323 @@
+:root {
+    --sidebar-width-on-desktop: calc((var(--base-font-size) * (14 / 15)) * 19);
+    --body-width-on-desktop: 45.75rem;
+}
+
+@media only screen and (min-width: 56.25rem) {
+    #content-wrap {
+        display: flex;
+        flex-direction: row;
+        width: calc(100vw - (100vw - 100%));
+        min-height: calc(100vh - calc(var(--final-header-height-on-desktop, 10.125rem)));
+        flex-grow: 2;
+        height: auto;
+        position: initial;
+        margin: 0 auto;
+        max-width: inherit;
+        margin-left: -11em;
+        margin-left: calc(var(--sidebar-width-on-desktop, 15.5em) * -1 / 2 - 2rem);
+    }
+
+    #main-content {
+        position: initial;
+        max-height: 100%;
+        padding: 2rem 1rem;
+        width: 45.75rem;
+        width: var(--body-width-on-desktop, 45.75rem);
+        max-width: 45.75rem;
+        max-width: var(--body-width-on-desktop, 45.75rem);
+        margin: 0 auto;
+    }
+
+    #page-content {
+        max-width: min(90vw, 45.75rem);
+        max-width: min(90vw, var(--body-width-on-desktop, 45.75rem));
+    }
+
+    #side-bar {
+        transform: translateX(-14.6rem);
+        transform: translateX(calc(var(--sidebar-width-on-desktop, 17em) * -1 - 1rem));
+        transition:
+            transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
+            background-color 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
+            padding 300ms linear,
+            margin 300ms linear;
+        border: none;
+        border-color: rgba(var(--swatch-tertiary-color, 170, 170, 170), 0.4);
+        width: var(--sidebar-width-on-desktop, 13.6rem) !important;
+        min-width: var(--sidebar-width-on-desktop, 13.6rem) !important;
+        grid-area: side-bar;
+        padding-right: 2rem;
+        background-color: transparent;
+        background-color: rgba(var(--sidebar-bg-color, 255, 255, 255), 0);
+        top: 0;
+        max-height: 100vh;
+        position: sticky;
+        left: 0;
+        padding-left: 0.5rem;
+        direction: rtl;
+        scrollbar-width: thin;
+        -ms-scroll-chaining: none;
+        overscroll-behavior: contain;
+        overflow-y: scroll;
+        scrollbar-color:
+            rgba(170, 170, 170, 0)
+            /* Thumb */
+            rgba(252, 252, 252, 0);
+        /* Track */
+        scrollbar-color:
+            rgba(var(--swatch-primary-darker, 170, 170, 170), 0.1)
+            /* Thumb */
+            rgba(var(--swatch-tertiary-color, 252, 252, 252), 0.05);
+        /* Track */
+    }
+
+    #side-bar::-webkit-scrollbar-track {
+        background-color: rgba(var(--swatch-secondary-color, 244, 244, 244), 0.8);
+    }
+
+    #side-bar::-webkit-scrollbar,
+    #side-bar::-webkit-scrollbar-thumb,
+    #side-bar::-webkit-scrollbar-corner {
+        width: 0.5rem;
+        border-right-width: calc(100vw + 100vh);
+        border-right-style: inset;
+        border-color: inherit;
+        background-color: rgba(var(--sidebar-bg-color, 255, 255, 255), 0);
+    }
+
+    #side-bar:hover,
+    #side-bar:active {
+        background-color: white;
+        background-color: rgba(var(--sidebar-bg-color, 255, 255, 255), 1);
+        padding-right: 0.25rem;
+        margin-right: 1.75rem;
+        transform: translateX(0);
+        transform: translateX(calc(var(--sidebar-width-on-desktop, 1rem) - var(--sidebar-width-on-desktop, 0)));
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-color:
+            rgba(170, 170, 170, 1)
+            /* Thumb */
+            rgba(252, 252, 252, 1);
+        /* Track */
+        scrollbar-color:
+            rgb(var(--swatch-primary-darker, 170, 170, 170), 1)
+            /* Thumb */
+            rgb(var(--swatch-menubg-color, 252, 252, 252), 1);
+        /* Track */
+        border-color: rgba(var(--swatch-primary-darker), 1);
+    }
+
+    #side-bar:focus-within {
+        background-color: white;
+        background-color: rgba(var(--sidebar-bg-color, 255, 255, 255), 1);
+        padding-right: 0.25rem;
+        margin-right: 1.75rem;
+        transform: translateX(0);
+        transform: translateX(calc(var(--sidebar-width-on-desktop, 1rem) - var(--sidebar-width-on-desktop, 0.5rem)));
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-color:
+            rgba(170, 170, 170, 1)
+            /* Thumb */
+            rgba(252, 252, 252, 1);
+        /* Track */
+        scrollbar-color:
+            rgb(var(--swatch-primary-darker, 170, 170, 170), 1)
+            /* Thumb */
+            rgb(var(--swatch-menubg-color, 252, 252, 252), 1);
+        /* Track */
+        border-color: rgba(var(--swatch-primary-darker), 1);
+    }
+
+    #main-content::after {
+        content: " ";
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1rem;
+        height: 100%;
+        max-height: 100%;
+        top: 0;
+        transition:
+            left 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
+            background-position 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
+            opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+        left: 1rem;
+        background: url("https://scp-wiki.wdfiles.com/local--files/component%3Acollapsible-sidebar/sidebar-tab.svg");
+        background-repeat: no-repeat;
+        background-position: center left 1rem;
+        background-attachment: fixed;
+        background-size: 1rem 12.875rem;
+        pointer-events: none;
+    }
+
+    #side-bar:hover+#main-content::after,
+    #side-bar:active+#main-content::after {
+        left: -17em;
+        left: calc(var(--sidebar-width-on-desktop, 17em) * -1);
+        background-position: center left -17em;
+        background-position: center left calc(var(--sidebar-width-on-desktop, 17em) * -1);
+        transition:
+            left 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
+            background-position 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
+            opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+        opacity: 0;
+        width: 0rem;
+        font-size: 0em;
+    }
+
+    #side-bar:focus-within+#main-content::after {
+        left: -17em;
+        left: calc(var(--sidebar-width-on-desktop, 17em) * -1);
+        background-position: center left -17em;
+        background-position: center left calc(var(--sidebar-width-on-desktop, 17em) * -1);
+        transition:
+            left 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
+            background-position 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
+            opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+        opacity: 0;
+        width: 0rem;
+        font-size: 0em;
+    }
+
+    #main-content::before {
+        --not-ie: absolute;
+        content: " ";
+        background-color: black;
+        background-color: rgb(var(--swatch-alternate-color, 0, 0, 0));
+        position: fixed;
+        position: var(--not-ie);
+        top: 0;
+        top: var(--final-header-height-on-desktop, 0);
+        left: 0;
+        transform: translateX(-12.6rem);
+        transform: translateX(calc(var(--sidebar-width-on-desktop, 17em) * -1 + 1rem));
+        width: 17em;
+        width: var(--sidebar-width-on-desktop, 17em);
+        height: calc(100% - 3rem);
+        height: calc(100% - var(--final-header-height-on-desktop, 0.688rem) - 2.313rem);
+        transition:
+            transform 300ms cubic-bezier(0.4, 0.0, 0.2, 1),
+            opacity 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+        opacity: 0.5;
+        pointer-events: none;
+        z-index: 9;
+        margin-bottom: 0;
+        margin-bottom: calc(var(--final-header-height-on-desktop, -2.313rem) * -1 - 2.313rem);
+    }
+
+    #side-bar:hover+#main-content::before,
+    #side-bar:active+#main-content::before {
+        transform: translateX(0);
+        opacity: 0;
+    }
+
+    #side-bar:focus-within+#main-content::before {
+        transform: translateX(0);
+        opacity: 0;
+    }
+
+    #side-bar .side-block {
+        margin-top: 1em;
+        padding-left: 0.25em;
+        background-color: rgb(0, 0, 0, 0);
+        border-radius: 0;
+        border-left-width: 0rem;
+        border-right-width: 0rem;
+        direction: ltr;
+    }
+
+    #side-bar .scpnet-interwiki-wrapper {
+        direction: ltr;
+    }
+
+    @supports (-ms-ime-align: auto) {
+        #side-bar {
+            overflow-y: hidden;
+            overflow-x: hidden;
+            transform: translateX(-90%) !important;
+        }
+
+        #side-bar:hover,
+        #side-bar:active {
+            overflow-y: auto;
+            transform: translateX(0) !important;
+            margin-left: -0.5rem;
+        }
+
+        #side-bar:focus-within {
+            overflow-y: auto;
+            transform: translateX(0) !important;
+            margin-left: -0.5rem;
+        }
+
+        #main-content::before {
+            left: 1rem;
+            transform: translateX(-100%) !important;
+        }
+    }
+
+    /* Print Friendly Formatting by Estrella */
+    body.print-body {
+        --sidebar-width-on-desktop: 0;
+    }
+
+    body.print-body #main-content::before,
+    body.print-body #main-content::after {
+        display: none;
+    }
+}
+
+#main-content::after {
+    height: 13rem;
+    border-radius: 0 0.6rem 0.6rem 0;
+    background-color: rgb(var(--swatch-sidebar-collapsible-tab-bg));
+    top: calc(50vh - 6.5rem);
+    background-image: url("../image/sidebar-arrows.svg");
+}
+
+#interwiki,
+#side-bar {
+    --sidebar-bg-color: var(--swatch-secondary-color);
+    --sideblock-heading-bg-color: var(--swatch-primary);
+    --sideblock-heading-text-color: var(--swatch-text-secondary-color);
+
+    .side-block {
+        margin: 0;
+        padding: 0;
+        box-shadow: inset calc(var(--sidebar-internal-border-thickness) * -1) 0 0 0 rgb(var(--swatch-border-color), 0.08),
+            inset calc(var(--sidebar-internal-border-thickness)) 0 0 0 rgb(var(--swatch-border-color), 0.24);
+
+        &.media {
+            margin: 0;
+        }
+
+        & div.menu-item a {
+            box-shadow: inset calc(var(--sidebar-internal-border-thickness) * -1) 0 0 0 rgb(var(--swatch-border-color), 0.16);
+
+            &::before {
+                background-color: rgba(var(--sidebar-links-hover-bg-color), 0.8);
+            }
+        }
+
+        & .heading {
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+
+            & p {
+                --wght: 500;
+            }
+        }
+
+        & div.menu-item a[href="/"]+a[href="/forum:start"]:last-child,
+        & div.menu-item:first-of-type a[href="/"],
+        & div.menu-item:nth-of-type(2) a[href="/forum:start"] {
+            justify-content: flex-start;
+            padding: 0 0 0 calc(var(--base-font-size)*(13/15));
+        }
+    }
+}

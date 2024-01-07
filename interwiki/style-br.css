@@ -1,0 +1,68 @@
+:root {
+    --ui-wght: 400;
+    --ui-hvr-wght: 400;
+
+    --white-monochrome: 237, 233, 233;
+    --black-monochrome: 25, 20, 16;
+    --bright-accent: 140, 136, 126;
+    --medium-accent: 72, 69, 60;
+    --dark-accent: 140, 136, 126;
+
+    --swatch-menubg-hover-color: var(--black-monochrome);
+    --gradient-sidemenu-header: linear-gradient(10deg, rgba(var(--swatch-primary-darker), 0.45) 0%, rgba(var(--swatch-primary-darker), 0.55) 100%);
+}
+
+.side-block {
+    --sideblock-heading-text-color: var(--swatch-text-secondary-color);
+    --sidebar-links-bg-color: var(--swatch-menu-bg-hover-color), 0;
+    --sidebar-links-hover-bg-color: var(--bright-accent), 0.25;
+    --sidebar-links-hover-text-color: var(--sidebar-links-text-color);
+    margin: 0;
+    border: solid rgba(var(--swatch-border-color), 0.08);
+    border-width: 0 var(--sidebar-internal-border-thickness);
+}
+
+.side-block .heading {
+    min-height: 1.25rem;
+    background: var(--gradient-sidemenu-header);
+    box-shadow: none;
+    justify-content: center;
+}
+
+.side-block .heading p {
+    --text-shadow: rgb(var(--swatch-border-color));
+    display: block;
+    line-height: 1.25rem;
+    text-align: center;
+    text-indent: inherit;
+    cursor: default;
+    text-shadow: 0.063rem 0.063rem 0.063rem var(--text-shadow);
+}
+
+.side-block div.menu-item a {
+    padding: 0 0 0 calc(var(--base-font-size) * (14 / 15));
+    transition: background-color 80ms cubic-bezier(.4, 0, .2, 1);
+    height: calc(1.5rem - var(--sidebar-internal-border-thickness));
+    line-height: calc(1.5rem - var(--sidebar-internal-border-thickness));
+}
+
+.side-block div.menu-item a::before {
+    --clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+    left: 0;
+    transform: translateX(-100%);
+    width: calc(100% + 6rem);
+    transition: transform .5s cubic-bezier(.4, 0, .2, 1);
+}
+
+.side-block div.menu-item a:hover,
+.side-block div.menu-item a:active,
+.side-block div.menu-item a:focus-within {
+    background-color: rgba(var(--swatch-menubg-hover-color), 0.15);
+}
+
+.side-block div.menu-item a:hover::before,
+.side-block div.menu-item a:active::before,
+.side-block div.menu-item a:focus-within::before {
+    --clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+    transform: translateX(0rem);
+}

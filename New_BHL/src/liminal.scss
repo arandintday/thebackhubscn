@@ -1,0 +1,423 @@
+/* Remove Default Wikidot Styles */
+@import url("https://cdn.scpwiki.com/theme/en/black-highlighter/css/min/normalize.min.css");
+
+/* Base BHL Theme */
+@import url("https://cdn.scpwiki.com/theme/en/black-highlighter/css/min/black-highlighter.min.css");
+
+/* Fantasque Sans Mono Font */
+@import url('https://fontlibrary.org/face/fantasque-sans-mono');
+
+/* Lato Font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* 侧边栏logo适配 */
+@import url("./round-logo.css");
+
+/* Fancy Forums */
+@import url("./forum.css");
+
+/* Banned History List */
+@import url("./banlist.css");
+
+/* Material Icons */
+@import url("./material-icons.css");
+
+/* CN Contents */
+@import url("./content-cn.css");
+
+/* 嵌入字体 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@100;300;400;500;700;900&display=swap');
+
+/* Root Variables: When making a new theme, see: https://github.com/Nu-SCPTheme/Black-Highlighter/blob/master/src/css/parts/root.css */
+:root {
+    /* S-CSS-P */
+    --theme-base: "black-highlighter";
+    --theme-id: "nuliminal";
+    --theme-name: "NuLiminal Theme";
+
+    /* Header */
+    --logo-image: url("../image/logo.svg");
+    --header-title: "The Backrooms";
+    --header-subtitle: "你曾经来过这里";
+
+    /* Typefaces */
+    --body-font: Inter, "Noto Sans SC", "Noto Sans TC", "Microsoft YaHei UI", "微软雅黑", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Geneva, sans-serif, STXihei, "华文细黑";
+    --UI-font: PTRootUI, "Noto Sans SC", "Noto Sans TC", "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
+    --header-font: var(--body-font);
+    --title-font: var(--body-font);
+    --mono-font: Recursive, "Noto Serif SC", "Noto Serif TC", "宋体", "SimSun", "Microsoft YaHei UI", "微软雅黑", "Microsoft JhengHei UI", "Microsoft JhengHei", "Courier New", Courier, monospace, STXihei, "华文细黑";
+
+    /* MOST THEMES SHOULDN'T CHANGE THIS: makes editing consistent across themes, adds programing ligatures */
+    --editor-font: Recursive, "Noto Serif SC", "Noto Serif TC", "宋体", "SimSun", "Microsoft YaHei UI", "微软雅黑", "Microsoft JhengHei UI", "Microsoft JhengHei", "Courier New", Courier, monospace, STXihei, "华文细黑";
+
+    /* Colors */
+    --white-monochrome: 252, 252, 252;
+    /* ALTERED */
+    --pale-gray-monochrome: 237, 233, 223;
+    /* ALTERED */
+    --light-pale-gray-monochrome: 217, 213, 203;
+    --very-light-gray-monochrome: 220, 215, 210;
+    --light-gray-monochrome: 165, 160, 155;
+    --gray-monochrome: 72, 69, 60;
+    --dark-gray-monochrome: 64, 63, 52;
+    --black-monochrome: 25, 20, 16;
+    --pale-accent: 230, 23, 68;
+    --bright-accent: 140, 136, 126;
+    --medium-accent: 72, 69, 60;
+    --dark-accent: 140, 136, 126;
+    --alt-accent: 221, 102, 17;
+
+    /* Liminal Variables */
+    --header-text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.8);
+    --header-text-shadow-hover: 0px 5px 3px rgba(0, 0, 0, 0.3);
+    --quote-shadow: 0 2px 4px rgba(var(--black-monochrome), 0.25);
+    --footer-message: var(--header-subtitle);
+
+    --swatch-sidebar-collapsible-tab-bg: var(--swatch-primary);
+
+    /* Swatches */
+    --swatch-secondary-color: var(--light-pale-gray-monochrome);
+    --rating-module-bg-color: var(--swatch-secondary-color);
+
+    --modal-header-bg: var(--swatch-primary), 0.9;
+
+    --gradient-header: linear-gradient(to top,
+            rgba(var(--medium-accent)) 0%,
+            rgba(var(--medium-accent), 0.90) 100%);
+
+    --diagonal-stripes: transparent;
+    --background-gradient-distance: 0;
+    --scrollbar-width: 0.7rem;
+    --swatch-background: var(--pale-gray-monochrome);
+    --swatch-topmenu-border-color: var(--medium-accent);
+
+    --ui-button-bg: var(--swatch-primary-darkest);
+    --ui-button-hover-bg: var(--swatch-menubg-dark-color);
+    --ui-button-txt: var(--swatch-text-secondary-color);
+
+    --swatch-headerh1-color: var(--white-monochrome);
+    --swatch-headerh2-color: var(--white-monochrome);
+
+    --text-tags: "标签\0021b4";
+    --rename-option: "记住：后室维基用户可以重命名/移动自己创建的页面，但请谨慎使用该功能（最好仅在名称中出现错误时使用）。只有工作人员允许删除页面，包括你自己创建的页面。若需自删，请在页面名称前面加上 deleted: 前缀，以方便工作人员追踪与核查。";
+}
+
+:root:where(:lang(cn)) {
+    --theme-base: "黑色标记笔";
+    --theme-id: "新阈限";
+    --theme-name: "新阈限版式";
+
+    --header-title: "The Backrooms";
+    --header-subtitle: "你曾经来过这里";
+
+    /* Typefaces */
+    --body-font: Inter, "Noto Sans SC", "Noto Sans TC", "Microsoft YaHei UI", "微软雅黑", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Geneva, sans-serif, STXihei, "华文细黑";
+    --UI-font: PTRootUI, "Noto Sans SC", "Noto Sans TC", "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
+    --header-font: var(--body-font);
+    --title-font: var(--body-font);
+    --mono-font: Recursive, "Noto Serif SC", "Noto Serif TC", "宋体", "SimSun", "Microsoft YaHei UI", "微软雅黑", "Microsoft JhengHei UI", "Microsoft JhengHei", "Courier New", Courier, monospace, STXihei, "华文细黑";
+
+    /* MOST THEMES SHOULDN'T CHANGE THIS: makes editing consistent across themes, adds programing ligatures */
+    --editor-font: Recursive, "Noto Serif SC", "Noto Serif TC", "宋体", "SimSun", "Microsoft YaHei UI", "微软雅黑", "Microsoft JhengHei UI", "Microsoft JhengHei", "Courier New", Courier, monospace, STXihei, "华文细黑";
+}
+
+#main-content {
+    --tabs-bg: var(--light-pale-gray-monochrome);
+    --tabs-hover-bg: var(--swatch-primary);
+    --tabs-selected-bg: var(--swatch-primary-darker);
+    --tabs-selected-outline: var(--swatch-primary-darker);
+    --tabs-bottom-border-color: var(--swatch-primary);
+}
+
+/* Dots */
+/* Header Dots */
+#skrollr-body {
+    background-image: radial-gradient(circle, rgb(var(--medium-accent)) 50%, transparent 0);
+    background-repeat: repeat;
+    background-size: 0.25em 0.25em;
+    width: 100%;
+    height: 7.5rem;
+}
+
+/* Content Dots */
+/* 透明化以避免 Bug */
+#container {
+    background-image: radial-gradient(circle, transparent 50%, transparent 0);
+    background-size: 0.25em 0.25em;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+/* Header Image */
+#header {
+    background-image: none;
+
+    &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background-image: var(--logo-image);
+        background-size: auto 16rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.4;
+    }
+
+    & h1 {
+        width: 100%;
+
+        & a {
+
+            &,
+            &::before {
+                width: fit-content;
+                transition: 0.2s;
+                position: relative;
+                bottom: 0;
+                color: rgb(var(--swatch-headerh1-color));
+            }
+
+            &::before {
+                text-shadow: var(--header-text-shadow);
+            }
+
+            &:hover::before {
+                text-shadow: var(--header-text-shadow-hover);
+                bottom: 3px;
+            }
+        }
+
+        &,
+        & a {
+            position: absolute;
+            top: 1rem;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            z-index: 0;
+            height: 1.5rem;
+        }
+    }
+
+    & h2 {
+
+        &,
+        & span,
+        & span::before {
+            position: absolute;
+            top: 1.85rem;
+            margin: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        & span::before {
+            color: rgb(var(--swatch-headerh2-color));
+            text-shadow: var(--header-text-shadow);
+        }
+    }
+}
+
+/* Div Boxes */
+.darkblock {
+    color: rgb(var(--swatch-text-secondary-color));
+    background: rgb(var(--swatch-primary-darker));
+    padding: 0.01rem 1rem;
+    margin: 0.5rem 0;
+    box-shadow: var(--quote-shadow);
+}
+
+.lightblock {
+    color: rgb(var(--black-monochrome));
+    background: rgb(var(--swatch-secondary-color));
+    padding: 0.01rem 1rem;
+    margin: 0.5rem 0;
+    box-shadow: var(--quote-shadow);
+}
+
+/* Div Quotes */
+.styled-quote {
+    color: rgb(var(--black-monochrome));
+    background: rgb(var(--swatch-secondary-color));
+    padding: 0.01rem 1rem;
+    margin: 0.5rem 0;
+    box-shadow: var(--quote-shadow);
+    border-left: solid 6px rgb(var(--swatch-primary-darker));
+}
+
+.dark-styled-quote {
+    color: rgb(var(--white-monochrome));
+    background: rgb(var(--swatch-primary-darker));
+    padding: 0.01rem 1rem;
+    margin: 0.5rem 0;
+    box-shadow: var(--quote-shadow);
+    border-left: solid 6px rgb(var(--swatch-primary-darker));
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0.5em;
+}
+
+/* Table of Contents */
+#main-content {
+    --toc-header-bg-color: var(--gray-monochrome);
+    --toc-body-bg-color: var(--pale-gray-monochrome);
+}
+
+/* Table */
+#page-content {
+
+    div.b-tables table.wiki-content-table,
+    table.wiki-content-table {
+        box-shadow: var(--quote-shadow);
+    }
+}
+
+div#footer::after {
+    content: var(--footer-message);
+    border-left: solid 1px;
+    padding-left: 0.5em;
+    height: 1.4em;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 0.3em;
+}
+
+/* Horizontal Rule Fix */
+hr {
+    clear: none;
+}
+
+/* Page Title */
+.meta-title p {
+    margin: 0;
+}
+
+/* printuser */
+span.printuser a:first-of-type:not(:last-of-type) img.small {
+    width: calc(80% - .3625rem);
+    height: 80%;
+}
+
+#avatar-hover-container {
+    display: none;
+}
+
+/* Message on Delete/Rename/Move */
+#rename-option-rename,
+#rename-option-delete {
+    &::before {
+        content: var(--rename-option);
+        color: red;
+        display: block;
+    }
+}
+
+/* Editor Font */
+#edit-page-textarea {
+    font-family: var(--editor-font);
+}
+
+/* Inline maths actually inline */
+#MathJax_Message,
+.math-inline {
+    display: inline;
+}
+
+/* License Box */
+#page-content .licensebox .collapsible-block-link {
+    margin-left: .25em;
+    padding: .25em;
+    font-weight: 700;
+    opacity: .5;
+    color: rgb(var(--gray-monochrome));
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+/* Info */
+#u-infobox {
+    opacity: 0 !important;
+    pointer-events: none;
+    will-change: opacity;
+    transition: 0.2s;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 20;
+    background-color: rgba(var(--swatch-alternate-color), .5);
+    justify-content: center;
+    align-items: center;
+
+    &:target {
+        opacity: 1 !important;
+        pointer-events: unset;
+    }
+}
+
+.infobox {
+    display: grid;
+    width: 60vw;
+    border: 0;
+    background-color: rgb(var(--modal-bg));
+    box-shadow: inset 0 0 0 .125rem rgba(var(--swatch-alternate-color), .25), .5rem .25rem 1rem 0 rgba(var(--swatch-alternate-color), .25);
+    color: rgb(var(--modal-body-text));
+
+    &-title {
+        --wght: 800;
+        display: flex;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 1.5ex 1.25rem;
+        background-color: rgb(var(--modal-header-bg));
+        background-image: linear-gradient(125deg, rgba(var(--modal-header-stripe), .75) 25%, transparent 25%, transparent 50%, rgba(var(--modal-header-stripe), .75) 50%, rgba(var(--modal-header-stripe), .75) 75%, transparent 75%, transparent 100%);
+        background-size: 3rem 4.35rem;
+        color: rgb(var(--modal-header-txt));
+        font-family: var(--header-font);
+        font-size: 1.5em;
+        font-weight: var(--wght);
+        line-height: 1ex;
+        text-transform: uppercase;
+    }
+
+    &-body {
+        display: grid;
+        margin: 0 1rem;
+        padding: 0;
+    }
+
+    &-footer {
+        width: 100%;
+        margin: 1rem 0 1em;
+        padding: 1rem 1rem 0 0;
+        box-shadow: 0-.0625rem 0 0 rgba(var(--modal-header-stripe), .2);
+        text-align: right;
+    }
+
+    &-title p,
+    &-footer p {
+        all: unset;
+    }
+}

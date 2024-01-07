@@ -1,0 +1,292 @@
+/*
+   Liminal Theme
+   [2020 Wikidot Theme]
+   by Lynch & Etoile
+   Edited by Lambda Core & irisluscinia & hoah2333
+*/
+
+/*
+@import url('https://fontlibrary.org/face/fantasque-sans-mono');
+@import url('https://fonts.googleapis.com/css?family=Basic|IBM+Plex+Mono:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;700;900&display=swap');
+*/
+/* 暂时不使用新版居中版头
+@import url("https://arandintday.github.io/thebackhubscn/centered-header.css");
+*/
+@import url("https://nu-scptheme.github.io/Black-Highlighter/css/normalize.css");
+@import url("./bhl-new.css");
+@import url("./sidebar.css");
+@import url("./banlist.css");
+@import url('https://fastly.jsdelivr.net/gh/scp-cn-tech/sigma9@cn/modules/colstyle.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+:root {
+    --theme-base: "black-highlighter";
+    --theme-id: "liminal";
+    --theme-name: "Liminal Theme";
+    /* Header */
+    --logo-image: url("./logo.svg");
+    --header-title: "The Backrooms";
+    --header-subtitle: "你曾经来过这里";
+    /* Fonts */
+    --body-font: Inter, "Noto Sans SC", Verdana, "Microsoft YaHei", "微软雅黑", Geneva, sans-serif, STXihei, "华文细黑";
+    --UI-font: PTRootUI, "Noto Sans SC", "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
+    --header-font: var(--body-font);
+    --title-font: var(--body-font);
+    --mono-font: Recursive, "Noto Serif SC", "Microsoft YaHei", "微软雅黑", "Courier New", Courier, monospace, STXihei, "华文细黑";
+    --white-monochrome: 237, 233, 223;
+    --pale-gray-monochrome: 255, 251, 240;
+    --light-pale-gray-monochrome: 255, 251, 240;
+    --very-light-gray-monochrome: 226, 222, 211;
+    --light-gray-monochrome: 160, 160, 160;
+    --gray-monochrome: 72, 69, 60;
+    --dark-gray-monochrome: 54, 51, 40;
+    --pale-accent: 140, 136, 126;
+    --black-monochrome: 25, 20, 16;
+    --bright-accent: 140, 136, 126;
+    --medium-accent: 72, 69, 60;
+    --dark-accent: 140, 136, 126;
+    --alt-accent: 221, 102, 17;
+    --background-gradient-distance: 0rem;
+    --link-color: 230, 23, 68;
+    --hover-link-color: 230, 23, 68;
+    --gradient-header: linear-gradient(to top, rgba(var(--medium-accent)) 0%, rgba(var(--medium-accent), 0.90) 100%);
+    --diagonal-stripes: linear-gradient(transparent 0);
+}
+
+#skrollr-body {
+    background-image: radial-gradient(circle, rgb(var(--medium-accent)) 50%, transparent 0);
+    background-repeat: repeat;
+    background-size: 0.25em 0.25em;
+    width: 100%;
+    height: 7.5rem;
+}
+
+#container {
+    background-image: radial-gradient(circle, rgb(var(--medium-accent), 0.05) 50%, transparent 0);
+    background-size: 0.25em 0.25em;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+
+#header {
+    background-image: none;
+}
+
+#header::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-image: var(--logo-image);
+    background-size: auto 16rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+}
+
+#header h1,
+#header h1 a {
+    position: absolute;
+    top: 1rem;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+}
+
+#header h2,
+#header h2 span,
+#header h2 span::before {
+    position: absolute;
+    top: 2rem;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#header h1 a::before,
+#header h2 span::before {
+    text-shadow: .063rem 0.1rem 0.1rem #0c0c0c;
+}
+
+.styled-quote {
+    background-color: rgb(var(--pale-gray-monochrome));
+    border-left: 0.5rem solid rgba(var(--gray-monochrome));
+    padding: 0.1rem 1rem;
+    margin: 0.5rem 0 0.5rem 0.25rem;
+    box-shadow: 0.05rem 0.1rem 0.3rem rgba(0, 0, 0, .25);
+}
+
+.dark-styled-quote {
+    background-color: rgb(var(--gray-monochrome));
+    border-left: 0.5rem solid rgba(var(--pale-gray-monochrome));
+    color: rgb(var(--white-monochrome));
+    padding: 0.1rem 1rem;
+    margin: 0.5rem 0 0.5rem 0.25rem;
+    box-shadow: 0.05rem 0.1rem 0.3rem rgba(0, 0, 0, .25);
+}
+
+.dark-styled-quote a {
+    color: rgb(var(--swatch-menubg-medium-color));
+}
+
+.lightblock {
+    background-color: rgb(var(--white-monochrome));
+    padding: 0.01rem 1rem;
+    margin: 0.5rem 0 0.5rem 0.25rem;
+    box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, .25);
+}
+
+.darkblock {
+    background-color: rgb(var(--gray-monochrome));
+    color: rgb(var(--white-monochrome));
+    padding: 0.01rem 1rem;
+    margin: 0.5rem 0 0.5rem 0.25rem;
+    box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, .25);
+}
+
+.darkblock a {
+    color: rgb(var(--swatch-menubg-medium-color));
+}
+
+#side-bar div.scpnet-interwiki-wrapper {
+    min-height: 300px;
+}
+
+.thread-container .post .long .content .image:not(.collapsible-block .image) {
+    object-fit: cover;
+    max-height: 2em;
+    width: 100%;
+    transition: max-height 0.5s;
+}
+
+.thread-container .post .long .content .image:hover:not(.collapsible-block .image) {
+    max-height: 100em;
+}
+
+div.scpnet-interwiki-wrapper {
+    margin: 0;
+    width: auto;
+}
+
+iframe.scpnet-interwiki-frame {
+    border: inherit;
+    width: 100%;
+    height: 230px;
+}
+
+@media (min-width:768px) {
+
+    div.scpnet-interwiki-wrapper,
+    iframe.scpnet-interwiki-frame {
+        width: 100%;
+    }
+}
+
+/* Content Warning */
+#page-content div#u-adult-warning {
+    width: fit-content;
+    margin: 0 auto 1.25rem;
+    padding: 0.5rem 1rem;
+    border: 3px solid #333;
+    background: #e4e4e4;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+}
+
+#page-content div#u-adult-warning>div#u-adult-header {
+    font-size: 300%;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, .5);
+    color: #901;
+}
+
+#page-content div#u-adult-warning>div#u-adult-header p {
+    margin: 0;
+}
+
+#page-content div#u-adult-warning>.error-block {
+    color: unset;
+    padding: unset;
+    margin: unset;
+    border: unset;
+    margin-bottom: 1em;
+}
+
+/* 去除用户信息中头像白边 */
+#odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child {
+    background-color: initial !important;
+}
+
+/* 新增信息翻译 */
+form#edit-page-form .edit-page-bottomtable tr>td:nth-of-type(1)>div:nth-of-type(1)::before {
+    content: "简要修改说明";
+}
+
+table.page-history tr:nth-of-type(2) td:nth-of-type(1)::before {
+    content: "版本";
+}
+
+table.page-history tr:nth-of-type(2) td:nth-of-type(3)::before {
+    content: "标记";
+}
+
+table.page-history tr:nth-of-type(2) td:nth-of-type(4)::before {
+    content: "操作";
+}
+
+table.page-history tr:nth-of-type(2) td:nth-of-type(5)::before {
+    content: "更新者";
+}
+
+table.page-history tr:nth-of-type(2) td:nth-of-type(6)::before {
+    content: "日期";
+}
+
+#site-tools-box::before {
+    content: "网站工具";
+}
+
+#main-content .page-tags::before {
+    content: "标签\0021b4";
+}
+
+#login-status #account-options li>a[href*="/messages"]::after {
+    content: "消息";
+}
+
+[id*="u-credit"] div.credit-back::before {
+    content: "返回";
+}
+
+#toc #toc-action-bar a::after {
+    content: "目录";
+}
+
+/* 侧边栏logo适配 */
+#side-bar .side-block.media a[href*="discord"] {
+    --social-logo-mask: var(--discord-mask-round);
+}
+
+#side-bar .side-block.media a[href*="b23.tv"] {
+    --social-logo-mask: var(--bilibili-mask-round);
+    --social-color: var(--bilibili-icon-color);
+}
+
+#side-bar .side-block.media a[href*="fandom"] {
+    --social-logo-mask: var(--fandom-mask-round);
+    --social-color: var(--fandom-icon-color);
+}
+
+#side-bar .side-block.media a[href*="tieba"] {
+    --social-logo-mask: var(--tieba-mask-round);
+    --social-color: var(--tieba-icon-color);
+}
