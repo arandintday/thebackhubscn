@@ -18,57 +18,57 @@ jobs:
       - name: 检查
         uses: actions/checkout@v3
         with:
-          ref: test
+          ref: main
 
-    #   - name: 移动文件
-    #     run: |
-    #       mkdir New_BHL/src
-    #       mkdir Old_BHL/src
-    #       mkdir New_BHL/css
-    #       mkdir Old_BHL/css
-    #       mv New_BHL/*.scss New_BHL/src/
-    #       mv Old_BHL/*.scss Old_BHL/src/
+      - name: 移动文件
+        run: |
+          mkdir New_BHL/src
+          mkdir Old_BHL/src
+          mkdir New_BHL/css
+          mkdir Old_BHL/css
+          mv New_BHL/*.scss New_BHL/src/
+          mv Old_BHL/*.scss Old_BHL/src/
 
-    #   - name: 编译 .scss 文件
-    #     uses: gha-utilities/sass-build@v0.5.1
-    #     with:
-    #       source: |
-    #         New_BHL/src/banlist.scss
-    #         New_BHL/src/content-cn.scss
-    #         New_BHL/src/forum.scss
-    #         New_BHL/src/hallprint.scss
-    #         New_BHL/src/liminal.scss
-    #         New_BHL/src/material-icons.scss
-    #         New_BHL/src/round-logo.scss
-    #         New_BHL/src/sidebar.scss
-    #         Old_BHL/src/black-highlighter.scss
-    #         Old_BHL/src/liminal-impact.scss
-    #         Old_BHL/src/liminal-sandbox.scss
-    #         Old_BHL/src/liminal.scss
-    #         Old_BHL/src/normalize.scss
-    #         Old_BHL/src/sidebar.scss
+      - name: 编译 .scss 文件
+        uses: gha-utilities/sass-build@v0.5.1
+        with:
+          source: |
+            New_BHL/src/banlist.scss
+            New_BHL/src/content-cn.scss
+            New_BHL/src/forum.scss
+            New_BHL/src/hallprint.scss
+            New_BHL/src/liminal.scss
+            New_BHL/src/material-icons.scss
+            New_BHL/src/round-logo.scss
+            New_BHL/src/sidebar.scss
+            Old_BHL/src/black-highlighter.scss
+            Old_BHL/src/liminal-impact.scss
+            Old_BHL/src/liminal-sandbox.scss
+            Old_BHL/src/liminal.scss
+            Old_BHL/src/normalize.scss
+            Old_BHL/src/sidebar.scss
 
-    #       destination: |
-    #         New_BHL/css/banlist.scss
-    #         New_BHL/css/content-cn.scss
-    #         New_BHL/css/forum.scss
-    #         New_BHL/css/hallprint.scss
-    #         New_BHL/css/liminal.scss
-    #         New_BHL/css/material-icons.scss
-    #         New_BHL/css/round-logo.scss
-    #         New_BHL/css/sidebar.scss
-    #         Old_BHL/css/black-highlighter.scss
-    #         Old_BHL/css/liminal-impact.scss
-    #         Old_BHL/css/liminal-sandbox.scss
-    #         Old_BHL/css/liminal.scss
-    #         Old_BHL/css/normalize.scss
-    #         Old_BHL/css/sidebar.scss
+          destination: |
+            New_BHL/css/banlist.scss
+            New_BHL/css/content-cn.scss
+            New_BHL/css/forum.scss
+            New_BHL/css/hallprint.scss
+            New_BHL/css/liminal.scss
+            New_BHL/css/material-icons.scss
+            New_BHL/css/round-logo.scss
+            New_BHL/css/sidebar.scss
+            Old_BHL/css/black-highlighter.scss
+            Old_BHL/css/liminal-impact.scss
+            Old_BHL/css/liminal-sandbox.scss
+            Old_BHL/css/liminal.scss
+            Old_BHL/css/normalize.scss
+            Old_BHL/css/sidebar.scss
 
-    #       outputStyle: expanded
-    #       indentWidth: 4
+          outputStyle: expanded
+          indentWidth: 4
 
-    #   - name: 部署至 GitHub Pages
-    #     uses: JamesIves/github-pages-deploy-action@v4.5.0
-    #     with:
-    #       branch: "gh-pages"
-    #       folder: "."
+      - name: 部署至 GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.5.0
+        with:
+          branch: "gh-pages"
+          folder: "."
