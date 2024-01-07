@@ -49,20 +49,20 @@ jobs:
             Old_BHL/src/sidebar.scss
 
           destination: |
-            New_BHL/css/banlist.scss
-            New_BHL/css/content-cn.scss
-            New_BHL/css/forum.scss
-            New_BHL/css/hallprint.scss
-            New_BHL/css/liminal.scss
-            New_BHL/css/material-icons.scss
-            New_BHL/css/round-logo.scss
-            New_BHL/css/sidebar.scss
-            Old_BHL/css/black-highlighter.scss
-            Old_BHL/css/liminal-impact.scss
-            Old_BHL/css/liminal-sandbox.scss
-            Old_BHL/css/liminal.scss
-            Old_BHL/css/normalize.scss
-            Old_BHL/css/sidebar.scss
+            New_BHL/css/banlist.css
+            New_BHL/css/content-cn.css
+            New_BHL/css/forum.css
+            New_BHL/css/hallprint.css
+            New_BHL/css/liminal.css
+            New_BHL/css/material-icons.css
+            New_BHL/css/round-logo.css
+            New_BHL/css/sidebar.css
+            Old_BHL/css/black-highlighter.css
+            Old_BHL/css/liminal-impact.css
+            Old_BHL/css/liminal-sandbox.css
+            Old_BHL/css/liminal.css
+            Old_BHL/css/normalize.css
+            Old_BHL/css/sidebar.css
 
           outputStyle: expanded
           indentWidth: 4
