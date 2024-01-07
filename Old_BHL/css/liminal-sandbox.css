@@ -1,0 +1,8 @@
+@charset "UTF-8";
+@import url("./liminal.css");
+@import url("./sidebar.css");
+:root {
+  --header-title: "The Backrooms中文沙盒站";
+  --header-subtitle: "创造与超越";
+  --medium-accent: 111, 168, 220;
+}/*# sourceMappingURL=liminal-sandbox.css.map */
