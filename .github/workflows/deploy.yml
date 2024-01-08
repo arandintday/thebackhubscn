@@ -67,6 +67,13 @@ jobs:
           outputStyle: expanded
           indentWidth: 4
 
+      - name: Autoprefixer
+        run: |
+          npm install postcss postcss-cli autoprefixer
+          npx postcss interwiki/**/*.css -u autoprefixer -r
+          npx postcss New_BHL/**/*.css -u autoprefixer -r
+          npx postcss Old_BHL/**/*.css -u autoprefixer -r
+
       - name: 部署至 GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.5.0
         with:
