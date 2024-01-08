@@ -73,6 +73,7 @@ jobs:
           npx postcss interwiki/**/*.css -u autoprefixer -r
           npx postcss New_BHL/**/*.css -u autoprefixer -r
           npx postcss Old_BHL/**/*.css -u autoprefixer -r
+          rm -r node_modules/ .gitignore package-lock.json package.json
 
       - name: 部署至 GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.5.0
