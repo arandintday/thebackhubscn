@@ -92,7 +92,7 @@
     --tieba-icon-color: 41, 50, 225;
 }
 
-:where(:lang(cn)) #side-bar div.side-block.media {
+#side-bar:lang(cn) div.side-block.media {
     grid-column: span 2;
     margin-top: 0;
 
