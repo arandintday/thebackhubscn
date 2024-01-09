@@ -2,7 +2,7 @@
    Liminal Theme
    [2020 Wikidot Theme]
    by Lynch & Etoile
-   Edited by Lambda Core & irisluscinia & hoah2333
+   Edited by Lambda Core & irisluscinia & hoah2333 & Ambersight
 */
 
 @import url("./normalize.css");
@@ -46,6 +46,8 @@
             rgba(var(--medium-accent)) 0%,
             rgba(var(--medium-accent), 0.90) 100%);
     --diagonal-stripes: linear-gradient(transparent 0);
+
+    --rename-option: "记住：后室维基用户可以重命名/移动自己创建的页面，但请谨慎使用该功能（最好仅在名称中出现错误时使用）。只有工作人员允许删除页面，包括你自己创建的页面。若需自删，请在页面名称前面加上 deleted: 前缀，以方便工作人员追踪与核查。";
 }
 
 #skrollr-body {
@@ -100,10 +102,10 @@ div#page-options-bottom-2>a {
         opacity: 0.4;
     }
 
-    & h1 {
+    h1 {
 
         &,
-        & a {
+        a {
             position: absolute;
             top: 1rem;
             margin: 0;
@@ -117,8 +119,8 @@ div#page-options-bottom-2>a {
     & h2 {
 
         &,
-        & span,
-        & span::before {
+        span,
+        span::before {
             position: absolute;
             top: 2rem;
             margin: 0;
@@ -134,16 +136,16 @@ div#page-options-bottom-2>a {
     padding-left: 0;
     top: 0;
 
-    & div.side-block {
+    div.side-block {
         direction: ltr;
         border-right: var(--sidebar-internal-border-thickness) solid rgba(var(--swatch-border-color), 0.08);
 
         &,
-        & .heading {
+        .heading {
             margin-top: 0;
         }
 
-        & div.menu-item {
+        div.menu-item {
 
             &,
             &>p {
@@ -161,7 +163,7 @@ div#page-options-bottom-2>a {
                 font-size: 0;
             }
 
-            & a {
+            a {
                 justify-content: flex-start;
                 padding: 0 0 0 calc(var(--base-font-size) * (14 / 15));
 
@@ -175,7 +177,7 @@ div#page-options-bottom-2>a {
                     border-left: var(--sidebar-internal-border-thickness) solid rgba(var(--swatch-border-color), 0.08);
                 }
 
-                & img {
+                img {
                     filter: grayscale(100%);
                 }
             }
@@ -202,8 +204,8 @@ div#page-options-bottom-2>a {
             left: -0.5rem;
         }
 
-        & .heading p,
-        & .side-block>.collapsible-block .collapsible-block-link {
+        .heading p,
+        .side-block>.collapsible-block .collapsible-block-link {
             letter-spacing: 0.016em;
         }
 
@@ -232,6 +234,33 @@ div.scpnet-interwiki-wrapper {
     @media only screen and (min-width: 768px) {
         width: 100%;
     }
+}
+
+/* Message on Delete/Rename/Move */
+#rename-option-rename,
+#rename-option-delete {
+    &::before {
+        content: var(--rename-option);
+        color: rgb(211, 54, 120);
+        display: block;
+    }
+}
+
+/* Non SavingPage 黑标版 */
+iframe#odialog-shader-iframe {
+    display: none;
+}
+
+div#odialog-shader.odialog-shader {
+	display: block;
+	position: fixed;
+	z-index: 40;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	background-color: rgba(var(--swatch-menubg-black-color), 0.5);
+	pointer-events: none;
+	inset: 0 0 auto auto;
 }
 
 iframe.scpnet-interwiki-frame {
@@ -283,7 +312,7 @@ blockquote {
     color: rgb(var(--white-monochrome));
     padding: 0.01rem 1rem;
     margin: 0.5rem 0 0.5rem 0.25rem;
-    box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0.2rem 0.3rem rgba(var(--black-monochrome), 0.25);
 
     & a {
         color: rgb(var(--swatch-menubg-medium-color));
@@ -307,7 +336,7 @@ blockquote {
         color: #901;
     }
 
-    & p {
+    p {
         margin: 0;
     }
 
@@ -325,6 +354,16 @@ blockquote {
     background-color: initial !important;
 }
 
+/* Message on Delete/Rename/Move */
+#rename-option-rename,
+#rename-option-delete {
+    &::before {
+        content: var(--rename-option);
+        color: red;
+        display: block;
+    }
+}
+
 /* 搜索框修改 */
 #search-top-box-input {
     display: none;
@@ -340,7 +379,7 @@ blockquote {
 #footer {
 
     &,
-    & a {
+    a {
         color: rgb(var(--white-monochrome));
     }
 }
