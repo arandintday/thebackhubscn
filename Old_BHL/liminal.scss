@@ -295,7 +295,7 @@ blockquote {
     margin: 0.5rem 0 0.5rem 0.25rem;
     box-shadow: 0.05rem 0.1rem 0.3rem rgba(var(--black-monochrome), 0.25);
 
-    & a {
+    a {
         color: rgb(var(--swatch-menubg-medium-color));
     }
 }
@@ -314,7 +314,7 @@ blockquote {
     margin: 0.5rem 0 0.5rem 0.25rem;
     box-shadow: 0 0.2rem 0.3rem rgba(var(--black-monochrome), 0.25);
 
-    & a {
+    a {
         color: rgb(var(--swatch-menubg-medium-color));
     }
 }
