@@ -4,12 +4,6 @@
 /* Base BHL Theme */
 @import url("https://cdn.scpwiki.com/theme/en/black-highlighter/css/min/black-highlighter.min.css");
 
-/* Fantasque Sans Mono Font */
-@import url('https://fontlibrary.org/face/fantasque-sans-mono');
-
-/* Public Sans Font */
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 /* 侧边栏logo适配 */
 @import url("./round-logo.css");
 
@@ -84,8 +78,12 @@
     --toc-body-bg-color: var(--white-monochrome);
     --swatch-topmenu-bg-color: var(--gray-monochrome);
     --swatch-topmenu-border-color: var(--swatch-topmenu-bg-color);
-    --gradient-header: linear-gradient(to bottom, rgb(var(--bright-accent)) 0%, rgb(var(--dark-accent)) 100%);
-    --gradient-background: linear-gradient(to bottom, rgb(var(--swatch-background)), rgb(var(--swatch-background)));
+    --gradient-header: linear-gradient(to bottom,
+            rgb(var(--bright-accent)) 0%,
+            rgb(var(--dark-accent)) 100%);
+    --gradient-background: linear-gradient(to bottom,
+            rgb(var(--swatch-background)),
+            rgb(var(--swatch-background)));
     --diagonal-stripes: transparent;
     --background-gradient-distance: 40rem;
     /* will not go further than 100vh */
@@ -145,7 +143,23 @@
         z-index: -1;
         display: block;
         max-height: 100vh;
-        background-image: linear-gradient(to top, rgba(var(--background-gradient-color), 0) 0%, rgba(var(--background-gradient-color), 0.013) 8.1%, rgba(var(--background-gradient-color), 0.049) 15.5%, rgba(var(--background-gradient-color), 0.104) 22.5%, rgba(var(--background-gradient-color), 0.175) 29%, rgba(var(--background-gradient-color), 0.259) 35.3%, rgba(var(--background-gradient-color), 0.352) 41.2%, rgba(var(--background-gradient-color), 0.45) 47.1%, rgba(var(--background-gradient-color), 0.55) 52.9%, rgba(var(--background-gradient-color), 0.648) 58.8%, rgba(var(--background-gradient-color), 0.741) 64.7%, rgba(var(--background-gradient-color), 0.825) 71%, rgba(var(--background-gradient-color), 0.896) 77.5%, rgba(var(--background-gradient-color), 0.951) 84.5%, rgba(var(--background-gradient-color), 0.987) 91.9%, rgb(var(--background-gradient-color)) 100%);
+        background-image: linear-gradient(to top,
+                rgba(var(--background-gradient-color), 0) 0%,
+                rgba(var(--background-gradient-color), 0.013) 8.1%,
+                rgba(var(--background-gradient-color), 0.049) 15.5%,
+                rgba(var(--background-gradient-color), 0.104) 22.5%,
+                rgba(var(--background-gradient-color), 0.175) 29%,
+                rgba(var(--background-gradient-color), 0.259) 35.3%,
+                rgba(var(--background-gradient-color), 0.352) 41.2%,
+                rgba(var(--background-gradient-color), 0.45) 47.1%,
+                rgba(var(--background-gradient-color), 0.55) 52.9%,
+                rgba(var(--background-gradient-color), 0.648) 58.8%,
+                rgba(var(--background-gradient-color), 0.741) 64.7%,
+                rgba(var(--background-gradient-color), 0.825) 71%,
+                rgba(var(--background-gradient-color), 0.896) 77.5%,
+                rgba(var(--background-gradient-color), 0.951) 84.5%,
+                rgba(var(--background-gradient-color), 0.987) 91.9%,
+                rgb(var(--background-gradient-color)) 100%);
     }
 
     &::before {
@@ -186,13 +200,6 @@
             rgba(var(--swatch-topmenu-bg-color), 0.951) 81.3%,
             rgba(var(--swatch-topmenu-bg-color), 0.987) 90.3%,
             rgb(var(--swatch-topmenu-bg-color)) 100%);
-}
-
-/* container wrap bug */
-#container,
-#container-wrap,
-#container-wrap-wrap {
-    width: 100vw;
 }
 
 /* Header Image */
@@ -238,7 +245,7 @@
         }
 
         &,
-        & a {
+        a {
             position: absolute;
             top: 1.4rem;
             margin: 0;
@@ -252,8 +259,8 @@
     & h2 {
 
         &,
-        & span,
-        & span::before {
+        span,
+        span::before {
             position: absolute;
             top: 2.05rem;
             margin: 0;
@@ -263,7 +270,7 @@
             font-weight: bold;
         }
 
-        & span::before {
+        span::before {
             color: rgb(var(--swatch-headerh2-color));
             text-shadow: var(--header-text-shadow);
         }
@@ -323,14 +330,18 @@ h6 {
 }
 
 /* Table of Contents */
-#page-content #toc {
+#main-content {
     --toc-header-bg-color: var(--gray-monochrome);
     --toc-body-bg-color: var(--pale-gray-monochrome);
 }
 
 /* Table */
-.wiki-content-table {
-    box-shadow: var(--quote-shadow);
+#page-content {
+
+    div.b-tables table.wiki-content-table,
+    table.wiki-content-table {
+        box-shadow: var(--quote-shadow);
+    }
 }
 
 /* Max-Width Fix */
@@ -371,7 +382,7 @@ hr {
 .yui-navset {
     margin-top: 1rem;
 
-    & .yui-nav {
+    .yui-nav {
         background: rgb(var(--tabs-bottom-border-color));
         column-gap: 4px;
     }
@@ -397,17 +408,12 @@ span.printuser img.small {
     display: none;
 }
 
-/* Stop the unordered lists being in line with the text, this breaks SD banners! */
-ul {
-    padding-inline-start: 2.5rem;
-}
-
 /* Template options text fix */
 form#edit-page-form,
 form#edit-post-form,
 form#new-post-form,
 form#new-thread-form {
-    & #page-templates option {
+    #page-templates option {
         color: rgb(var(--swatch-menutxt-dark-color));
     }
 }
@@ -420,26 +426,6 @@ form#new-thread-form {
         color: red;
         display: block;
         margin-top: 1rem;
-    }
-}
-
-/* Fix Images */
-.scp-image-caption {
-    width: inherit !important;
-}
-
-.image-caption,
-.scp-image-caption {
-    width: unset !important;
-}
-
-div.image-block,
-div.scp-image-block {
-    align-items: stretch;
-
-    & img.image {
-        width: 100% !important;
-        border: 0;
     }
 }
 
@@ -472,25 +458,32 @@ div.scp-image-block {
 
 /* License Box */
 #page-content .licensebox .collapsible-block-link {
-    margin-left: .25em;
-    padding: .25em;
+    margin-left: 0.25em;
+    padding: 0.25em;
     font-weight: 700;
-    opacity: .5;
+    opacity: 0.5;
     color: rgb(var(--gray-monochrome));
-    -webkit-transition: opacity .5s ease-in-out;
-    -moz-transition: opacity .5s ease-in-out;
-    transition: opacity .5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
 
     &:hover {
         color: rgb(var(--dark-gray-monochrome));
     }
 }
 
-/* Unordered Lists */
-#page-content ul:not(.yui-nav) {
-    padding-left: 1rem;
-    list-style: disc;
-    margin: 1rem 0;
+/* Fix unordered and ordered list margin */
+#page-content {
+
+    ol,
+    ul:not(.yui-nav) {
+        margin-block-start: 1rem;
+        margin-block-end: 1rem;
+
+        ol,
+        ul:not(.yui-nav) {
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+    }
 }
 
 /* Footnote */
@@ -508,11 +501,6 @@ a.footnoteref {
 /* Little Patches */
 html {
     scroll-behavior: smooth;
-}
-
-body {
-    max-width: 100vw;
-    overflow-x: hidden;
 }
 
 #page-content {
