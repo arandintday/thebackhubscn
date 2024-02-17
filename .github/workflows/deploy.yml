@@ -22,12 +22,11 @@ jobs:
 
       - name: 移动文件
         run: |
-          mkdir New_BHL/src
-          mkdir Old_BHL/src
-          mkdir New_BHL/css
-          mkdir Old_BHL/css
+          mkdir New_BHL/src Old_BHL/src stickers/src
+          mkdir New_BHL/css Old_BHL/css stickers/css
           mv New_BHL/*.scss New_BHL/src/
           mv Old_BHL/*.scss Old_BHL/src/
+          mv stickers/*.scss stickers/src/
 
       - name: 编译 .scss 文件
         uses: gha-utilities/sass-build@v0.5.1
@@ -47,6 +46,8 @@ jobs:
             Old_BHL/src/liminal.scss
             Old_BHL/src/normalize.scss
             Old_BHL/src/sidebar.scss
+            stickers/src/stickers.scss
+            stickers/src/bml_1.scss
 
           destination: |
             New_BHL/css/banlist.css
@@ -63,6 +64,8 @@ jobs:
             Old_BHL/css/liminal.css
             Old_BHL/css/normalize.css
             Old_BHL/css/sidebar.css
+            stickers/css/stickers.css
+            stickers/css/bml_1.css
 
           outputStyle: expanded
           indentWidth: 4
@@ -73,6 +76,7 @@ jobs:
           npx postcss interwiki/**/*.css -u autoprefixer -r
           npx postcss New_BHL/**/*.css -u autoprefixer -r
           npx postcss Old_BHL/**/*.css -u autoprefixer -r
+          npx postcss stickers/**/*.css -u autoprefixer -r
           rm -r node_modules/ .gitignore package-lock.json package.json
 
       - name: 部署至 GitHub Pages
