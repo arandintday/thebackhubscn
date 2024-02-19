@@ -110,7 +110,7 @@
 /* Header Wallpaper */
 #skrollr-body {
     height: var(--header-height-on-desktop);
-    width: 100vw;
+    width: 100%;
 
     &::before {
         content: "";
