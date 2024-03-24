@@ -32,6 +32,7 @@ jobs:
         uses: gha-utilities/sass-build@v0.5.1
         with:
           source: |
+            countdown-generator/main.scss
             New_BHL/src/banlist.scss
             New_BHL/src/content-cn.scss
             New_BHL/src/forum.scss
@@ -50,6 +51,7 @@ jobs:
             stickers/src/bml_1.scss
 
           destination: |
+            countdown-generator/main.css
             New_BHL/css/banlist.css
             New_BHL/css/content-cn.css
             New_BHL/css/forum.css
@@ -73,6 +75,7 @@ jobs:
       - name: Autoprefixer
         run: |
           npm install postcss postcss-cli autoprefixer
+          npx postcss countdown-generator/*.css -u autoprefixer -r
           npx postcss interwiki/**/*.css -u autoprefixer -r
           npx postcss New_BHL/**/*.css -u autoprefixer -r
           npx postcss Old_BHL/**/*.css -u autoprefixer -r
