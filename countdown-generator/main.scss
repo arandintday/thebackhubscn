@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700;900&display=swap");
+
+body,
+textarea {
+    font-family: Inter, "Noto Sans SC", "Noto Sans TC";
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#component-wrapper {
+    position: relative;
+    max-width: 960px;
+    width: 100%;
+
+    p {
+        margin: 0;
+    }
+
+    legend {
+        border: 2px groove rgb(192, 192, 192);
+        padding: 0 0.5rem;
+    }
+
+    .timer-custom input {
+        width: 20rem;
+    }
+}
+
+button {
+    font-family: Inter, "Noto Sans SC", "Noto Sans TC";
+}
+
+blockquote {
+    margin: 0;
+    padding: 0.5rem;
+    border: 2px groove rgb(192, 192, 192);
+}
+
+#countdown-wrapper {
+    .warning {
+        color: red;
+    }
+    .timer {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+}
