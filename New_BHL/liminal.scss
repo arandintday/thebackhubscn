@@ -20,10 +20,10 @@
 @import url("./content-cn.css");
 
 /* 嵌入字体 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@100;300;400;500;700;900&display=swap");
 
 /* Root Variables: When making a new theme, see: https://github.com/Nu-SCPTheme/Black-Highlighter/blob/master/src/css/parts/root.css */
 :root {
@@ -38,14 +38,18 @@
     --header-subtitle: "你曾经来过这里";
 
     /* Typefaces */
-    --body-font: Inter, "Noto Sans SC", "Noto Sans TC", "Microsoft YaHei UI", "微软雅黑", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Geneva, sans-serif, STXihei, "华文细黑";
-    --UI-font: PTRootUI, "Noto Sans SC", "Noto Sans TC", "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
+    --body-font: Inter, "Noto Sans SC", "Noto Sans TC", "Microsoft YaHei UI", "微软雅黑", "黑体", "Heiti SC",
+        "Microsoft JhengHei UI", "Microsoft JhengHei", Geneva, sans-serif, STXihei, "华文细黑";
+    --UI-font: PTRootUI, "Noto Sans SC", "Noto Sans TC", "方体", "PingFang SC", "黑体", "Heiti SC",
+        "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
     --header-font: var(--body-font);
     --title-font: var(--body-font);
-    --mono-font: Recursive, "Noto Serif SC", "Noto Serif TC", "宋体", "SimSun", "Microsoft YaHei UI", "微软雅黑", "Microsoft JhengHei UI", "Microsoft JhengHei", "Courier New", Courier, monospace, STXihei, "华文细黑";
+    --mono-font: Recursive, "Noto Serif SC", "Noto Serif TC", "宋体", "SimSun", "Microsoft YaHei UI", "微软雅黑",
+        "Microsoft JhengHei UI", "Microsoft JhengHei", "Courier New", Courier, monospace, STXihei, "华文细黑";
 
     /* MOST THEMES SHOULDN'T CHANGE THIS: makes editing consistent across themes, adds programing ligatures */
-    --editor-font: Recursive, "Noto Serif SC", "Noto Serif TC", "宋体", "SimSun", "Microsoft YaHei UI", "微软雅黑", "Microsoft JhengHei UI", "Microsoft JhengHei", "Courier New", Courier, monospace, STXihei, "华文细黑";
+    --editor-font: Recursive, "Noto Serif SC", "Noto Serif TC", "宋体", "SimSun", "Microsoft YaHei UI", "微软雅黑",
+        "Microsoft JhengHei UI", "Microsoft JhengHei", "Courier New", Courier, monospace, STXihei, "华文细黑";
 
     /* Colors */
     --white-monochrome: 252, 252, 252;
@@ -78,9 +82,7 @@
 
     --modal-header-bg: var(--swatch-primary), 0.9;
 
-    --gradient-header: linear-gradient(to top,
-            rgba(var(--medium-accent)) 0%,
-            rgba(var(--medium-accent), 0.90) 100%);
+    --gradient-header: linear-gradient(to top, rgba(var(--medium-accent)) 0%, rgba(var(--medium-accent), 0.9) 100%);
 
     --diagonal-stripes: transparent;
     --background-gradient-distance: 0;
@@ -108,14 +110,18 @@
     --header-subtitle: "你曾经来过这里";
 
     /* Typefaces */
-    --body-font: Inter, "Noto Sans SC", "Noto Sans TC", "Microsoft YaHei UI", "微软雅黑", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Geneva, sans-serif, STXihei, "华文细黑";
-    --UI-font: PTRootUI, "Noto Sans SC", "Noto Sans TC", "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
+    --body-font: Inter, "Noto Sans SC", "Noto Sans TC", "Microsoft YaHei UI", "微软雅黑", "黑体", "Heiti SC",
+        "Microsoft JhengHei UI", "Microsoft JhengHei", Geneva, sans-serif, STXihei, "华文细黑";
+    --UI-font: PTRootUI, "Noto Sans SC", "Noto Sans TC", "方体", "PingFang SC", "黑体", "Heiti SC",
+        "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
     --header-font: var(--body-font);
     --title-font: var(--body-font);
-    --mono-font: Recursive, "Noto Serif SC", "Noto Serif TC", "宋体", "SimSun", "Microsoft YaHei UI", "微软雅黑", "Microsoft JhengHei UI", "Microsoft JhengHei", "Courier New", Courier, monospace, STXihei, "华文细黑";
+    --mono-font: Recursive, "Noto Serif SC", "Noto Serif TC", "宋体", "SimSun", "Microsoft YaHei UI", "微软雅黑",
+        "Microsoft JhengHei UI", "Microsoft JhengHei", "Courier New", Courier, monospace, STXihei, "华文细黑";
 
     /* MOST THEMES SHOULDN'T CHANGE THIS: makes editing consistent across themes, adds programing ligatures */
-    --editor-font: Recursive, "Noto Serif SC", "Noto Serif TC", "宋体", "SimSun", "Microsoft YaHei UI", "微软雅黑", "Microsoft JhengHei UI", "Microsoft JhengHei", "Courier New", Courier, monospace, STXihei, "华文细黑";
+    --editor-font: Recursive, "Noto Serif SC", "Noto Serif TC", "宋体", "SimSun", "Microsoft YaHei UI", "微软雅黑",
+        "Microsoft JhengHei UI", "Microsoft JhengHei", "Courier New", Courier, monospace, STXihei, "华文细黑";
 }
 
 #main-content {
@@ -167,7 +173,6 @@
         width: 100%;
 
         & a {
-
             &,
             &::before {
                 width: fit-content;
@@ -200,7 +205,6 @@
     }
 
     & h2 {
-
         &,
         & span,
         & span::before {
@@ -274,7 +278,6 @@ h6 {
 
 /* Table */
 #page-content {
-
     div.b-tables table.wiki-content-table,
     table.wiki-content-table {
         box-shadow: var(--quote-shadow);
@@ -334,7 +337,6 @@ span.printuser a:first-of-type:not(:last-of-type) img.small {
 
 /* Fix unordered and ordered list margin */
 #page-content {
-
     ol,
     ul:not(.yui-nav) {
         margin-block-start: 1rem;
@@ -390,7 +392,8 @@ span.printuser a:first-of-type:not(:last-of-type) img.small {
     width: 60vw;
     border: 0;
     background-color: rgb(var(--modal-bg));
-    box-shadow: inset 0 0 0 0.125rem rgba(var(--swatch-alternate-color), 0.25), 0.5rem 0.25rem 1rem 0 rgba(var(--swatch-alternate-color), 0.25);
+    box-shadow: inset 0 0 0 0.125rem rgba(var(--swatch-alternate-color), 0.25),
+        0.5rem 0.25rem 1rem 0 rgba(var(--swatch-alternate-color), 0.25);
     color: rgb(var(--modal-body-text));
 
     &-title {
@@ -400,14 +403,16 @@ span.printuser a:first-of-type:not(:last-of-type) img.small {
         margin: 0;
         padding: 1.5ex 1.25rem;
         background-color: rgb(var(--modal-header-bg));
-        background-image: linear-gradient(125deg,
-                rgba(var(--modal-header-stripe), 0.75) 25%,
-                transparent 25%,
-                transparent 50%,
-                rgba(var(--modal-header-stripe), 0.75) 50%,
-                rgba(var(--modal-header-stripe), 0.75) 75%,
-                transparent 75%,
-                transparent 100%);
+        background-image: linear-gradient(
+            125deg,
+            rgba(var(--modal-header-stripe), 0.75) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(var(--modal-header-stripe), 0.75) 50%,
+            rgba(var(--modal-header-stripe), 0.75) 75%,
+            transparent 75%,
+            transparent 100%
+        );
         background-size: 3rem 4.35rem;
         color: rgb(var(--modal-header-txt));
         font-family: var(--header-font);

@@ -43,7 +43,7 @@ body {
     bottom: -2px;
 }
 
-.side-block .menu-item>.image {
+.side-block .menu-item > .image {
     filter: hue-rotate(140deg) brightness(150%);
     -webkit-filter: hue-rotate(140deg) brightness(150%);
 }

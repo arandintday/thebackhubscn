@@ -1,29 +1,15 @@
-@each $nameCN,
-$number,
-$namecn,
-$width in (点赞, "01", dz, "73"),
-(乖巧, "02", gq, "63"),
-(偷笑, "03", tx, "70"),
-(看看文, "04", kkw, "65"),
-(无语, "05", wy, "75"),
-(犯困, "06", fk, "72"),
-(吓, "07", x, "71"),
-(哭哭, "08", kk, "75"),
-(比心, "09", bx, "70"),
-(生气, "10", sq, "74"),
-(震惊, "11", zj, "75"),
-(疑惑, "12", yh, "75"),
-(去世, "13", qs, "75"),
-(委屈, "14", wq, "75"),
-(摸鱼, "15", my, "75"),
-(开摆, "16", kb, "75") {
-
+@each $nameCN, $number, $namecn, $width in (点赞, "01", dz, "73"), (乖巧, "02", gq, "63"), (偷笑, "03", tx, "70"),
+    (看看文, "04", kkw, "65"), (无语, "05", wy, "75"), (犯困, "06", fk, "72"), (吓, "07", x, "71"),
+    (哭哭, "08", kk, "75"), (比心, "09", bx, "70"), (生气, "10", sq, "74"), (震惊, "11", zj, "75"),
+    (疑惑, "12", yh, "75"), (去世, "13", qs, "75"), (委屈, "14", wq, "75"), (摸鱼, "15", my, "75"),
+    (开摆, "16", kb, "75")
+{
     span.白沐林_#{$nameCN},
     span.白沐林_#{$number},
     span.bml_#{$namecn},
     span.bml_#{$number} {
         display: inline-block;
-        background-image: url('http://backrooms-oversight-cn.wikidot.com/local--files/bml-emojis-1/bml_#{$number}.png');
+        background-image: url("http://backrooms-oversight-cn.wikidot.com/local--files/bml-emojis-1/bml_#{$number}.png");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: left bottom;

@@ -2,7 +2,7 @@
     --thread-accent-color: 227, 223, 213;
 }
 
-#thread-container-posts>.post-container {
+#thread-container-posts > .post-container {
     border: 1px solid rgb(var(--dark-accent));
 
     .thread-container & {
@@ -10,7 +10,7 @@
         padding: 12px;
     }
 
-    &>.post-container>.post-container>.post-container>.post-container>.post-container {
+    & > .post-container > .post-container > .post-container > .post-container > .post-container {
         border-right: 1px solid rgb(var(--dark-accent));
     }
 }
@@ -29,7 +29,7 @@
             .content {
                 padding: 0;
 
-                &>p:first-of-type:not(*+p) {
+                & > p:first-of-type:not(* + p) {
                     margin-top: 0;
                 }
 
@@ -47,7 +47,7 @@
                 }
             }
 
-            .changes>a[onclick*=showHistory] {
+            .changes > a[onclick*="showHistory"] {
                 display: inline-flex;
 
                 .icon-plus::before {
@@ -136,7 +136,7 @@
                 grid-template-rows: 1fr max-content;
                 font-size: 0;
 
-                &>* {
+                & > * {
                     font-size: initial;
                 }
 
@@ -166,7 +166,6 @@
                         border: 2px solid rgb(var(--gray-monochrome));
                         border-radius: 50%;
                         margin-right: 12px;
-
                     }
                 }
 
@@ -181,7 +180,7 @@
                     width: 100%;
                 }
 
-                &>a {
+                & > a {
                     font-size: 14px;
                     max-width: fit-content;
 
@@ -207,14 +206,14 @@
                     grid-template-columns: max-content max-content max-content 1fr;
                     grid-template-rows: 1fr max-content max-content;
 
-                    &>a:nth-of-type(2)::before {
+                    & > a:nth-of-type(2)::before {
                         margin: 0 0.5em 0 0;
                     }
                 }
             }
         }
 
-        #recent-posts-container>& {
+        #recent-posts-container > & {
             border: 1px solid rgb(var(--dark-accent));
             background-color: rgb(var(--thread-accent-color));
             margin-bottom: 1rem;
@@ -240,28 +239,28 @@
             }
         }
 
-        .post~.post-container {
+        .post ~ .post-container {
             border-top: 1px solid rgb(var(--dark-accent));
             border-left: 1px solid transparent;
         }
     }
 
-    &>.options {
+    & > .options {
         display: none;
     }
 }
 
-#page-content .forum-recent-posts-box>form {
+#page-content .forum-recent-posts-box > form {
     box-shadow: none;
 }
 
-#page-content>div.forum-thread-box>div.options {
-    margin: .2em 0;
+#page-content > div.forum-thread-box > div.options {
+    margin: 0.2em 0;
 }
 
-#page-content>div.forum-thread-box>div.options a,
+#page-content > div.forum-thread-box > div.options a,
 #page-content .thread-container div.post div.long .options a,
-#page-content>div.new-post a {
+#page-content > div.new-post a {
     border: initial;
     background-color: initial;
     color: #77a;
@@ -269,8 +268,7 @@
     --wght: 500;
     padding: 0 0.25em;
     margin: 0 0.1rem;
-    transition: text-decoration-color 150ms cubic-bezier(0.4, 0, 0.2, 1),
-        color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: text-decoration-color 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: none;
     display: block;
     min-width: initial;

@@ -9,7 +9,11 @@
     --dark-accent: 140, 136, 126;
 
     --swatch-menubg-hover-color: var(--black-monochrome);
-    --gradient-sidemenu-header: linear-gradient(10deg, rgba(var(--swatch-primary-darker), 0.45) 0%, rgba(var(--swatch-primary-darker), 0.55) 100%);
+    --gradient-sidemenu-header: linear-gradient(
+        10deg,
+        rgba(var(--swatch-primary-darker), 0.45) 0%,
+        rgba(var(--swatch-primary-darker), 0.55) 100%
+    );
 }
 
 .side-block {
@@ -41,7 +45,7 @@
 
 .side-block div.menu-item a {
     padding: 0 0 0 calc(var(--base-font-size) * (14 / 15));
-    transition: background-color 80ms cubic-bezier(.4, 0, .2, 1);
+    transition: background-color 80ms cubic-bezier(0.4, 0, 0.2, 1);
     height: calc(1.5rem - var(--sidebar-internal-border-thickness));
     line-height: calc(1.5rem - var(--sidebar-internal-border-thickness));
 }
@@ -51,7 +55,7 @@
     left: 0;
     transform: translateX(-100%);
     width: calc(100% + 6rem);
-    transition: transform .5s cubic-bezier(.4, 0, .2, 1);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .side-block div.menu-item a:hover,

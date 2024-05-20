@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap");
 
 :root {
     /* ===TYPEFACES=== */
-    --body-font: Inter, "Noto Sans SC", Verdana, "Microsoft YaHei", "微软雅黑",
-        Geneva, sans-serif, STXihei, "华文细黑";
-    --UI-font: PTRootUI, "Noto Sans SC", "方体", "PingFang SC", "黑体", "Heiti SC",
-        "Microsoft JhengHei UI", "Microsoft JhengHei", Roboto, Noto,
-        "Noto Sans CJK SC", sans-serif;
+    --body-font: Inter, "Noto Sans SC", Verdana, "Microsoft YaHei", "微软雅黑", Geneva, sans-serif, STXihei, "华文细黑";
+    --UI-font: PTRootUI, "Noto Sans SC", "方体", "PingFang SC", "黑体", "Heiti SC", "Microsoft JhengHei UI",
+        "Microsoft JhengHei", Roboto, Noto, "Noto Sans CJK SC", sans-serif;
     --title-font: var(--body-font);
 
     /* ===BASE FONT SIZE & LINE HEIGHT=== */
@@ -89,20 +87,18 @@
 
 @supports (font-variation-settings: inherit) {
     * {
-        font-variation-settings: "ital"var(--ital, 0), "slnt"var(--slnt, 0),
-            "CASL"var(--CASL, 0), "CRSV"var(--CRSV, 0), "MONO"var(--MONO, 0),
-            "FLAR"var(--FLAR, 0);
+        font-variation-settings: "ital" var(--ital, 0), "slnt" var(--slnt, 0), "CASL" var(--CASL, 0),
+            "CRSV" var(--CRSV, 0), "MONO" var(--MONO, 0), "FLAR" var(--FLAR, 0);
     }
 }
 
 @supports (font-feature-settings: inherit) {
     * {
-        font-feature-settings: "lnum"var(--lnum, 1), "pnum"var(--pnum, 1),
-            "kern"var(--kern, 1), "cpsp"var(--cpsp, 1), "liga"var(--liga, 1),
-            "case"var(--case, 1), "clig"var(--clig, 1), "dlig"var(--dlig, 0),
-            "calt"var(--calt, 1), "aalt"var(--aalt, 0), "ss01"var(--ss01, 1),
-            "ss02"var(--ss02, 0), "ss03"var(--ss03, 1), "ss04"var(--ss04, 1),
-            "zero"var(--zero, 1), "cv11"var(--cv11, 0);
+        font-feature-settings: "lnum" var(--lnum, 1), "pnum" var(--pnum, 1), "kern" var(--kern, 1),
+            "cpsp" var(--cpsp, 1), "liga" var(--liga, 1), "case" var(--case, 1), "clig" var(--clig, 1),
+            "dlig" var(--dlig, 0), "calt" var(--calt, 1), "aalt" var(--aalt, 0), "ss01" var(--ss01, 1),
+            "ss02" var(--ss02, 0), "ss03" var(--ss03, 1), "ss04" var(--ss04, 1), "zero" var(--zero, 1),
+            "cv11" var(--cv11, 0);
     }
 }
 
@@ -223,10 +219,8 @@ body {
     height: 1.5em;
     margin: 0;
     padding: 0 0.6em;
-    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1),
-        color 150ms cubic-bezier(0.4, 0, 0.2, 1),
-        font-weight 200ms cubic-bezier(0.4, 0, 0.2, 1),
-        font-variation-settings 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1),
+        font-weight 200ms cubic-bezier(0.4, 0, 0.2, 1), font-variation-settings 200ms cubic-bezier(0.4, 0, 0.2, 1);
     background-clip: padding-box;
     background-color: rgba(var(--sidebar-links-bg-color));
     color: rgb(var(--sidebar-links-text));
@@ -262,8 +256,7 @@ body {
     height: 100%;
     transition: -webkit-clip-path 200ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: clip-path 200ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: clip-path 200ms cubic-bezier(0.4, 0, 0.2, 1),
-        -webkit-clip-path 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: clip-path 200ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-clip-path 200ms cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 1;
     background-color: rgb(var(--sidebar-links-hover-bg-color));
     pointer-events: none;
