@@ -10,15 +10,14 @@
 @import url("../../New_BHL/css/banlist.css");
 @import url("../../New_BHL/css/forum.css");
 @import url("../../stickers/css/stickers.css");
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fastly.jsdelivr.net/gh/scp-cn-tech/sigma9@cn/modules/colstyle.min.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fastly.jsdelivr.net/gh/scp-cn-tech/sigma9@cn/modules/colstyle.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
- 
 :root {
     --theme-base: "black-highlighter";
     --theme-id: "liminal";
@@ -27,7 +26,8 @@
     --header-title: "The Backrooms";
     --header-subtitle: "你曾经来过这里";
     --body-font: Inter, "Noto Sans SC", "Noto Sans TC", Arimo, Verdana, Geneva, sans-serif;
-    --header-font: Inter, "Noto Sans SC", "Noto Sans TC", Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
+    --header-font: Inter, "Noto Sans SC", "Noto Sans TC", Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic,
+        Arial, sans-serif;
     --title-font: var(--header-font);
     --mono-font: Recursive, "Noto Serif SC", "Noto Serif TC", Consolas, monaco, monospace;
     --white-monochrome: 237, 233, 223;
@@ -44,18 +44,14 @@
     --hover-link-color: 187, 0, 34;
     --visited-link-color: 150, 24, 43;
     --background-gradient-distance: 0rem;
-    --gradient-header: linear-gradient(to top,
-            rgba(var(--medium-accent)) 0%,
-            rgba(var(--medium-accent), 0.90) 100%);
+    --gradient-header: linear-gradient(to top, rgba(var(--medium-accent)) 0%, rgba(var(--medium-accent), 0.9) 100%);
     --diagonal-stripes: linear-gradient(transparent 0);
 
     --rename-option: "记住：后室维基用户可以重命名/移动自己创建的页面，但请谨慎使用该功能（最好仅在名称中出现错误时使用）。只有工作人员允许删除页面，包括你自己创建的页面。若需自删，请在页面名称前面加上 deleted: 前缀，以方便工作人员追踪与核查。";
 }
 
 #skrollr-body {
-    background-image: radial-gradient(circle,
-            rgb(var(--medium-accent)) 50%,
-            transparent 0);
+    background-image: radial-gradient(circle, rgb(var(--medium-accent)) 50%, transparent 0);
     background-repeat: repeat;
     background-size: 0.25em 0.25em;
     width: 100%;
@@ -63,16 +59,14 @@
 }
 
 #container {
-    background-image: radial-gradient(circle,
-            transparent 50%,
-            transparent 0);
+    background-image: radial-gradient(circle, transparent 50%, transparent 0);
     background-size: 0.25em 0.25em;
     background-repeat: repeat;
     background-attachment: fixed;
 }
 
-div#page-options-bottom>a,
-div#page-options-bottom-2>a {
+div#page-options-bottom > a,
+div#page-options-bottom-2 > a {
     border-radius: 0em;
 
     &,
@@ -105,7 +99,6 @@ div#page-options-bottom-2>a {
     }
 
     h1 {
-
         &,
         a {
             position: absolute;
@@ -119,7 +112,6 @@ div#page-options-bottom-2>a {
     }
 
     & h2 {
-
         &,
         span,
         span::before {
@@ -148,9 +140,8 @@ div#page-options-bottom-2>a {
         }
 
         div.menu-item {
-
             &,
-            &>p {
+            & > p {
                 display: flex;
                 flex-shrink: 0;
                 flex-basis: 100%;
@@ -161,7 +152,8 @@ div#page-options-bottom-2>a {
                 min-height: 1.5rem;
                 margin: 0;
                 padding: 0;
-                box-shadow: inset 0 calc(var(--sidebar-internal-border-thickness) * -1) 0 0 rgba(var(--sidebar-border-color));
+                box-shadow: inset 0 calc(var(--sidebar-internal-border-thickness) * -1) 0 0
+                    rgba(var(--sidebar-border-color));
                 font-size: 0;
             }
 
@@ -192,7 +184,7 @@ div#page-options-bottom-2>a {
                 white-space: nowrap;
             }
 
-            &>:last-child {
+            & > :last-child {
                 flex-grow: 2;
             }
         }
@@ -207,7 +199,7 @@ div#page-options-bottom-2>a {
         }
 
         .heading p,
-        .side-block>.collapsible-block .collapsible-block-link {
+        .side-block > .collapsible-block .collapsible-block-link {
             letter-spacing: 0.016em;
         }
 
@@ -254,15 +246,15 @@ iframe#odialog-shader-iframe {
 }
 
 div#odialog-shader.odialog-shader {
-	display: block;
-	position: fixed;
-	z-index: 40;
-	width: 100%;
-	height: 100%;
-	opacity: 1;
-	background-color: rgba(var(--swatch-menubg-black-color), 0.5);
-	pointer-events: none;
-	inset: 0 0 auto auto;
+    display: block;
+    position: fixed;
+    z-index: 40;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: rgba(var(--swatch-menubg-black-color), 0.5);
+    pointer-events: none;
+    inset: 0 0 auto auto;
 }
 
 iframe.scpnet-interwiki-frame {
@@ -332,7 +324,7 @@ blockquote {
     text-align: center;
     font-weight: bold;
 
-    &>div#u-adult-header {
+    & > div#u-adult-header {
         font-size: 300%;
         text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
         color: #901;
@@ -342,7 +334,7 @@ blockquote {
         margin: 0;
     }
 
-    &>.error-block {
+    & > .error-block {
         color: unset;
         padding: unset;
         margin: unset;
@@ -352,7 +344,7 @@ blockquote {
 }
 
 /* 去除用户信息中头像白边 */
-#odialog-container .owindow>div.modal-body>img[style*="padding: 2px 8px;"]:first-child {
+#odialog-container .owindow > div.modal-body > img[style*="padding: 2px 8px;"]:first-child {
     background-color: initial !important;
 }
 
@@ -379,7 +371,6 @@ blockquote {
 
 /* Footer */
 #footer {
-
     &,
     a {
         color: rgb(var(--white-monochrome));

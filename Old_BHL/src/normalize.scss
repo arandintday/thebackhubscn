@@ -5,7 +5,7 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
 
 @charset "utf-8";
 
-@supports(display: grid) {
+@supports (display: grid) {
     #content-wrap {
         position: inherit;
         margin: inherit;
@@ -149,7 +149,7 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
         }
 
         &-form {
-            input[type=submit] {
+            input[type="submit"] {
                 cursor: inherit;
                 box-shadow: inherit;
                 border: inherit;
@@ -303,7 +303,7 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
                 }
             }
 
-            &>li>ul {
+            & > li > ul {
                 margin-top: inherit;
             }
         }
@@ -437,7 +437,6 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
     }
 
     @media (min-width: 768px) {
-
         div.scpnet-interwiki-wrapper,
         iframe.scpnet-interwiki-frame {
             width: inherit;
@@ -476,7 +475,6 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
 
         .yui-nav {
             a {
-
                 &:focus,
                 &:hover {
                     background: inherit;
@@ -485,7 +483,6 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
             }
 
             .selected a {
-
                 &,
                 &:focus,
                 &:hover {
@@ -539,7 +536,7 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
         min-height: inherit;
     }
 
-    .unmargined>p {
+    .unmargined > p {
         margin: inherit;
         line-height: inherit;
     }
@@ -580,7 +577,7 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
 
         .panel-footer,
         .panel-heading {
-            &>p {
+            & > p {
                 margin: inherit;
             }
         }
@@ -702,7 +699,7 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
             img {
                 border: inherit;
                 width: inherit;
-                height: inherit
+                height: inherit;
             }
         }
     }
@@ -729,7 +726,6 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
         width: inherit;
 
         &.block {
-
             &-left,
             &-right {
                 float: inherit;
@@ -757,13 +753,13 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
             font-size: inherit;
             text-align: inherit;
 
-            &>p {
+            & > p {
                 margin: inherit;
                 padding: inherit;
             }
         }
 
-        &>p {
+        & > p {
             margin: inherit;
         }
     }
@@ -897,8 +893,7 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
             font-family: inherit;
         }
 
-        @media (-ms-high-contrast: none),
-        screen and (-ms-high-contrast: active) {
+        @media (-ms-high-contrast: none), screen and (-ms-high-contrast: active) {
             background-image: inherit;
             background-size: inherit;
             background-repeat: inherit;
@@ -913,7 +908,7 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
 
     @viewport {
         zoom: inherit;
-        width: inherit
+        width: inherit;
     }
 
     ::-webkit-scrollbar {
@@ -954,7 +949,7 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
         }
 
         .modal-body .table,
-        .modal-body .table~div,
+        .modal-body .table ~ div,
         .owindow .button-bar {
             float: inherit;
         }
@@ -1065,7 +1060,7 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
         }
     }
 
-    @media (min-width:480px) and (max-width:580px) {
+    @media (min-width: 480px) and (max-width: 580px) {
         #search-top-box-input {
             width: inherit;
         }
@@ -1117,7 +1112,6 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
             }
         }
 
-
         #page-content div.title {
             word-break: inherit;
         }
@@ -1134,12 +1128,11 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
 
         #page-content div,
         #page-content div table {
-            clear: inherit
+            clear: inherit;
         }
     }
 
     @media (min-width: 581px) and (max-width: 767px) {
-
         #search-top-box-input,
         #side-bar {
             width: inherit;
@@ -1248,7 +1241,7 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
         }
 
         .modal-body .table,
-        .modal-body .table~div,
+        .modal-body .table ~ div,
         .owindow .button-bar {
             float: inherit;
         }
@@ -1258,7 +1251,7 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
             width: inherit;
         }
 
-        .owindow div .btn-primary~div {
+        .owindow div .btn-primary ~ div {
             width: inherit;
         }
 
@@ -1332,7 +1325,7 @@ https://nu-scptheme.github.io/Black-Highlighter/css/min/normalize.min.css
                 border: inherit;
                 width: inherit;
 
-                +#main-content {
+                + #main-content {
                     left: inherit;
                 }
 
