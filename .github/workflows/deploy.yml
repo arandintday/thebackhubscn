@@ -68,7 +68,7 @@ jobs:
             Old_BHL/css/sidebar.css
             stickers/css/stickers.css
             stickers/css/bml_1.css
-            Super_Liminal/css/icon_masks.scss
+            Super_Liminal/css/icon_masks.css
 
           outputStyle: expanded
           indentWidth: 4
