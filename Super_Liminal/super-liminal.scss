@@ -271,6 +271,7 @@ by Ambersight
     --rating-cancel-text-color: var(--neutral-text-color);
     --rating-info-color: var(--dark-color-3);
     --rating-info-text-color: var(--light-color-2);
+    --rating-border-color: var(--dark-color-2);
 
     /* Popup Vs */
     --popup-tip-content: "（点击空白处关闭）";
@@ -1227,7 +1228,6 @@ div.buttons input {
     height: 2rem;
     cursor: pointer;
     transition: background 0.2s;
-    font-weight: 500;
     line-height: 1;
 }
 
@@ -1818,7 +1818,6 @@ table.page-compare th {
     color: rgba(var(--general-button-text-color));
     background: rgba(var(--general-button-background-color));
     text-decoration: none;
-    font-weight: 500;
     transition: background 0.3s;
     height: 2rem;
 }
@@ -2373,6 +2372,11 @@ div.wiki-note {
     display: none;
 }
 
+.footnote .f-content,
+.reference .r-content {
+    font-weight: 400;
+}
+
 .footnotes-footer,
 .bibitems {
     background: rgba(var(--footnote-block-background-color));
@@ -2681,6 +2685,11 @@ div.page-rate-widget-box,
     margin: 0.2rem 0;
     border-radius: 0;
     box-shadow: none;
+    border-bottom: rgba(var(--rating-border-color)) solid 0.15rem;
+}
+
+.creditBottomRate div.page-rate-widget-box {
+    border-bottom: none;
 }
 
 .rate-box-with-credit-button div.page-rate-widget-box,
