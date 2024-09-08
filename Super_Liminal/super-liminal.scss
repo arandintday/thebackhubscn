@@ -296,7 +296,7 @@ by Ambersight
     --popup-hover-button-text-color: var(--general-hover-button-text-color);
     --popup-hover-button-background-color: var(--general-hover-button-background-color);
     --popup-tip-color: var(--light-color-2);
-    --popup-loading-color: var(--dark-color-3);
+    --popup-loading-color: var(--dark-color-2);
 
     /* The 4 */
     --lightblock-background-color: var(--light-color-2);
@@ -683,7 +683,7 @@ img, embed, video, object, iframe, table {
 
 /* User Info */
 #login-status {
-    right: calc(var(--header-margin) + 10px);
+    right: calc(var(--header-margin) + 0.6rem);
     font-size: 0.9rem;
     font-weight: 500;
     z-index: 3;
@@ -763,7 +763,7 @@ img, embed, video, object, iframe, table {
 /* Search */
 #search-top-box {
     z-index: 2;
-    right: calc(var(--header-margin) + 10px);
+    right: calc(var(--header-margin) + 0.6rem);
     top: 45%;
 }
 
@@ -1807,7 +1807,7 @@ table.page-history tr td:nth-child(6) {
     grid-area: date;
     width: fit-content !important;
     font-size: 0.8rem;
-    font-weight: 700;
+    font-weight: 400;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2223,7 +2223,7 @@ table.page-compare th {
 }
 
 .scp-image-block.block-center {
-    margin: 1.5rem auto;
+    margin: 1rem auto;
 }
 
 /* Horizon Line */
@@ -2947,6 +2947,7 @@ div.page-rate-widget-box .cancel a:is(:hover, :active, :focus, :focus-within)::b
 .creditBottomRate {
     height: auto;
     border-top: rgba(var(--popup-text-color), 0.18) solid 0.1rem;
+    padding: 0.5rem 0;
 }
 
 /* The 4 */
@@ -2981,7 +2982,6 @@ div.page-rate-widget-box .cancel a:is(:hover, :active, :focus, :focus-within)::b
 }
 
 @media only screen and (max-width: 1024px) {
-
     :root {
         --header-height: calc(var(--main-header-height-on-mobile) + var(--topbar-height-on-mobile));
         --header-background-image: linear-gradient(to top, rgba(var(--dark-color-3)) var(--topbar-height-on-mobile), rgba(var(--dark-color-3), 0.9) 100%);
@@ -3112,5 +3112,70 @@ div.page-rate-widget-box .cancel a:is(:hover, :active, :focus, :focus-within)::b
         flex-wrap: wrap;
         justify-content: center;
     }
+}
 
+@media only screen and (max-width: 540px) {
+    /* Image Block */
+    .scp-image-block:is(.block-right, .block-left) {
+        float: none;
+        margin: 0.1rem auto;
+    }
+    
+    /* Page History */
+    table.page-history tr {
+        grid-template-areas:
+            "revision . signature date"
+            "choose . action user"
+            "memo . memo memo";
+        grid-template-columns: 2.5rem 0.5rem 4.4rem 1fr;
+    }
+    
+    table.page-history tr td:nth-child(3) {
+        text-align: left;
+        font-size: 0.8rem;
+        font-weight: 400;
+        margin-bottom: 0.2rem;
+    }
+    
+    table.page-history tr td:nth-child(5) {
+        width: auto !important;
+        padding-right: 0;
+        font-size: 0.8rem;
+        justify-content: flex-end;
+    }
+    
+    table.page-history tr td:nth-child(6) {
+        width: auto !important;
+        justify-content: flex-end;
+        padding-right: 0;
+    }
+    
+    table.page-history tr td:nth-child(7) {
+        margin-top: 0.2rem;
+    }
+    
+    /* Popup Info */
+    .owindow .content > img + h1 + table {
+        grid-template-columns: 1fr;
+    }
+    
+    .owindow .content > img + h1 + table td:first-child {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+    
+    .owindow .content > img + h1 + table td:last-child {
+        padding-top: 0;
+    }
+
+    /* Page Title */
+    #page-title, .meta-title {
+        font-size: 1.75rem;
+        padding-bottom: 0;
+    }
+
+    /* Blockquote */
+    blockquote, .blockquote {
+        margin: 1rem 0;
+    }
 }
