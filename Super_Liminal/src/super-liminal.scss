@@ -611,7 +611,6 @@ img, embed, video, object, iframe, table {
     width: 100%;
     box-sizing: border-box;
     border: solid calc(var(--topbar-drop-border-width) / 2) rgba(var(--topbar-drop-border-color));
-    border-top: none;
     height: 2rem;
 }
 
@@ -626,7 +625,7 @@ img, embed, video, object, iframe, table {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    background: rgba(var(--topbar-drop-background-color));
+    background: transparent;
     color: rgba(var(--topbar-drop-text-color));
     padding: 0 1em;
     transition: background 0.3s;
