@@ -2668,6 +2668,7 @@ div.wiki-note {
     text-decoration: none;
     padding: 0 0.5em;
     font-size: 0.8rem;
+    white-space: nowrap;
 }
 
 .owindow .button-bar>a:not([onclick*=cleanAll]):is(:hover, :active, :focus, :focus-within),
