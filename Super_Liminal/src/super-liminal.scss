@@ -3124,10 +3124,10 @@ div.page-rate-widget-box .cancel a:is(:hover, :active, :focus, :focus-within)::b
     /* Page History */
     table.page-history tr {
         grid-template-areas:
-            "revision . signature date"
-            "choose . action user"
-            "memo . memo memo";
-        grid-template-columns: 2.5rem 0.5rem 4.4rem 1fr;
+            "revision signature date"
+            "choose action user"
+            "memo memo memo";
+        grid-template-columns: 2.5rem 4.4rem 1fr;
     }
     
     table.page-history tr td:nth-child(3) {
