@@ -2626,7 +2626,7 @@ div.wiki-note {
     display: grid;
     border-top: rgba(var(--popup-text-color), 0.18) solid 0.1rem;
     grid-template-columns: max-content 1fr;
-    max-height: 47.5vh;
+    max-height: 42.5vh;
     overflow-y: auto;
 }
 
@@ -2659,13 +2659,15 @@ div.wiki-note {
     align-items: center;
     color: rgba(var(--popup-button-text-color));
     background: rgba(var(--popup-button-background-color));
-    flex-basis: 10em;
+    flex-basis: 8em;
     flex-grow: 2;
     height: 2rem;
     transition: background 0.2s;
     font-weight: 500;
     line-height: 1;
     text-decoration: none;
+    padding: 0 0.5em;
+    font-size: 0.8rem;
 }
 
 .owindow .button-bar>a:not([onclick*=cleanAll]):is(:hover, :active, :focus, :focus-within),
