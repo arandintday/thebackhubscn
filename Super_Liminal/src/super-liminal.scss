@@ -2482,7 +2482,7 @@ div.wiki-note {
 }
 
 #odialog-container[style*=block],
-.fader {
+div.fader {
     display: flex !important;
     justify-content: center;
     align-items: center;
@@ -2495,7 +2495,7 @@ div.wiki-note {
     left: 0;
 }
 
-.modalcontainer {
+div.modalcontainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2507,7 +2507,7 @@ div.wiki-note {
 }
 
 .owindow,
-.modalbox {
+div.modalbox {
     max-width: 80ch;
     top: initial !important;
     left: initial !important;
@@ -2748,15 +2748,15 @@ div.wiki-note {
 }
 
 /* Rating Module */
-.creditRate {
+div.creditRate {
     margin: 0;
     display: block;
     padding: 0;
 }
 
-.rate-box-with-credit-button,
+div.rate-box-with-credit-button,
 div.page-rate-widget-box,
-.creditButtonStandalone {
+div.creditButtonStandalone {
     display: inline-flex;
     background: rgba(var(--rating-background-color));
     color: rgba(var(--rating-text-color));
@@ -2768,13 +2768,13 @@ div.page-rate-widget-box,
     border-bottom: rgba(var(--rating-border-color)) solid 0.15rem;
 }
 
-.creditBottomRate div.page-rate-widget-box {
+div.creditBottomRate div.page-rate-widget-box {
     border-bottom: none;
 }
 
-.rate-box-with-credit-button div.page-rate-widget-box,
-.creditButton p,
-.creditButtonStandalone p {
+div.rate-box-with-credit-button div.page-rate-widget-box,
+div.creditButton p,
+div.creditButtonStandalone p {
     display: contents;
 }
 
@@ -2792,19 +2792,19 @@ div.page-rate-widget-box .rate-points .number {
     font-size: 1rem;
 }
 
-.rate-box-with-credit-button .creditButton {
+div.rate-box-with-credit-button div.creditButton {
     display: block;
 }
 
 div.page-rate-widget-box .btn,
-.rate-box-with-credit-button .creditButton {
+div.rate-box-with-credit-button div.creditButton {
     width: 1.6rem;
     height: 1.6rem;
 }
 
 div.page-rate-widget-box a,
-.creditButton p a,
-.creditButtonStandalone p a {
+div.creditButton p a,
+div.creditButtonStandalone p a {
     background: transparent;
     text-decoration: none;
     border: none;
@@ -2818,7 +2818,7 @@ div.page-rate-widget-box a,
     margin: 0;
 }
 
-.creditButtonStandalone p a {
+div.creditButtonStandalone p a {
     width: 1.6rem;
     height: 1.6rem;
     box-shadow: none;
@@ -2826,8 +2826,8 @@ div.page-rate-widget-box a,
 }
 
 div.page-rate-widget-box a::before,
-.creditButton p a::before,
-.creditButtonStandalone p a::before {
+div.creditButton p a::before,
+div.creditButtonStandalone p a::before {
     --rating-module-button-mask: none;
     --rating-module-button-color: var(--rating-text-color);
     content: "";
@@ -2877,28 +2877,28 @@ div.page-rate-widget-box .cancel a:is(:hover, :active, :focus, :focus-within)::b
     --rating-module-button-color: var(--rating-cancel-text-color);
 }
 
-.creditButton p a:is(:hover, :active, :focus, :focus-within),
-.creditButtonStandalone p a:is(:hover, :active, :focus, :focus-within) {
+div.creditButton p a:is(:hover, :active, :focus, :focus-within),
+div.creditButtonStandalone p a:is(:hover, :active, :focus, :focus-within) {
     background: rgba(var(--rating-info-color));
 }
 
-.creditButtonStandalone p a::before,
-.creditButton p a::before {
+div.creditButtonStandalone p a::before,
+div.creditButton p a::before {
     --rating-module-button-mask: var(--vote-info-mask);
     mask-size: 27.5%;
     mask-position: center 40%;
 }
 
-.creditButtonStandalone p a:is(:hover, :active, :focus, :focus-within)::before,
-.creditButton p a:is(:hover, :active, :focus, :focus-within)::before {
+div.creditButtonStandalone p a:is(:hover, :active, :focus, :focus-within)::before,
+div.creditButton p a:is(:hover, :active, :focus, :focus-within)::before {
     --rating-module-button-color: var(--rating-info-text-color);
 }
 
-.modalbox {
+div.modalbox {
     max-height: unset;
 }
 
-.modalbox::after {
+div.modalbox::after {
     position: absolute;
     border: none;
     margin: 0;
@@ -2919,27 +2919,27 @@ div.page-rate-widget-box .cancel a:is(:hover, :active, :focus, :focus-within)::b
     pointer-events: none;
 }
 
-.modalbox > hr {
+div.modalbox > hr {
     display: none;
 }
 
-.modalbox > div:first-child {
+div.modalbox > div:first-child {
     background: rgba(var(--popup-title-background-color));
     padding: 0.5rem 1rem;
     text-align: left !important;
 }
 
-.modalbox > div:first-child h2 {
+div.modalbox > div:first-child h2 {
     margin: 0;
     font-size: 1.25rem;
     color: rgba(var(--popup-title-text-color));
 }
 
-.close-credits {
+div.close-credits {
     display: none;
 }
 
-.modalbox .credit {
+div.modalbox .credit {
     padding: 0.5rem 1rem;
     margin: 0;
     max-height: 47.5vh;
@@ -2948,7 +2948,7 @@ div.page-rate-widget-box .cancel a:is(:hover, :active, :focus, :focus-within)::b
     min-height: 5rem;
 }
 
-.creditBottomRate {
+div.creditBottomRate {
     height: auto;
     border-top: rgba(var(--popup-text-color), 0.18) solid 0.15rem;
     padding: 0.5rem 0;
