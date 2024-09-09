@@ -1897,7 +1897,7 @@ table.page-compare th {
     height: 2rem;
 }
 
-.page-options-bottom a:is(:hover, :active, :focus, :focus-within) {
+.page-options-bottom a:is(:hover, :active) {
     color: rgba(var(--general-hover-button-text-color));
     background: rgba(var(--general-hover-button-background-color));
 }
