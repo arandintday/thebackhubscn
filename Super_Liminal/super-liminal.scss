@@ -711,7 +711,7 @@ img, embed, video, object, iframe, table {
     vertical-align: -0.2rem;
 }
 
-#my-account {
+#login-status a {
     color: rgba(var(--header-text-color));
 }
 
@@ -2984,6 +2984,73 @@ div.creditBottomRate {
     border-left: rgba(var(--dark-styled-quote-border-color)) solid 0.6rem;
     margin: 1rem 0;
     padding: 0.5rem 1rem;
+}
+
+/* Old Divs */
+.footer-wikiwalk-nav {
+    font-weight: 700;
+    font-size: 0.8em;
+}
+
+.bblock {
+    background-color: rgb(var(--text-color));
+    transition: color 0.3s linear;
+}
+
+.bblock:is(:hover, :focus-within) {
+    background-color: rgb(var(--text-color));
+    color: rgb(var(--background-color));
+}
+
+.dblock {
+    background-color: currentColor;
+    transition: background-color 0.3s linear;
+}
+
+.dblock:is(:hover, :focus-within) {
+    background-color: transparent;
+}
+
+.keycap {
+    background-color: rgb(var(--light-color-2));
+    padding: 0.25em;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125em 0 0.05em rgb(var(--dark-color-3), 0.5);
+}
+
+.rt, rt {
+    display: table-header-group;
+    font-size: 0.65em;
+    line-height: 1.15;
+}
+
+.ruby, ruby {
+    display: inline-table;
+    line-height: 1;
+    vertical-align: text-bottom;
+}
+
+.rt, .ruby, rt, ruby {
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* License Box */
+.licensebox a.collapsible-block-link {
+    opacity: 0.75;
+    color: rgba(var(--text-color));
+    font-size: 0.85em;
+    font-weight: 700;
+    transition: opacity 0.3s;
+}
+
+.licensebox a.collapsible-block-link:is(:hover, :active, :focus, :focus-within) {
+    opacity: 1;
+}
+
+.licensebox :is(blockquote, .blockquote) {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 @media only screen and (max-width: 1024px) {
