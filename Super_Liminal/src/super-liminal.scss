@@ -245,7 +245,7 @@ by Ambersight
     /* Blockquote Colors */
     --blockquote-background-color: var(--light-color-2);
     --blockquote-text-color: var(--text-color);
-    --blockquote-shdadow-color: 0, 0, 0, 0;
+    --blockquote-shadow-color: 0, 0, 0, 0;
     --blockquote-border-color: var(--dark-color-3), 0.18;
 
     /* Code Block Colors */
@@ -2354,6 +2354,7 @@ blockquote, .blockquote {
     box-shadow: 0.05rem 0.1rem 0.3rem rgba(var(--blockquote-shadow-color));
     margin: 1rem 2rem;
     border: rgba(var(--blockquote-border-color)) var(--blockquote-border-width) solid;
+    padding: 0.01rem 1rem;
 }
 
 /* Code Block */
