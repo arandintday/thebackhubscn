@@ -41,8 +41,8 @@ by Ambersight
     --accept-color: 20, 169, 32;
     --neutral-color: 193, 147, 44;
     --warning-text-color: var(--light-color-2);
-    --accept-text-color: var(--light-color-2);
-    --neutral-text-color: var(--light-color-2);
+    --accept-text-color: var(--warning-text-color);
+    --neutral-text-color: var(--warning-text-color);
 
     /* Link Colors */
     --link-color: 230, 23, 68;
@@ -136,10 +136,10 @@ by Ambersight
     --page-tag-hover-background-color: var(--dark-color-3);
 
     /* Page Option Colors */
-    --page-option-text-color: var(--light-color-1);
-    --page-option-hover-text-color: var(--light-color-1);
-    --page-option-background-color: var(--dark-color-2);
-    --page-option-hover-background-color: var(--dark-color-3);
+    --page-option-text-color: var(--general-button-text-color);
+    --page-option-hover-text-color: var(--general-hover-button-text-color);
+    --page-option-background-color: var(--general-button-background-color);
+    --page-option-hover-background-color: var(--general-hover-button-background-color);
 
     /* Footer Colors */
     --footer-text-color: var(--light-color-2);
