@@ -160,7 +160,7 @@ by Ambersight
     --sidebar-media-icon-color: var(--text-color);
     --sidebar-title-background-color: var(--dark-color-3), 0.5;
     --sidebar-title-text-color: var(--light-color-1);
-    --sidebar-titile-shadow-color: var(--text-color);
+    --sidebar-title-shadow-color: var(--text-color);
     --sidebar-text-color: var(--text-color);
     --sidebar-hover-text-color: var(--sidebar-text-color);
     --sidebar-border-color: var(--text-color), 0.08;
@@ -1115,7 +1115,7 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
     align-items: center;
     text-align: center;
     font-size: 0.8rem;
-    text-shadow: 1px 1px 1px rgba(var(--sidebar-titile-shadow-color));
+    text-shadow: 1px 1px 1px rgba(var(--sidebar-title-shadow-color));
     font-weight: 700;
     border-bottom: solid calc(2rem / 15) rgba(var(--sidebar-border-color));
 }
