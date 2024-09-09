@@ -309,6 +309,49 @@ by Ambersight
     --dark-styled-quote-background-color: var(--dark-color-3);
     --dark-styled-quote-text-color: var(--light-color-2);
     --dark-styled-quote-border-color: var(--light-color-2);
+
+    /* Swatch paid me to do this */
+    --white-monochrome: var(--background-color);
+    --pale-gray-monochrome: var(--light-color-2);
+    --light-pale-gray-monochrome: 244, 244, 244;
+    --very-light-gray-monochrome: 215, 215, 215;
+    --light-gray-monochrome: var(--dark-color-1);
+    --gray-monochrome: var(--dark-color-3);
+    --dark-gray-monochrome: 48, 48, 52;
+    --black-monochrome: var(--text-color);
+    --pale-accent: var(--dark-color-2);
+    --bright-accent: var(--dark-color-2);
+    --medium-accent: var(--dark-color-3);
+    --dark-accent: var(--dark-color-2);
+    --alt-accent: 221, 102, 17;
+    --background-gradient-color: var(--very-light-gray-monochrome);
+    --swatch-background: var(--white-monochrome);
+    --swatch-primary: var(--bright-accent);
+    --swatch-primary-darker: var(--medium-accent);
+    --swatch-primary-darkest: var(--dark-accent);
+    --swatch-text-dark: var(--black-monochrome);
+    --swatch-text-light: var(--white-monochrome);
+    --swatch-text-general: var(--swatch-text-dark);
+    --swatch-important-text: var(--bright-accent);
+    --swatch-menubg-color: var(--white-monochrome);
+    --swatch-menubg-light-color: var(--pale-gray-monochrome);
+    --swatch-menubg-medium-color: var(--light-gray-monochrome);
+    --swatch-menubg-medium-dark-color: var(--gray-monochrome);
+    --swatch-menubg-dark-color: var(--dark-gray-monochrome);
+    --swatch-menubg-black-color: var(--black-monochrome);
+    --swatch-menubg-hover-color: var(--black-monochrome);
+    --swatch-menutxt-dark-color: var(--black-monochrome);
+    --swatch-menutxt-light-color: var(--white-monochrome);
+    --swatch-menutxt-general-color: var(--swatch-menutxt-dark-color);
+    --swatch-border-color: var(--black-monochrome);
+    --swatch-secondary-color: var(--swatch-menubg-light-color);
+    --swatch-tertiary-color: var(--swatch-menubg-medium-color);
+    --swatch-text-secondary-color: var(--swatch-menutxt-light-color);
+    --swatch-text-tertiary-color: var(--swatch-menutxt-dark-color);
+    --swatch-headerh1-color: var(--swatch-text-light);
+    --swatch-headerh2-color: var(--swatch-text-light);
+    --swatch-topmenu-border-color: var(--medium-accent);
+    --swatch-topmenu-bg-color: var(--swatch-menubg-medium-dark-color);
 }
 
 /* Global */
@@ -832,10 +875,6 @@ a#account-topbutton {
     margin: 1.6rem 0;
     padding: 0;
     font-size: var(--content-font-size);
-}
-
-#page-content p {
-    margin: 1rem 0;
 }
 
 /* Tags */
