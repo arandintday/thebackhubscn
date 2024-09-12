@@ -5,13 +5,13 @@ by Ambersight
 */
 
 /* Site Staff */
-@import url("https://github.backroomswiki.cn/New_BHL/css/banlist.css");
-@import url("https://github.backroomswiki.cn/New_BHL/css/forum.css");
-@import url("https://github.backroomswiki.cn/stickers/css/stickers.css");
+@import url("../../New_BHL/css/banlist.css");
+@import url("../../New_BHL/css/forum.css");
+@import url("../../stickers/css/stickers.css");
 @import url("https://fastly.jsdelivr.net/gh/scp-cn-tech/sigma9@cn/modules/colstyle.min.css");
 
 /* Icons */
-@import url("https://github.backroomswiki.cn/Super_Liminal/css/icon-masks.css");
+@import url("./icon-masks.css");
 
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+SC:wght@200..900&family=Noto+Serif+TC:wght@200..900&display=swap");
@@ -86,7 +86,7 @@ by Ambersight
     --header-height: calc(var(--main-header-height) + var(--topbar-height));
     --header-width: 65rem;
     --header-margin: max(calc((100% - var(--header-width)) / 2), 0px);
-    --logo-image: url("https://github.backroomswiki.cn/logo_nomargin.svg");
+    --logo-image: url("../../logo_nomargin.svg");
     --header-title: "The Backrooms";
     --header-title-font-size: 2.65rem;
     --header-title-font-size-on-mobile: 1.6rem;
