@@ -941,6 +941,10 @@ a#account-topbutton {
     background: rgba(var(--page-tag-hover-background-color));
 }
 
+#main-content .page-tags [href^="/system:page-tags/tag/_"] {
+    display: none;
+}
+
 /* Buttons */
 #page-options-container {
     margin-top: 0.5rem;
