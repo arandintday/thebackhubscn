@@ -3054,6 +3054,31 @@ div.creditBottomRate {
     padding: 0.5rem 1rem;
 }
 
+/* Printuser */
+.printuser {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.25em;
+    text-indent: 0;
+}
+
+.printuser>a:first-child {
+    display: flex;
+    user-select: none;
+    align-self: center;
+    min-width: max-content;
+}
+
+.printuser>a:first-child img {
+    height: 1.25em;
+    width: 1.25em;
+    padding: 0;
+    padding-left: 0.5em;
+    object-fit: contain;
+    background-size: cover;
+    overflow: hidden;
+}
+
 /* Old Divs */
 .footer-wikiwalk-nav {
     font-weight: 700;
