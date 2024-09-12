@@ -1131,10 +1131,12 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
     filter: drop-shadow(rgba(var(--sidebar-media-icon-color)) 20rem 0);     
 }
 
-#side-bar .heading {
+#side-bar .heading,
+#side-bar .collapsible-block-unfolded-link a,
+#side-bar .collapsible-block-folded a {
     background: rgba(var(--sidebar-title-background-color));
     color: rgba(var(--sidebar-title-text-color));
-    height: calc(4rem /3);
+    height: 1.3333333333rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1142,7 +1144,26 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
     font-size: 0.8rem;
     text-shadow: 1px 1px 1px rgba(var(--sidebar-title-shadow-color));
     font-weight: 700;
-    border-bottom: solid calc(2rem / 15) rgba(var(--sidebar-border-color));
+    border-bottom: solid 0.1333333333rem rgba(var(--sidebar-border-color));
+    direction: ltr;
+}
+
+#side-bar .collapsible-block-unfolded-link,
+#side-bar .collapsible-block-folded {
+    margin: 0;
+}
+
+#side-bar .collapsible-block-folded a::before {
+    content: "▶";
+}
+
+#side-bar .collapsible-block-folded a::after {
+    content: "◀";
+}
+
+#side-bar .collapsible-block-unfolded-link a::before,
+#side-bar .collapsible-block-unfolded-link a::after {
+    content: "▼"
 }
 
 #side-bar .menu-item {
@@ -1163,6 +1184,7 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
     padding-left: 1em;
     border-left: solid calc(2rem / 15) rgba(var(--sidebar-border-color));
     background: transparent;
+    flex-grow: 2;
 }
 
 #side-bar .menu-item a:is(:hover, :active, :focus, :focus-within) {
