@@ -174,7 +174,7 @@ by Ambersight
 
     /* Sidebar Vs */
     --sidebar-width: 18rem;
-    --sidebar-width-on-mobile: 15rem;
+    --sidebar-width-on-mobile: 16rem;
 
     /* Sidebar Colors */
     --sidebar-handle-text-color: var(--general-dark-text-color);
@@ -1175,7 +1175,6 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
 
 #side-bar .menu-item a {
     display: block;
-    width: 100%;
     font-size: 0.9rem;
     text-decoration: none;
     color: rgba(var(--sidebar-text-color));
