@@ -772,6 +772,7 @@ img, embed, video, object, iframe, table {
     width: 1rem;
     padding: 0 0 0 0.5rem;
     vertical-align: -0.2rem;
+    background-size: auto;
 }
 
 #login-status a {
@@ -3075,6 +3076,7 @@ div.creditBottomRate {
     padding: 0;
     padding-left: 0.5em;
     object-fit: contain;
+    background-size: cover;
     overflow: hidden;
 }
 
