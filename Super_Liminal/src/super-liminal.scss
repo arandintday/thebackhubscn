@@ -54,9 +54,31 @@ by Ambersight
     --selected-background-color: 67, 98, 197;
     --selected-text-color: 253, 253, 253;
 
-    /* Scrollbar Vs */
+    /* Scrollbar Colors */
     --scrollbar-color: var(--dark-color-1), 0.75;
     --scrollbar-background-color: var(--dark-color-1), 0.15;
+
+    /* General Colors */
+    --general-light-background-color: var(--light-color-2);
+    --general-light-text-color: var(--text-color);
+    --general-medium-background-color: var(--dark-color-2);
+    --general-medium-text-color: var(--light-color-1);
+    --general-dark-background-color: var(--dark-color-3);
+    --general-dark-text-color: var(--light-color-1);
+    --general-shadow-color: var(--text-color);
+    --general-light-border-color: var(--dark-color-3), 0.08;
+    --general-medium-border-color: var(--dark-color-3), 0.2;
+    --general-strong-border-color: var(--dark-color-3), 0.5;
+    --general-dark-border-color: var(--dark-color-3);
+    --general-blur: 0.15rem;
+    --general-transition-time-fast: 0.2s;
+    --general-transition-time-slow: 0.3s;
+
+    /* General Buttons */
+    --general-button-text-color: var(--general-medium-text-color);
+    --general-button-background-color: var(--general-medium-background-color);
+    --general-hover-button-text-color: var(--general-dark-text-color);
+    --general-hover-button-background-color: var(--general-dark-background-color);
 
     /* Header Vs */
     --main-header-height: 8rem;
@@ -74,10 +96,12 @@ by Ambersight
     --search-icon-width-on-mobile: 2.5rem;
     
     /* Header Colors */
-    --header-background-image: linear-gradient(to top, rgba(var(--dark-color-3)) var(--topbar-height), rgba(var(--dark-color-3), 0.9) 100%);
-    --header-background-image-2: radial-gradient(circle, rgb(var(--dark-color-3)) 50%, transparent 0);
-    --header-text-color: var(--light-color-1);
-    --header-text-shadow-color: var(--text-color);
+    --header-background-bottom: var(--general-dark-background-color);
+    --header-background-top: var(--general-dark-background-color), 0.9;
+    --header-background-image: linear-gradient(to top, rgba(var(--header-background-bottom)) var(--topbar-height), rgba(var(--header-background-top)) 100%);
+    --header-extra-background-image: radial-gradient(circle, rgba(var(--general-dark-background-color)) 50%, transparent 0);
+    --header-text-color: var(--general-dark-text-color);
+    --header-text-shadow-color: var(--general-shadow-color);
 
     /* Topbar Vs */
     --topbar-height: 2rem;
@@ -92,31 +116,31 @@ by Ambersight
     --topbar-hover-background-color: var(--dark-color-4);
     --topbar-hover-border-color: var(--dark-color-2), 0.5;
     --topbar-drop-text-color: var(--light-color-1);
-    --topbar-drop-hover-text-color: var(--topbar-drop-text-color);
+    --topbar-drop-hover-text-color: var(--general-medium-text-color);
     --topbar-drop-background-color: var(--dark-color-4), 0.93;
-    --topbar-drop-hover-background-color: var(--dark-color-2);
+    --topbar-drop-hover-background-color: var(--general-medium-background-color);
     --topbar-drop-border-color: var(--text-color);
     --topbar-drop-border-width: calc(4rem / 45);
-    --topbar-drop-shadow-color: var(--text-color), 0.5;
+    --topbar-drop-shadow-color: var(--general-shadow-color), 0.5;
 
     /* User Account Colors */
     --header-username-color: var(--dark-color-1);
-    --account-button-text-color: var(--dark-color-3);
-    --account-button-hover-text-color: var(--dark-color-3);
-    --account-button-background-color: var(--light-color-1);
-    --account-button-hover-background-color: var(--dark-color-1);
-    --account-drop-text-color: var(--text-color);
-    --account-drop-hover-text-color: var(--text-color);
-    --account-drop-background-color: var(--light-color-2);
-    --account-drop-hover-background-color: var(--dark-color-1);
-    --account-drop-border-color: var(--text-color);
+    --account-button-text-color: var(--general-dark-background-color);
+    --account-button-hover-text-color: var(--general-medium-text-color);
+    --account-button-background-color: var(--general-dark-text-color);
+    --account-button-hover-background-color: var(--general-medium-background-color);
+    --account-drop-text-color: var(--general-light-text-color);
+    --account-drop-hover-text-color: var(--general-medium-text-color);
+    --account-drop-background-color: var(--general-light-background-color);
+    --account-drop-hover-background-color: var(--general-medium-background-color);
+    --account-drop-border-color: var(--general-dark-border-color);
     --account-drop-border-width: var(--topbar-drop-border-width);
 
     /* Search Button Colors */
-    --search-button-text-color: var(--text-color);
-    --search-button-hover-text-color: var(--search-button-text-color);
-    --search-button-background-color: var(--light-color-1);
-    --search-button-hover-background-color: var(--dark-color-1);
+    --search-button-text-color: var(--account-button-text-color);
+    --search-button-hover-text-color: var(--account-button-hover-text-color);
+    --search-button-background-color: var(--account-button-background-color);
+    --search-button-hover-background-color: var(--account-button-hover-background-color);
 
     /* Content Vs */
     --body-width: 48rem;
@@ -125,15 +149,15 @@ by Ambersight
 
     /* Page Title Colors */
     --page-title-text-color: var(--text-color);
-    --page-title-border-color: var(--dark-color-3);
+    --page-title-border-color: var(--general-dark-border-color);
 
     /* Page Tag Colors */
-    --page-tag-border-color: var(--dark-color-2);
-    --page-tag-title-color: var(--light-color-1);
+    --page-tag-border-color: var(--general-medium-background-color);
+    --page-tag-title-color: var(--general-medium-text-color);
     --page-tag-text-color: var(--text-color);
-    --page-tag-hover-text-color: var(--light-color-1);
+    --page-tag-hover-text-color: var(--general-dark-text-color);
     --page-tag-background-color: var(--dark-color-2), 0.2;
-    --page-tag-hover-background-color: var(--dark-color-3);
+    --page-tag-hover-background-color: var(--general-dark-background-color);
 
     /* Page Option Colors */
     --page-option-text-color: var(--general-button-text-color);
@@ -142,48 +166,44 @@ by Ambersight
     --page-option-hover-background-color: var(--general-hover-button-background-color);
 
     /* Footer Colors */
-    --footer-text-color: var(--light-color-2);
-    --footer-background-color: var(--dark-color-2);
+    --footer-text-color: var(--general-medium-text-color);
+    --footer-background-color: var(--general-medium-background-color);
     --license-background-color: var(--light-color-1);
     --license-text-color: var(--dark-color-3);
-    --license-link-color: var(--dark-color-4);
+    --license-link-color: var(--license-text-color);
 
     /* Sidebar Vs */
     --sidebar-width: 18rem;
     --sidebar-width-on-mobile: 15rem;
 
     /* Sidebar Colors */
-    --sidebar-handle-text-color: var(--light-color-2);
-    --sidebar-handle-background-color: var(--dark-color-3);
+    --sidebar-handle-text-color: var(--general-dark-text-color);
+    --sidebar-handle-background-color: var(--general-dark-background-color);
     --sidebar-background-color: var(--light-color-1);
     --sidebar-media-background-color: var(--text-color), 0.15;
-    --sidebar-media-icon-color: var(--text-color);
-    --sidebar-title-background-color: var(--dark-color-3), 0.5;
-    --sidebar-title-text-color: var(--light-color-1);
-    --sidebar-title-shadow-color: var(--text-color);
+    --sidebar-media-icon-color: var(--dark-color-3);
+    --sidebar-title-background-color: var(--general-dark-background-color), 0.5;
+    --sidebar-title-text-color: var(--general-dark-text-color);
+    --sidebar-title-shadow-color: var(--general-shadow-color);
     --sidebar-text-color: var(--text-color);
     --sidebar-hover-text-color: var(--sidebar-text-color);
-    --sidebar-border-color: var(--text-color), 0.08;
+    --sidebar-border-color: var(--general-light-border-color);
     --sidebar-hover-background-color: var(--text-color), 0.15;
 
     /* Action Colors */
-    --action-area-border-color: var(--dark-color-3), 0.08;
+    --action-area-border-color: var(--general-light-border-color);
     --action-area-subtext-color: var(--text-color), 0.75;
-    --action-area-info-background-color: var(--dark-color-2);
-    --action-area-info-text-color: var(--light-color-1);
-    --general-button-text-color: var(--light-color-1);
-    --general-button-background-color: var(--dark-color-2);
-    --general-hover-button-text-color: var(--light-color-1);
-    --general-hover-button-background-color: var(--dark-color-3);
-    --page-source-background-color: var(--light-color-2);
-    --page-source-text-color: var(--text-color);
+    --action-area-info-background-color: var(--general-medium-background-color);
+    --action-area-info-text-color: var(--general-medium-text-color);
+    --page-source-background-color: var(--general-light-background-color);
+    --page-source-text-color: var(--general-light-text-color);
 
     /* Edit Area Colors */
     --edit-area-background-color: var(--dark-color-2), 0.15;
     --edit-area-text-color: var(--text-color);
-    --edit-area-textarea-text-color: var(--text-color);
-    --edit-area-textarea-background-color: var(--light-color-2);
-    --edit-area-textarea-border-color: var(--dark-color-3);
+    --edit-area-textarea-text-color: var(--general-light-text-color);
+    --edit-area-textarea-background-color: var(--general-light-background-color);
+    --edit-area-textarea-border-color: var(--general-dark-border-color);
     --edit-area-info-background-color: var(--action-area-info-background-color);
     --edit-area-info-text-color: var(--action-area-info-text-color);
     --edit-area-button-background-color: var(--general-button-background-color);
@@ -192,18 +212,18 @@ by Ambersight
     --edit-area-hover-button-text-color: var(--general-hover-button-text-color);
 
     /* Hovertip Colors */
-    --hovertip-background-color: var(--light-color-2);
-    --hovertip-text-color: var(--text-color);
-    --hovertip-border-color: var(--dark-color-3);
+    --hovertip-background-color: var(--general-light-background-color);
+    --hovertip-text-color: var(--general-light-text-color);
+    --hovertip-border-color: var(--general-dark-border-color);
 
     /* Image Block Vs */
     --imageblock-border-width: 0.15rem;
 
     /* Image Block Colors */
-    --imageblock-caption-background-color: var(--light-color-2);
-    --imageblcok-caption-text-color: var(--text-color);
+    --imageblock-caption-background-color: var(--general-light-background-color);
+    --imageblcok-caption-text-color: var(--general-light-text-color);
     --imageblock-shaodw-color: 0, 0, 0, 0;
-    --imageblock-border-color: var(--dark-color-3), 0.2;
+    --imageblock-border-color: var(--general-medium-border-color);
 
     /* Header & Horizon Colors */
     --h1-color: var(--text-color);
@@ -218,24 +238,24 @@ by Ambersight
     --tabview-border-width: calc(1rem / 15);
 
     /* Tabview Colors */
-    --tabview-border-color: var(--dark-color-3);
-    --tabview-button-background-color: var(--light-color-2);
-    --tabview-button-text-color: var(--text-color);
-    --tabview-hover-button-background-color: var(--dark-color-2);
-    --tabview-hover-button-text-color: var(--light-color-1);
-    --tabview-selected-button-background-color: var(--dark-color-3);
-    --tabview-selected-button-text-color: var(--light-color-2);
+    --tabview-border-color: var(--general-dark-border-color);
+    --tabview-button-background-color: var(--general-light-background-color);
+    --tabview-button-text-color: var(--general-light-text-color);
+    --tabview-hover-button-background-color: var(--general-medium-background-color);
+    --tabview-hover-button-text-color: var(--general-medium-text-color);
+    --tabview-selected-button-background-color: var(--general-dark-background-color);
+    --tabview-selected-button-text-color: var(--general-dark-text-color);
     --tabview-horizon-color: var(--dark-color-3), 0.65;
-    --tabview-content-background-color: var(--light-color-2), 0.25;
-    --tabview-content-text-color: var(--text-color);
+    --tabview-content-background-color: var(--general-light-background-color), 0.25;
+    --tabview-content-text-color: var(--general-light-text-color);
 
     /* Tabel Vs */
     --table-border-width: calc(2rem / 15);
 
     /* Tabel Colors */
-    --table-border-color: var(--dark-color-3), 0.5;
-    --table-header-background-color: var(--dark-color-2);
-    --table-header-text-color: var(--light-color-1);
+    --table-border-color: var(--general-strong-border-color);
+    --table-header-background-color: var(--general-medium-background-color);
+    --table-header-text-color: var(--general-medium-text-color);
     --table-background-color: var(--light-color-1);
     --table-text-color: var(--text-color);
 
@@ -243,34 +263,34 @@ by Ambersight
     --blockquote-border-width: calc(2rem / 15);
 
     /* Blockquote Colors */
-    --blockquote-background-color: var(--light-color-2);
-    --blockquote-text-color: var(--text-color);
+    --blockquote-background-color: var(--general-light-background-color);
+    --blockquote-text-color: var(--general-light-text-color);
     --blockquote-shadow-color: 0, 0, 0, 0;
-    --blockquote-border-color: var(--dark-color-3), 0.18;
+    --blockquote-border-color: var(--general-medium-border-color);
 
     /* Code Block Colors */
     --code-block-background-color: var(--blockquote-background-color);
     --code-block-text-color: var(--blockquote-text-color);
-    --code-block-border-color: var(--dark-color-3), 0.5;
+    --code-block-border-color: var(--general-strong-border-color);
 
     /* TOC Colors */
-    --toc-background-color: var(--light-color-2);
-    --toc-text-color: var(--text-color);
+    --toc-background-color: var(--general-light-background-color);
+    --toc-text-color: var(--general-light-text-color);
     --toc-border-color: var(--dark-color-2);
 
     /* Note Colors */
     --note-background-color: 255, 242, 114;
-    --note-text-color: var(--text-color);
-    --note-border-color: var(--dark-color-3), 0.5;
+    --note-text-color: 24, 27, 27;
+    --note-border-color: 24, 27, 27, 0.5;
 
     /* Footnote Block Colors*/
     --footnote-block-background-color: var(--dark-color-2), 0.18;
     --footnote-block-text-color: var(--text-color);
-    --footnote-block-border-color: var(--dark-color-3);
+    --footnote-block-border-color: var(--general-dark-border-color);
 
     /* Rating Module Colors */
-    --rating-background-color: var(--light-color-2);
-    --rating-text-color: var(--text-color);
+    --rating-background-color: var(--general-light-background-color);
+    --rating-text-color: var(--general-light-text-color);
     --rating-rateup-color: var(--accept-color);
     --rating-ratedown-color: var(--warning-color);
     --rating-cancel-color: var(--neutral-color);
@@ -279,18 +299,18 @@ by Ambersight
     --rating-cancel-text-color: var(--neutral-text-color);
     --rating-info-color: var(--dark-color-3);
     --rating-info-text-color: var(--light-color-2);
-    --rating-border-color: var(--dark-color-2);
+    --rating-border-color: var(--general-dark-border-color);
 
     /* Popup Vs */
     --popup-tip-content: "（点击空白处关闭）";
 
     /* Popups Colors */
-    --popup-shadow-color: var(--text-color), 0.65;
-    --popup-background-color: var(--light-color-2);
-    --popup-text-color: var(--text-color);
-    --popup-title-background-color: var(--dark-color-3);
-    --popup-title-text-color: var(--light-color-1);
-    --popup-border-color: var(--dark-color-3), 0.5;
+    --popup-fader-color: var(--general-shadow-color), 0.65;
+    --popup-background-color: var(--general-light-background-color);
+    --popup-text-color: var(--general-light-text-color);
+    --popup-title-background-color: var(--general-dark-background-color);
+    --popup-title-text-color: var(--general-dark-text-color);
+    --popup-border-color: var(--general-strong-border-color);
     --popup-button-text-color: var(--general-button-text-color);
     --popup-button-background-color: var(--general-button-background-color);
     --popup-hover-button-text-color: var(--general-hover-button-text-color);
@@ -299,15 +319,15 @@ by Ambersight
     --popup-loading-color: var(--dark-color-2);
 
     /* The 4 */
-    --lightblock-background-color: var(--light-color-2);
-    --lightblock-text-color: var(--text-color);
-    --darkblock-background-color: var(--dark-color-3);
-    --darkblock-text-color: var(--light-color-2);
-    --styled-quote-background-color: var(--light-color-2);
-    --styled-quote-text-color: var(--text-color);
-    --styled-quote-border-color: var(--dark-color-3);
-    --dark-styled-quote-background-color: var(--dark-color-3);
-    --dark-styled-quote-text-color: var(--light-color-2);
+    --lightblock-background-color: var(--general-light-background-color);
+    --lightblock-text-color: var(--general-light-text-color);
+    --darkblock-background-color: var(--general-dark-background-color);
+    --darkblock-text-color: var(--general-dark-text-color);
+    --styled-quote-background-color: var(--general-light-background-color);
+    --styled-quote-text-color: var(--general-light-text-color);
+    --styled-quote-border-color: var(--general-dark-border-color);
+    --dark-styled-quote-background-color: var(--general-dark-background-color);
+    --dark-styled-quote-text-color: var(--general-dark-text-color);
     --dark-styled-quote-border-color: var(--light-color-2);
 
     /* Swatch paid me to do this */
@@ -433,7 +453,7 @@ h6 {
     color: rgba(var(--h6-color));
 }
 
-input, textarea, select, button, meter, progress, code, tt, .code {
+input, textarea, select, button, meter, progress, code, tt, .code, pre, .pre {
     font-family: var(--mono-font);
 }
 
@@ -480,7 +500,7 @@ img, embed, video, object, iframe, table {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: var(--header-background-image-2);
+    background-image: var(--header-extra-background-image);
     background-size: 0.25em 0.25em;
 }
 
@@ -592,7 +612,7 @@ img, embed, video, object, iframe, table {
     flex: 2 2 auto;
     margin: 0;
     position: relative;
-    transition: background 0.3s;
+    transition: background var(--general-transition-time-slow);
 }
 
 #top-bar div[class*=top-bar] > ul > li:is(:hover, :active, :focus, :focus-within, .sfhover) {
@@ -612,7 +632,7 @@ img, embed, video, object, iframe, table {
     color: rgba(var(--topbar-text-color));
     background: transparent;
     box-shadow: none;
-    transition: box-shadow 0.15s;
+    transition: box-shadow clamp(0s, 0.15s, calc(var(--general-transition-time-slow) / 2));
 }
 
 #top-bar div[class*=top-bar] > ul > li:is(:hover, :active, :focus, :focus-within, .sfhover) > a {
@@ -631,13 +651,13 @@ img, embed, video, object, iframe, table {
     flex-direction: column;
     min-width: 100%;
     width: auto;
-    backdrop-filter: blur(1.33px);
+    backdrop-filter: blur(var(--general-blur));
     box-shadow: 0 2px 6px rgba(var(--topbar-drop-shadow-color));
     left: 0;
     pointer-events: none;
     opacity: 0;
     visibility: visible;
-    transition: opacity 0.2s ease-in-out;
+    transition: opacity var(--general-transition-time-fast) ease-in-out;
 }
 
 #top-bar div[class*=top-bar] > ul > li:last-of-type > ul {
@@ -671,7 +691,7 @@ img, embed, video, object, iframe, table {
     background: transparent;
     color: rgba(var(--topbar-drop-text-color));
     padding: 0 1em;
-    transition: background 0.3s;
+    transition: background var(--general-transition-time-slow);
     font-size: 0.8rem;
     box-sizing: border-box;
     white-space: nowrap;
@@ -701,7 +721,7 @@ img, embed, video, object, iframe, table {
     width: 100%;
     height: 100%;
     font-size: 0;
-    transition: background 0.3s, box-shadow 0.15s;
+    transition: background var(--general-transition-time-slow), box-shadow clamp(0s, 0.15s, calc(var(--general-transition-time-slow) / 2));
     background: transparent;
 }
 
@@ -763,7 +783,7 @@ a#account-topbutton {
     background: rgba(var(--account-button-background-color));
     color: rgba(var(--account-button-text-color));
     border: none;
-    transition: background 0.3s;
+    transition: background var(--general-transition-time-slow);
 }
 
 #account-topbutton:is(:hover, :active, :focus, :focus-within) {
@@ -791,7 +811,7 @@ a#account-topbutton {
     align-items: center;
     text-align: center;
     background: transparent;
-    transition: background 0.3s;
+    transition: background var(--general-transition-time-slow);
     color: rgba(var(--account-drop-text-color));
     text-decoration: none;
 }
@@ -828,7 +848,7 @@ a#account-topbutton {
     font-weight: 500;
     color: rgba(var(--search-button-text-color));
     background: rgba(var(--search-button-background-color));
-    transition: background 0.3s;
+    transition: background var(--general-transition-time-slow);
     cursor: pointer;
     border: none;
     font-family: var(--body-font);
@@ -912,7 +932,7 @@ a#account-topbutton {
     padding: 0.1rem 0.3rem;
     margin: 0;
     text-decoration: none;
-    transition: background 0.15s;
+    transition: background var(--general-transition-time-fast);
 }
 
 .page-tags span a:is(:hover, :active, :focus, :focus-within) {
@@ -949,7 +969,7 @@ div[id*=page-options-bottom] > a {
     flex: 2 0 auto;
     color: rgba(var(--page-option-text-color));
     background: rgba(var(--page-option-background-color));
-    transition: background 0.3s;
+    transition: background var(--general-transition-time-slow);
     display: flex;
     line-height: 1;
     justify-content: center;
@@ -1061,7 +1081,7 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
     border-radius: 0 0.75rem 0.75rem 0;
     z-index: -1;
     opacity: 1;
-    transition: opacity 0.2s ease, left 0.2s ease;
+    transition: opacity var(--general-transition-time-fast) ease, left calc(2 * var(--general-transition-time-fast)) ease;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1069,7 +1089,7 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
 }
 
 #side-bar:is(:hover, :focus-within)::after {
-    left: -2rem;
+    left: calc(-1 * var(--sidebar-width));
     opacity: 0;
 }
 
@@ -1155,9 +1175,9 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
     transition: opacity 0.25s ease 0.125s, width 0.25s ease 0.125s;
     z-index: -1;
     pointer-events: none;
-    background: rgba(var(--popup-shadow-color));
+    background: rgba(var(--popup-fader-color));
     opacity: 0;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(var(--general-blur));
 }
 
 #side-bar .close-menu img {
@@ -1193,7 +1213,7 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
     width: 100%;
     box-sizing: border-box;
     outline: none;
-    transition: box-shadow 0.3s;
+    transition: box-shadow var(--general-transition-time-slow);
     font-weight: 900;
 }
 
@@ -1206,7 +1226,7 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
     outline: none;
     box-sizing: border-box;
     border: none;
-    transition: box-shadow 0.3s;
+    transition: box-shadow var(--general-transition-time-slow);
 }
 
 .change-textarea-size {
@@ -1228,7 +1248,7 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
     font-size: 1rem;
     margin-left: 0.5rem;
     text-decoration: none;
-    transition: background 0.2s;
+    transition: background var(--general-transition-time-fast);
 }
 
 .edit-help-34 {
@@ -1248,7 +1268,7 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
     margin-right: 0.5rem;
     font-size: 0.8rem;
     text-decoration: none;
-    transition: background 0.2s;
+    transition: background var(--general-transition-time-fast);
 }
 
 .edit-help-34 a:is(:hover, :active, :focus, :focus-within),
@@ -1288,8 +1308,9 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
     width: 100% !important;
     box-sizing: border-box;
     min-height: 5rem;
-    transition: box-shadow 0.3s;
+    transition: box-shadow var(--general-transition-time-slow);
     border: none;
+    padding: 0.5rem;
 }
 
 .edit-page-bottomtable td .sub {
@@ -1342,7 +1363,7 @@ div.buttons input {
     flex-grow: 1;
     height: 2rem;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background var(--general-transition-time-fast);
     line-height: 1;
 }
 
@@ -1399,7 +1420,7 @@ div.buttons input:is(:hover, :active, :focus, :focus-within) {
     width: 100%;
     height: 100%;
     background: rgba(var(--edit-area-button-background-color));
-    transition: background 0.2s;
+    transition: background var(--general-transition-time-fast);
 }
 
 #wd-editor-toolbar-panel a:is(:hover, :active, :focus, :focus-within) {
@@ -1466,7 +1487,8 @@ div.buttons input:is(:hover, :active, :focus, :focus-within) {
 }
 
 #who-rated-page-area .printuser {
-    padding-left: 0.75em;
+    border-bottom: rgba(var(--action-area-border-color)) solid 0.15rem;
+    padding: 0.2rem;
 }
 
 #who-rated-page-area span[style*=color] {
@@ -1478,6 +1500,7 @@ div.buttons input:is(:hover, :active, :focus, :focus-within) {
     color: rgba(var(--text-color)) !important;
     font-size: 1.25em;
     line-height: 1;
+    border-bottom: rgba(var(--action-area-border-color)) solid 0.15rem;
 }
 
 /* Tags */
@@ -1526,7 +1549,7 @@ table.form td input {
     padding: 0.2em 0.5em;
     margin: 0;
     outline: none;
-    transition: box-shadow 0.3s;
+    transition: box-shadow var(--general-transition-time-slow);
     font-weight: 500;
 }
 
@@ -1561,7 +1584,7 @@ a.action-area-close,
     width: 2rem;
     background: rgba(var(--general-button-background-color));
     color: rgba(var(--general-button-text-color));
-    transition: background 0.3s;
+    transition: background var(--general-transition-time-slow);
     text-decoration: none;
     font-size: 0;
     margin: 0;
@@ -1614,7 +1637,7 @@ a.action-area-close:is(:hover, :active, :focus, :focus-within),
 #upload-userfile[type=file] {
     cursor: pointer;
     box-shadow: none;
-    transition: box-shadow 0.3s;
+    transition: box-shadow var(--general-transition-time-slow);
 }
 
 #upload-userfile[type=file]:is(:hover, :active, :focus, :focus-within) {
@@ -1636,7 +1659,7 @@ a.action-area-close:is(:hover, :active, :focus, :focus-within),
     background: rgba(var(--general-button-background-color));
     min-width: 5em;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background var(--general-transition-time-fast);
     font-weight: 500;
     line-height: normal;
 }
@@ -1654,7 +1677,7 @@ a.action-area-close:is(:hover, :active, :focus, :focus-within),
     width: 100% !important;
     box-sizing: border-box;
     min-height: 5rem;
-    transition: box-shadow 0.3s;
+    transition: box-shadow var(--general-transition-time-slow);
     border: none;
 }
 
@@ -1733,7 +1756,7 @@ a.action-area-close:is(:hover, :active, :focus, :focus-within),
     background: transparent;
     justify-content: center;
     font-size: 0.9rem;
-    transition: background 0.3s;
+    transition: background var(--general-transition-time-slow);
     min-width: 1rem;
     font-weight: 500;
 }
@@ -1769,7 +1792,7 @@ table.page-history tr {
     grid-template-columns: 2.5rem 3rem 4.4rem max-content 1fr max-content;
     border-bottom: rgba(var(--action-area-border-color)) solid 0.15rem;
     padding: 0.5rem 0;
-    transition: background 0.3s;
+    transition: background var(--general-transition-time-slow);
 }
 
 table.page-history tr:is(:hover, :focus-within) {
@@ -1829,7 +1852,7 @@ table.page-history tr td:nth-child(4) a {
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: background 0.3s;
+    transition: background var(--general-transition-time-slow);
 }
 
 table.page-history tr td:nth-child(4) a:is(:hover, :active, :focus, :focus-within) {
@@ -1933,7 +1956,7 @@ table.page-compare th {
     color: rgba(var(--general-button-text-color));
     background: rgba(var(--general-button-background-color));
     text-decoration: none;
-    transition: background 0.3s;
+    transition: background var(--general-transition-time-slow);
     height: 2rem;
 }
 
@@ -1977,7 +2000,7 @@ table.page-compare th {
     font-weight: 400;
     font-size: 0.8rem;
     border-bottom: rgba(var(--action-area-border-color)) solid 0.15rem;
-    transition: background 0.3s;
+    transition: background var(--general-transition-time-slow);
 }
 
 .wanted-pages-module table.form td:is(:hover, :focus-within) {
@@ -1996,7 +2019,7 @@ table.page-compare th {
 #st-action-area > a,
 #st-action-area > span {
     border-bottom: rgba(var(--action-area-border-color)) solid 0.15rem;
-    transition: background 0.3s;
+    transition: background var(--general-transition-time-slow);
     display: block;
     padding: 0.3rem 0.5rem;
 }
@@ -2037,7 +2060,7 @@ table.page-compare th {
     color: rgba(var(--general-button-text-color));
     background: rgba(var(--general-button-background-color));
     text-decoration: none;
-    transition: background 0.3s;
+    transition: background var(--general-transition-time-slow);
     min-height: 2rem;
     min-width: 3rem;
     font-size: 0.8rem;
@@ -2061,7 +2084,7 @@ table.page-compare th {
     font-size: 0.8rem;
     padding: 0.3rem 0.5rem;
     border-bottom: rgba(var(--action-area-border-color)) solid 0.15rem;
-    transition: background 0.3s;
+    transition: background var(--general-transition-time-slow);
 }
 
 #action-area p+ul[style*="list-style: none"] li:is(:hover, :active, :focus, :focus-within) {
@@ -2081,7 +2104,7 @@ table.page-compare th {
     font-size: 0.8rem;
     padding: 0.2rem 0.5rem;
     border-bottom: rgba(var(--action-area-border-color)) solid 0.15rem;
-    transition: background 0.3s;
+    transition: background var(--general-transition-time-slow);
     display: flex;
     align-items: center;
 }
@@ -2158,7 +2181,7 @@ table.page-compare th {
     font-weight: 400;
     font-size: 0.8rem;
     border-bottom: rgba(var(--action-area-border-color)) solid 0.15rem;
-    transition: background 0.3s;
+    transition: background var(--general-transition-time-slow);
     padding: 0.5em 1em;
 }
 
@@ -2310,7 +2333,7 @@ hr {
     display: block;
     padding: 0;
     background: rgba(var(--tabview-button-background-color));
-    transition: background 0.3s;
+    transition: background var(--general-transition-time-slow);
     max-width: 100%;
 }
 
@@ -2459,6 +2482,10 @@ dd {
     margin-inline-start: 1rem;
 }
 
+ul, ol {
+    padding-inline-start: 2rem;
+}
+
 /* Note */
 div.wiki-note {
     background: rgba(var(--note-background-color));
@@ -2530,8 +2557,8 @@ div.fader {
     position: fixed;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(2px);
-    background: rgba(var(--popup-shadow-color));
+    backdrop-filter: blur(var(--general-blur));
+    background: rgba(var(--popup-fader-color));
     top: 0;
     left: 0;
 }
@@ -2710,7 +2737,7 @@ div.modalbox {
     flex-basis: 8em;
     flex-grow: 2;
     height: 2rem;
-    transition: background 0.2s;
+    transition: background var(--general-transition-time-fast);
     font-weight: 500;
     line-height: 1;
     text-decoration: none;
@@ -2856,7 +2883,7 @@ div.creditButtonStandalone p a {
     width: 100%;
     height: 100%;
     padding: 0;
-    transition: background 0.3s;
+    transition: background var(--general-transition-time-slow);
     margin: 0;
 }
 
@@ -3034,18 +3061,18 @@ div.creditBottomRate {
 }
 
 .bblock {
-    background-color: rgb(var(--text-color));
-    transition: color 0.3s linear;
+    background-color: rgba(var(--text-color));
+    transition: color var(--general-transition-time-slow) linear;
 }
 
 .bblock:is(:hover, :focus-within) {
-    background-color: rgb(var(--text-color));
+    background-color: rgba(var(--text-color));
     color: rgb(var(--background-color));
 }
 
 .dblock {
     background-color: currentColor;
-    transition: background-color 0.3s linear;
+    transition: background-color var(--general-transition-time-slow) linear;
 }
 
 .dblock:is(:hover, :focus-within) {
@@ -3053,7 +3080,8 @@ div.creditBottomRate {
 }
 
 .keycap {
-    background-color: rgb(var(--light-color-2));
+    background-color: rgba(var(--general-light-background-color));
+    color: rgba(var(--general-light-text-color));
     padding: 0.25em;
     border-radius: 0.25rem;
     box-shadow: 0 0.125em 0 0.05em rgb(var(--dark-color-3), 0.5);
@@ -3082,7 +3110,7 @@ div.creditBottomRate {
     color: rgba(var(--text-color));
     font-size: 0.85em;
     font-weight: 700;
-    transition: opacity 0.3s;
+    transition: opacity var(--general-transition-time-slow);
 }
 
 .licensebox a.collapsible-block-link:is(:hover, :active, :focus, :focus-within) {
@@ -3097,7 +3125,7 @@ div.creditBottomRate {
 @media only screen and (max-width: 1024px) {
     :root {
         --header-height: calc(var(--main-header-height-on-mobile) + var(--topbar-height-on-mobile));
-        --header-background-image: linear-gradient(to top, rgba(var(--dark-color-3)) var(--topbar-height-on-mobile), rgba(var(--dark-color-3), 0.9) 100%);
+        --header-background-image: linear-gradient(to top, rgba(var(--header-background-bottom)) var(--topbar-height-on-mobile), rgba(var(--header-background-top)) 100%);
         --header-width: 100%;
         --sidebar-width: min(var(--sidebar-width-on-mobile), calc(100% - 3rem));
     }
