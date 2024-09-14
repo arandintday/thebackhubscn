@@ -482,7 +482,7 @@ img, embed, video, object, iframe, table {
     display: grid;
     grid-template-areas : "h1" "topbar";
     grid-template-rows: 1fr var(--topbar-height);
-    z-index: 4;
+    z-index: 7;
     position: relative;
     top: 0;
     left: 0;
