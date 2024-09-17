@@ -744,7 +744,7 @@ img, embed, video, object, iframe, table {
         inset 0 -0.2rem 0 rgba(var(--topbar-hover-border-color));
 }
 
-#top-bar .mobile-top-bar.open-menu a:is(:hover, :active, :focus, :focus-within)::before {
+#top-bar .mobile-top-bar .open-menu a:is(:hover, :active, :focus, :focus-within)::before {
     background: rgba(var(--topbar-hover-text-color));
 }
 
