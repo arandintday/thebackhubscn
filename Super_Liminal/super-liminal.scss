@@ -2770,6 +2770,7 @@ div.modalbox {
     padding: 0 0.5em;
     font-size: 0.8rem;
     white-space: nowrap;
+    border: none;
 }
 
 .owindow .button-bar>a:not([onclick*=cleanAll]):is(:hover, :active, :focus, :focus-within),
