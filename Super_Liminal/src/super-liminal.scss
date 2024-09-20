@@ -85,6 +85,7 @@ by Ambersight
     --main-header-height-on-mobile: 8rem;
     --header-height: calc(var(--main-header-height) + var(--topbar-height));
     --header-width: 65rem;
+    --header-width-on-mobile: 100%;
     --header-margin: max(calc((100% - var(--header-width)) / 2), 0px);
     --logo-image: url("../images/white_logo.svg");
     --header-title: "The Backrooms";
@@ -3178,8 +3179,7 @@ div.creditBottomRate {
     :root {
         --header-height: calc(var(--main-header-height-on-mobile) + var(--topbar-height-on-mobile));
         --header-background-image: linear-gradient(to top, rgba(var(--header-background-bottom)) var(--topbar-height-on-mobile), rgba(var(--header-background-top)) 100%);
-        --header-width: 100%;
-        --sidebar-width: min(var(--sidebar-width-on-mobile), calc(100% - 3rem));
+        --header-margin: max(calc((100% - var(--header-width-on-mobile)) / 2), 0px);
     }
     
     /* Header */
@@ -3290,6 +3290,7 @@ div.creditBottomRate {
     #side-bar,
     #side-bar:is(:hover,:focus-within):not(:target) {
         left: calc(var(--sidebar-width) * -1);
+        width: min(var(--sidebar-width-on-mobile), calc(100% - 3rem));
     }
     
     #side-bar::before,
