@@ -3305,7 +3305,7 @@ div.creditBottomRate {
     #side-bar:target .close-menu {
         opacity: 1;
         pointer-events: auto;
-        width: calc(100% - var(--sidebar-width));
+        width: calc(100% - min(var(--sidebar-width-on-mobile), calc(100% - 3rem)));
     }
     
     /* Footer */
