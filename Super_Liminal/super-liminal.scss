@@ -2406,7 +2406,8 @@ hr {
     background: rgba(var(--tabview-selected-button-background-color));
 }
 
-.yui-navset .yui-nav li.selected a {
+.yui-navset .yui-nav li.selected a,
+.yui-navset .yui-nav li.selected a:is(:hover, :active, :focus, :focus-within) {
     color: rgba(var(--tabview-selected-button-text-color));
 }
 
