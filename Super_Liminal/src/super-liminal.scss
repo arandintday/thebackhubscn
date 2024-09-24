@@ -2606,6 +2606,7 @@ div.infobox-footer {
 
 div.infobox-footer {
     z-index: -1;
+    backdrop-filter: none;
 }
 
 div.infobox-footer p a.button {
