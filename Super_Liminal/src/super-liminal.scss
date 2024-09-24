@@ -160,6 +160,9 @@ by Ambersight
     --page-tag-background-color: var(--dark-color-2), 0.2;
     --page-tag-hover-background-color: var(--general-dark-background-color);
 
+    /* Page Tag Vs */
+    --page-tag-title: "标签 \0021b4";
+
     /* Page Option Colors */
     --page-option-text-color: var(--general-button-text-color);
     --page-option-hover-text-color: var(--general-hover-button-text-color);
@@ -304,6 +307,7 @@ by Ambersight
 
     /* Popup Vs */
     --popup-tip-content: "（点击空白处关闭）";
+    --popup-loading-content: "正在保存……";
 
     /* Popups Colors */
     --popup-fader-color: var(--general-shadow-color), 0.65;
@@ -909,7 +913,7 @@ a#account-topbutton {
 }
 
 .page-tags::before {
-    content: "标签 \0021b4";
+    content: var(--page-tag-title);
     font-weight: 700;
     font-size: 0.75rem;
     background: rgba(var(--page-tag-border-color));
@@ -1658,7 +1662,7 @@ a.action-area-close:is(:hover, :active, :focus, :focus-within),
 }
 
 #file-upload-form table.form tr:first-child td:first-child::after {
-    content: "：";
+    content: ":";
 }
 
 #upload-userfile[type=file] {
@@ -2642,7 +2646,7 @@ div.modalbox {
 }
 
 .owindow.owait::before {
-    content: "正在保存……";
+    content: var(--popup-loading-content);
     display: block;
     white-space: nowrap;
 }
