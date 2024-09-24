@@ -2105,7 +2105,7 @@ table.page-compare th {
 #action-area h1 + p + h2 ~ div[style="padding-left:3em;"] > div {
     display: flex;
     border-bottom: rgba(var(--action-area-border-color)) solid 0.15rem;
-    word-break: break-all;
+    word-break: break-word;
 }
 
 #action-area h1 + p + h2 ~ div[style="padding-left:3em;"] > div a {
@@ -2183,7 +2183,7 @@ table.page-compare th {
 .page-source {
     background: rgba(var(--page-source-background-color));
     color: rgba(var(--page-source-text-color));
-    word-break: break-all;
+    word-break: break-word;
     border: none;
     padding: 1rem;
     font-family: var(--mono-font);
