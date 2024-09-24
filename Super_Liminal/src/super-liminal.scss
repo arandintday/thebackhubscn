@@ -716,7 +716,6 @@ img, embed, video, object, iframe, table {
 #top-bar div[class*=top-bar] > ul > li > ul > li > ul {
     box-sizing: border-box;
     border: solid calc(var(--topbar-drop-border-width) / 2) rgba(var(--topbar-drop-border-color));
-    border-left: none;
     background: rgba(var(--topbar-drop-background-color));
     display: flex;
     flex-direction: column;
