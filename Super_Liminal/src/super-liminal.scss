@@ -3108,6 +3108,12 @@ div.creditBottomRate {
     padding: 0.5rem 0;
 }
 
+div.creditRate + br + span[style*="margin-top: -0.7rem"] {
+    margin: -0.2rem 0.5rem 0.2rem 0 !important;
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
 /* The 4 */
 .lightblock {
     background: rgba(var(--lightblock-background-color));
