@@ -2194,6 +2194,10 @@ table.page-compare th {
     text-align: center;
 }
 
+.error-block a {
+    color: rgba(var(--warning-text-color));
+}
+
 /* Rename */
 #rename-backlinks-box table.form {
     display: grid;
@@ -2293,6 +2297,7 @@ table.page-compare th {
     color: rgba(var(--imageblock-caption-text-color));
     padding: 0.2em 1em;
     text-align: center;
+    width: auto !important;
 }
 
 .scp-image-caption p {
@@ -2582,7 +2587,8 @@ div.wiki-note {
 }
 
 #odialog-container[style*=block],
-div.fader {
+div.fader,
+div.infobox-footer {
     display: flex !important;
     justify-content: center;
     align-items: center;
@@ -2593,9 +2599,30 @@ div.fader {
     background: rgba(var(--popup-fader-color));
     top: 0;
     left: 0;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
 }
 
-div.modalcontainer {
+div.infobox-footer {
+    z-index: -1;
+}
+
+div.infobox-footer p a.button {
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    position: absolute;
+    border: none;
+}
+
+div.modalcontainer,
+div#u-infobox {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2606,8 +2633,13 @@ div.modalcontainer {
     pointer-events: none;
 }
 
+div#u-infobox {
+    backdrop-filter: blur(var(--general-blur));
+}
+
 .owindow,
-div.modalbox {
+div.modalbox,
+div.infobox {
     max-width: 80ch;
     top: initial !important;
     left: initial !important;
@@ -2622,6 +2654,10 @@ div.modalbox {
     padding: 0;
     pointer-events: auto;
     font-size: var(--content-font-size);
+}
+
+div.infobox {
+    pointer-events: inherit;
 }
 
 .owindow.owait,
@@ -2856,6 +2892,10 @@ ul.creditRate {
     padding: 0;
 }
 
+.creditRate > li {
+    line-height: 1.5;
+}
+
 div.rate-box-with-credit-button,
 div.page-rate-widget-box,
 div.creditButtonStandalone {
@@ -3000,7 +3040,8 @@ div.modalbox {
     max-height: unset;
 }
 
-div.modalbox::after {
+div.modalbox::after,
+div.infobox::after {
     position: absolute;
     border: none;
     margin: 0;
@@ -3025,23 +3066,34 @@ div.modalbox > hr {
     display: none;
 }
 
-div.modalbox > div:first-child {
+div.modalbox > div:first-child,
+div.infobox-title {
     background: rgba(var(--popup-title-background-color));
     padding: 0.5rem 1rem;
     text-align: left !important;
+    display: block;
+    line-height: 1.5;
 }
 
-div.modalbox > div:first-child h2 {
+div.modalbox > div:first-child h2,
+div.infobox-title p {
     margin: 0;
     font-size: 1.25rem;
     color: rgba(var(--popup-title-text-color));
+    font-family: var(--title-font);
 }
 
 div.close-credits {
     display: none;
 }
 
-div.modalbox .credit {
+div.infobox-body,
+div.infobox-footer p {
+    display: contents;
+}
+
+div.modalbox .credit,
+div.infobox-body > div:first-child {
     padding: 0.5rem 1rem;
     margin: 0;
     max-height: 47.5vh;
