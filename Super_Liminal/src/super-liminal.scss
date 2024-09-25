@@ -3148,6 +3148,12 @@ div.creditRate + br + span[style*="margin-top: -0.7rem"] {
 }
 
 .darkblock {
+    --h1-color: var(--darkblock-text-color);
+    --h2-color: var(--darkblock-text-color);
+    --h3-color: var(--darkblock-text-color);
+    --h4-color: var(--darkblock-text-color);
+    --h5-color: var(--darkblock-text-color);
+    --h6-color: var(--darkblock-text-color);
     background: rgba(var(--darkblock-background-color));
     color: rgba(var(--darkblock-text-color));
     margin: 1rem 0;
@@ -3163,6 +3169,12 @@ div.creditRate + br + span[style*="margin-top: -0.7rem"] {
 }
 
 .dark-styled-quote {
+    --h1-color: var(--dark-styled-quote-text-color);
+    --h2-color: var(--dark-styled-quote-text-color);
+    --h3-color: var(--dark-styled-quote-text-color);
+    --h4-color: var(--dark-styled-quote-text-color);
+    --h5-color: var(--dark-styled-quote-text-color);
+    --h6-color: var(--dark-styled-quote-text-color);
     background: rgba(var(--dark-styled-quote-background-color));
     color: rgba(var(--dark-styled-quote-text-color));
     border-left: rgba(var(--dark-styled-quote-border-color)) solid 0.6rem;
