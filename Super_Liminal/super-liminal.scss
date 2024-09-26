@@ -486,7 +486,7 @@ img, embed, video, object, iframe, table {
     color: rgba(var(--header-text-color));
     display: grid;
     grid-template-areas : "h1" "topbar";
-    grid-template-rows: 1fr var(--topbar-height);
+    grid-template-rows: var(--main-header-height) var(--topbar-height);
     z-index: 7;
     position: relative;
     top: 0;
