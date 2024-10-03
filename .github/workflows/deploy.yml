@@ -52,6 +52,7 @@ jobs:
             Super_Liminal/src/icon-masks.scss
             Super_Liminal/src/super-liminal.scss
             Super_Liminal/src/basic-styles.scss
+            Super_Liminal/src/colmod-style.scss
 
           destination: |
             New_BHL/css/banlist.css
@@ -73,6 +74,7 @@ jobs:
             Super_Liminal/css/icon-masks.css
             Super_Liminal/css/super-liminal.css
             Super_Liminal/css/basic-styles.css
+            Super_Liminal/css/colmod-style.css
 
           outputStyle: expanded
           indentWidth: 4
