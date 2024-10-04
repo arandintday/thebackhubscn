@@ -1405,7 +1405,7 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
     grid-gap: 0.5rem;
 }
 
-div.buttons input {
+div.buttons input, input.button, button, file, a.button {
     margin: 0;
     padding: 0 0.5em;
     display: flex;
@@ -1420,9 +1420,14 @@ div.buttons input {
     cursor: pointer;
     transition: background var(--general-transition-time-fast);
     line-height: 1;
+    text-decoration: none;
 }
 
-div.buttons input:is(:hover, :active, :focus, :focus-within) {
+div.buttons input:is(:hover, :active, :focus, :focus-within),
+input.button:is(:hover, :active, :focus, :focus-within),
+button:is(:hover, :active, :focus, :focus-within),
+file:is(:hover, :active, :focus, :focus-within),
+a.button:is(:hover, :active, :focus, :focus-within) {
     color: rgba(var(--general-hover-button-text-color));
     background: rgba(var(--general-hover-button-background-color));
 }
