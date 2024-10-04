@@ -3216,6 +3216,14 @@ div.creditRate + br + span[style*="margin-top: -0.7rem"] {
     overflow: hidden;
 }
 
+.printuser.deleted img {
+    height: 1.25em;
+    width: 1.25em;
+    padding: 0;
+    vertical-align: 0;
+    align-self: center;
+}
+
 /* Old Divs */
 .footer-wikiwalk-nav {
     font-weight: 700;
