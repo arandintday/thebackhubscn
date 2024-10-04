@@ -3190,6 +3190,10 @@ div.creditRate + br + span[style*="margin-top: -0.7rem"] {
     text-indent: 0;
 }
 
+.printuser a {
+    margin-right: 0;
+}
+
 .printuser>a:first-child {
     display: flex;
     user-select: none;
