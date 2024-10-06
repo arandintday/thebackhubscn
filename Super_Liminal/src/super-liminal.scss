@@ -882,6 +882,8 @@ a#account-topbutton {
     cursor: pointer;
     border: none;
     font-family: var(--body-font);
+    height: fit-content;
+    line-height: 1.5;
 }
 
 #search-top-box-form .button:is(:hover, :active, :focus, :focus-within) {
