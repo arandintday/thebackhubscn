@@ -424,7 +424,7 @@ table {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
-    font-family: rgba(var(--title-font));
+    font-family: var(--title-font);
     margin: 0.35em 0;
 }
 
@@ -537,7 +537,7 @@ img, embed, video, object, iframe, table {
     align-items: center;
     flex-direction: column;
     color: rgba(var(--header-text-color));
-    font-family: rgba(var(--header-font));
+    font-family: var(--header-font);
     text-shadow: 1px 1px 1px rgba(var(--header-text-shadow-color));
     box-sizing: border-box;
     line-height: 1.25;
