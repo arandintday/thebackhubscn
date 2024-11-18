@@ -3304,7 +3304,7 @@ div.creditRate + br + span[style*="margin-top: -0.7rem"] {
     
     /* Header */
     #header {
-        grid-template-rows: 1fr var(--topbar-height-on-mobile);
+        grid-template-rows: var(--main-header-height-on-mobile) var(--topbar-height-on-mobile);
         position: sticky;
         top: calc(-1 * var(--main-header-height-on-mobile));
     }
