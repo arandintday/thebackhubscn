@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*
 Super Liminal
 Wikidot Theme 2024
@@ -26,7 +28,7 @@ by Ambersight
     font-size: 15px;
     --body-font: Inter, "Noto Sans SC", "Noto Sans TC", Arimo, Verdana, Geneva, sans-serif;
     --header-font: Inter, "Noto Sans SC", "Noto Sans TC", Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
-    --title-font: var(--header-font);
+    --title-font: Inter, "Noto Sans SC", "Noto Sans TC", Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
     --mono-font: "JetBrains Mono", "Noto Serif SC", "Noto Serif TC", Consolas, monaco, monospace;
 
     /* Basic Colors */
@@ -92,7 +94,7 @@ by Ambersight
     --header-width: 65rem;
     --header-width-on-mobile: 100%;
     --header-margin: max(calc((100% - var(--header-width)) / 2), 0px);
-    --logo-image: url("../images/white_logo.svg");
+    --logo-image: url("https://github.backroomswiki.cn/Super_Liminal/images/white_logo.svg");
     --header-title: "The Backrooms";
     --header-title-font-size: 2.65rem;
     --header-title-font-size-on-mobile: 1.6rem;
@@ -231,7 +233,7 @@ by Ambersight
     /* Image Block Colors */
     --imageblock-caption-background-color: var(--general-light-background-color);
     --imageblock-caption-text-color: var(--general-light-text-color);
-    --imageblock-shaodw-color: 0, 0, 0, 0;
+    --imageblock-shadow-color: 0, 0, 0, 0;
     --imageblock-border-color: var(--general-medium-border-color);
 
     /* Header & Horizon Colors */
@@ -2323,7 +2325,7 @@ table.page-compare th {
 .scp-image-block {
     display: flex;
     flex-direction: column;
-    box-shadow: 0.2rem 0.2rem 0.4rem rgba(var(--imageblock-shaodw-color));
+    box-shadow: 0.2rem 0.2rem 0.4rem rgba(var(--imageblock-shadow-color));
     clear: both;
     border: rgba(var(--imageblock-border-color)) var(--imageblock-border-width) solid;
     max-width: 100%;
