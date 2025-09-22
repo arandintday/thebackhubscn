@@ -1402,7 +1402,9 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
 
 #edit-page-title:focus-visible,
 #edit-page-textarea:focus-visible,
-#edit-page-comments:focus-visible {
+#edit-page-comments:focus-visible,
+#new-post-div input.text:focus-visible,
+#new-post-div textarea#np-text:focus-visible {
     box-shadow:
         2px 2px 0 rgba(var(--edit-area-textarea-border-color)),
         -2px 2px 0 rgba(var(--edit-area-textarea-border-color)),
