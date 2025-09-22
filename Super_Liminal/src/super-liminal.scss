@@ -1,10 +1,9 @@
 @charset "UTF-8";
 
-/*
-Super Liminal
-Wikidot Theme 2024
-by Ambersight
-*/
+/* ------------------- */
+/* Super Liminal Theme */
+/* ----- by Ambersight */
+/* ------------------- */
 
 /* Site Stuff */
 @import url("../../New_BHL/css/banlist.css");
@@ -23,6 +22,9 @@ by Ambersight
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap');
 
+/* ------------------- */
+/* Root Variables ---- */
+/* ------------------- */
 :root {
     /* Font Set */
     font-size: 15px;
@@ -386,7 +388,9 @@ by Ambersight
     --swatch-topmenu-bg-color: var(--swatch-menubg-medium-dark-color);
 }
 
-/* Global */
+/* ------------------- */
+/* Global ------------ */
+/* ------------------- */
 body, html {
     line-height: 1.5;
     font-family: var(--body-font);
@@ -477,7 +481,7 @@ img, embed, video, object, iframe, table {
     max-width: 100%;
 }
 
-.button, .btn {
+.button, .btn, input[type="button"] {
     font-family: var(--body-font);
 }
 
@@ -485,7 +489,9 @@ img, embed, video, object, iframe, table {
     min-height: 100vh;
 }
 
-/* Header */
+/* ------------------- */
+/* Header ------------ */
+/* ------------------- */
 #header {
     width: 100%;
     height: var(--header-height);
@@ -898,7 +904,9 @@ a#account-topbutton {
     background: rgba(var(--search-button-hover-background-color));
 }
 
-/* Main Content */
+/* ------------------- */
+/* Main Content ------ */
+/* ------------------- */
 #main-content {
     margin: 2rem var(--body-margin);
     padding: 0;
@@ -1029,7 +1037,9 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
     background: rgba(var(--page-option-hover-background-color));
 }
 
-/* Footer */
+/* ------------------- */
+/* Footer ------------ */
+/* ------------------- */
 #footer {
     display: flex !important;
     flex-wrap: wrap;
@@ -1076,7 +1086,9 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
     color: rgba(var(--license-link-color));
 }
 
-/*Side Bar */
+/* ------------------- */
+/* Side Bar ---------- */
+/* ------------------- */
 #side-bar {
     width: var(--sidebar-width);
     height: 100vh;
@@ -1249,8 +1261,11 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
     display: none;
 }
 
-/* Action Area */
-#edit-page-form {
+/* ------------------- */
+/* Action Area ------- */
+/* ------------------- */
+#edit-page-form,
+#new-post-form {
     background-color: rgba(var(--edit-area-background-color));
     color: rgba(var(--edit-area-text-color));
     padding: 1rem;
@@ -1269,7 +1284,8 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
     padding: 0;
 }
 
-#edit-page-title {
+#edit-page-title,
+#new-post-div input.text {
     border: none;
     color: rgba(var(--edit-area-textarea-text-color));
     background: rgba(var(--edit-area-textarea-background-color));
@@ -1282,7 +1298,8 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
     font-weight: 900;
 }
 
-#edit-page-textarea {
+#edit-page-textarea,
+#new-post-div textarea#np-text {
     width: 100% !important;
     color: rgba(var(--edit-area-textarea-text-color));
     background: rgba(var(--edit-area-textarea-background-color));
@@ -1407,7 +1424,8 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
     display: none;
 }
 
-#edit-page-form div.buttons {
+#edit-page-form div.buttons,
+#new-post-form div.buttons {
     margin: 1rem 0 0;
     padding: 0;
     display: flex;
@@ -1452,14 +1470,14 @@ a.button:is(:hover, :active, :focus, :focus-within) {
     background: rgba(var(--edit-area-hover-button-background-color));
 }
 
-#wd-editor-toolbar-panel {
+:is(#wd-editor-toolbar-panel, #np-editor-panel) {
     margin: 1rem 0;
     display: flex;
     flex-direction: column;
     grid-gap: 0.5rem;
 }
 
-#wd-editor-toolbar-panel div {
+:is(#wd-editor-toolbar-panel, #np-editor-panel) div {
     display: flex;
     flex-wrap: wrap;
     grid-gap: 0.5rem;
@@ -1468,36 +1486,36 @@ a.button:is(:hover, :active, :focus, :focus-within) {
     height: auto;
 }
 
-#wd-editor-toolbar-panel div > ul {
+:is(#wd-editor-toolbar-panel, #np-editor-panel) div > ul {
     display: contents;
 }
 
-#wd-editor-toolbar-panel div > ul li {
+:is(#wd-editor-toolbar-panel, #np-editor-panel) div > ul li {
     display: block;
     width: 2rem;
     height: 2rem;
 }
 
-#wd-editor-toolbar-panel div > ul > li.hseparator {
+:is(#wd-editor-toolbar-panel, #np-editor-panel) div > ul > li.hseparator {
     display: none;
 }
 
-.wd-editor-toolbar-panel ul li:hover ul {
+:is(#wd-editor-toolbar-panel, #np-editor-panel) ul li:hover ul {
     border: 2px solid rgba(var(--edit-area-hover-button-background-color));
 }
 
-#wd-editor-toolbar-panel a {
+:is(#wd-editor-toolbar-panel, #np-editor-panel) a {
     width: 100%;
     height: 100%;
     background: rgba(var(--edit-area-button-background-color));
     transition: background var(--general-transition-time-fast);
 }
 
-#wd-editor-toolbar-panel a:is(:hover, :active, :focus, :focus-within) {
+:is(#wd-editor-toolbar-panel, #np-editor-panel) a:is(:hover, :active, :focus, :focus-within) {
     background: rgba(var(--edit-area-hover-button-background-color));
 }
 
-#wd-editor-toolbar-panel a::before {
+:is(#wd-editor-toolbar-panel, #np-editor-panel) a::before {
     content: "";
     display: block;
     width: 100%;
@@ -1509,7 +1527,7 @@ a.button:is(:hover, :active, :focus, :focus-within) {
     mask-size: 75%;
 }
 
-#wd-editor-toolbar-panel a:is(:hover, :active, :focus, :focus-within)::before {
+:is(#wd-editor-toolbar-panel, #np-editor-panel) a:is(:hover, :active, :focus, :focus-within)::before {
     background: rgba(var(--edit-area-hover-button-text-color));
 }
 
@@ -1610,7 +1628,8 @@ table.form td:first-child {
     font-weight: 700;
 }
 
-table.form td input {
+table.form td input,
+.new-page-box form input.text {
     width: 100%;
     box-sizing: border-box;
     border: none;
@@ -1623,7 +1642,8 @@ table.form td input {
     font-weight: 500;
 }
 
-table.form td input:focus-visible {
+table.form td input:focus-visible,
+.new-page-box form input.text:focus-visible {
     box-shadow:
         2px 2px 0 rgba(var(--edit-area-textarea-border-color)),
         -2px 2px 0 rgba(var(--edit-area-textarea-border-color)),
@@ -2295,7 +2315,9 @@ table.page-compare th {
     gap: .25rem .125rem;
 }
 
-/* Hovertips */
+/* ------------------- */
+/* Hovertips --------- */
+/* ------------------- */
 #avatar-hover-container {
     display: none;
 }
@@ -2311,6 +2333,9 @@ table.page-compare th {
     max-width: min(87.5%,calc(var(--body-width)*.75));
 }
 
+/* ------------------- */
+/* Writing Elements -- */
+/* ------------------- */
 /* Image Blocks */
 #page-content > img {
     margin: 1rem 0;
@@ -2621,7 +2646,9 @@ div.wiki-note {
     margin-bottom: 0.5rem;
 }
 
-/* Popups */
+/* ------------------- */
+/* Popups ------------ */
+/* ------------------- */
 .odialog-shader, .odialog-shader-iframe {
     display: none;
 }
@@ -3303,6 +3330,51 @@ div.creditRate + br + span[style*="margin-top: -0.7rem"] {
     margin-right: 0;
 }
 
+/* ------------------- */
+/* Wikidot Modules --- */
+/* ------------------- */
+.join-box a {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.2em 1em;
+    background-image: none;
+    background-color: rgba(var(--general-medium-background-color));
+    color: rgba(var(--general-medium-text-color));
+    border-radius: 0;
+    transition: background var(--general-transition-time-fast);
+    text-decoration: none;
+    width: fit-content;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.join-box a:is(:hover, :active, :focus, :focus-within) {
+    background-color: rgba(var(--general-dark-background-color));
+    color: rgba(var(--general-dark-text-color));
+}
+
+#who-invited-form table.form,
+#petition-new-campain-form table.form {
+    width: 100%;
+}
+
+#who-invited-form .autocomplete-container {
+    padding-top: 0 !important;
+}
+
+.new-page-box form {
+    display: flex;
+    gap: 0.25rem;
+}
+
+#new-post-form > br,
+#np-editor-title {
+    display: none;
+}
+
+/* ------------------- */
+/* Mobile Adaptation - */
+/* ------------------- */
 @media only screen and (max-width: 1024px) {
     :root {
         --header-height: calc(var(--main-header-height-on-mobile) + var(--topbar-height-on-mobile));
