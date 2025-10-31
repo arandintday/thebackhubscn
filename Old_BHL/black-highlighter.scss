@@ -1693,13 +1693,16 @@
                 z-index: 2;
                 overflow: hidden;
 
-                &:hover {
+                &:hover,
+                &:active,
+                &:focus-within {
                     background-color: rgba(var(--swatch-menubg-hover-color), 0.15);
                     text-decoration: none;
                 }
 
                 &::before,
-                &:hover::before {
+                &:hover::before,
+                &:active::before {
                     content: "";
                     position: absolute;
                     top: 0;
@@ -1717,7 +1720,8 @@
                     pointer-events: none;
                 }
 
-                &:hover::before {
+                &:hover::before,
+                &:active::before {
                     transform: translateX(-2rem);
                 }
 
@@ -1973,7 +1977,7 @@
         }
 
         .heading p,
-        #side-bar .side-block > .collapsible-block .collapsible-block-link {
+        .side-block > .collapsible-block .collapsible-block-link {
             --text-shadow: rgb(var(--swatch-border-color, 12, 12, 12));
             --wght: 700;
             display: block;
