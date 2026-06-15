@@ -1,0 +1,162 @@
+.creditRate {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    float:right;
+    padding: 0; margin: 0;
+    margin-bottom:10px;
+    margin-right:2em;
+}
+ 
+:where(.creditRate) div.page-rate-widget-box {
+    margin:0;
+}
+
+.rate-box-with-credit-button {
+    background-color: #633;
+    border: solid 1px #633;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+}
+.rate-box-with-credit-button .cancel {
+    border-right: 0;
+}
+.rate-box-with-credit-button .page-rate-widget-box {
+    box-shadow: none;
+}
+.rate-box-with-credit-button .creditButton {
+    display: inline-block;
+}
+.creditRate > li {
+    display: inline-block;
+    list-style: none;
+    line-height: initial;
+    text-align: initial;
+}
+.creditRate > li > br { display: none; }
+.creditButton p {
+    font-size: 0.8em;
+    margin:0;
+}
+.creditButton p a {
+    display: inline-block;
+    font-family: FontAwesome;
+    width: 1.425em;
+    line-height: 1;
+    margin-left: -5px;
+    color: #ffffff;
+    border-left: solid 1px #966;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.15em;
+}
+.creditButton p a:hover {
+    color: #3498db;
+}
+
+
+.creditButtonStandalone p {
+    margin: 0;
+}
+.creditButtonStandalone p a {
+    font-family: FontAwesome;
+    display: block;
+    width: 1.25em;
+    height: 1.25em;
+    line-height: 1.25em;
+    border-radius: 50%;
+    color: #ffffff;
+    text-align: center;
+    background: #744;
+    box-shadow: 0 0 3px gray;
+    font-size: 0.95em;
+}
+.creditButtonStandalone p a:hover {
+    background: #3498db;
+}
+
+#u-credit-view {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    display: flex;
+    z-index: 10;
+}
+:not(.unfolded) > #u-credit-view {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+#u-credit-view {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transition: opacity 0.105s linear, visibility 0.105s;
+}
+
+/* Add a lil X to close the box */
+.close-credits {
+    position: absolute;
+    top: 1.5em;
+    right: 1.5em;
+    width: 1em;
+}
+
+.fader {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.fader a {
+    font-size: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+}
+ 
+.modalcontainer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 37.5rem;
+    max-width: 95vw;
+    height: 350px;
+    margin: auto;
+}
+.modalbox {
+    background-color: #fefefe;
+    background:linear-gradient(#eee 51px,#fefefe 51px,#fefefe);
+    border: #333 solid 1px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(102, 0, 0, .5);
+    padding: 4px;
+    max-height: 50vh;
+}
+
+.modalbox .credit {
+    margin: 0 2em;
+    height: 30vh;
+    overflow-y: auto;
+}
+
+.creditBottomRate {
+    position: relative;
+    height: 1.875rem;
+    text-align: center;
+}
