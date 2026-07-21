@@ -262,10 +262,10 @@
     --tabview-content-background-color: var(--general-light-background-color), 0.25;
     --tabview-content-text-color: var(--general-light-text-color);
 
-    /* Tabel Vs */
+    /* Table Vs */
     --table-border-width: calc(2rem / 15);
 
-    /* Tabel Colors */
+    /* Table Colors */
     --table-border-color: var(--general-strong-border-color);
     --table-header-background-color: var(--general-medium-background-color);
     --table-header-text-color: var(--general-medium-text-color);
@@ -1339,7 +1339,6 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
 }
 
 .edit-help-34 a {
-    font-size: 1rem;
     color: rgba(var(--edit-area-button-text-color));
     background: rgba(var(--edit-area-button-background-color));
     height: 1.5rem;
@@ -3116,7 +3115,6 @@ div.infobox::after {
     border: none;
     margin: 0;
     padding: 0;
-    width: 5rem;
     height: 2.5rem;
     bottom: -2.2rem;
     right: 0;
