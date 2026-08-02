@@ -1,27 +1,61 @@
-tr#revision-row-1496157767,
-tr#revision-row-1496157716,
-tr#revision-row-1496157676,
-tr#revision-row-1496157704,
-tr#revision-row-1496157668,
-tr#revision-row-1496157666,
-tr#revision-row-1496157663,
-tr#revision-row-1496157658,
-tr#revision-row-1496157655,
-tr#revision-row-1496157652,
-tr#revision-row-1496157650,
-tr#revision-row-1496157647,
-tr#revision-row-1496157642,
-tr#revision-row-1496157633,
-tr#revision-row-1496157630,
-tr#revision-row-1496157624,
-tr#revision-row-1496157621,
-tr#revision-row-1496157617,
-tr#revision-row-1496157611,
-tr#revision-row-1496157604,
-tr#revision-row-1496157598,
-tr#revision-row-1496157594,
-tr#revision-row-1496157589,
-tr#revision-row-1496157581,
-tr#revision-row-1496157537 {
-    display: none !important;
+@each $revision
+    in (
+        1496157767,
+        1496157716,
+        1496157676,
+        1496157704,
+        1496157668,
+        1496157666,
+        1496157663,
+        1496157658,
+        1496157655,
+        1496157652,
+        1496157650,
+        1496157647,
+        1496157642,
+        1496157633,
+        1496157630,
+        1496157624,
+        1496157621,
+        1496157617,
+        1496157611,
+        1496157604,
+        1496157598,
+        1496157594,
+        1496157589,
+        1496157581,
+        1496157537
+    )
+{
+    tr#revision-row-#{$revision} {
+        display: none !important;
+    }
+}
+
+@each $username, $replace-string in (ye-zhi-d, Ye Zhi_D), (yoghurt-jinchouge, Yoghurt Jinchouge),
+    (spiced-salt-yuy, Spiced Salt YuY), (y-deathstroke, Y Deathstroke), (cloudaswater, cloudaswater),
+    (stewie-griffin, Stewie Griffin), (zcom12, ZCOM12), (bluegralloy, BlueGralloy), (br-bot, Br_bot),
+    (conversely-louver, conversely-louver), (white-geese, White geese), (gaplouelpew, GaplouelPew),
+    (watercold, watercold), (starset-m, Starset_M), (destitute, Destitute), (dr-day, Dr Dayy), (dr-dayy, Dr Dayy),
+    (cancel-nine, Cancel Nine), (antioxidaglucose, Antioxidaglucose), (thisuserdoesntexist, ThisUserDoesntExist)
+{
+    span.printuser {
+        a[href="http://www.wikidot.com/user:info/#{$username}"] {
+            display: block !important;
+            pointer-events: none;
+            color: #000;
+            text-decoration: none !important;
+            font-size: 0px;
+
+            &:nth-child(2),
+            img {
+                display: none !important;
+            }
+
+            &::before {
+                content: "#{$replace-string}";
+                font-size: initial;
+            }
+        }
+    }
 }
