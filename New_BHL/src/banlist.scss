@@ -32,11 +32,11 @@
     }
 }
 
-@each $username, $replace-string in (ye-zhi-d, Ye Zhi_D), (yoghurt-jinchouge, Yoghurt Jinchouge),
+@each $username, $replace-string in (ye-zhi-d, Ye_zhi_D), (yoghurt-jinchouge, Yoghurt Jinchouge),
     (spiced-salt-yuy, Spiced Salt YuY), (y-deathstroke, Y Deathstroke), (cloudaswater, cloudaswater),
     (stewie-griffin, Stewie Griffin), (zcom12, ZCOM12), (bluegralloy, BlueGralloy), (br-bot, Br_bot),
     (conversely-louver, conversely-louver), (white-geese, White geese), (gaplouelpew, GaplouelPew),
-    (watercold, watercold), (starset-m, Starset_M), (destitute, Destitute), (dr-day, Dr Dayy), (dr-dayy, Dr Dayy),
+    (watercold, watercold), (starset-m, Starset_M), (dr-day, Dr Dayy), (dr-dayy, Dr Dayy),
     (cancel-nine, Cancel Nine), (antioxidaglucose, Antioxidaglucose), (thisuserdoesntexist, ThisUserDoesntExist)
 {
     span.printuser {
