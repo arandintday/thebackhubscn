@@ -1149,6 +1149,11 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
     opacity: 0;
 }
 
+#interwiki body {
+    background-color: unset;
+    min-width: unset;
+}
+
 :is(#side-bar, #interwiki) > * {
     position: relative;
     z-index: 1;
