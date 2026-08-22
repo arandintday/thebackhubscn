@@ -1224,6 +1224,10 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
     direction: ltr;
 }
 
+:is(#side-bar, #interwiki) .menu-item > img {
+    display: none;
+}
+
 :is(#side-bar, #interwiki) .menu-item a {
     display: block;
     font-size: 0.9rem;
