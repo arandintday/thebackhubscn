@@ -1149,16 +1149,16 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
     opacity: 0;
 }
 
-#side-bar > * {
+:is(#side-bar, #interwiki) > * {
     position: relative;
     z-index: 1;
 }
 
-#side-bar p {
+:is(#side-bar, #interwiki) p {
     display: contents;
 }
 
-#side-bar .side-block {
+:is(#side-bar, #interwiki) .side-block {
     display: flex;
     flex-direction: column;
 }
@@ -1182,7 +1182,7 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
     filter: drop-shadow(rgba(var(--sidebar-media-icon-color)) 20rem 0);     
 }
 
-#side-bar .heading,
+:is(#side-bar, #interwiki) .heading,
 #side-bar .collapsible-block-unfolded-link a,
 #side-bar .collapsible-block-folded a {
     background: rgba(var(--sidebar-title-background-color));
@@ -1217,14 +1217,14 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
     content: "▼"
 }
 
-#side-bar .menu-item {
+:is(#side-bar, #interwiki) .menu-item {
     font-size: 0;
     display: flex;
     border-bottom: solid calc(2rem / 15) rgba(var(--sidebar-border-color));
     direction: ltr;
 }
 
-#side-bar .menu-item a {
+:is(#side-bar, #interwiki) .menu-item a {
     display: block;
     font-size: 0.9rem;
     text-decoration: none;
@@ -1237,7 +1237,7 @@ div[id*=page-options-bottom] > a:is(:hover, :active) {
     flex-grow: 2;
 }
 
-#side-bar .menu-item a:is(:hover, :active, :focus, :focus-within) {
+:is(#side-bar, #interwiki) .menu-item a:is(:hover, :active, :focus, :focus-within) {
     background: rgba(var(--sidebar-hover-background-color));
     color: rgba(var(--sidebar-hover-text-color));
 }
