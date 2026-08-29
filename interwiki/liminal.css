@@ -42,6 +42,10 @@ body {
     padding: 0;
 }
 
+body {
+    overflow: hidden;
+}
+
 /* Side Block */
 .side-block {
     display: block;
