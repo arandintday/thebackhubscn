@@ -1,0 +1,49 @@
+:root {
+    --text-color: 35, 35, 38;
+    --background-color: 252, 252, 252;
+    --light-color-2: 240, 240, 244;
+    --dark-color-2: 229, 229, 238;
+    --dark-color-3: 50, 50, 51;
+    --dark-color-4: var(--dark-color-3);
+    --general-light-background-color: var(--light-color-2);
+    --general-light-text-color: var(--text-color);
+    --general-medium-background-color: var(--dark-color-2);
+    --general-medium-text-color: var(--text-color);
+    --general-dark-background-color: var(--dark-color-3);
+    --general-dark-text-color: var(--light-color-1);
+    --header-background-bottom: var(--light-color-2);
+    --header-background-top: var(--light-color-2), 0.8;
+    --header-extra-background-image: none;
+    --logo-image: url(https://github.backroomswiki.cn/Super_Liminal/images/black_logo.svg);
+    --header-text-color: var(--dark-color-3);
+    --header-text-shadow-color: 0, 0, 0, 0;
+    --topbar-text-color: var(--dark-color-3);
+    --topbar-hover-text-color: var(--light-color-2);
+    --header-username-color: var(--dark-color-3);
+    --account-button-text-color: var(--light-color-2);
+    --account-button-hover-text-color: var(--text-color);
+    --account-button-background-color: var(--dark-color-3);
+    --account-drop-hover-background-color: var(--light-color-1);
+    --page-title-border-color: var(--dark-color-2);
+    --sidebar-title-background-color: var(--dark-color-2);
+    --sidebar-title-text-color: var(--dark-color-3);
+    --sidebar-title-shadow-color: 0, 0, 0, 0;
+    --sidebar-media-background-color: var(--light-color-2);
+    --sidebar-hover-background-color: var(--light-color-2);
+    --hr-color: var(--dark-color-2);
+    --popup-loading-color: var(--dark-color-3);
+    --scrollbar-color: var(--dark-color-3);
+    --scrollbar-background-color: var(--light-color-2);
+    --page-option-background-color: var(--light-color-2);
+}
+
+#header {
+    box-shadow:
+        0px 0px 8.5px -1px rgba(var(--general-shadow-color), 0.42),
+        0px 0px 68px -21px rgba(var(--general-shadow-color), 0.1)
+}
+
+#header h2 span::before {
+    opacity: 0.1;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImRheXRpbWUuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksd0JBQXdCO0lBQ3hCLGlDQUFpQztJQUNqQyw4QkFBOEI7SUFDOUIsNkJBQTZCO0lBQzdCLDBCQUEwQjtJQUMxQixtQ0FBbUM7SUFDbkMsc0RBQXNEO0lBQ3RELDZDQUE2QztJQUM3QyxzREFBc0Q7SUFDdEQsOENBQThDO0lBQzlDLG9EQUFvRDtJQUNwRCwrQ0FBK0M7SUFDL0MsZ0RBQWdEO0lBQ2hELGtEQUFrRDtJQUNsRCxxQ0FBcUM7SUFDckMsc0ZBQXNGO0lBQ3RGLHdDQUF3QztJQUN4QyxzQ0FBc0M7SUFDdEMsd0NBQXdDO0lBQ3hDLCtDQUErQztJQUMvQyw0Q0FBNEM7SUFDNUMsaURBQWlEO0lBQ2pELG9EQUFvRDtJQUNwRCxzREFBc0Q7SUFDdEQsMkRBQTJEO0lBQzNELDhDQUE4QztJQUM5QyxxREFBcUQ7SUFDckQsK0NBQStDO0lBQy9DLHdDQUF3QztJQUN4QyxzREFBc0Q7SUFDdEQsc0RBQXNEO0lBQ3RELCtCQUErQjtJQUMvQiwwQ0FBMEM7SUFDMUMsc0NBQXNDO0lBQ3RDLGtEQUFrRDtJQUNsRCxvREFBb0Q7QUFDeEQ7O0FBRUE7SUFDSTs7O0FBR0o7O0FBRUE7SUFDSSxZQUFZO0FBQ2hCIiwiZmlsZSI6ImRheXRpbWUuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOnJvb3Qge1xuICAgIC0tdGV4dC1jb2xvcjogMzUsIDM1LCAzODtcbiAgICAtLWJhY2tncm91bmQtY29sb3I6IDI1MiwgMjUyLCAyNTI7XG4gICAgLS1saWdodC1jb2xvci0yOiAyNDAsIDI0MCwgMjQ0O1xuICAgIC0tZGFyay1jb2xvci0yOiAyMjksIDIyOSwgMjM4O1xuICAgIC0tZGFyay1jb2xvci0zOiA1MCwgNTAsIDUxO1xuICAgIC0tZGFyay1jb2xvci00OiB2YXIoLS1kYXJrLWNvbG9yLTMpO1xuICAgIC0tZ2VuZXJhbC1saWdodC1iYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodC1jb2xvci0yKTtcbiAgICAtLWdlbmVyYWwtbGlnaHQtdGV4dC1jb2xvcjogdmFyKC0tdGV4dC1jb2xvcik7XG4gICAgLS1nZW5lcmFsLW1lZGl1bS1iYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1kYXJrLWNvbG9yLTIpO1xuICAgIC0tZ2VuZXJhbC1tZWRpdW0tdGV4dC1jb2xvcjogdmFyKC0tdGV4dC1jb2xvcik7XG4gICAgLS1nZW5lcmFsLWRhcmstYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tZGFyay1jb2xvci0zKTtcbiAgICAtLWdlbmVyYWwtZGFyay10ZXh0LWNvbG9yOiB2YXIoLS1saWdodC1jb2xvci0xKTtcbiAgICAtLWhlYWRlci1iYWNrZ3JvdW5kLWJvdHRvbTogdmFyKC0tbGlnaHQtY29sb3ItMik7XG4gICAgLS1oZWFkZXItYmFja2dyb3VuZC10b3A6IHZhcigtLWxpZ2h0LWNvbG9yLTIpLCAwLjg7XG4gICAgLS1oZWFkZXItZXh0cmEtYmFja2dyb3VuZC1pbWFnZTogbm9uZTtcbiAgICAtLWxvZ28taW1hZ2U6IHVybChodHRwczovL2dpdGh1Yi5iYWNrcm9vbXN3aWtpLmNuL1N1cGVyX0xpbWluYWwvaW1hZ2VzL2JsYWNrX2xvZ28uc3ZnKTtcbiAgICAtLWhlYWRlci10ZXh0LWNvbG9yOiB2YXIoLS1kYXJrLWNvbG9yLTMpO1xuICAgIC0taGVhZGVyLXRleHQtc2hhZG93LWNvbG9yOiAwLCAwLCAwLCAwO1xuICAgIC0tdG9wYmFyLXRleHQtY29sb3I6IHZhcigtLWRhcmstY29sb3ItMyk7XG4gICAgLS10b3BiYXItaG92ZXItdGV4dC1jb2xvcjogdmFyKC0tbGlnaHQtY29sb3ItMik7XG4gICAgLS1oZWFkZXItdXNlcm5hbWUtY29sb3I6IHZhcigtLWRhcmstY29sb3ItMyk7XG4gICAgLS1hY2NvdW50LWJ1dHRvbi10ZXh0LWNvbG9yOiB2YXIoLS1saWdodC1jb2xvci0yKTtcbiAgICAtLWFjY291bnQtYnV0dG9uLWhvdmVyLXRleHQtY29sb3I6IHZhcigtLXRleHQtY29sb3IpO1xuICAgIC0tYWNjb3VudC1idXR0b24tYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tZGFyay1jb2xvci0zKTtcbiAgICAtLWFjY291bnQtZHJvcC1ob3Zlci1iYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodC1jb2xvci0xKTtcbiAgICAtLXBhZ2UtdGl0bGUtYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrLWNvbG9yLTIpO1xuICAgIC0tc2lkZWJhci10aXRsZS1iYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1kYXJrLWNvbG9yLTIpO1xuICAgIC0tc2lkZWJhci10aXRsZS10ZXh0LWNvbG9yOiB2YXIoLS1kYXJrLWNvbG9yLTMpO1xuICAgIC0tc2lkZWJhci10aXRsZS1zaGFkb3ctY29sb3I6IDAsIDAsIDAsIDA7XG4gICAgLS1zaWRlYmFyLW1lZGlhLWJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0LWNvbG9yLTIpO1xuICAgIC0tc2lkZWJhci1ob3Zlci1iYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodC1jb2xvci0yKTtcbiAgICAtLWhyLWNvbG9yOiB2YXIoLS1kYXJrLWNvbG9yLTIpO1xuICAgIC0tcG9wdXAtbG9hZGluZy1jb2xvcjogdmFyKC0tZGFyay1jb2xvci0zKTtcbiAgICAtLXNjcm9sbGJhci1jb2xvcjogdmFyKC0tZGFyay1jb2xvci0zKTtcbiAgICAtLXNjcm9sbGJhci1iYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodC1jb2xvci0yKTtcbiAgICAtLXBhZ2Utb3B0aW9uLWJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0LWNvbG9yLTIpO1xufVxuXG4jaGVhZGVyIHtcbiAgICBib3gtc2hhZG93OlxuICAgICAgICAwcHggMHB4IDguNXB4IC0xcHggcmdiYSh2YXIoLS1nZW5lcmFsLXNoYWRvdy1jb2xvciksIDAuNDIpLFxuICAgICAgICAwcHggMHB4IDY4cHggLTIxcHggcmdiYSh2YXIoLS1nZW5lcmFsLXNoYWRvdy1jb2xvciksIDAuMSlcbn1cblxuI2hlYWRlciBoMiBzcGFuOjpiZWZvcmUge1xuICAgIG9wYWNpdHk6IDAuMTtcbn0iXX0= */
