@@ -1,0 +1,158 @@
+:root {
+    --body-font: initial;
+
+    --white-monochrome: initial;
+    --black-monochrome: initial;
+    --bright-accent: initial;
+    --medium-accent: initial;
+
+    --swatch-primary-darker: initial;
+    --swatch-menubg-hover-color: initial;
+    --swatch-menutxt-dark-color: initial;
+    --swatch-menutxt-light-color: initial;
+    --swatch-menutxt-general-color: initial;
+    --swatch-border-color: initial;
+    --swatch-text-secondary-color: initial;
+    --sidebar-links-text: initial;
+
+    --base-font-size: initial;
+    --sidebar-internal-border-thickness: initial;
+    --gradient-sidemenu-header: initial;
+}
+
+a,
+a:visited {
+    transition: revert;
+    -webkit-text-decoration: revert;
+    text-decoration: revert;
+    text-decoration-color: revert;
+}
+
+#interwiki,
+#interwiki body {
+    margin: 0;
+    background-color: unset;
+    padding: 0;
+}
+
+#interwiki body {
+    overflow: revert;
+}
+
+.side-block {
+    display: revert;
+    direction: revert;
+    margin-top: revert;
+    border: revert;
+    border-right: revert;
+    background: revert;
+    font-family: revert;
+}
+
+.side-block p {
+    margin: revert;
+}
+
+.side-block .menu-item {
+    display: revert;
+    flex-shrink: revert;
+    flex-basis: revert;
+    flex-flow: revert;
+    align-items: revert;
+    justify-content: revert;
+    margin: revert;
+    padding: revert;
+    height: revert;
+    min-height: revert;
+    font-size: revert;
+    border-bottom: revert;
+    border-left: revert;
+    text-align: revert;
+}
+
+.side-block .menu-item > span {
+    display: revert;
+}
+
+.side-block .menu-item img {
+    display: revert;
+}
+
+.side-block .menu-item > a {
+    display: revert;
+    position: revert;
+    flex: revert;
+    z-index: revert;
+    box-sizing: revert;
+    transition: revert;
+    margin: revert;
+    background-clip: revert;
+    background-color: revert;
+    padding: revert;
+    min-width: revert;
+    height: revert;
+    overflow: revert;
+    color: revert;
+    font-size: revert;
+    line-height: revert;
+    letter-spacing: revert;
+    text-align: revert;
+}
+
+.side-block .menu-item > a:hover,
+.side-block .menu-item > a:active,
+.side-block .menu-item > a:focus-within {
+    background-color: revert;
+    text-decoration: revert;
+}
+
+.side-block .menu-item > a:active,
+.side-block .menu-item > a:visited {
+    color: revert;
+}
+
+.side-block .menu-item > :last-child {
+    flex-grow: revert;
+}
+
+.side-block .menu-item > a::before {
+    content: revert;
+    position: revert;
+    top: revert;
+    left: revert;
+    opacity: revert;
+    z-index: revert;
+    transform: revert;
+    transition: revert;
+    clip-path: revert;
+    background-color: revert;
+    width: revert;
+    height: revert;
+    pointer-events: revert;
+}
+
+.side-block .menu-item > a:hover::before,
+.side-block .menu-item > a:active::before {
+    transform: revert;
+}
+
+.side-block .heading {
+    margin-top: revert;
+    background: revert;
+    min-height: revert;
+}
+
+.side-block .heading p {
+    --text-shadow: initial;
+    display: revert;
+    cursor: revert;
+    height: revert;
+    color: revert;
+    font-weight: revert;
+    font-size: revert;
+    line-height: revert;
+    letter-spacing: revert;
+    text-align: revert;
+    text-shadow: revert;
+    text-transform: revert;
+}
