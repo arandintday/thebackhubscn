@@ -1,0 +1,39 @@
+:root {
+    --background-color: 13, 13, 15;
+    --text-color: 195, 195, 195;
+    --light-color-2: 26, 26, 28;
+    --dark-color-2: 44, 44, 45;
+    --dark-color-3: 66, 66, 67;
+    --dark-color-4: var(--dark-color-3);
+    --warning-text-color: 230, 230, 230;
+    --rating-info-text-color: 230, 230, 230;
+    --general-light-background-color: var(--light-color-2);
+    --general-light-text-color: var(--text-color);
+    --general-medium-background-color: var(--dark-color-2);
+    --general-medium-text-color: var(--text-color);
+    --general-dark-background-color: var(--dark-color-3);
+    --general-dark-text-color: var(--text-color);
+    --scrollbar-color: var(--dark-color-3);
+    --scrollbar-background-color: var(--light-color-2);
+    --header-background-bottom: var(--light-color-2);
+    --header-background-top: var(--light-color-2), 0.8;
+    --header-extra-background-image: none;
+    --header-text-color: var(--text-color);
+    --header-text-shadow-color: 0, 0, 0, 0;
+    --popup-fader-color: 0, 0, 0, 0.5;
+    --popup-tip-color: var(--text-color);
+    --topbar-text-color: var(--text-color);
+    --topbar-hover-text-color: var(--text-color);
+    --topbar-hover-border-color: var(--background-color), 0.5;
+    --topbar-drop-text-color: var(--text-color);
+    --topbar-drop-hover-text-color: var(--text-color);
+    --hr-color: var(--dark-color-3);
+    --sidebar-handle-background-color: var(--light-color-2);
+    --sidebar-title-shadow-color: 0, 0, 0, 0;
+    --sidebar-media-background-color: var(--light-color-2), 0.5;
+    --popup-loading-color: var(--dark-color-3);
+}
+
+#header h2 span::before {
+    opacity: 0.25;
+}

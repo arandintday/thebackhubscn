@@ -1,0 +1,48 @@
+:root {
+    --text-color: 35, 35, 38;
+    --background-color: 252, 252, 252;
+    --light-color-2: 240, 240, 244;
+    --dark-color-2: 229, 229, 238;
+    --dark-color-3: 50, 50, 51;
+    --dark-color-4: var(--dark-color-3);
+    --general-light-background-color: var(--light-color-2);
+    --general-light-text-color: var(--text-color);
+    --general-medium-background-color: var(--dark-color-2);
+    --general-medium-text-color: var(--text-color);
+    --general-dark-background-color: var(--dark-color-3);
+    --general-dark-text-color: var(--light-color-1);
+    --header-background-bottom: var(--light-color-2);
+    --header-background-top: var(--light-color-2), 0.8;
+    --header-extra-background-image: none;
+    --logo-image: url(https://github.backroomswiki.cn/Super_Liminal/images/black_logo.svg);
+    --header-text-color: var(--dark-color-3);
+    --header-text-shadow-color: 0, 0, 0, 0;
+    --topbar-text-color: var(--dark-color-3);
+    --topbar-hover-text-color: var(--light-color-2);
+    --header-username-color: var(--dark-color-3);
+    --account-button-text-color: var(--light-color-2);
+    --account-button-hover-text-color: var(--text-color);
+    --account-button-background-color: var(--dark-color-3);
+    --account-drop-hover-background-color: var(--light-color-1);
+    --page-title-border-color: var(--dark-color-2);
+    --sidebar-title-background-color: var(--dark-color-2);
+    --sidebar-title-text-color: var(--dark-color-3);
+    --sidebar-title-shadow-color: 0, 0, 0, 0;
+    --sidebar-media-background-color: var(--light-color-2);
+    --sidebar-hover-background-color: var(--light-color-2);
+    --hr-color: var(--dark-color-2);
+    --popup-loading-color: var(--dark-color-3);
+    --scrollbar-color: var(--dark-color-3);
+    --scrollbar-background-color: var(--light-color-2);
+    --page-option-background-color: var(--light-color-2);
+}
+
+#header {
+    box-shadow:
+        0px 0px 8.5px -1px rgba(var(--general-shadow-color), 0.42),
+        0px 0px 68px -21px rgba(var(--general-shadow-color), 0.1)
+}
+
+#header h2 span::before {
+    opacity: 0.1;
+}
