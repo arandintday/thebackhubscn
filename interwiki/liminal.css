@@ -1,0 +1,164 @@
+/* This is the default style for Interwiki Component for Backrooms Wiki CN. */
+
+/* Body Font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap");
+
+/* Archived BHL */
+:root {
+    --body-font: Inter, "Noto Sans SC", "Noto Sans TC", Arimo, Verdana, Geneva, sans-serif;
+
+    --white-monochrome: 237, 233, 223;
+    --black-monochrome: 25, 20, 16;
+    --bright-accent: 140, 136, 126;
+    --medium-accent: 72, 69, 60;
+
+    --swatch-primary-darker: var(--medium-accent);
+    --swatch-menubg-hover-color: var(--black-monochrome);
+    --swatch-menutxt-dark-color: var(--black-monochrome);
+    --swatch-menutxt-light-color: var(--white-monochrome);
+    --swatch-menutxt-general-color: var(--swatch-menutxt-dark-color);
+    --swatch-border-color: var(--black-monochrome);
+    --swatch-text-secondary-color: var(--swatch-menutxt-light-color);
+    --sidebar-links-text: var(--swatch-menutxt-general-color);
+
+    --base-font-size: 0.9375rem;
+    --sidebar-internal-border-thickness: 0.125rem;
+    --gradient-sidemenu-header: linear-gradient(10deg, rgba(var(--swatch-primary-darker), 0.45) 0%, rgba(var(--swatch-primary-darker), 0.55) 100%);
+}
+
+a, a:visited {
+    transition: text-decoration-color 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-text-decoration: underline 0.09375em;
+    text-decoration: underline 0.09375em;
+    text-decoration-color: transparent;
+}
+
+/* Interwiki */
+#interwiki,
+body {
+    margin: 0;
+    background-color: unset;
+    padding: 0;
+}
+
+/* Side Block */
+.side-block {
+    display: block;
+    direction: ltr;
+    margin-top: 0;
+    border: 0;
+    border-right: var(--sidebar-internal-border-thickness) solid rgba(var(--swatch-border-color), 0.08);
+    background: transparent;
+    font-family: var(--body-font);
+}
+
+.side-block p {
+    margin: 0;
+}
+
+.side-block .menu-item {
+    display: flex;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    height: 1.5rem;
+    min-height: 1.5rem;
+    font-size: 0;
+    border-bottom: var(--sidebar-internal-border-thickness) solid rgba(var(--swatch-border-color), 0.08);
+    border-left: var(--sidebar-internal-border-thickness) solid rgba(var(--swatch-border-color), 0.08);
+    text-align: right;
+}
+
+.side-block .menu-item > span {
+    display: none;
+}
+
+.side-block .menu-item img {
+    display: none;
+}
+
+/* Menu Links */
+.side-block .menu-item > a {
+    display: block;
+    position: relative;
+    flex: 1 1 0;
+    z-index: 2;
+    box-sizing: border-box;
+    transition: background-color 80ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 0;
+    background-clip: padding-box;
+    background-color: rgba(var(--swatch-menubg-hover-color), 0);
+    padding: 0 0 0 calc(var(--base-font-size) * (14 / 15));
+    min-width: 0;
+    height: calc(1.5rem - var(--sidebar-internal-border-thickness));
+    overflow: hidden;
+    color: rgb(var(--sidebar-links-text));
+    font-size: calc(var(--base-font-size) * 0.9333333333);
+    line-height: calc(1.5rem - var(--sidebar-internal-border-thickness));
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+
+.side-block .menu-item > a:hover,
+.side-block .menu-item > a:active,
+.side-block .menu-item > a:focus-within {
+    background-color: rgba(var(--swatch-menubg-hover-color), 0.15);
+    text-decoration: none;
+}
+
+.side-block .menu-item > a:active,
+.side-block .menu-item > a:visited {
+    color: rgb(var(--sidebar-links-text));
+}
+
+.side-block .menu-item > :last-child {
+    flex-grow: 2;
+}
+
+.side-block .menu-item > a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    z-index: -1;
+    transform: translateX(-100%);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+    background-color: rgba(var(--bright-accent), 0.25);
+    width: calc(100% + 6rem);
+    height: 100%;
+    pointer-events: none;
+}
+
+.side-block .menu-item > a:hover::before,
+.side-block .menu-item > a:active::before {
+    transform: translateX(-100%);
+}
+
+/* Heading */
+.side-block .heading {
+    margin-top: 0;
+    background: var(--gradient-sidemenu-header);
+    min-height: 1.25rem;
+}
+
+.side-block .heading p {
+    --text-shadow: rgb(var(--swatch-border-color, 12, 12, 12));
+    display: block;
+    cursor: default;
+    height: 1.25rem;
+    color: rgb(var(--swatch-text-secondary-color));
+    font-weight: 700;
+    font-size: calc(var(--base-font-size) * 0.9333333333 * 0.9);
+    line-height: 1.25rem;
+    letter-spacing: 0.016em;
+    text-align: center;
+    text-shadow: 0.063rem 0.063rem 0.063rem var(--text-shadow);
+    text-transform: uppercase;
+}
